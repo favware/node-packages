@@ -12,7 +12,7 @@ aliases:
         - yarn-packages-{{ arch }}-{{ .Branch }}-
         - yarn-packages-{{ arch }}-
   - &run-yarn
-    run: Install packages
+    run:
       name: Install Packages
       command: yarn --frozen-lockfile
   - &store_artifacts
