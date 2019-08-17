@@ -1,0 +1,148 @@
+version: 2.1
+
+orbs:
+  codecov: codecov/codecov@1.0.5
+
+aliases:
+  - &restore_yarn_cache
+    restore_cache:
+      name: Restore Yarn Package Cache
+      keys:
+        - yarn-packages-{{ arch }}-{{ .Branch }}-{{ checksum "yarn.lock" }}
+        - yarn-packages-{{ arch }}-{{ .Branch }}-
+        - yarn-packages-{{ arch }}-
+  - &run-yarn
+    run: Install packages
+      name: Install Packages
+      command: yarn --frozen-lockfile
+  - &store_artifacts
+    store_artifacts:
+      path: coverage
+  - &codecov
+    codecov/upload:
+      file: coverage/*.json
+  - &checkout
+    checkout
+
+commands:
+  setup:
+    steps:
+      - *checkout
+      - *restore_yarn_cache
+      - *run_yarn
+      - save_cache:
+          name: Save Yarn Package Cache
+          key: yarn-packages-{{ arch }}-{{ .Branch }}-{{ checksum "yarn.lock" }}
+          paths:
+            - ~/.cache/yarn
+            - node_modules
+
+  lint:
+    steps:
+      checkout
+      - *restore_yarn_cache
+      - *run_yarn
+      - run:
+          name: Lint all libraries
+          command: yarn lint
+
+  test:
+    steps:
+      checkout
+      - *restore_yarn_cache
+      - *run_yarn
+      - run:
+          name: Test all libraries
+          command: yarn test:coverage
+
+  build:
+    parallelism: 20
+    steps:
+      checkout
+      - *restore_yarn_cache
+      - *run_yarn
+      - run:
+          name: Build packages
+          command: yarn build
+      - persist_to_workspace:
+          root: build
+          paths:
+            - node_modules
+            - dist
+
+  process_artifacts:
+    steps:
+      checkout
+      - *restore_yarn_cache
+      - *run_yarn
+      - *store_artifacts
+      - *codecov
+
+# List of jobs
+jobs:
+  node-v10:
+    docker:
+      - image: circleci/node:10
+    steps:
+      - lint
+      - test
+      - build
+  node-v11:
+    docker:
+      - image: circleci/node:11
+    steps:
+      - lint
+      - test
+      - build
+  node-v12:
+    docker:
+      - image: circleci/node:12
+    steps:
+      - lint
+      - test
+      - build
+
+workflows:
+  version: 2
+  node-multi-build:
+    jobs:
+      - setup
+      - node-v10:
+          requires:
+            - setup
+      - node-v11:
+          requires:
+            - setup
+      - node-v12:
+          requires:
+            - setup
+      - process_artifacts:
+          requires:
+            - node-v10
+            - node-v11
+            - nodev-12
+
+  every-sunday-at-night:
+    triggers:
+      - schedule:
+          cron: "0 0 * * 0"
+          filters:
+            branches:
+              only:
+                - master
+    jobs:
+      - setup
+      - node-v10:
+          requires:
+            - setup
+      - node-v11:
+          requires:
+            - setup
+      - node-v12:
+          requires:
+            - setup
+      - process_artifacts:
+          requires:
+            - node-v10
+            - node-v11
+            - nodev-12

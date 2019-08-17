@@ -1,0 +1,59 @@
+{
+  "name": "@favware/eslint-config",
+  "version": "3.0.0",
+  "description": "Standard ESLint config for Favware projects written in TypeScript",
+  "author": "@favware",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "module": "dist/index.es.js",
+  "jsnext:main": "dist/index.es.js",
+  "types": "dist/index.d.ts",
+  "runkitExampleFilename": "dist/example.js",
+  "homepage": "https://github.com/favware/node-packages/tree/master/packages/eslint-config#readme",
+  "scripts": {
+    "test": "yarn lint",
+    "lint": "eslint src --ext .js,.jsx,.ts,.tsx --fix",
+    "prebuild": "yarn lint && yarn test",
+    "build": "rollup -c rollup.config.js",
+    "start": "yarn build -w",
+    "docs": "jsdoc2md --template ./docs/template.hbs --files ./docsbuild/*.js --example-lang ts --partial ./docs/partials/desc.hbs --partial ./docs/partials/reponame.hbs --partial ./docs/partials/siteurl.hbs > ./README.md",
+    "docs:clean": "rimraf ./docsbuild",
+    "docs:build": "tsc -p ./tsconfig.docs.json"
+  },
+  "peerDependencies": {
+    "eslint": ">=6"
+  },
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^2.0.0",
+    "@typescript-eslint/parser": "^2.0.0",
+    "eslint-plugin-jest": "^22.15.1"
+  },
+  "devDependencies": {},
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=10",
+    "npm": ">=6"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/favware/node-packages.git",
+    "directory": "packages/eslint-config"
+  },
+  "bugs": {
+    "url": "https://github.com/favware/node-packages/issues"
+  },
+  "keywords": [
+    "eslint-config",
+    "math",
+    "random",
+    "security",
+    "favware",
+    "typescript",
+    "ts"
+  ],
+  "directories": {
+    "lib": "src"
+  }
+}

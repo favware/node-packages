@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CommonJS usage Parse should work with empty input 1`] = `Object {}`;
+
+exports[`CommonJS usage Stringify should work with empty input 1`] = `""`;

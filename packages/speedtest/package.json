@@ -1,0 +1,58 @@
+{
+  "name": "@favware/speedtest",
+  "version": "0.0.1",
+  "description": "Speedtest utility to test your internet speed",
+  "author": "@favware",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "module": "dist/index.es.js",
+  "jsnext:main": "dist/index.es.js",
+  "types": "dist/index.d.ts",
+  "runkitExampleFilename": "dist/example.js",
+  "homepage": "https://github.com/favware/node-packages/tree/master/packages/speedtest#readme",
+  "scripts": {
+    "test": "yarn lint",
+    "lint": "eslint src __tests__ --ext .js,.jsx,.ts,.tsx --fix",
+    "prebuild": "yarn lint && yarn test",
+    "build": "rollup -c rollup.config.ts",
+    "start": "yarn build -w",
+    "docs": "jsdoc2md --template ./docs/template.hbs --files ./docsbuild/*.js --example-lang ts --partial ./docs/partials/desc.hbs --partial ./docs/partials/reponame.hbs --partial ./docs/partials/siteurl.hbs > ./README.md",
+    "docs:clean": "rimraf ./docsbuild",
+    "docs:build": "tsc -p ./tsconfig.docs.json"
+  },
+  "peerDependencies": {},
+  "dependencies": {
+    "fast-xml-parser": "^3.12.19",
+    "node-fetch": "^2.6.0",
+    "strict-event-emitter-types": "^2.0.0"
+  },
+  "devDependencies": {},
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=10",
+    "npm": ">=6"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/favware/node-packages.git",
+    "directory": "packages/querystring"
+  },
+  "bugs": {
+    "url": "https://github.com/favware/node-packages/issues"
+  },
+  "keywords": [
+    "querystring",
+    "math",
+    "random",
+    "security",
+    "favware",
+    "typescript",
+    "ts"
+  ],
+  "directories": {
+    "lib": "src",
+    "test": "__tests__"
+  }
+}

@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Error checking should error with wrong input 1`] = `"@Favware/Querystring: Your input was not an object. Please supply an object when using Stringify"`;
+
+exports[`Error checking should work with invalid separator and equals options 1`] = `"?prop=value&prop2=value2"`;
+
+exports[`Error checking should work with wrong options 1`] = `"prop%value=prop2%value2"`;
+
+exports[`Standard Behaviour confirm default export works 1`] = `"?prop=value&prop2=value2"`;
+
+exports[`Standard Behaviour should work with empty input 1`] = `""`;
+
+exports[`Standard Behaviour should work with empty input and custom options 1`] = `"?"`;
+
+exports[`Standard Behaviour should work with valid options 1`] = `"?prop=value&prop2=value2"`;
+
+exports[`Standard Behaviour should work without options 1`] = `"prop=value&prop2=value2&prop3=true&prop4=6&prop5=false&prop6=&prop7=value1&prop7=value2&prop8=undefined&prop9=null"`;

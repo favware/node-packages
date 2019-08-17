@@ -1,0 +1,65 @@
+{
+  "name": "@favware/milky-tslint",
+  "version": "1.0.6",
+  "description": "TypeScript linter Gulp plugin, based on gulp-tslint but updated for modernization",
+  "author": "@favware",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "module": "dist/index.es.js",
+  "jsnext:main": "dist/index.es.js",
+  "types": "dist/index.d.ts",
+  "runkitExampleFilename": "dist/example.js",
+  "homepage": "https://github.com/favware/node-packages/tree/master/packages/milky-tslint#readme",
+  "scripts": {
+    "test": "yarn lint",
+    "lint": "eslint src --ext .js,.jsx,.ts,.tsx --fix",
+    "prebuild": "yarn lint && yarn test",
+    "build": "rollup -c rollup.config.js",
+    "start": "yarn build -w",
+    "docs": "jsdoc2md --template ./docs/template.hbs --files ./docsbuild/*.js --example-lang ts --partial ./docs/partials/desc.hbs --partial ./docs/partials/reponame.hbs --partial ./docs/partials/siteurl.hbs > ./README.md",
+    "docs:clean": "rimraf ./docsbuild",
+    "docs:build": "tsc -p ./tsconfig.docs.json"
+  },
+  "peerDependencies": {
+    "tslint": ">=5"
+  },
+  "dependencies": {
+    "chalk": "^2.4.2",
+    "map-stream": "^0.0.7",
+    "moment": "^2.24.0",
+    "plugin-error": "^1.0.1",
+    "strict-event-emitter-types": "^2.0.0",
+    "through": "^2.3.8"
+  },
+  "devDependencies": {},
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=10",
+    "npm": ">=6"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/favware/node-packages.git",
+    "directory": "packages/milky-tslint"
+  },
+  "bugs": {
+    "url": "https://github.com/favware/node-packages/issues"
+  },
+  "keywords": [
+    "gulp",
+    "plugin",
+    "gulpplugin",
+    "gulpfriendly",
+    "tslint",
+    "linter",
+    "lint",
+    "favware",
+    "typescript",
+    "ts"
+  ],
+  "directories": {
+    "lib": "src"
+  }
+}
