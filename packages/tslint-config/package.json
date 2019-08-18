@@ -22,8 +22,9 @@
   "peerDependencies": {
     "tslint": ">=5"
   },
-  "dependencies": {},
-  "devDependencies": {},
+  "devDependencies": {
+    "@favware/eslint-config": "^3.0.0"
+  },
   "files": [
     "dist"
   ],

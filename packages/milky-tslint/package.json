@@ -31,7 +31,9 @@
     "strict-event-emitter-types": "^2.0.0",
     "through": "^2.3.8"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "@favware/eslint-config": "^3.0.0"
+  },
   "files": [
     "dist"
   ],

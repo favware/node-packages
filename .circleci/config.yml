@@ -14,7 +14,7 @@ aliases:
   - &run_yarn
     run:
       name: Install Packages
-      command: yarn --frozen-lockfile
+      command: yarn install --frozen-lockfile && yarn lerna exec -- yarn install
   - &store_artifacts
     store_artifacts:
       path: coverage
