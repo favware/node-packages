@@ -43,9 +43,6 @@ commands:
       - run:
           name: Test all libraries
           command: yarn ci:test
-      - run:
-          name: Build packages
-          command: yarn ci:build
       - *store_artifacts
       - *codecov
 

@@ -16,8 +16,7 @@
     "cz": "git-cz",
     "scripts:validateNoOnly": "babel-node scripts/validateNoOnly --extensions \".ts\"",
     "ci:lint": "lerna run lint --ignore @favware/speedtest",
-    "ci:test": "jest --collectCoverage --max-workers 2",
-    "ci:build": "lerna run build --ignore @favware/speedtest"
+    "ci:test": "jest --collectCoverage --max-workers 2"
   },
   "devDependencies": {
     "@babel/core": "^7.5.5",
