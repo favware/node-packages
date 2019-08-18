@@ -39,13 +39,13 @@ commands:
             - node_modules
       - run:
           name: Lint all libraries
-          command: yarn lint
+          command: yarn ci:lint
       - run:
           name: Test all libraries
-          command: yarn test:coverage
+          command: yarn ci:test
       - run:
           name: Build packages
-          command: yarn build
+          command: yarn ci:build
       - *store_artifacts
       - *codecov
 

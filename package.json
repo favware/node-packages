@@ -7,7 +7,6 @@
   "scripts": {
     "lint": "lerna run lint --parallel --ignore @favware/speedtest",
     "test": "jest",
-    "test:coverage": "jest --collectCoverage --max-workers 2",
     "build": "lerna run build --parallel --ignore @favware/speedtest",
     "predocs": "lerna run docs:clean --parallel && lerna run docs:build --parallel",
     "docs": "lerna run docs --parallel",
@@ -15,7 +14,10 @@
     "prepublishOnly": "yarn build && yarn docs",
     "commit": "git-cz",
     "cz": "git-cz",
-    "scripts:validateNoOnly": "babel-node scripts/validateNoOnly --extensions \".ts\""
+    "scripts:validateNoOnly": "babel-node scripts/validateNoOnly --extensions \".ts\"",
+    "ci:lint": "lerna run lint --ignore @favware/speedtest",
+    "ci:test": "jest --collectCoverage --max-workers 2",
+    "ci:build": "lerna run build --ignore @favware/speedtest"
   },
   "devDependencies": {
     "@babel/core": "^7.5.5",
