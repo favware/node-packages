@@ -1,6 +1,6 @@
 {
   "name": "@favware/yamlreader",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Minimal wrapper around js-yaml for directly reading in YAML files",
   "author": "@favware",
   "license": "MIT",
@@ -20,11 +20,9 @@
     "docs:clean": "rimraf ./docsbuild",
     "docs:build": "tsc -p ./tsconfig.docs.json"
   },
-  "peerDependencies": {},
   "dependencies": {
     "js-yaml": "^3.13.1"
   },
-  "devDependencies": {},
   "files": [
     "dist"
   ],

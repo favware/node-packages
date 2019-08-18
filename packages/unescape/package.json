@@ -1,6 +1,6 @@
 {
   "name": "@favware/unescape",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Convert HTML entities to HTML characters, e.g. `&gt;` converts to `>`.",
   "author": "@favware",
   "license": "MIT",
@@ -20,9 +20,6 @@
     "docs:clean": "rimraf ./docsbuild",
     "docs:build": "tsc -p ./tsconfig.docs.json"
   },
-  "peerDependencies": {},
-  "dependencies": {},
-  "devDependencies": {},
   "files": [
     "dist"
   ],

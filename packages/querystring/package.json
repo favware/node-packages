@@ -1,6 +1,6 @@
 {
   "name": "@favware/querystring",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "Awesome and robust querystring",
   "author": "@favware",
   "license": "MIT",
@@ -20,9 +20,6 @@
     "docs:clean": "rimraf ./docsbuild",
     "docs:build": "tsc -p ./tsconfig.docs.json"
   },
-  "peerDependencies": {},
-  "dependencies": {},
-  "devDependencies": {},
   "files": [
     "dist"
   ],

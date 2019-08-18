@@ -1,6 +1,6 @@
 {
   "name": "@favware/milky-tslint",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "TypeScript linter Gulp plugin, based on gulp-tslint but updated for modernization",
   "author": "@favware",
   "license": "MIT",
@@ -31,7 +31,6 @@
     "strict-event-emitter-types": "^2.0.0",
     "through": "^2.3.8"
   },
-  "devDependencies": {},
   "files": [
     "dist"
   ],

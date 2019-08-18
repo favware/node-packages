@@ -1,6 +1,6 @@
 {
   "name": "@favware/tslint-config",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "TSLint configuration for Favware projects",
   "author": "@favware",
   "license": "MIT",
@@ -22,8 +22,6 @@
   "peerDependencies": {
     "tslint": ">=5"
   },
-  "dependencies": {},
-  "devDependencies": {},
   "files": [
     "dist"
   ],

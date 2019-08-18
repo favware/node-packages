@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "@favware/speedtest",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Speedtest utility to test your internet speed",
   "author": "@favware",
   "license": "MIT",
@@ -21,13 +21,11 @@
     "docs:clean": "rimraf ./docsbuild",
     "docs:build": "tsc -p ./tsconfig.docs.json"
   },
-  "peerDependencies": {},
   "dependencies": {
     "fast-xml-parser": "^3.12.19",
     "node-fetch": "^2.6.0",
     "strict-event-emitter-types": "^2.0.0"
   },
-  "devDependencies": {},
   "files": [
     "dist"
   ],
