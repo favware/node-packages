@@ -26,14 +26,15 @@
     "@babel/register": "^7.5.5",
     "@commitlint/cli": "^8.1.0",
     "@commitlint/config-conventional": "^8.1.0",
+    "@favware/eslint-config": "3.0.1",
     "@types/common-tags": "^1.8.0",
     "@types/find": "^0.2.1",
-    "@types/gulp-rename": "^0.0.33",
     "@types/gulp": "^4.0.6",
+    "@types/gulp-rename": "^0.0.33",
     "@types/jest": "^24.0.17",
     "@types/js-yaml": "^3.12.1",
-    "@types/node-fetch": "^2.5.0",
     "@types/node": "^12.7.2",
+    "@types/node-fetch": "^2.5.0",
     "@types/rollup-plugin-progress": "^1.1.0",
     "@types/through": "^0.0.29",
     "chalk": "^2.4.2",
@@ -42,8 +43,8 @@
     "eslint": "^6.1.0",
     "find": "^0.3.0",
     "husky": "^3.0.4",
-    "jest-circus": "^24.9.0",
     "jest": "^24.9.0",
+    "jest-circus": "^24.9.0",
     "jsdoc-to-markdown": "^5.0.0",
     "lerna": "^3.16.4",
     "lint-staged": "^9.2.3",
@@ -86,5 +87,6 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
-  }
+  },
+  "dependencies": {}
 }
