@@ -1,4 +1,22 @@
-import zalgo, { chars } from '../src';
+import zalgo, { chars, banish, zalgo as NamedZalgo } from '../src';
+
+describe('Snapshot Testing', () => {
+  test('zalgo should match snapshot', () => {
+    expect(zalgo).toMatchSnapshot();
+  });
+
+  test('chars should match snapshot', () => {
+    expect(chars).toMatchSnapshot();
+  });
+
+  test('banish should match snapshot', () => {
+    expect(banish).toMatchSnapshot();
+  });
+
+  test('NamedZalgo should match snapshot', () => {
+    expect(NamedZalgo).toMatchSnapshot();
+  });
+});
 
 describe('No option testing', () => {
   test('should zalgo normally', () => {
