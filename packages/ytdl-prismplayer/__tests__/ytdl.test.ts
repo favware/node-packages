@@ -44,6 +44,9 @@ describe('ytdl-prismplayer', () => {
   test('should resolve play function', async () => {
     const stream = await play('https://youtu.be/y3OzHBEcymw');
     expect(stream).toBeInstanceOf(Readable);
-    expect(stream).toMatchSnapshot();
+  });
+
+  test('play function should match snapshot', () => {
+    expect(play).toMatchSnapshot();
   });
 });
