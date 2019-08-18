@@ -1,4 +1,5 @@
 {
+  "private": true,
   "name": "@favware/speedtest",
   "version": "0.0.1",
   "description": "Speedtest utility to test your internet speed",
