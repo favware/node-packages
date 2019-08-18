@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/ban-ts-ignore, @typescript-eslint/no-unused-vars */
 import eventemitter from './events';
 import { parse as xml2json } from 'fast-xml-parser';
 import fetch from 'node-fetch';
@@ -44,62 +45,6 @@ const calculateDistance = (client: LatLng, server: LatLng) => {
     dist: distanceInMeters,
     distMi: distanceInMiles,
   };
-};
-
-/**
- * Gets Speedtest Configuration
- * If no client configuration could be found it will default to a client based in Amsterdam, The Netherlands
- */
-const getSpeedtestClientConfig = async (): Promise<speedtestClientConfig> => {
-  try {
-    const requestConfig = await fetch('https://www.speedtest.net/speedtest-config.php');
-    const config = xml2json(await requestConfig.text()) as SpeedtestConfigData;
-    const speedtestConfig = {
-      client: config.settings.client,
-      times: config.settings.times,
-      download: config.settings.download,
-      upload: config.settings.upload,
-    };
-
-    eventemitter.emit('config', speedtestConfig);
-
-    return speedtestConfig;
-  } catch (err) {
-    eventemitter.emit('error', err);
-
-    return baseClientData;
-  }
-};
-
-/**
- * Gets the configuration of a speedtest server
- * If no server could configuration could be found it will default to a server in Amsterdam, The Netherlands
- */
-const getSpeedtestServerConfig = async (clientLocation: { lat: string; lon: string }): Promise<SpeedtestServerConfig[]> => {
-  try {
-    const requestServers = await fetch('https://www.speedtest.net/speedtest-servers.php');
-    const data = xml2json(await requestServers.text(), { ignoreAttributes: false, attributeNamePrefix: '' }) as SpeedtestServerData;
-
-    let servers = data.settings.servers.server;
-    eventemitter.emit('servers', servers);
-
-    servers = servers.map(server => ({
-      ...server,
-      ...calculateDistance(
-        { lat: parseFloat(clientLocation.lat), lng: parseFloat(clientLocation.lon) }, { lat: parseFloat(server.lat), lng: parseFloat(server.lon) }
-      ),
-    }));
-
-    servers = servers.sort((serverA, serverB) => serverA.dist - serverB.dist);
-
-    eventemitter.emit('bestservers', servers);
-
-    return servers;
-  } catch (err) {
-    eventemitter.emit('error', err);
-
-    return baseServerData;
-  }
 };
 
 /** Pings a single server and returns the ping time based on process.hrtime() */
@@ -185,27 +130,84 @@ const pingServers = async (servers: SpeedtestServerConfig[], count: number) => {
 };
 
 // @ts-ignore
+export const speedtest = async (options: SpeedtestOptions = {}) => { // eslint-disable-line
+
+  /**
+ * Gets Speedtest Configuration
+ * If no client configuration could be found it will default to a client based in Amsterdam, The Netherlands
+ */
+  const getSpeedtestClientConfig = async (): Promise<speedtestClientConfig> => {
+    try {
+      const requestConfig = await fetch('https://www.speedtest.net/speedtest-config.php');
+      const config = xml2json(await requestConfig.text()) as SpeedtestConfigData;
+      const speedtestConfig = {
+        client: config.settings.client,
+        times: config.settings.times,
+        download: config.settings.download,
+        upload: config.settings.upload,
+      };
+
+      speedtest.events.emit('config', speedtestConfig);
+
+      return speedtestConfig;
+    } catch (err) {
+      speedtest.events.emit('error', err);
+
+      return baseClientData;
+    }
+  };
+
+  /**
+ * Gets the configuration of a speedtest server
+ * If no server could configuration could be found it will default to a server in Amsterdam, The Netherlands
+ */
+  const getSpeedtestServerConfig = async (clientLocation: { lat: string; lon: string }): Promise<SpeedtestServerConfig[]> => {
+    try {
+      const requestServers = await fetch('https://www.speedtest.net/speedtest-servers.php');
+      const data = xml2json(await requestServers.text(), { ignoreAttributes: false, attributeNamePrefix: '' }) as SpeedtestServerData;
+
+      let servers = data.settings.servers.server;
+      speedtest.events.emit('servers', servers);
+
+      servers = servers.map(server => ({
+        ...server,
+        ...calculateDistance(
+          { lat: parseFloat(clientLocation.lat), lng: parseFloat(clientLocation.lon) }, { lat: parseFloat(server.lat), lng: parseFloat(server.lon) }
+        ),
+      }));
+
+      servers = servers.sort((serverA, serverB) => serverA.dist - serverB.dist);
+
+      speedtest.events.emit('bestservers', servers);
+
+      return servers;
+    } catch (err) {
+      speedtest.events.emit('error', err);
+
+      return baseServerData;
+    }
+  };
+
+  // @ts-ignore
 const startDownload = (speedInfo: SpeedtestInfo, speedtestOptions: SpeedtestOptions, iterator = 0,) => { // eslint-disable-line
   // @ts-ignore
-  if (iterator > speedInfo.bestServers.length || iterator >= speedtestOptions.maxServers!) return startUpload();
+    if (iterator > speedInfo.bestServers.length || iterator >= speedtestOptions.maxServers!) return startUpload();
 
-  const server = speedInfo.bestServers[iterator];
-  const serverUrl = server.url;
-  const sizes = [ 350, 500, 750, 1000, 1500, 2000, 2500, 3000, 3500, 4000 ];
-  const urls = [];
+    const server = speedInfo.bestServers[iterator];
+    const serverUrl = server.url;
+    const sizes = [ 350, 500, 750, 1000, 1500, 2000, 2500, 3000, 3500, 4000 ];
+    const urls = [];
 
-  for (const size of sizes) {
-    for (let i = 0; i < 4; i++) {
-      urls.push(resolve(serverUrl, `random${size}x${size}.jpg`));
+    for (const size of sizes) {
+      for (let i = 0; i < 4; i++) {
+        urls.push(resolve(serverUrl, `random${size}x${size}.jpg`));
+      }
     }
-  }
 
-  eventemitter.emit('testserver', server);
+    speedtest.events.emit('testserver', server);
   // Left of here on 2019-08-11
-};
+  };
 
-// @ts-ignore
-export const speedtest = async (options: SpeedtestOptions = {}) => { // eslint-disable-line
   // @ts-ignore
   const serverUrl = 'https://www.speedtest.net/speedtest-servers.php';
   const speedOptions: SpeedtestOptions = {
@@ -225,10 +227,12 @@ export const speedtest = async (options: SpeedtestOptions = {}) => { // eslint-d
     speedInfo.bestServers = bestServers;
     speedInfo.bestServer = bestServers[0];
 
-    eventemitter.emit('bestservers', bestServers);
+    speedtest.events.emit('bestservers', bestServers);
   } catch (err) {
-    return eventemitter.emit('error', err);
+    return speedtest.events.emit('error', err);
   }
 };
+
+speedtest.events = eventemitter;
 
 export default speedtest;
