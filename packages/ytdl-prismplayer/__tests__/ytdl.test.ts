@@ -45,6 +45,5 @@ describe('ytdl-prismplayer', () => {
     const stream = await play('https://youtu.be/y3OzHBEcymw');
     expect(stream).toBeInstanceOf(Readable);
     expect(stream).toMatchSnapshot();
-    expect(play).toMatchSnapshot();
   });
 });

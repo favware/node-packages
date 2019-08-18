@@ -131,5 +131,3 @@ WebmDemuxer {
   "writable": true,
 }
 `;
-
-exports[`ytdl-prismplayer should resolve play function 2`] = `[Function]`;
