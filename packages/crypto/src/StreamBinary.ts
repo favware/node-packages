@@ -12,7 +12,7 @@ class StreamBinary {
     for (i = 0; i < n; i++) {
       b = StreamBinary.get(sequence, i).toString(2);
       while (b.length < bits) b = `0${b}`;
-      binary = binary + b;
+      binary = String(binary) + String(b);
     }
 
     binary = binary.split('').map((bin: string) => parseInt(bin, 2));

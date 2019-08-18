@@ -53,7 +53,7 @@ export const stringify = (obj: QuerystringObject, options: StringifyOptions = { 
     if (!options.includeQuestion) options.includeQuestion = false;
     const keys = Object.keys(obj).sort() // eslint-disable-line @typescript-eslint/require-array-sort-compare
       .map(key => {
-        const ks = encodeURIComponent(stringifyPrimitive(key)) + options.equals;
+        const ks = encodeURIComponent(stringifyPrimitive(key)) + options.equals!;
         if (obj[key] === undefined) return ks + encodeURIComponent(stringifyPrimitive(obj[key]));
         if (obj[key] === null) return ks + encodeURIComponent(stringifyPrimitive(obj[key]));
         if (Array.isArray(obj[key])) {
