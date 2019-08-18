@@ -1,8 +1,4 @@
-/**
- * @file ESLint config
- * @description Standard config rules
- */
-module.exports = {
+const config = {
   root: true,
   parser: '@typescript-eslint/parser',
   parserOptions: {
@@ -396,3 +392,6 @@ module.exports = {
     ],
   },
 };
+
+module.exports = config;
+export default config;

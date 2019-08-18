@@ -10,7 +10,7 @@
   "types": "dist/index.d.ts",
   "homepage": "https://github.com/favware/node-packages/tree/master/packages/tslint-config#readme",
   "scripts": {
-    "test": "yarn lint",
+    "test": "jest",
     "lint": "eslint src --ext .js,.jsx,.ts,.tsx --fix",
     "prebuild": "yarn lint",
     "build": "rollup -c rollup.config.js",
@@ -47,6 +47,7 @@
     "ts"
   ],
   "directories": {
-    "lib": "src"
+    "lib": "src",
+    "test": "__tests__"
   }
 }

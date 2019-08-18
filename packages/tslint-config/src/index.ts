@@ -1,4 +1,4 @@
-module.exports = {
+const config = {
   rules: {
     align: [
       true,
@@ -190,3 +190,6 @@ module.exports = {
     ],
   },
 };
+
+module.exports = config;
+export default config;

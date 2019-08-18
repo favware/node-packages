@@ -17,10 +17,10 @@ aliases:
       command: yarn --frozen-lockfile
   - &store_artifacts
     store_artifacts:
-      path: coverage
+      path: '**/coverage'
   - &codecov
     codecov/upload:
-      file: coverage/*.json
+      file: '**/coverage/*.json'
   - &checkout
     checkout
 

@@ -7,7 +7,7 @@
   "scripts": {
     "lint": "lerna run lint --parallel --ignore @favware/speedtest",
     "test": "lerna run test --parallel --ignore @favware/speedtest",
-    "test:coverage": "yarn test --collectCoverage",
+    "test:coverage": "lerna run test --parallel --ignore @favware/speedtest -- --collectCoverage",
     "build": "lerna run build --parallel --ignore @favware/speedtest",
     "predocs": "lerna run docs:clean --parallel --ignore @favware/speedtest && lerna run docs:build --parallel --ignore @favware/speedtest",
     "docs": "lerna run docs --parallel --ignore @favware/speedtest",

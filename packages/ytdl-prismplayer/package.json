@@ -11,7 +11,7 @@
   "runkitExampleFilename": "dist/example.js",
   "homepage": "https://github.com/favware/node-packages/tree/master/packages/ytdl-prismplayer#readme",
   "scripts": {
-    "test": "yarn lint",
+    "test": "jest",
     "lint": "eslint src --ext .js,.jsx,.ts,.tsx --fix",
     "prebuild": "yarn lint && yarn test",
     "build": "rollup -c rollup.config.js",
@@ -54,6 +54,7 @@
     "ts"
   ],
   "directories": {
-    "lib": "src"
+    "lib": "src",
+    "test": "__tests__"
   }
 }
