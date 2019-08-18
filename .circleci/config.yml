@@ -25,7 +25,9 @@ aliases:
     checkout
 
 commands:
+
   setup:
+    description: Initial setup for favware projects
     steps:
       - *checkout
       - *restore_yarn_cache
@@ -38,8 +40,9 @@ commands:
             - node_modules
 
   lint:
+    description: Lints Favware projects
     steps:
-      checkout
+      - *checkout
       - *restore_yarn_cache
       - *run_yarn
       - run:
@@ -47,8 +50,9 @@ commands:
           command: yarn lint
 
   test:
+    description: Tests Favware projects
     steps:
-      checkout
+      - *checkout
       - *restore_yarn_cache
       - *run_yarn
       - run:
@@ -56,9 +60,9 @@ commands:
           command: yarn test:coverage
 
   build:
-    parallelism: 20
+    description: Builds Favware projects
     steps:
-      checkout
+      - *checkout
       - *restore_yarn_cache
       - *run_yarn
       - run:
@@ -71,8 +75,9 @@ commands:
             - dist
 
   process_artifacts:
+    description: Process artifacts for Favware projects
     steps:
-      checkout
+      - *checkout
       - *restore_yarn_cache
       - *run_yarn
       - *store_artifacts
@@ -84,43 +89,37 @@ jobs:
     docker:
       - image: circleci/node:10
     steps:
+      - setup
       - lint
       - test
       - build
+      - process_artifacts
   node-v11:
     docker:
       - image: circleci/node:11
     steps:
+      - setup
       - lint
       - test
       - build
+      - process_artifacts
   node-v12:
     docker:
       - image: circleci/node:12
     steps:
+      - setup
       - lint
       - test
       - build
+      - process_artifacts
 
 workflows:
   version: 2
   node-multi-build:
     jobs:
-      - setup
-      - node-v10:
-          requires:
-            - setup
-      - node-v11:
-          requires:
-            - setup
-      - node-v12:
-          requires:
-            - setup
-      - process_artifacts:
-          requires:
-            - node-v10
-            - node-v11
-            - nodev-12
+      - node-v10
+      - node-v11
+      - node-v12
 
   every-sunday-at-night:
     triggers:
@@ -131,18 +130,6 @@ workflows:
               only:
                 - master
     jobs:
-      - setup
-      - node-v10:
-          requires:
-            - setup
-      - node-v11:
-          requires:
-            - setup
-      - node-v12:
-          requires:
-            - setup
-      - process_artifacts:
-          requires:
-            - node-v10
-            - node-v11
-            - nodev-12
+      - node-v10
+      - node-v11
+      - node-v12
