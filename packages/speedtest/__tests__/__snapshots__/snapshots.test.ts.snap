@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot Testing NamedSpeedtest should match snapshot 1`] = `undefined`;
+
+exports[`Snapshot Testing eventemitter should match snapshot 1`] = `undefined`;
+
+exports[`Snapshot Testing roundNumber should match snapshot 1`] = `undefined`;
+
+exports[`Snapshot Testing speedtest should match snapshot 1`] = `[Function]`;

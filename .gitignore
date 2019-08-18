@@ -30,6 +30,3 @@ coverage/
 !.vscode/*.code-snippets
 .vs/
 *.iml
-
-# Unstable unfinished projects
-packages/speedtest/
