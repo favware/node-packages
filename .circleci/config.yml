@@ -38,6 +38,10 @@ commands:
             - ~/.cache/yarn
             - node_modules
       - run:
+          name: Build eslint-config
+          command: cd packages/eslint-config && yarn ci:build
+      - *run_yarn
+      - run:
           name: Lint all libraries
           command: yarn ci:lint
       - run:
