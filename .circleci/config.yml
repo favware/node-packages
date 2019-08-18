@@ -11,7 +11,7 @@ aliases:
         - yarn-packages-{{ arch }}-{{ .Branch }}-{{ checksum "yarn.lock" }}
         - yarn-packages-{{ arch }}-{{ .Branch }}-
         - yarn-packages-{{ arch }}-
-  - &run-yarn
+  - &run_yarn
     run:
       name: Install Packages
       command: yarn --frozen-lockfile
