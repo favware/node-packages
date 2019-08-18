@@ -1,3 +1,4 @@
+/* eslint-disable no-console, @typescript-eslint/no-explicit-any */
 import chalk from 'chalk';
 import moment from 'moment';
 import PluginError from 'plugin-error';

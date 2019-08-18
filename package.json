@@ -5,7 +5,7 @@
     "packages/*"
   ],
   "scripts": {
-    "lint": "lerna run lint --parallel --ignore @favware/speedtest",
+    "lint": "lerna run lint --parallel",
     "test": "jest",
     "build": "lerna run build --parallel --ignore @favware/speedtest",
     "predocs": "lerna run docs:clean --parallel && lerna run docs:build --parallel",

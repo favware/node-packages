@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 export type IPluginOptions = {
   configuration?: any;
   fix?: boolean;
