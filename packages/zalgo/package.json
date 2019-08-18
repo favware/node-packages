@@ -25,9 +25,8 @@
     "prism-media": ">=1",
     "ytdl-core": ">=0.29.5"
   },
-  "devDependencies": {
-    "@favware/eslint-config": "^3.0.0"
-  },
+  "dependencies": {},
+  "devDependencies": {},
   "files": [
     "dist"
   ],

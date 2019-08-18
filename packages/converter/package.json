@@ -20,12 +20,11 @@
     "docs:clean": "rimraf ./docsbuild",
     "docs:build": "tsc -p ./tsconfig.docs.json"
   },
+  "peerDependencies": {},
   "dependencies": {
     "array-flat-polyfill": "^1.0.1"
   },
-  "devDependencies": {
-    "@favware/eslint-config": "^3.0.0"
-  },
+  "devDependencies": {},
   "files": [
     "dist"
   ],

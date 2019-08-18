@@ -20,9 +20,9 @@
     "docs:clean": "rimraf ./docsbuild",
     "docs:build": "tsc -p ./tsconfig.docs.json"
   },
-  "devDependencies": {
-    "@favware/eslint-config": "^3.0.0"
-  },
+  "peerDependencies": {},
+  "dependencies": {},
+  "devDependencies": {},
   "files": [
     "dist"
   ],
