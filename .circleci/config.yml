@@ -25,9 +25,8 @@ aliases:
     checkout
 
 commands:
-
-  setup:
-    description: Initial setup for favware projects
+  nodejs:
+    description: Main NodeJS flow
     steps:
       - *checkout
       - *restore_yarn_cache
@@ -38,48 +37,15 @@ commands:
           paths:
             - ~/.cache/yarn
             - node_modules
-
-  lint:
-    description: Lints Favware projects
-    steps:
-      - *checkout
-      - *restore_yarn_cache
-      - *run_yarn
       - run:
           name: Lint all libraries
           command: yarn lint
-
-  test:
-    description: Tests Favware projects
-    steps:
-      - *checkout
-      - *restore_yarn_cache
-      - *run_yarn
       - run:
           name: Test all libraries
           command: yarn test:coverage
-
-  build:
-    description: Builds Favware projects
-    steps:
-      - *checkout
-      - *restore_yarn_cache
-      - *run_yarn
       - run:
           name: Build packages
           command: yarn build
-      - persist_to_workspace:
-          root: build
-          paths:
-            - node_modules
-            - dist
-
-  process_artifacts:
-    description: Process artifacts for Favware projects
-    steps:
-      - *checkout
-      - *restore_yarn_cache
-      - *run_yarn
       - *store_artifacts
       - *codecov
 
@@ -89,29 +55,17 @@ jobs:
     docker:
       - image: circleci/node:10
     steps:
-      - setup
-      - lint
-      - test
-      - build
-      - process_artifacts
+      - nodejs
   node-v11:
     docker:
       - image: circleci/node:11
     steps:
-      - setup
-      - lint
-      - test
-      - build
-      - process_artifacts
+      - nodejs
   node-v12:
     docker:
       - image: circleci/node:12
     steps:
-      - setup
-      - lint
-      - test
-      - build
-      - process_artifacts
+      - nodejs
 
 workflows:
   version: 2
