@@ -38,12 +38,8 @@ commands:
             - ~/.cache/yarn
             - node_modules
       - run:
-          name: Build eslint-config
-          command: cd packages/eslint-config && yarn ci:build
-      - *run_yarn
-      - run:
           name: Lint all libraries
-          command: yarn ci:lint
+          command: yarn lint
       - run:
           name: Test all libraries
           command: yarn ci:test
@@ -76,10 +72,10 @@ workflows:
       - node-v11
       - node-v12
 
-  every-sunday-at-night:
+  nightly:
     triggers:
       - schedule:
-          cron: "0 0 * * 0"
+          cron: 0 2 * * *
           filters:
             branches:
               only:

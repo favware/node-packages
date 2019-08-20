@@ -1,15 +1,16 @@
-import find from 'find';
+import glob from 'glob';
 import path from 'path';
 import fs from 'fs';
 import chalk from 'chalk';
-import { stripIndents } from "common-tags";
+import { stripIndents } from 'common-tags';
 
-const files = find.fileSync(/\.test\.(?:t|j)s$/, path.join(__dirname, '../packages'));
+let files = glob.sync('**/*.test.?(j|t)s?(x)', { cwd: path.join(__dirname, '../packages') });
+files = files.map(file => path.join(__dirname, '../packages', file));
 const onlyPattern = new RegExp(/(?:describe\.only|it\.only|test\.only)/, 'gm');
 
 let shouldError = false;
-let badFiles: string[] = [];
-let badPatterns: string[] = [];
+const badFiles: string[] = [];
+const badPatterns: string[] = [];
 
 for (const file of files) {
   const fileContent = fs.readFileSync(file, { encoding: 'utf8' });
@@ -25,14 +26,15 @@ for (const file of files) {
 }
 
 if (shouldError) {
+  // eslint-disable-next-line no-console
   console.error(stripIndents(
     `
       ${chalk.red('\nLooks like you left focused tests, I found these hits:')}
-
       ${badPatterns.map((pattern, index) => `- ${chalk.cyan(pattern)} \t${pattern.includes('describe') ? '' : '\t'}  in \t ${badFiles[index]}`).join('\n')}
-
-      ${chalk.cyan(`Please remove all the focused tests!\n`)}
+      ${chalk.cyan('Please remove all the focused tests!\n')}
     `
   ));
-  process.exit(1)
+  process.exit(1);
 }
+
+process.exit(0);

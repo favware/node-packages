@@ -14,8 +14,9 @@
     "prepublishOnly": "yarn build && yarn docs",
     "commit": "git-cz",
     "cz": "git-cz",
+    "up": "yarn upgrade-interactive",
     "scripts:validateNoOnly": "babel-node scripts/validateNoOnly --extensions \".ts\"",
-    "ci:lint": "lerna run lint --ignore @favware/speedtest",
+    "scripts:duplicateESLintConfig": "babel-node scripts/duplicateESLintConfig --extensions \".ts\"",
     "ci:test": "jest --collectCoverage --max-workers 2"
   },
   "devDependencies": {
@@ -27,24 +28,26 @@
     "@commitlint/cli": "^8.1.0",
     "@commitlint/config-conventional": "^8.1.0",
     "@types/common-tags": "^1.8.0",
-    "@types/find": "^0.2.1",
-    "@types/gulp": "^4.0.6",
-    "@types/gulp-rename": "^0.0.33",
+    "@types/glob": "^7.1.1",
     "@types/jest": "^24.0.17",
     "@types/js-yaml": "^3.12.1",
+    "@types/jsonfile": "^5.0.0",
     "@types/node": "^12.7.2",
     "@types/node-fetch": "^2.5.0",
     "@types/rollup-plugin-progress": "^1.1.0",
     "@types/through": "^0.0.29",
     "chalk": "^2.4.2",
     "common-tags": "^1.8.0",
+    "concurrently": "^4.1.2",
+    "cross-env": "^5.2.0",
     "cz-conventional-changelog": "3.0.2",
     "eslint": "^6.1.0",
-    "find": "^0.3.0",
+    "glob": "^7.1.4",
     "husky": "^3.0.4",
     "jest": "^24.9.0",
     "jest-circus": "^24.9.0",
     "jsdoc-to-markdown": "^5.0.0",
+    "jsonfile": "^5.0.0",
     "lerna": "^3.16.4",
     "lint-staged": "^9.2.3",
     "prism-media": "^1.0.2",
@@ -58,7 +61,6 @@
     "rollup-plugin-progress": "^1.1.1",
     "rollup-plugin-terser": "5.1.1",
     "rollup-plugin-typescript2": "^0.22.1",
-    "standard-version": "^7.0.0",
     "ts-jest": "^24.0.2",
     "ts-node": "^8.3.0",
     "tslint": "^5.18.0",
@@ -79,6 +81,10 @@
   "lint-staged": {
     "*.{js,ts,tsx}": [
       "yarn lint",
+      "git add"
+    ],
+    "packages/eslint-config/src/index.ts": [
+      "yarn scripts:duplicateESLintConfig",
       "git add"
     ]
   },
