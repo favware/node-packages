@@ -2,91 +2,9 @@
 
 exports[`ytdl-prismplayer play function should match snapshot 1`] = `[Function]`;
 
-exports[`ytdl-prismplayer should match snapshot 1`] = `
-"(url, options = {}) => __awaiter(this, void 0, void 0, function* () {
-    return new Promise((resolve, reject) => {
-        ytdl_core_1.default.getInfo(url, (err, info) => {
-            if (err) {
-                return reject(err);
-            }
-            // Prefer opus
-            const format = info.formats.find(filter);
-            const canDemux = format && Number(info.length_seconds) !== 0;
-            if (canDemux)
-                options = Object.assign({}, options, { filter });
-            else if (Number(info.length_seconds) !== 0)
-                options = Object.assign({}, options, { filter: 'audioonly' });
-            if (canDemux) {
-                const demuxer = new prism_media_1.default.opus.WebmDemuxer();
-                return resolve(ytdl_core_1.default.downloadFromInfo(info, options).pipe(demuxer).on('end', () => demuxer.destroy()));
-            }
-            const transcoder = new prism_media_1.default.FFmpeg({
-                args: [
-                    '-reconnect', '1',
-                    '-reconnect_streamed', '1',
-                    '-reconnect_delay_max', '5',
-                    '-i', nextBestFormat(info.formats).url,
-                    '-analyzeduration', '0',
-                    '-loglevel', '0',
-                    '-f', 's16le',
-                    '-ar', '48000',
-                    '-ac', '2'
-                ],
-            });
-            const opus = new prism_media_1.default.opus.Encoder({ frameSize: 960, channels: 2, rate: 48000 });
-            const stream = transcoder.pipe(transcoder).pipe(opus);
-            stream.on('close', () => {
-                transcoder.destroy();
-                opus.destroy();
-            });
-            return resolve(stream);
-        });
-    });
-})"
-`;
+exports[`ytdl-prismplayer should match snapshot 1`] = `[Function]`;
 
-exports[`ytdl-prismplayer should match snapshot 2`] = `
-"(url, options = {}) => __awaiter(this, void 0, void 0, function* () {
-    return new Promise((resolve, reject) => {
-        ytdl_core_1.default.getInfo(url, (err, info) => {
-            if (err) {
-                return reject(err);
-            }
-            // Prefer opus
-            const format = info.formats.find(filter);
-            const canDemux = format && Number(info.length_seconds) !== 0;
-            if (canDemux)
-                options = Object.assign({}, options, { filter });
-            else if (Number(info.length_seconds) !== 0)
-                options = Object.assign({}, options, { filter: 'audioonly' });
-            if (canDemux) {
-                const demuxer = new prism_media_1.default.opus.WebmDemuxer();
-                return resolve(ytdl_core_1.default.downloadFromInfo(info, options).pipe(demuxer).on('end', () => demuxer.destroy()));
-            }
-            const transcoder = new prism_media_1.default.FFmpeg({
-                args: [
-                    '-reconnect', '1',
-                    '-reconnect_streamed', '1',
-                    '-reconnect_delay_max', '5',
-                    '-i', nextBestFormat(info.formats).url,
-                    '-analyzeduration', '0',
-                    '-loglevel', '0',
-                    '-f', 's16le',
-                    '-ar', '48000',
-                    '-ac', '2'
-                ],
-            });
-            const opus = new prism_media_1.default.opus.Encoder({ frameSize: 960, channels: 2, rate: 48000 });
-            const stream = transcoder.pipe(transcoder).pipe(opus);
-            stream.on('close', () => {
-                transcoder.destroy();
-                opus.destroy();
-            });
-            return resolve(stream);
-        });
-    });
-})"
-`;
+exports[`ytdl-prismplayer should match snapshot 2`] = `[Function]`;
 
 exports[`ytdl-prismplayer should parse typing 1`] = `
 Object {

@@ -3,8 +3,14 @@ import { Readable } from 'stream';
 
 describe('ytdl-prismplayer', () => {
   test('should match snapshot', () => {
-    expect(play.toString()).toMatchSnapshot();
-    expect(NamedPlay.toString()).toMatchSnapshot();
+    expect(play).toBeDefined();
+    expect(NamedPlay).toBeDefined();
+
+    expect(play).toMatchSnapshot();
+    expect(NamedPlay).toMatchSnapshot();
+
+    expect(play).toBeInstanceOf(Function);
+    expect(NamedPlay).toBeInstanceOf(Function);
   });
 
   test('should parse typing', () => {
