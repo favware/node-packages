@@ -85,3 +85,10 @@ export const play = async (url: string, options: YTDLDownloadOptions = {}): Prom
 };
 
 export default play;
+export {
+  chooseFormat, downloadFromInfo, downloadOptions,
+  filterFormats, getBasicInfo, getInfo,
+  getURLVideoID, getVideoID, relatedVideo,
+  validateID, validateURL, videoFormat,
+  videoInfo
+} from 'ytdl-core';

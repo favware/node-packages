@@ -1,6 +1,6 @@
 <div align="center">
   <p>
-  <a href="https://favware.tech/ytdl-prismplayer"><img src="https://storage.googleapis.com/data-sunlight-146313.appspot.com/website-project-icons/ytdl-prismplayer.png" height="200" alt="logo"/></a>
+  <a href="https://favware.tech/prismplayer"><img src="https://storage.googleapis.com/data-sunlight-146313.appspot.com/website-project-icons/prismplayer.png" height="200" alt="logo"/></a>
   </p>
 
   <p>

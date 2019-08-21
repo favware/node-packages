@@ -86,14 +86,6 @@ the server has a relatively low [packet jitter](http://en.wikipedia.org/wiki/Jit
 ## Functions
 
 <dl>
-<dt><a href="#getSpeedtestClientConfig">getSpeedtestClientConfig()</a></dt>
-<dd><p>Gets Speedtest Configuration
-If no client configuration could be found it will default to a client based in Amsterdam, The Netherlands</p>
-</dd>
-<dt><a href="#getSpeedtestServerConfig">getSpeedtestServerConfig()</a></dt>
-<dd><p>Gets the configuration of a speedtest server
-If no server could configuration could be found it will default to a server in Amsterdam, The Netherlands</p>
-</dd>
 <dt><a href="#pingSingleServer">pingSingleServer()</a></dt>
 <dd><p>Pings a single server and returns the ping time based on process.hrtime()</p>
 </dd>
@@ -102,20 +94,6 @@ If no server could configuration could be found it will default to a server in A
 </dd>
 </dl>
 
-<a name="getSpeedtestClientConfig"></a>
-
-## getSpeedtestClientConfig()
-Gets Speedtest Configuration
-If no client configuration could be found it will default to a client based in Amsterdam, The Netherlands
-
-**Kind**: global function  
-<a name="getSpeedtestServerConfig"></a>
-
-## getSpeedtestServerConfig()
-Gets the configuration of a speedtest server
-If no server could configuration could be found it will default to a server in Amsterdam, The Netherlands
-
-**Kind**: global function  
 <a name="pingSingleServer"></a>
 
 ## pingSingleServer()
