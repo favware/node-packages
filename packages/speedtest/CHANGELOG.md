@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.1.0](https://github.com/favware/node-packages/compare/@favware/speedtest@0.0.2...@favware/speedtest@0.1.0) (2019-08-21)
+
+
+### Features
+
+* **ytdl-prismplayer:** export ytdl-core functions ([ad99f08](https://github.com/favware/node-packages/commit/ad99f08)), closes [#2](https://github.com/favware/node-packages/issues/2)
+
+
+
+
+
 ## 0.0.2 (2019-08-18)
 
 

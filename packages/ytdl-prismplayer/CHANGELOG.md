@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.2.0](https://github.com/favware/node-packages/compare/@favware/ytdl-prismplayer@2.1.1...@favware/ytdl-prismplayer@2.2.0) (2019-08-21)
+
+
+### Features
+
+* **ytdl-prismplayer:** export ytdl-core functions ([ad99f08](https://github.com/favware/node-packages/commit/ad99f08)), closes [#2](https://github.com/favware/node-packages/issues/2)
+
+
+
+
+
 ## 2.1.1 (2019-08-18)
 
 
