@@ -7,38 +7,47 @@ import {
 
 describe('ytdl-core validation', () => {
   test('should export chooseFormat', () => {
-    expect(chooseFormat.toString()).toMatchSnapshot();
+    expect(chooseFormat).toBeDefined();
+    expect(chooseFormat).toBeInstanceOf(Function);
   });
 
   test('should export downloadFromInfo', () => {
-    expect(downloadFromInfo.toString()).toMatchSnapshot();
+    expect(downloadFromInfo).toBeDefined();
+    expect(downloadFromInfo).toBeInstanceOf(Function);
   });
 
   test('should export filterFormats', () => {
-    expect(filterFormats.toString()).toMatchSnapshot();
+    expect(filterFormats).toBeDefined();
+    expect(filterFormats).toBeInstanceOf(Function);
   });
 
   test('should export getBasicInfo', () => {
-    expect(getBasicInfo.toString()).toMatchSnapshot();
+    expect(getBasicInfo).toBeDefined();
+    expect(getBasicInfo).toBeInstanceOf(Function);
   });
 
   test('should export getInfo', () => {
-    expect(getInfo.toString()).toMatchSnapshot();
+    expect(getInfo).toBeDefined();
+    expect(getInfo).toBeInstanceOf(Function);
   });
 
   test('should export getURLVideoID', () => {
-    expect(getURLVideoID.toString()).toMatchSnapshot();
+    expect(getURLVideoID).toBeDefined();
+    expect(getURLVideoID).toBeInstanceOf(Function);
   });
 
   test('should export getVideoID', () => {
-    expect(getVideoID.toString()).toMatchSnapshot();
+    expect(getVideoID).toBeDefined();
+    expect(getVideoID).toBeInstanceOf(Function);
   });
 
   test('should export validateID', () => {
-    expect(validateID.toString()).toMatchSnapshot();
+    expect(validateID).toBeDefined();
+    expect(validateID).toBeInstanceOf(Function);
   });
 
   test('should export validateURL', () => {
-    expect(validateURL.toString()).toMatchSnapshot();
+    expect(validateURL).toBeDefined();
+    expect(validateURL).toBeInstanceOf(Function);
   });
 });
