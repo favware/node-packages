@@ -1,0 +1,19 @@
+{
+  "groups": {
+    "default": {
+      "packages": [
+        "package.json",
+        "packages/converter/package.json",
+        "packages/crypto/package.json",
+        "packages/eslint-config/package.json",
+        "packages/milky-tslint/package.json",
+        "packages/querystring/package.json",
+        "packages/tslint-config/package.json",
+        "packages/unescape/package.json",
+        "packages/yamlreader/package.json",
+        "packages/ytdl-prismplayer/package.json",
+        "packages/zalgo/package.json"
+      ]
+    }
+  }
+}
