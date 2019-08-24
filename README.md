@@ -12,6 +12,8 @@
 
 ---
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/favware/node-packages.svg)](https://greenkeeper.io/)
+
 **Project Status**
 
 [![GitHub](https://img.shields.io/github/license/favware/node-packages?logo=github&style=flat-square)](https://github.com/favware/node-packages/blob/master/LICENSE.md)
