@@ -135,6 +135,10 @@ workflows:
             - node-v12
 
   nightly:
+    jobs:
+      - node-v10
+      - node-v11
+      - node-v12
     triggers:
       - schedule:
           cron: 0 2 * * *
@@ -142,7 +146,3 @@ workflows:
             branches:
               only:
                 - master
-    jobs:
-      - node-v10
-      - node-v11
-      - node-v12
