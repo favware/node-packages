@@ -4,39 +4,68 @@ orbs:
   codecov: codecov/codecov@1.0.5
 
 aliases:
-  - &restore_yarn_cache
-    restore_cache:
-      name: Restore Yarn Package Cache
-      keys:
-        - yarn-packages-{{ arch }}-{{ .Branch }}-{{ checksum "yarn.lock" }}
-        - yarn-packages-{{ arch }}-{{ .Branch }}-
-        - yarn-packages-{{ arch }}-
-  - &run_yarn
-    run:
-      name: Install Packages
-      command: yarn --frozen-lockfile
+  - &checkout
+    checkout
   - &store_artifacts
     store_artifacts:
       path: coverage
   - &codecov
     codecov/upload:
       file: coverage/*.json
-  - &checkout
-    checkout
+
+run_yarn: &run_yarn
+  name: Install yarn packages
+  command: yarn install --frozen-lockfile
+
+save_git: &save_git
+  save_cache:
+    name: Save Git Cache
+    key: git-code-{{ .Revision }}
+    paths:
+      - .git
+      - ~/.ssh
+
+save_yarn: &save_yarn
+  save_cache:
+    name: Save Yarn Package Cache
+    key: yarn-packages-{{ .Branch }}-{{ checksum "yarn.lock" }}
+    paths:
+      - ~/.cache/yarn
+      - node_modules
+
+restore_git: &restore_git
+  restore_cache:
+    name: Restore Git Cache
+    key: git-code-{{ .Revision }}
+
+restore_yarn: &restore_yarn
+  restore_cache:
+    name: Restore Yarn Package Cache
+    key: yarn-packages-{{ .Branch }}-{{ checksum "yarn.lock" }}
 
 commands:
+  greenkeeper_update:
+    description: Updates the lockfile if current branch is a greenkeeper branch
+    steps:
+    - *checkout
+    - <<: [*restore_git, *restore_yarn]
+    - run:
+        name: update lockfile
+        command:
+          export PATH=$PATH:$(yarn global bin) &&
+          yarn global add greenkeeper-lockfile@2 &&
+          greenkeeper-lockfile-update
+    - run:
+        name: Install dependencies
+        command: yarn install --frozen-lockfile
+    - <<: [*save_yarn, *save_git]
   nodejs:
-    description: Main NodeJS flow
+    description: Primary flow
     steps:
       - *checkout
-      - *restore_yarn_cache
-      - *run_yarn
-      - save_cache:
-          name: Save Yarn Package Cache
-          key: yarn-packages-{{ arch }}-{{ .Branch }}-{{ checksum "yarn.lock" }}
-          paths:
-            - ~/.cache/yarn
-            - node_modules
+      - <<: [*restore_git, *restore_yarn]
+      - run:
+          <<: *run_yarn
       - run:
           name: Lint all libraries
           command: yarn lint
@@ -45,9 +74,25 @@ commands:
           command: yarn ci:test
       - *store_artifacts
       - *codecov
+  greenkeeper_upload:
+    description: Uploads the lockfile if current branch is a greenkeeper branch
+    steps:
+    - *checkout
+    - <<: [*restore_git, *restore_yarn]
+    - run:
+        name: Upload lockfile
+        command:
+          export PATH=$PATH:$(yarn global bin) &&
+          yarn global add greenkeeper-lockfile@2 &&
+          greenkeeper-lockfile-update
 
 # List of jobs
 jobs:
+  lockfile_update:
+    docker:
+      - image: circleci/node:10
+    steps:
+      - greenkeeper_update
   node-v10:
     docker:
       - image: circleci/node:10
@@ -63,14 +108,31 @@ jobs:
       - image: circleci/node:12
     steps:
       - nodejs
+  lockfile_upload:
+    docker:
+      - image: circleci/node:10
+    steps:
+      - greenkeeper_upload
 
 workflows:
   version: 2
   node-multi-build:
     jobs:
-      - node-v10
-      - node-v11
-      - node-v12
+      - lockfile_update
+      - node-v10:
+          requires:
+            - lockfile_update
+      - node-v11:
+          requires:
+            - lockfile_update
+      - node-v12:
+          requires:
+            - lockfile_update
+      - lockfile_upload:
+          requires:
+            - node-v10
+            - node-v11
+            - node-v12
 
   nightly:
     triggers:
