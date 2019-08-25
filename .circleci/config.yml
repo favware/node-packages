@@ -13,6 +13,19 @@ aliases:
     codecov/upload:
       file: coverage/*.json
 
+job_node_10: &job_node_10
+  docker:
+    - image: circleci/node:10
+
+job_node_11: &job_node_11
+  docker:
+    - image: circleci/node:11
+
+job_node_12: &job_node_12
+  docker:
+    - image: circleci/node:12
+
+
 run_yarn: &run_yarn
   name: Install yarn packages
   command: yarn install --frozen-lockfile
@@ -93,28 +106,23 @@ commands:
 # List of jobs
 jobs:
   lockfile_update:
-    docker:
-      - image: circleci/node:10
+    <<: *job_node_10
     steps:
       - greenkeeper_update
   node-v10:
-    docker:
-      - image: circleci/node:10
+    <<: *job_node_10
     steps:
       - nodejs
   node-v11:
-    docker:
-      - image: circleci/node:11
+    <<: *job_node_11
     steps:
       - nodejs
   node-v12:
-    docker:
-      - image: circleci/node:12
+    <<: *job_node_12
     steps:
       - nodejs
   lockfile_upload:
-    docker:
-      - image: circleci/node:10
+    <<: *job_node_10
     steps:
       - greenkeeper_upload
 
