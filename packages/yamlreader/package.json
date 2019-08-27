@@ -55,5 +55,10 @@
   "directories": {
     "lib": "src",
     "test": "__tests__"
+  },
+  "greenkeeper": {
+    "lockfiles": {
+      "outOfRangeUpdatesOnly": true
+    }
   }
 }

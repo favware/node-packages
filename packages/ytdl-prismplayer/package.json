@@ -21,7 +21,7 @@
     "docs:build": "tsc -p ./tsconfig.docs.json"
   },
   "peerDependencies": {
-    "@types/node": "^12",
+    "@types/node": ">=10",
     "prism-media": ">=1",
     "ytdl-core": ">=0.29"
   },
@@ -54,5 +54,10 @@
   "directories": {
     "lib": "src",
     "test": "__tests__"
+  },
+  "greenkeeper": {
+    "lockfiles": {
+      "outOfRangeUpdatesOnly": true
+    }
   }
 }
