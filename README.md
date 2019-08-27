@@ -12,10 +12,9 @@
 
 ---
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/favware/node-packages.svg)](https://greenkeeper.io/)
-
 **Project Status**
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/favware/node-packages.svg?style=flat-square)](https://greenkeeper.io/)
 [![GitHub](https://img.shields.io/github/license/favware/node-packages?logo=github&style=flat-square)](https://github.com/favware/node-packages/blob/master/LICENSE.md)
 [![CircleCI](https://img.shields.io/circleci/build/github/favware/node-packages?logo=circleci&style=flat-square)](https://circleci.com/gh/favware/node-packages/tree/master)
 [![Codecov](https://img.shields.io/codecov/c/github/favware/node-packages?logo=codecov&style=flat-square)](https://codecov.io/gh/favware/node-packages)
