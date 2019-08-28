@@ -27,7 +27,7 @@ job_node_12: &job_node_12
 
 run_yarn: &run_yarn
   name: Install yarn packages
-  command: yarn install --frozen-lockfile
+  command: yarn install
 
 save_yarn: &save_yarn
   save_cache:
