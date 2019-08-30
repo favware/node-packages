@@ -94,6 +94,7 @@ const config = {
     'jest/no-if': 'off',
     'jest/prefer-inline-snapshots': 'off',
     'jest/expect-expect': [ 'error', { assertFunctionNames: [ 'expect', 'expectSaga', 'testSaga' ] } ],
+    'jest/require-top-level-describe': 'off',
 
     // Possible Errors
     'no-console': 'warn',
