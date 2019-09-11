@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.6](https://github.com/favware/node-packages/compare/@favware/converter@1.0.5...@favware/converter@1.0.6) (2019-09-11)
+
+
+### Bug Fixes
+
+* **converter:** fixed circular dependency ([1540e6b](https://github.com/favware/node-packages/commit/1540e6b))
+* **converter:** properly load array-flat-polyfill ([456b633](https://github.com/favware/node-packages/commit/456b633))
+
+
+
+
+
 ## [1.0.5](https://github.com/favware/node-packages/compare/@favware/converter@1.0.4...@favware/converter@1.0.5) (2019-09-11)
 
 **Note:** Version bump only for package @favware/converter

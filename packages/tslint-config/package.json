@@ -1,6 +1,6 @@
 {
   "name": "@favware/tslint-config",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "TSLint configuration for Favware projects",
   "author": "@favware",
   "license": "MIT",
