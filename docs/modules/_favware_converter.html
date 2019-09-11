@@ -1,0 +1,412 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>@favware/converter | Favware Node Packages</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="../assets/js/search.js" data-base="..">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="../index.html" class="title">Favware Node Packages</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="../globals.html">Globals</a>
+				</li>
+				<li>
+					<a href="_favware_converter.html">@favware/converter</a>
+				</li>
+			</ul>
+			<h1>Module @favware/converter</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div align="center">
+						<p>
+							<a href="https://favware.tech/converter"><img src="https://storage.googleapis.com/data-sunlight-146313.appspot.com/website-project-icons/converter.png" height="200" alt="logo"/></a>
+						</p>
+						<p>
+							<h1> @favware/converter</h1>
+							<h3> Unit convertion done right</h3>
+						</p>
+					</div>
+					<hr>
+					<p><strong>Project Status</strong></p>
+					<p><a href="https://github.com/favware/node-packages/blob/master/LICENSE.md"><img src="https://img.shields.io/github/license/favware/node-packages?logo=github&style=flat-square" alt="GitHub"></a>
+						<a href="https://circleci.com/gh/favware/node-packages/tree/master"><img src="https://img.shields.io/circleci/build/github/favware/node-packages?logo=circleci&style=flat-square" alt="CircleCI"></a>
+					<a href="https://codecov.io/gh/favware/node-packages"><img src="https://img.shields.io/codecov/c/github/favware/node-packages?logo=codecov&style=flat-square" alt="Codecov"></a></p>
+					<p><strong>Bundle Sizes</strong></p>
+					<p><a href="https://bundlephobia.com/result?p=@favware/converter"><img src="https://img.shields.io/bundlephobia/min/@favware/converter?label=converter%20-%20minified&logo=webpack&style=flat-square" alt="npm bundle size"></a>
+						<a href="https://bundlephobia.com/result?p=@favware/converter"><img src="https://img.shields.io/bundlephobia/minzip/@favware/converter?label=converter%20-%20minzipped&logo=webpack&style=flat-square" alt="npm bundle size"></a>
+					<a href="https://www.npmjs.com/package/@favware/converter"><img src="https://img.shields.io/npm/v/@favware/converter?color=crimson&label=converter%20version&logo=npm&style=flat-square" alt="npm"></a></p>
+					<p><strong>Social Media and Donations</strong></p>
+					<p><a href="https://favware.tech/redirect/server"><img src="https://img.shields.io/discord/512303595966824458?color=697EC4&label=Join%20Discord%20Server&logo=discord&logoColor=FDFEFE&style=flat-square" alt="Join Discord server"></a>
+						<a href="https://twitter.com/Favna_/follow"><img src="https://img.shields.io/twitter/follow/favna_?label=Follow%20@Favna_&logo=twitter&colorB=1DA1F2&style=flat-square" alt="Twitter Follow"></a>
+						<a href="https://www.patreon.com/bePatron?u=9336537"><img src="https://img.shields.io/badge/patreon-donate-brightgreen.svg?label=Donate%20with%20Patreon&logo=patreon&colorB=F96854&style=flat-square&link=https://www.patreon.com/bePatron?u=9336537" alt="Patreon Donate"></a>
+					<a href="https://www.patreon.com/bePatron?u=9336537"><img src="https://img.shields.io/badge/paypal-donate-brightgreen.svg?label=Donate%20with%20Paypal&logo=paypal&colorB=00457C&style=flat-square&link=https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=XMAYCF9SDHZ34" alt="PayPal Donate"></a></p>
+					<hr>
+					<p>An awesome and typesafe unit converter for NodeJS</p>
+					<p><strong>Key Features</strong></p>
+					<ul>
+						<li>Typesafe</li>
+						<li>Supports many different units</li>
+						<li>Bundled with Rollup for maximum size reduction (only 1kB minified + gzipped!), ES module support and browser support</li>
+						<li>Generated TypeScript declarations</li>
+						<li>Treeshakeable in Webpack</li>
+						<li>Useable in browsers</li>
+					</ul>
+					<a href="#install" id="install" style="color: inherit; text-decoration: none;">
+						<h1>Install</h1>
+					</a>
+					<p>Install with <a href="https://yarnpkg.com">yarn</a> or <a href="https://www.npmjs.com/">npm</a>:</p>
+					<pre><code class="language-sh">yarn add @favware/converter
+
+<span class="hljs-comment"># npm install @favware/converter</span></code></pre>
+					<a href="#usage" id="usage" style="color: inherit; text-decoration: none;">
+						<h1>Usage</h1>
+					</a>
+					<pre><code class="language-js"><span class="hljs-keyword">const</span> {convert, definitions} = <span class="hljs-built_in">require</span>(<span class="hljs-string">'@favware/converter'</span>);
+<span class="hljs-comment">// Or for babel / typescript:</span>
+<span class="hljs-comment">// import convert, { definitions } from '@favware/converter';</span>
+
+<span class="hljs-comment">// Just pass required arguments</span>
+<span class="hljs-built_in">console</span>.log(convert(<span class="hljs-number">100</span>, <span class="hljs-string">'g'</span>, <span class="hljs-string">'lb'</span>)); <span class="hljs-comment">// 0.22</span>
+
+<span class="hljs-comment">// Specify decimal precision</span>
+<span class="hljs-built_in">console</span>.log(convert(<span class="hljs-number">100</span>, <span class="hljs-string">'g'</span>, <span class="hljs-string">'lb'</span>, {<span class="hljs-attr">precision</span>: <span class="hljs-number">3</span>})); <span class="hljs-comment">// 0.220</span>
+
+<span class="hljs-comment">// Will not work if you pass units of different groups</span>
+<span class="hljs-built_in">console</span>.log(convert(<span class="hljs-number">100</span>, <span class="hljs-string">'g'</span>, <span class="hljs-string">'m'</span>)); <span class="hljs-comment">// ConverterError: g and m and not in the same definition group</span>
+
+<span class="hljs-comment">// Log all supported definitions</span>
+<span class="hljs-built_in">console</span>.log(definitions);</code></pre>
+				</div>
+			</section>
+			<section class="tsd-panel-group tsd-index-group">
+				<h2>Index</h2>
+				<section class="tsd-panel tsd-index-panel">
+					<div class="tsd-index-content">
+						<section class="tsd-index-section ">
+							<h3>Enumerations</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-enum tsd-parent-kind-module"><a href="../enums/_favware_converter.system.html" class="tsd-kind-icon">System</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Classes</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/_favware_converter.convertererror.html" class="tsd-kind-icon">Converter<wbr>Error</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Interfaces</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/_favware_converter.convertoptions.html" class="tsd-kind-icon">Convert<wbr>Options</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/_favware_converter.measurementsystemdata.html" class="tsd-kind-icon">Measurement<wbr>System<wbr>Data</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/_favware_converter.unitdata.html" class="tsd-kind-icon">Unit<wbr>Data</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/_favware_converter.unitdefinition.html" class="tsd-kind-icon">Unit<wbr>Definition</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Variables</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-variable tsd-parent-kind-module"><a href="_favware_converter.html#definitions" class="tsd-kind-icon">definitions</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Functions</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="_favware_converter.html#convert" class="tsd-kind-icon">convert</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="_favware_converter.html#roundnumber" class="tsd-kind-icon">round<wbr>Number</a></li>
+							</ul>
+						</section>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Variables</h2>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-module">
+					<a name="definitions" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> definitions</h3>
+					<div class="tsd-signature tsd-kind-icon">definitions<span class="tsd-signature-symbol">:</span> <a href="../interfaces/_favware_converter.unitdefinition.html" class="tsd-signature-type">UnitDefinition</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> =&nbsp;[{name: &#x27;acceleration&#x27;,primary: { default: &#x27;g&#x27;, ratio: 1 },data: [{ id: &#x27;gf&#x27;, system: System.PRIMARY, multiplier: 9.80665 },{ id: &#x27;m/s2&#x27;, system: System.PRIMARY, multiplier: 1 }],},{name: &#x27;angle&#x27;,primary: { default: &#x27;deg&#x27;, ratio: 1 },data: [{ id: &#x27;rad&#x27;, system: System.PRIMARY, multiplier: 180 / Math.PI },{ id: &#x27;deg&#x27;, system: System.PRIMARY, multiplier: 1 },{ id: &#x27;grad&#x27;, system: System.PRIMARY, multiplier: 9 / 10 },{ id: &#x27;arcmin&#x27;, system: System.PRIMARY, multiplier: 1 / 60 },{ id: &#x27;arcsec&#x27;, system: System.PRIMARY, multiplier: 1 / 3.6e+3 }],},{name: &#x27;apparentPower&#x27;,primary: { default: &#x27;va&#x27;, ratio: 1 },data: [{ id: &#x27;va&#x27;, system: System.PRIMARY, multiplier: 1 },{ id: &#x27;miva&#x27;, system: System.PRIMARY, multiplier: 1e-3 },{ id: &#x27;kva&#x27;, system: System.PRIMARY, multiplier: 1e+3 },{ id: &#x27;mva&#x27;, system: System.PRIMARY, multiplier: 1e+6 },{ id: &#x27;gva&#x27;, system: System.PRIMARY, multiplier: 1e+9 }],},{name: &#x27;area&#x27;,primary: { default: &#x27;m2&#x27;, ratio: 10.7639 },secondary: { default: &#x27;ft2&#x27;, ratio: 1 / 10.76391 },data: [{ id: &#x27;mm2&#x27;, system: System.PRIMARY, multiplier: 1e-6 },{ id: &#x27;cm2&#x27;, system: System.PRIMARY, multiplier: 1e-4 },{ id: &#x27;m2&#x27;, system: System.PRIMARY, multiplier: 1 },{ id: &#x27;dm&#x27;, system: System.PRIMARY, multiplier: 1e+2 },{ id: &#x27;ha&#x27;, system: System.PRIMARY, multiplier: 1e+4 },{ id: &#x27;km2&#x27;, system: System.PRIMARY, multiplier: 1e+6 },{ id: &#x27;in2&#x27;, system: System.SECONDARY, multiplier: 1 / 144 },{ id: &#x27;yd2&#x27;, system: System.SECONDARY, multiplier: 9 },{ id: &#x27;ft2&#x27;, system: System.SECONDARY, multiplier: 1 },{ id: &#x27;ac&#x27;, system: System.SECONDARY, multiplier: 43560 },{ id: &#x27;mi2&#x27;, system: System.SECONDARY, multiplier: 27878400 }],},{name: &#x27;charge&#x27;,primary: { default: &#x27;co&#x27;, ratio: 1 },data: [{ id: &#x27;co&#x27;, system: System.PRIMARY, multiplier: 1 },{ id: &#x27;mco&#x27;, system: System.PRIMARY, multiplier: 1e-3 },{ id: &#x27;mico&#x27;, system: System.PRIMARY, multiplier: 1e-6 },{ id: &#x27;nco&#x27;, system: System.PRIMARY, multiplier: 1e-9 },{ id: &#x27;pco&#x27;, system: System.PRIMARY, multiplier: 1e-12 }],},{name: &#x27;current&#x27;,primary: { default: &#x27;a&#x27;, ratio: 1 },data: [{ id: &#x27;a&#x27;, system: System.PRIMARY, multiplier: 1 },{ id: &#x27;ma&#x27;, system: System.PRIMARY, multiplier: 1e-3 },{ id: &#x27;ka&#x27;, system: System.PRIMARY, multiplier: 1e+3 }],},{name: &#x27;digital&#x27;,primary: { default: &#x27;b&#x27;, ratio: 1 / 8 },secondary: { default: &#x27;by&#x27;, ratio: 8 },data: [{ id: &#x27;b&#x27;, system: System.PRIMARY, multiplier: 1 },{ id: &#x27;kb&#x27;, system: System.PRIMARY, multiplier: 1024 },{ id: &#x27;mb&#x27;, system: System.PRIMARY, multiplier: 1048576 },{ id: &#x27;gb&#x27;, system: System.PRIMARY, multiplier: 1073741824 },{ id: &#x27;tb&#x27;, system: System.PRIMARY, multiplier: 1099511627776 },{ id: &#x27;by&#x27;, system: System.SECONDARY, multiplier: 1 },{ id: &#x27;kby&#x27;, system: System.SECONDARY, multiplier: 1024 },{ id: &#x27;mby&#x27;, system: System.SECONDARY, multiplier: 1048576 },{ id: &#x27;gby&#x27;, system: System.SECONDARY, multiplier: 1073741824 },{ id: &#x27;tby&#x27;, system: System.SECONDARY, multiplier: 1099511627776 }],},{name: &#x27;each&#x27;,primary: { default: &#x27;ea&#x27;, ratio: 1 },data: [{ id: &#x27;ea&#x27;, system: System.PRIMARY, multiplier: 1 },{ id: &#x27;dz&#x27;, system: System.PRIMARY, multiplier: 12 }],},{name: &#x27;energy&#x27;,primary: { default: &#x27;j&#x27;, ratio: 1 },data: [{ id: &#x27;j&#x27;, system: System.PRIMARY, multiplier: 1 },{ id: &#x27;kj&#x27;, system: System.PRIMARY, multiplier: 1e+3 },{ id: &#x27;wh&#x27;, system: System.PRIMARY, multiplier: 3.6e+3 },{ id: &#x27;miwh&#x27;, system: System.PRIMARY, multiplier: 3.6 },{ id: &#x27;kwh&#x27;, system: System.PRIMARY, multiplier: 3.6e+6 },{ id: &#x27;mwh&#x27;, system: System.PRIMARY, multiplier: 3.6e+9 },{ id: &#x27;gwh&#x27;, system: System.PRIMARY, multiplier: 3.6e+12 }],},{name: &#x27;force&#x27;,primary: { default: &#x27;n&#x27;, ratio: 1 },data: [{ id: &#x27;n&#x27;, system: System.PRIMARY, multiplier: 1 },{ id: &#x27;kn&#x27;, system: System.PRIMARY, multiplier: 1e+3 },{ id: &#x27;lbf&#x27;, system: System.PRIMARY, multiplier: 4.44822 }],},{name: &#x27;frequency&#x27;,primary: { default: &#x27;hz&#x27;, ratio: 1 },data: [{ id: &#x27;mihz&#x27;, system: System.PRIMARY, multiplier: 1e-3 },{ id: &#x27;hz&#x27;, system: System.PRIMARY, multiplier: 1 },{ id: &#x27;khz&#x27;, system: System.PRIMARY, multiplier: 1e+3 },{ id: &#x27;mhz&#x27;, system: System.PRIMARY, multiplier: 1e+6 },{ id: &#x27;ghz&#x27;, system: System.PRIMARY, multiplier: 1e+9 },{ id: &#x27;thz&#x27;, system: System.PRIMARY, multiplier: 1e+12 },{ id: &#x27;rpm&#x27;, system: System.PRIMARY, multiplier: 1 / 60 },{ id: &#x27;deg/s&#x27;, system: System.PRIMARY, multiplier: 1 / 3.6e+2 },{ id: &#x27;rad/s&#x27;, system: System.PRIMARY, multiplier: 1 / (Math.PI * 2) }],},{name: &#x27;illuminance&#x27;,primary: { default: &#x27;lx&#x27;, ratio: 1 / 10.76391 },secondary: { default: &#x27;ft-cd&#x27;, ratio: 10.76391 },data: [{ id: &#x27;lx&#x27;, system: System.PRIMARY, multiplier: 1 },{ id: &#x27;ft-cd&#x27;, system: System.SECONDARY, multiplier: 1 }],},{name: &#x27;length&#x27;,primary: { default: &#x27;m&#x27;, ratio: 3.28084 },secondary: { default: &#x27;ft&#x27;, ratio: 1 / 3.28084 },data: [{ id: &#x27;mm&#x27;, system: System.PRIMARY, multiplier: 1e-3 },{ id: &#x27;cm&#x27;, system: System.PRIMARY, multiplier: 1e-2 },{ id: &#x27;dm&#x27;, system: System.PRIMARY, multiplier: 1e-1 },{ id: &#x27;m&#x27;, system: System.PRIMARY, multiplier: 1 },{ id: &#x27;dem&#x27;, system: System.PRIMARY, multiplier: 10 },{ id: &#x27;hm&#x27;, system: System.PRIMARY, multiplier: 100 },{ id: &#x27;km&#x27;, system: System.PRIMARY, multiplier: 1e+3 },{ id: &#x27;in&#x27;, system: System.SECONDARY, multiplier: 12 },{ id: &#x27;yd&#x27;, system: System.SECONDARY, multiplier: 3 },{ id: &#x27;ft-us&#x27;, system: System.SECONDARY, multiplier: 1.000002 },{ id: &#x27;ft&#x27;, system: System.SECONDARY, multiplier: 1 },{ id: &#x27;fathom&#x27;, system: System.SECONDARY, multiplier: 6 },{ id: &#x27;mi&#x27;, system: System.SECONDARY, multiplier: 5280 },{ id: &#x27;nmi&#x27;, system: System.SECONDARY, multiplier: 6076.12 }],},{name: &#x27;mass&#x27;,primary: { default: &#x27;g&#x27;, ratio: 1 / 453.592 },secondary: { default: &#x27;lb&#x27;, ratio: 453.592 },data: [{ id: &#x27;mcg&#x27;, system: System.PRIMARY, multiplier: 1e-6 },{ id: &#x27;mg&#x27;, system: System.PRIMARY, multiplier: 1e-3 },{ id: &#x27;g&#x27;, system: System.PRIMARY, multiplier: 1 },{ id: &#x27;kg&#x27;, system: System.PRIMARY, multiplier: 1000 },{ id: &#x27;mt&#x27;, system: System.PRIMARY, multiplier: 1e+6 },{ id: &#x27;oz&#x27;, system: System.SECONDARY, multiplier: 1 / 16 },{ id: &#x27;lb&#x27;, system: System.SECONDARY, multiplier: 1 },{ id: &#x27;t&#x27;, system: System.SECONDARY, multiplier: 2e+3 }],},{name: &#x27;pace&#x27;,primary: { default: &#x27;s/m&#x27;, ratio: 0.3048 },secondary: { default: &#x27;s/ft&#x27;, ratio: 1 / 0.3048 },data: [{ id: &#x27;min/km&#x27;, system: System.PRIMARY, multiplier: 0.06 },{ id: &#x27;s/m&#x27;, system: System.PRIMARY, multiplier: 1 },{ id: &#x27;min/min&#x27;, system: System.SECONDARY, multiplier: 0.0113636 },{ id: &#x27;s/ft&#x27;, system: System.SECONDARY, multiplier: 1 }],},{name: &#x27;partsPer&#x27;,primary: { default: &#x27;ppm&#x27;, ratio: 1e-6 },data: [{ id: &#x27;ppm&#x27;, system: System.PRIMARY, multiplier: 1 },{ id: &#x27;ppb&#x27;, system: System.PRIMARY, multiplier: 1e-3 },{ id: &#x27;ppt&#x27;, system: System.PRIMARY, multiplier: 1e-6 },{ id: &#x27;ppq&#x27;, system: System.PRIMARY, multiplier: 1e-9 }],},{name: &#x27;power&#x27;,primary: { default: &#x27;w&#x27;, ratio: 1 },data: [{ id: &#x27;w&#x27;, system: System.PRIMARY, multiplier: 1 },{ id: &#x27;miw&#x27;, system: System.PRIMARY, multiplier: 1e-3 },{ id: &#x27;kw&#x27;, system: System.PRIMARY, multiplier: 1e+3 },{ id: &#x27;mew&#x27;, system: System.PRIMARY, multiplier: 1e+6 },{ id: &#x27;gw&#x27;, system: System.PRIMARY, multiplier: 1e+9 }],},{name: &#x27;pressure&#x27;,primary: { default: &#x27;kpa&#x27;, ratio: 0.00014503768078 },secondary: { default: &#x27;psi&#x27;, ratio: 1 / 0.00014503768078 },data: [{ id: &#x27;pa&#x27;, system: System.PRIMARY, multiplier: 1e-3 },{ id: &#x27;hpa&#x27;, system: System.PRIMARY, multiplier: 1e-1 },{ id: &#x27;kpa&#x27;, system: System.PRIMARY, multiplier: 1 },{ id: &#x27;mpa&#x27;, system: System.PRIMARY, multiplier: 1e+3 },{ id: &#x27;bar&#x27;, system: System.PRIMARY, multiplier: 100 },{ id: &#x27;torr&#x27;, system: System.PRIMARY, multiplier: 101325 / 760000 },{ id: &#x27;psi&#x27;, system: System.SECONDARY, multiplier: 1e-3 },{ id: &#x27;ksi&#x27;, system: System.SECONDARY, multiplier: 1 }],},{name: &#x27;reactiveEnergy&#x27;,primary: { default: &#x27;varh&#x27;, ratio: 1 },data: [{ id: &#x27;varh&#x27;, system: System.PRIMARY, multiplier: 1 },{ id: &#x27;mivarh&#x27;, system: System.PRIMARY, multiplier: 1e-3 },{ id: &#x27;kvarh&#x27;, system: System.PRIMARY, multiplier: 1e+3 },{ id: &#x27;mvarh&#x27;, system: System.PRIMARY, multiplier: 1e+6 },{ id: &#x27;gvarh&#x27;, system: System.PRIMARY, multiplier: 1e+9 }],},{name: &#x27;reactivePower&#x27;,primary: { default: &#x27;var&#x27;, ratio: 1 },data: [{ id: &#x27;var&#x27;, system: System.PRIMARY, multiplier: 1 },{ id: &#x27;mivar&#x27;, system: System.PRIMARY, multiplier: 1e-3 },{ id: &#x27;kvar&#x27;, system: System.PRIMARY, multiplier: 1e+3 },{ id: &#x27;mvar&#x27;, system: System.PRIMARY, multiplier: 1e+6 },{ id: &#x27;gvar&#x27;, system: System.PRIMARY, multiplier: 1e+9 }],},{name: &#x27;speed&#x27;,primary: { default: &#x27;km/h&#x27;, ratio: 1 / 1.609344 },secondary: { default: &#x27;mph&#x27;, ratio: 1.609344 },data: [{ id: &#x27;m/s&#x27;, system: System.PRIMARY, multiplier: 3.6 },{ id: &#x27;km/h&#x27;, system: System.PRIMARY, multiplier: 1 },{ id: &#x27;mph&#x27;, system: System.SECONDARY, multiplier: 1 },{ id: &#x27;knot&#x27;, system: System.SECONDARY, multiplier: 1.150779 },{ id: &#x27;ft/s&#x27;, system: System.SECONDARY, multiplier: 0.681818 }],},{name: &#x27;temperature&#x27;,primary: { default: &#x27;c&#x27;, ratio: 1, transform: (C: number) &#x3D;&gt; (C * 9 / 5) + 32 },secondary: { default: &#x27;f&#x27;, ratio: 1, transform: (F: number) &#x3D;&gt; (F - 32) * (5 / 9) },data: [{id: &#x27;c&#x27;, system: System.PRIMARY, multiplier: 1, valueShift: 0,},{id: &#x27;k&#x27;, system: System.PRIMARY, multiplier: 1, valueShift: 273.15,},{id: &#x27;f&#x27;, system: System.SECONDARY, multiplier: 1, valueShift: 0,},{id: &#x27;r&#x27;, system: System.SECONDARY, multiplier: 1, valueShift: 459.67,}],},{name: &#x27;time&#x27;,primary: { default: &#x27;s&#x27;, ratio: 1 },data: [{ id: &#x27;ns&#x27;, system: System.PRIMARY, multiplier: 1e-9 },{ id: &#x27;mu&#x27;, system: System.PRIMARY, multiplier: 1e-6 },{ id: &#x27;ms&#x27;, system: System.PRIMARY, multiplier: 1e-3 },{ id: &#x27;min&#x27;, system: System.PRIMARY, multiplier: 60 },{ id: &#x27;h&#x27;, system: System.PRIMARY, multiplier: 60 * 60 },{ id: &#x27;d&#x27;, system: System.PRIMARY, multiplier: 60 * 60 * 24 },{ id: &#x27;week&#x27;, system: System.PRIMARY, multiplier: 60 * 60 * 24 * 7 },{ id: &#x27;month&#x27;, system: System.PRIMARY, multiplier: 60 * 60 * 24 * 365.25 / 12 },{ id: &#x27;year&#x27;, system: System.PRIMARY, multiplier: 60 * 60 * 24 * 365.25 }],},{name: &#x27;voltage&#x27;,primary: { default: &#x27;v&#x27;, ratio: 1 },data: [{ id: &#x27;v&#x27;, system: System.PRIMARY, multiplier: 1 },{ id: &#x27;mv&#x27;, system: System.PRIMARY, multiplier: 1e-3 },{ id: &#x27;kv&#x27;, system: System.PRIMARY, multiplier: 1e+3 }],},{name: &#x27;volume&#x27;,primary: { default: &#x27;l&#x27;, ratio: 33.8140227 },secondary: { default: &#x27;fl-oz&#x27;, ratio: 1 / 33.8140227 },data: [{ id: &#x27;mm3&#x27;, system: System.PRIMARY, multiplier: 1e-6 },{ id: &#x27;cm3&#x27;, system: System.PRIMARY, multiplier: 1e-4 },{ id: &#x27;ml&#x27;, system: System.PRIMARY, multiplier: 1e-4 },{ id: &#x27;cl&#x27;, system: System.PRIMARY, multiplier: 1e-2 },{ id: &#x27;dl&#x27;, system: System.PRIMARY, multiplier: 1e-1 },{ id: &#x27;l&#x27;, system: System.PRIMARY, multiplier: 1 },{ id: &#x27;kl&#x27;, system: System.PRIMARY, multiplier: 1e+3 },{ id: &#x27;m3&#x27;, system: System.PRIMARY, multiplier: 1e+3 },{ id: &#x27;km3&#x27;, system: System.PRIMARY, multiplier: 1e+12 },{ id: &#x27;tsp&#x27;, system: System.SECONDARY, multiplier: 1 / 6 },{ id: &#x27;tbs&#x27;, system: System.SECONDARY, multiplier: 1 / 2 },{ id: &#x27;in3&#x27;, system: System.SECONDARY, multiplier: 0.55411 },{ id: &#x27;fl-oz&#x27;, system: System.SECONDARY, multiplier: 1 },{ id: &#x27;cup&#x27;, system: System.SECONDARY, multiplier: 8 },{ id: &#x27;pnt&#x27;, system: System.SECONDARY, multiplier: 16 },{ id: &#x27;qt&#x27;, system: System.SECONDARY, multiplier: 32 },{ id: &#x27;gal&#x27;, system: System.SECONDARY, multiplier: 128 },{ id: &#x27;ft3&#x27;, system: System.SECONDARY, multiplier: 957.506 },{ id: &#x27;yd3&#x27;, system: System.SECONDARY, multiplier: 25852.7 }],},{name: &#x27;volumeFlowRate&#x27;,primary: { default: &#x27;l/s&#x27;, ratio: 33.8140227 },secondary: { default: &#x27;fl-oz/s&#x27;, ratio: 1 / 33.8140227 },data: [{ id: &#x27;mm3/s&#x27;, system: System.PRIMARY, multiplier: 1e-6 },{ id: &#x27;cm3/s&#x27;, system: System.PRIMARY, multiplier: 1e-4 },{ id: &#x27;ml/s&#x27;, system: System.PRIMARY, multiplier: 1e-4 },{ id: &#x27;cl/s&#x27;, system: System.PRIMARY, multiplier: 1e-2 },{ id: &#x27;dl/s&#x27;, system: System.PRIMARY, multiplier: 1e-1 },{ id: &#x27;l/s&#x27;, system: System.PRIMARY, multiplier: 1 },{ id: &#x27;l/min&#x27;, system: System.PRIMARY, multiplier: 1 / 60 },{ id: &#x27;l/h&#x27;, system: System.PRIMARY, multiplier: 1 / 3.6e+3 },{ id: &#x27;kl/s&#x27;, system: System.PRIMARY, multiplier: 1e+3 },{ id: &#x27;kl/min&#x27;, system: System.PRIMARY, multiplier: 50 / 3 },{ id: &#x27;kl/h&#x27;, system: System.PRIMARY, multiplier: 5 / 18 },{ id: &#x27;m3/s&#x27;, system: System.PRIMARY, multiplier: 1e+3 },{ id: &#x27;m3/min&#x27;, system: System.PRIMARY, multiplier: 50 / 3 },{ id: &#x27;m3/h&#x27;, system: System.PRIMARY, multiplier: 5 / 18 },{ id: &#x27;km3/h&#x27;, system: System.PRIMARY, multiplier: 1e+12 },{ id: &#x27;tsp/s&#x27;, system: System.SECONDARY, multiplier: 1 / 6 },{ id: &#x27;tbs/s&#x27;, system: System.SECONDARY, multiplier: 1 / 2 },{ id: &#x27;in3/s&#x27;, system: System.SECONDARY, multiplier: 0.55411 },{ id: &#x27;in3/min&#x27;, system: System.SECONDARY, multiplier: 0.55411 / 60 },{ id: &#x27;in3/h&#x27;, system: System.SECONDARY, multiplier: 0.55411 / 3.6e+3 },{ id: &#x27;fl-oz/s&#x27;, system: System.SECONDARY, multiplier: 1 },{ id: &#x27;fl-oz/min&#x27;, system: System.SECONDARY, multiplier: 1 / 60 },{ id: &#x27;fl-oz/h&#x27;, system: System.SECONDARY, multiplier: 1 / 3.6e+3 },{ id: &#x27;cup/s&#x27;, system: System.SECONDARY, multiplier: 8 },{ id: &#x27;pnt/s&#x27;, system: System.SECONDARY, multiplier: 16 },{ id: &#x27;pnt/min&#x27;, system: System.SECONDARY, multiplier: 16 / 60 },{ id: &#x27;pnt/h&#x27;, system: System.SECONDARY, multiplier: 16 / 3.6e+3 },{ id: &#x27;qt/s&#x27;, system: System.SECONDARY, multiplier: 32 },{ id: &#x27;gal/s&#x27;, system: System.SECONDARY, multiplier: 128 },{ id: &#x27;gal/min&#x27;, system: System.SECONDARY, multiplier: 128 / 60 },{ id: &#x27;gal/h&#x27;, system: System.SECONDARY, multiplier: 128 / 3.6e+3 },{ id: &#x27;ft3/s&#x27;, system: System.SECONDARY, multiplier: 957.506 },{ id: &#x27;ft3/min&#x27;, system: System.SECONDARY, multiplier: 957.506 / 60 },{ id: &#x27;ft3/h&#x27;, system: System.SECONDARY, multiplier: 957.506 / 3.6e+3 },{ id: &#x27;yd3/s&#x27;, system: System.SECONDARY, multiplier: 25852.7 },{ id: &#x27;yd3/min&#x27;, system: System.SECONDARY, multiplier: 25852.7 / 60 },{ id: &#x27;yd3/h&#x27;, system: System.SECONDARY, multiplier: 25852.7 / 3.6e+3 }],}]</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/favware/node-packages/blob/d09f2ab/packages/converter/src/helpers.ts#L3">packages/converter/src/helpers.ts:3</a></li>
+						</ul>
+					</aside>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Functions</h2>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="convert" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> convert</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">convert<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, fromUnit<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, toUnit<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, options<span class="tsd-signature-symbol">?: </span><a href="../interfaces/_favware_converter.convertoptions.html" class="tsd-signature-type">ConvertOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/favware/node-packages/blob/d09f2ab/packages/converter/src/converter.ts#L12">packages/converter/src/converter.ts:12</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Converts input from one unit to another unit</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>value: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>The input value to convert</p>
+										</div>
+									</div>
+								</li>
+								<li>
+									<h5>fromUnit: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>The unit to convert from</p>
+										</div>
+									</div>
+								</li>
+								<li>
+									<h5>toUnit: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>The unit to convert to</p>
+										</div>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> options: <a href="../interfaces/_favware_converter.convertoptions.html" class="tsd-signature-type">ConvertOptions</a><span class="tsd-signature-symbol"> =&nbsp;{ precision: 8 }</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span>
+								<span class="tsd-signature-symbol"> | </span>
+								<span class="tsd-signature-type">string</span>
+							</h4>
+							<p>Will return a number if the function succeeded or a string with an error message if not</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="roundnumber" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> round<wbr>Number</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">round<wbr>Number<span class="tsd-signature-symbol">(</span>num<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, precision<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/favware/node-packages/blob/d09f2ab/packages/converter/src/helpers.ts#L396">packages/converter/src/helpers.ts:396</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Rounds any number to a given precision</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>num: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>The number to round</p>
+										</div>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> precision: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> =&nbsp;8</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+							<p>rounded off number</p>
+						</li>
+					</ul>
+				</section>
+			</section>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class="globals  ">
+						<a href="../globals.html"><em>Globals</em></a>
+					</li>
+					<li class="current tsd-kind-module">
+						<a href="_favware_converter.html">@favware/converter</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="_favware_crypto.html">@favware/crypto</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="_favware_milky_tslint.html">@favware/milky-<wbr>tslint</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="_favware_querystring.html">@favware/querystring</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="_favware_unescape.html">@favware/unescape</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="_favware_yamlreader.html">@favware/yamlreader</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="_favware_ytdl_prismplayer.html">@favware/ytdl-<wbr>prismplayer</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="_favware_zalgo.html">@favware/zalgo</a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+					<li class=" tsd-kind-enum tsd-parent-kind-module">
+						<a href="../enums/_favware_converter.system.html" class="tsd-kind-icon">System</a>
+					</li>
+					<li class=" tsd-kind-class tsd-parent-kind-module">
+						<a href="../classes/_favware_converter.convertererror.html" class="tsd-kind-icon">Converter<wbr>Error</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-module">
+						<a href="../interfaces/_favware_converter.convertoptions.html" class="tsd-kind-icon">Convert<wbr>Options</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-module">
+						<a href="../interfaces/_favware_converter.measurementsystemdata.html" class="tsd-kind-icon">Measurement<wbr>System<wbr>Data</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-module">
+						<a href="../interfaces/_favware_converter.unitdata.html" class="tsd-kind-icon">Unit<wbr>Data</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-module">
+						<a href="../interfaces/_favware_converter.unitdefinition.html" class="tsd-kind-icon">Unit<wbr>Definition</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-parent-kind-module">
+						<a href="_favware_converter.html#definitions" class="tsd-kind-icon">definitions</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="_favware_converter.html#convert" class="tsd-kind-icon">convert</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="_favware_converter.html#roundnumber" class="tsd-kind-icon">round<wbr>Number</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-module"><span class="tsd-kind-icon">Module</span></li>
+				<li class="tsd-kind-object-literal"><span class="tsd-kind-icon">Object literal</span></li>
+				<li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
+				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
+				<li class="tsd-kind-function tsd-has-type-parameter"><span class="tsd-kind-icon">Function with type parameter</span></li>
+				<li class="tsd-kind-index-signature"><span class="tsd-kind-icon">Index signature</span></li>
+				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
+				<li class="tsd-kind-type-alias tsd-has-type-parameter"><span class="tsd-kind-icon">Type alias with type parameter</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-enum"><span class="tsd-kind-icon">Enumeration</span></li>
+				<li class="tsd-kind-enum-member"><span class="tsd-kind-icon">Enumeration member</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-enum"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-enum"><span class="tsd-kind-icon">Method</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
+				<li class="tsd-kind-interface tsd-has-type-parameter"><span class="tsd-kind-icon">Interface with type parameter</span></li>
+				<li class="tsd-kind-constructor tsd-parent-kind-interface"><span class="tsd-kind-icon">Constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-interface"><span class="tsd-kind-icon">Method</span></li>
+				<li class="tsd-kind-index-signature tsd-parent-kind-interface"><span class="tsd-kind-icon">Index signature</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
+				<li class="tsd-kind-class tsd-has-type-parameter"><span class="tsd-kind-icon">Class with type parameter</span></li>
+				<li class="tsd-kind-constructor tsd-parent-kind-class"><span class="tsd-kind-icon">Constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-class"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class"><span class="tsd-kind-icon">Accessor</span></li>
+				<li class="tsd-kind-index-signature tsd-parent-kind-class"><span class="tsd-kind-icon">Index signature</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited accessor</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected accessor</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private accessor</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static property</span></li>
+				<li class="tsd-kind-call-signature tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static method</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="../assets/js/main.js"></script>
+<script>if (location.protocol == 'file:') document.write('<script src="../assets/js/search.js"><' + '/script>');</script>
+</body>
+</html>

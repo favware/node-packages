@@ -7,10 +7,8 @@
   "scripts": {
     "lint": "lerna run lint --parallel",
     "test": "jest",
-    "build": "lerna run build --parallel --ignore @favware/speedtest",
-    "predocs": "lerna run docs:clean --parallel && lerna run docs:build --parallel",
-    "docs": "lerna run docs --parallel",
-    "postdocs": "rimraf packages/**/docsbuild",
+    "build": "lerna run build --parallel --ignore @favware/speedtest --ignore @favware/utils",
+    "docs": "typedoc",
     "prepublishOnly": "yarn build && yarn docs",
     "commit": "git-cz",
     "cz": "git-cz",
@@ -65,7 +63,7 @@
     "ts-node": "^8.3.0",
     "tslint": "^5.20.0",
     "typedoc": "^0.15.0",
-    "typedoc-plugin-monorepo": "^0.1.0",
+    "typedoc-plugin-lerna-packages": "^0.1.6",
     "typescript": "^3.6.3",
     "ytdl-core": "^0.29.7"
   },

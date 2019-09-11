@@ -21,11 +21,32 @@
     "sourceMap": true,
     "strict": true
   },
-  "include": [
-    "scripts/*.ts", "scripts/validateNoOnly.ts"
-  ],
   "exclude": [
     "node_modules",
-    "**/*.spec.ts"
-  ]
+    "**/*.test.ts"
+  ],
+  "typedocOptions": {
+    "out": "./docs/",
+    "readme": "./README.md",
+    "name": "Favware Node Packages",
+    "exclude": [
+      "**/node_modules/**",
+      "**/*.test.ts",
+      "**/*.js"
+    ],
+    "mode": "modules",
+    "plugin": "typedoc-plugin-lerna-packages",
+    "lernaExclude": [
+      "@favware/speedtest"
+    ],
+    "pathExclude": [
+      "scripts/duplicateESLintConfig",
+      "scripts/validateNoOnly"
+    ],
+    "excludeExternals": true,
+    "excludePrivate": true,
+    "excludeProtected": true,
+    "excludeNotExported": true,
+    "skipInternal": true
+  }
 }
