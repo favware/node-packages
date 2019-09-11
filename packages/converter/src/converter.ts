@@ -11,11 +11,6 @@ import { ConvertOptions, MeasurementSystemData, UnitData, UnitDefinition, System
  */
 export const convert = (value: number, fromUnit: string, toUnit: string, options: ConvertOptions = { precision: 8 }): number | string => {
   try {
-    // Dynamically import array.flat() polyfill based on NodeJS version
-    if (parseFloat(process.version.slice(1)) < 11) {
-      require('array-flat-polyfill'); // eslint-disable-line
-    }
-
     if (!value || !fromUnit || !toUnit) throw new Error('missing_input');
     if (typeof value !== 'number') throw new Error('value_not_number');
     if (typeof fromUnit !== 'string') throw new Error('fromUnit_not_string');
