@@ -6,7 +6,7 @@ import { SpeedtestServerConfig, speedtestClientConfig } from './types';
 /**
  * @typedef SpeedEvents events output by this library
  */
-export type SpeedEvents = {
+export interface SpeedEvents {
   /**
    * Fired when data is download.
    * The progress in percent is passed through.
@@ -83,7 +83,7 @@ export type SpeedEvents = {
    * This event will not fire when an error is occurred
    */
   done: (done: any) => void;
-};
+}
 
 export const eventemitter: StrictEventEmitter<EventEmitter, SpeedEvents> = new EventEmitter();
 export default eventemitter;

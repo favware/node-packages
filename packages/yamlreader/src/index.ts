@@ -3,10 +3,10 @@ import yaml, { DumpOptions } from 'js-yaml';
 
 /**
  * FS Options
- * @typedef {fsOptions} fsOptions Options for the file reader
+ * @typedef {FsOptions} fsOptions Options for the file reader
  * @property
  */
-type fsOptions = {
+interface FsOptions {
   encoding?:
   | 'utf8'
   | 'ascii'
@@ -17,7 +17,7 @@ type fsOptions = {
   | 'binary'
   | 'hex';
   flag?: string;
-};
+}
 
 /**
  * YAMLReaderOptions for configuring both `fs` and `js-yaml`
@@ -36,7 +36,7 @@ type fsOptions = {
  * @property {boolean} [noCompatMode=false] if `true` don't try to be compatible with older yaml versions. Currently: don't quote "yes", "no" and so on, as required for YAML 1.1
  * @property {boolean} [condenseFlow=false] if `true` flow sequences will be condensed, omitting the space between `a, b`. Eg. `'[a,b]'`
  */
-export type YamlReaderOptions = DumpOptions & fsOptions;
+export type YamlReaderOptions = DumpOptions & FsOptions;
 
 export class YamlReaderError extends Error {
   /**

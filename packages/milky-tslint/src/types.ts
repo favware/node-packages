@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-export type IPluginOptions = {
+export interface PluginOptions {
   configuration?: any;
   fix?: boolean;
   quiet?: boolean;
@@ -8,16 +8,16 @@ export type IPluginOptions = {
   rulesDirectory?: string;
   tslint?: any;
   program?: any;
-};
+}
 
-export type IReportOptions = {
+export interface ReportOptions {
   emitError?: boolean;
   reportLimit?: number;
   summarizeFailureOutput?: boolean;
   allowWarnings?: boolean;
-};
+}
 
-export type ITSLintFile = {
+export interface TSLintFile {
   tslint: any;
   path: string;
   relative: string;
@@ -26,7 +26,7 @@ export type ITSLintFile = {
   isStream (): boolean;
 
   isNull (): boolean;
-};
+}
 
 export enum LogLevels {
   ERROR = 'error',

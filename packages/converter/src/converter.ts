@@ -1,15 +1,15 @@
 import { ConverterError, definitions, roundNumber } from '.';
-import { IConvertOptions, IMeasurementSystemData, IUnitData, IUnitDefinition, System } from './interfaces';
+import { ConvertOptions, MeasurementSystemData, UnitData, UnitDefinition, System } from './interfaces';
 
 /**
  * Converts input from one unit to another unit
  * @param {number} value The input value to convert
  * @param {string} fromUnit The unit to convert from
  * @param {string} toUnit The unit to convert to
- * @param {IConvertOptions} [options] Options for the conversion
+ * @param {ConvertOptions} [options] Options for the conversion
  * @returns {number | string} Will return a number if the function succeeded or a string with an error message if not
  */
-export const convert = (value: number, fromUnit: string, toUnit: string, options: IConvertOptions = { precision: 8 }): number | string => {
+export const convert = (value: number, fromUnit: string, toUnit: string, options: ConvertOptions = { precision: 8 }): number | string => {
   try {
     // Dynamically import array.flat() polyfill based on NodeJS version
     if (parseFloat(process.version.slice(1)) < 11) {
@@ -22,7 +22,7 @@ export const convert = (value: number, fromUnit: string, toUnit: string, options
     if (typeof toUnit !== 'string') throw new Error('toUnit_not_string');
 
     const supportedIds = Object.values(definitions)
-      .map((definition: IUnitDefinition) => definition.data.map((data: IUnitData) => data.id))
+      .map((definition: UnitDefinition) => definition.data.map((data: UnitData) => data.id))
       .flat();
 
     if (!supportedIds.includes(fromUnit)) throw new Error('fromUnit_not_supported');
@@ -30,32 +30,32 @@ export const convert = (value: number, fromUnit: string, toUnit: string, options
     if (!options.precision) options.precision = 2;
     if (fromUnit === toUnit) return value;
 
-    let definitionData: IUnitDefinition = {
+    let definitionData: UnitDefinition = {
       name: '',
       primary: { default: '', ratio: 1, transform: undefined },
       secondary: { default: '', ratio: 1, transform: undefined },
       data: [ { id: '', system: System.PRIMARY, multiplier: 1 } ],
     };
 
-    Object.values(definitions).forEach((definition: IUnitDefinition) => {
-      const idsInDefinition = definition.data.map((unit: IUnitData) => unit.id);
+    Object.values(definitions).forEach((definition: UnitDefinition) => {
+      const idsInDefinition = definition.data.map((unit: UnitData) => unit.id);
       if (idsInDefinition.includes(fromUnit) && idsInDefinition.includes(toUnit)) definitionData = definition;
     });
 
     if (!definitionData.name) throw new Error('no_data_found');
 
-    const fromData = definitionData.data.filter((unit: IUnitData) => unit.id === fromUnit)[0];
-    const toData = definitionData.data.filter((unit: IUnitData) => unit.id === toUnit)[0];
+    const fromData = definitionData.data.filter((unit: UnitData) => unit.id === fromUnit)[0];
+    const toData = definitionData.data.filter((unit: UnitData) => unit.id === toUnit)[0];
     let result = value * fromData.multiplier;
 
     if (fromData.valueShift) result -= fromData.valueShift;
 
     if (fromData.system !== toData.system) {
-      const transform = (definitionData[fromData.system] as IMeasurementSystemData).transform; // eslint-disable-line @typescript-eslint/unbound-method
+      const transform = (definitionData[fromData.system] as MeasurementSystemData).transform; // eslint-disable-line @typescript-eslint/unbound-method
       if (typeof transform === 'function') {
         result = transform(result);
       } else {
-        result *= (definitionData[fromData.system] as IMeasurementSystemData).ratio;
+        result *= (definitionData[fromData.system] as MeasurementSystemData).ratio;
       }
     }
 

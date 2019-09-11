@@ -7,7 +7,7 @@ export type SpeedtestOptions = Partial<{
   };
 }>;
 
-export type SpeedtestConfigData = {
+export interface SpeedtestConfigData {
   settings: {
     client: {
       ip: string;
@@ -115,19 +115,19 @@ export type SpeedtestConfigData = {
       }[];
     };
   };
-};
+}
 
-export type SpeedtestServerData = {
+export interface SpeedtestServerData {
   settings: {
     servers: {
       server: SpeedtestServerConfig[];
     };
   };
-};
+}
 
 export type speedtestClientConfig = Pick<SpeedtestConfigData['settings'], 'client' | 'times' | 'download' | 'upload'>;
 
-export type SpeedtestServerConfig = {
+export interface SpeedtestServerConfig {
   url: string;
   lat: string;
   lon: string;
@@ -142,16 +142,16 @@ export type SpeedtestServerConfig = {
   distMi: number;
   bestPing: number;
   [key: string]: string | number;
-};
+}
 
-export type LatLng = {
+export interface LatLng {
   lat: number;
   lng: number;
-};
+}
 
-export type SpeedtestInfo = {
+export interface SpeedtestInfo {
   config: speedtestClientConfig;
   servers: SpeedtestServerConfig[];
   bestServers: SpeedtestServerConfig[];
   bestServer: SpeedtestServerConfig;
-};
+}

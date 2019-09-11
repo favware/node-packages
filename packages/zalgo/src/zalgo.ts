@@ -2,34 +2,34 @@ import chars from './chars';
 
 /**
  * Options for the Zalgo screw up
- * @typedef {IZalgoOptions} IZalgoOptions Options for the Zalgo
+ * @typedef {ZalgoOptions} IZalgoOptions Options for the Zalgo
  * @property {boolean} up Whether the zalgo should go up
  * @property {boolean} middle Whether the zalgo should go in the middle
  * @property {boolean} down Whether the zalgo should go downards
  * @property {'mini' | 'maxi'} size Whether the zalgo should be mini or maxi
  */
-export type IZalgoOptions = {
+export interface ZalgoOptions {
   up?: boolean;
   middle?: boolean;
   down?: boolean;
   size?: 'mini' | 'maxi' | '';
-};
+}
 
 /**
  * Counts map for the zalgo
- * @typedef {IZalgoCountsMap} IZalgoCountsMap
+ * @typedef {ZalgoCountsMap} IZalgoCountsMap
  * @property {number} up
  * @property {number} middle
  * @property {number} down
  * @private
  */
-type IZalgoCountsMap = {
+interface ZalgoCountsMap {
   up: number;
   middle: number;
   down: number;
 
   [indexSingature: string]: number;
-};
+}
 
 /**
  * @class
@@ -93,7 +93,7 @@ const randomizer = (maximum: number): number => ~~(Math.random() * maximum);
  * @name zalgo
  * @description Zalgolize any text
  * @param {string} text Input text to zalgolize
- * @param {IZalgoOptions} [options] Options for the Zalgo
+ * @param {ZalgoOptions} [options] Options for the Zalgo
  * @returns {string}
  *
  * @example
@@ -107,7 +107,7 @@ const randomizer = (maximum: number): number => ~~(Math.random() * maximum);
  * // > ŝ̜̩͇̼̥̼́̏͢o͎͊͜ḿ̛̩̳̖͕̞̩̭ͪe͖̺̣̹̺̋̀͛̽͝ ̖͍̭͓̯̠͑͑͢t̼̪̋͌͢eͯ̋͏͖͎͍̩̭̮x̢͚̄̾̀̈ͧ̓ͩ̚t̪ͫ͝
  *
  */
-export const zalgo = (text: string, options: IZalgoOptions = {
+export const zalgo = (text: string, options: ZalgoOptions = {
   up: true, middle: true, down: true, size: '',
 }): string => {
   try {
@@ -121,7 +121,7 @@ export const zalgo = (text: string, options: IZalgoOptions = {
     const splitText = unicodeStringSplitter(text);
     const splitTextLength = splitText.length;
 
-    let counts: IZalgoCountsMap;
+    let counts: ZalgoCountsMap;
     let result = '';
     const types: string[] = [];
 

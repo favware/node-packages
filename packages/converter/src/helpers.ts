@@ -1,6 +1,6 @@
-import { IUnitDefinition, System } from './interfaces';
+import { UnitDefinition, System } from './interfaces';
 
-export const definitions: IUnitDefinition[] = [
+export const definitions: UnitDefinition[] = [
   {
     name: 'acceleration',
     primary: { default: 'g', ratio: 1 },

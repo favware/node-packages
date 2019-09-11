@@ -5,7 +5,7 @@ import PluginError from 'plugin-error';
 import through from 'through';
 import TSLint from 'tslint';
 import { RuleFailure } from 'tslint/lib/language/rule/rule';
-import { IPluginOptions, LogLevels, LintFormatters, ITSLintFile, IReportOptions } from './types';
+import { PluginOptions, LogLevels, LintFormatters, TSLintFile, ReportOptions } from './types';
 import eventemitter from './events';
 
 // eslint-disable-next-line
@@ -23,11 +23,11 @@ const isString = (value: any): boolean => {
 
 /**
  * Returns the TSLint from the options, or if not set, the default TSLint.
- * @param {IPluginOptions} options
+ * @param {PluginOptions} options
  * @returns {any} TSLint module
  * @ignore
  */
-const getTslint = (options: IPluginOptions): any => {
+const getTslint = (options: PluginOptions): any => {
   if (options && options.tslint) {
     return options.tslint;
   }
@@ -56,14 +56,14 @@ const log = (message: string, level?: LogLevels) => {
   }
 };
 
-let unscopedPluginOptions: IPluginOptions;
+let unscopedPluginOptions: PluginOptions;
 
 /**
  * @method milkyLint
  * @description TSLint plugin for Gulp
  * @param pluginOptions Options to pass to the plugin
  */
-export const milkyLint = (pluginOptions: IPluginOptions = {}) => {
+export const milkyLint = (pluginOptions: PluginOptions = {}) => {
   unscopedPluginOptions = pluginOptions;
 
   const options: TSLint.ILinterOptions = {
@@ -77,7 +77,7 @@ export const milkyLint = (pluginOptions: IPluginOptions = {}) => {
   const linter = getTslint(pluginOptions);
   const tslint = new linter.Linter(options, pluginOptions.program);
 
-  return map((file: ITSLintFile, cb: (error: any, file?: ITSLintFile) => void) => {
+  return map((file: TSLintFile, cb: (error: any, file?: TSLintFile) => void) => {
     if (file.isNull()) return cb(null, file);
     if (file.isStream()) return cb(new PluginError('@favware/milky-tslint', 'streaming is not supported'));
 
@@ -101,7 +101,7 @@ export const milkyLint = (pluginOptions: IPluginOptions = {}) => {
  * @description Reporter for milky-tslint
  * @param options Reporter options
  */
-export const milkyReport = (options: IReportOptions = {
+export const milkyReport = (options: ReportOptions = {
   emitError: false, reportLimit: 0, summarizeFailureOutput: true, allowWarnings: false,
 }) => {
   if (!options.emitError) options.emitError = false;
@@ -109,12 +109,12 @@ export const milkyReport = (options: IReportOptions = {
   if (!options.summarizeFailureOutput) options.summarizeFailureOutput = true;
   if (!options.allowWarnings) options.allowWarnings = false;
 
-  const errorFiles: ITSLintFile[] = [];
+  const errorFiles: TSLintFile[] = [];
   let allFailures: RuleFailure[] = [];
 
   let totalReported = 0;
 
-  const reportFailures = (file: ITSLintFile) => {
+  const reportFailures = (file: TSLintFile) => {
     if (file.tslint) {
       let errorCount = file.tslint.errorCount;
       if (!options.allowWarnings) errorCount += file.tslint.warningCount;

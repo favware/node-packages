@@ -1,13 +1,13 @@
 /**
  * Interface for the characters object
- * @typedef {IChars} IChars characters object
+ * @typedef {Chars} IChars characters object
  * @property {string[]} [all] All characters
  * @property {string[]} up characters going up
  * @property {string[]} middle characters in the middle
  * @property {string[]} down characters going below
  * @property {RegExp} [pattern] Stored RegExp pattern
  */
-export type IChars = {
+export interface Chars {
   all?: string[];
   up: string[];
   middle: string[];
@@ -15,7 +15,7 @@ export type IChars = {
   pattern?: RegExp;
 
   [indexSignature: string]: string[] | RegExp | undefined;
-};
+}
 
 /* eslint-disable max-len */
 /**
@@ -28,7 +28,7 @@ export type IChars = {
  *
  * console.log(chars);
  */
-export const chars: IChars = {
+export const chars: Chars = {
   up: [ '̍', '̎', '̄', '̅', '̿', '̑', '̆', '̐', '͒', '͗', '͑', '̇', '̈', '̊', '͂', '̓', '̈́', '͊', '͋', '͌', '̃', '̂', '̌', '͐', '̀', '́', '̋', '̏', '̒', '̓', '̔', '̽', '̉', 'ͣ', 'ͤ', 'ͥ', 'ͦ', 'ͧ', 'ͨ', 'ͩ', 'ͪ', 'ͫ', 'ͬ', 'ͭ', 'ͮ', 'ͯ', '̾', '͛', '͆', '̚' ],
   middle: [ '̕', '̛', '̀', '́', '͘', '̡', '̢', '̧', '̨', '̴', '̵', '̶', '͏', '͜', '͝', '͞', '͟', '͠', '͢', '̸', '̷', '͡', '҉' ],
   down: [ '̖', '̗', '̘', '̙', '̜', '̝', '̞', '̟', '̠', '̤', '̥', '̦', '̩', '̪', '̫', '̬', '̭', '̮', '̯', '̰', '̱', '̲', '̳', '̹', '̺', '̻', '̼', 'ͅ', '͇', '͈', '͉', '͍', '͎', '͓', '͔', '͕', '͖', '͙', '͚', '̣' ],

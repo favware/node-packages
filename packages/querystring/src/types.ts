@@ -5,11 +5,11 @@
  * @property {string} [equals] equals sign the querystring should use
  * @property {boolean} [includeQuestion] whether the querystring should be prefixed with a `?`
  */
-export type StringifyOptions = {
+export interface StringifyOptions {
   separator?: string;
   equals?: string;
   includeQuestion?: boolean;
-};
+}
 
 /**
  * Options for the Parse function
@@ -17,10 +17,10 @@ export type StringifyOptions = {
  * @property {string} [separator] separator the querystring has
  * @property {string} [equals] equals sign the querystring has
  */
-export type ParseOptions = {
+export interface ParseOptions {
   separator?: string;
   equals?: string;
-};
+}
 
 /**
  * Generic object for type definitions
@@ -28,9 +28,9 @@ export type ParseOptions = {
  * @property {any} key String based key with value of any type
  * @private
  */
-export type QuerystringObject = {
+export interface QuerystringObject {
   [key: string]: string | number | boolean | any; // eslint-disable-line @typescript-eslint/no-explicit-any
-};
+}
 
 /**
  * Extension to generic object defining an absolute error property

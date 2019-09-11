@@ -30,8 +30,9 @@ const config = {
     '@typescript-eslint/prefer-interface': 'off',
     '@typescript-eslint/consistent-type-definitions': [
       'error',
-      'type'
+      'interface'
     ],
+    '@typescript-eslint/interface-name-prefix': [ 'error', { prefixWithI: 'never' } ],
     '@typescript-eslint/await-thenable': 'error',
     '@typescript-eslint/ban-types': [
       'error',
