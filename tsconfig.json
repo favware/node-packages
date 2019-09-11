@@ -35,7 +35,6 @@
       "**/*.js"
     ],
     "mode": "modules",
-    "plugin": "typedoc-plugin-lerna-packages",
     "lernaExclude": [
       "@favware/speedtest"
     ],
@@ -46,7 +45,6 @@
     "excludeExternals": true,
     "excludePrivate": true,
     "excludeProtected": true,
-    "excludeNotExported": true,
-    "skipInternal": true
+    "excludeNotExported": true
   }
 }

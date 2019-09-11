@@ -4223,6 +4223,15 @@ fs-extra@8.1.0, fs-extra@^8.1.0:
     jsonfile "^4.0.0"
     universalify "^0.1.0"
 
+fs-extra@^6.0.1:
+  version "6.0.1"
+  resolved "https://registry.yarnpkg.com/fs-extra/-/fs-extra-6.0.1.tgz#8abc128f7946e310135ddc93b98bddb410e7a34b"
+  integrity sha512-GnyIkKhhzXZUWFCaJzvyDLEEgDkPfb4/TPvJCJVuS8MWZgoSsErf++QpiAlDnKFcqhRlm+tIOcencCjyJE6ZCA==
+  dependencies:
+    graceful-fs "^4.1.2"
+    jsonfile "^4.0.0"
+    universalify "^0.1.0"
+
 fs-minipass@^1.2.5:
   version "1.2.6"
   resolved "https://registry.yarnpkg.com/fs-minipass/-/fs-minipass-1.2.6.tgz#2c5cc30ded81282bfe8a0d7c7c1853ddeb102c07"
@@ -9009,10 +9018,17 @@ typedoc-default-themes@^0.6.0:
     lunr "^2.3.6"
     underscore "^1.9.1"
 
-typedoc-plugin-lerna-packages@^0.1.6:
-  version "0.1.6"
-  resolved "https://registry.yarnpkg.com/typedoc-plugin-lerna-packages/-/typedoc-plugin-lerna-packages-0.1.6.tgz#64352dd17827fb17607ea2334731f90572776a4f"
-  integrity sha512-kkOwbLwxrPclb5Rl7clUi3OUEPkAkS13UGBjymQRvF8CLP5g5tHAW5iaduCnfnldgc5Z3nKURPMO3H0eGYf0IA==
+typedoc-plugin-lerna-packages@^0.2.1:
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/typedoc-plugin-lerna-packages/-/typedoc-plugin-lerna-packages-0.2.1.tgz#abb095116ba1a4866df391127e34ef1708346945"
+  integrity sha512-rYYWUFI9AjDIjOUbK915Bgd/pCGc9sIDEvSlKFW22LCMVsOfgTkw/UFEksVp/bxqVGcr24GzXXb/IUYsWKkl9Q==
+
+typedoc-plugin-nojekyll@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/typedoc-plugin-nojekyll/-/typedoc-plugin-nojekyll-1.0.1.tgz#d6879d4118bbf10efe3feb3b766b69a09c80b3ef"
+  integrity sha512-hdFMhn0vAFCwepihSaVVs5yyImjo2FCX/OVQW89lrrqoARYHlAchOki4BQug23UqFSrYdykUu8yP4gD0M48qbw==
+  dependencies:
+    fs-extra "^6.0.1"
 
 typedoc@^0.15.0:
   version "0.15.0"
