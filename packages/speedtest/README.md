@@ -80,29 +80,3 @@ necessary to do this. It is certainly possible to copy Ookla's test method in no
 
 The test results use correction factors which were derived by dividing bitrates recorded from speedtest.net by raw bitrates recorded using this module, using averages over a statistically insufficient number of tests. Even in consideration of this, the current method is likely to produce very similar results as speedtest.net, as long as the internet connection with
 the server has a relatively low [packet jitter](http://en.wikipedia.org/wiki/Jitter#Packet_jitter_in_computer_networks).
-
-# Documentation
-
-## Functions
-
-<dl>
-<dt><a href="#pingSingleServer">pingSingleServer()</a></dt>
-<dd><p>Pings a single server and returns the ping time based on process.hrtime()</p>
-</dd>
-<dt><a href="#pingServers">pingServers()</a></dt>
-<dd><p>Loops all servers and pings each to determine the best server to use</p>
-</dd>
-</dl>
-
-<a name="pingSingleServer"></a>
-
-## pingSingleServer()
-Pings a single server and returns the ping time based on process.hrtime()
-
-**Kind**: global function  
-<a name="pingServers"></a>
-
-## pingServers()
-Loops all servers and pings each to determine the best server to use
-
-**Kind**: global function  

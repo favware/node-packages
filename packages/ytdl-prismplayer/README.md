@@ -85,17 +85,3 @@ async function play(connection, url) {
     });
 }
 ```
-
-# Documentation
-
-<a name="play"></a>
-
-## play(url, [options]) ⇒ <code>Promise.&lt;Readable&gt;</code>
-**Kind**: global function  
-**Returns**: <code>Promise.&lt;Readable&gt;</code> - Readable Stream ([https://nodejs.org/api/stream.html#stream_class_stream_readable](https://nodejs.org/api/stream.html#stream_class_stream_readable))  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| url | <code>string</code> | YouTube Video URL that should be played |
-| [options] | <code>YTDLDownloadOptions</code> | Any extra options to pass to ytdl, see [https://github.com/fent/node-ytdl-core/#ytdlurl-options](https://github.com/fent/node-ytdl-core/#ytdlurl-options) |
-
