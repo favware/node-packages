@@ -59,3 +59,5 @@ const { readYaml } = require('@favware/yamlreader');
 const data = readYaml('/path/to/some/yaml/file');
 console.log(data) // => JavaScript object with the keys from the yaml
 ```
+
+## [API Documentation](https://favware.github.io/node-packages/modules/_favware_yamlreader.html)

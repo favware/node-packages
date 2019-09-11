@@ -96,3 +96,5 @@ console.log(parse('?prop=value&prop2=value2', {separator: '&', equals: '='}));
 console.log(parse('prop=value&&prop2=value2', {separator: '&&', equals: '='}));
 //=> {prop: 'value', prop2: 'value2'}
 ```
+
+## [API Documentation](https://favware.github.io/node-packages/modules/_favware_querystring.html)

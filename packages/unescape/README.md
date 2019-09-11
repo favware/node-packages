@@ -68,3 +68,5 @@ console.log(unescape`awesome text with some ${text} section`);
 // Log the supported characters
 console.log(charSets);
 ```
+
+## [API Documentation](https://favware.github.io/node-packages/modules/_favware_unescape.html)

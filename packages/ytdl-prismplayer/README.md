@@ -85,3 +85,5 @@ async function play(connection, url) {
     });
 }
 ```
+
+## [API Documentation](https://favware.github.io/node-packages/modules/_favware_ytdl_prismplayer.html)

@@ -70,3 +70,5 @@ banish('ŝ̜̩͇̼̥̼́̏͢o͎͊͜ḿ̛̩̳̖͕̞̩̭ͪe͖̺̣̹̺̋̀͛̽͝ �
 // To log all the supported chars use:
 console.log(chars);
 ```
+
+## [API Documentation](https://favware.github.io/node-packages/modules/_favware_zalgo.html)

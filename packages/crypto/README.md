@@ -71,3 +71,5 @@ const { Radix } = require('@favware/crypto');
 // import Radix from '@favware/crypto'
 crypto(160, Radix.base64);
 ```
+
+## [API Documentation](https://favware.github.io/node-packages/modules/_favware_crypto.html)

@@ -80,6 +80,10 @@ Before you can develop on packages in this repository you'll have to follow a fe
 2. Install Yarn package manager: `npm i -g yarn`
 3. Globally install CLI tools: `yarn global add commitizen eslint jest-cli lerna rollup ts-node tslint typescript`
 
+## API Documentation
+
+The documentation for all packages can be found on this repository's [github.io page](https://favware.github.io/node-packages/)
+
 * * *
 
 ## About

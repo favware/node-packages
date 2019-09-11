@@ -71,3 +71,5 @@ console.log(convert(100, 'g', 'm')); // ConverterError: g and m and not in the s
 // Log all supported definitions
 console.log(definitions);
 ```
+
+## [API Documentation](https://favware.github.io/node-packages/modules/_favware_converter.html)

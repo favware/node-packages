@@ -204,3 +204,5 @@ const reportOptions = {
     allowWarnings: false
 };
 ```
+
+## [API Documentation](https://favware.github.io/node-packages/modules/_favware_milky_tslint.html)

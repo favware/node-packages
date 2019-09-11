@@ -51,3 +51,5 @@ yarn add @favware/eslint-config
   ]
 }
 ```
+
+## [API Documentation](https://favware.github.io/node-packages/modules/_favware_eslint_config.html)
