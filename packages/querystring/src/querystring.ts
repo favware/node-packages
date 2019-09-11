@@ -2,12 +2,13 @@ import { FunctionSource, ParseOptions, QuerystringError, QuerystringObject, Stri
 
 /**
  * Checks what kind of primitive type the property is and transforms accordingly
+ *
+ * @remarks
  * Used for stringify
+ *
  * @param v Input to check for primitive type
- * @private
  */
 const stringifyPrimitive = (v: any): string => { // eslint-disable-line @typescript-eslint/no-explicit-any
-  if (v === undefined || v === null) return `${v}`;
   switch (typeof v) {
     case 'string':
       return v;
@@ -22,9 +23,9 @@ const stringifyPrimitive = (v: any): string => { // eslint-disable-line @typescr
 
 /**
  * Gracefully handles errors thrown by other functions
- * @param {string} err The error message to parse
- * @param {FunctionSource} source The source of the error, one of {@link FunctionSource}
- * @private
+ *
+ * @param err The error message to parse
+ * @param source The source of the error, one of {@link FunctionSource}
  */
 const handleQuerystringError = (err: string, source: FunctionSource): string | QuerystringError => {
   switch (source) {
@@ -38,11 +39,10 @@ const handleQuerystringError = (err: string, source: FunctionSource): string | Q
 
 /**
  * Stringifies an object
- * @method
- * @name stringify
- * @param {QuerystringObject} obj Object to stringify
- * @param {StringifyOptions} [options] Options for the stringify, see {@link IStringifyOptions}
- * @returns {string}
+ *
+ * @param obj Object to stringify
+ * @param options Options for the stringify, see {@link IStringifyOptions}
+ * @returns The stringified query object
  */
 export const stringify = (obj: QuerystringObject, options: StringifyOptions = { separator: '&', equals: '=', includeQuestion: false }): string => {
   try {
@@ -54,8 +54,7 @@ export const stringify = (obj: QuerystringObject, options: StringifyOptions = { 
     const keys = Object.keys(obj).sort() // eslint-disable-line @typescript-eslint/require-array-sort-compare
       .map(key => {
         const ks = encodeURIComponent(stringifyPrimitive(key)) + options.equals!;
-        if (obj[key] === undefined) return ks + encodeURIComponent(stringifyPrimitive(obj[key]));
-        if (obj[key] === null) return ks + encodeURIComponent(stringifyPrimitive(obj[key]));
+        if (obj[key] === undefined || obj[key] === null) return '';
         if (Array.isArray(obj[key])) {
           return obj[key]
             .map((v: string) => ks + encodeURIComponent(stringifyPrimitive(v)))
@@ -87,11 +86,10 @@ export const stringify = (obj: QuerystringObject, options: StringifyOptions = { 
 
 /**
  * Parses a querystring back to an object
- * @method
- * @name parse
- * @param {string} qs Querystring to parse
- * @param {ParseOptions} [options] Options for the parse, see {@link IParseOptions}
- * @returns {QuerystringObject}
+ *
+ * @param qs Querystring to parse
+ * @param options Options for the parse, see {@link IParseOptions}
+ * @returns A JavaScript object of the parsed parameters
  */
 export const parse = (qs = '', options: ParseOptions = { separator: '&', equals: '=' }): QuerystringObject => {
   try {
