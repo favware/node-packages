@@ -204,39 +204,3 @@ const reportOptions = {
     allowWarnings: false
 };
 ```
-
-# Documentation
-
-## Functions
-
-<dl>
-<dt><a href="#milkyLint">milkyLint(pluginOptions)</a></dt>
-<dd><p>TSLint plugin for Gulp</p>
-</dd>
-<dt><a href="#milkyReport">milkyReport(options)</a></dt>
-<dd><p>Reporter for milky-tslint</p>
-</dd>
-</dl>
-
-<a name="milkyLint"></a>
-
-## milkyLint(pluginOptions)
-TSLint plugin for Gulp
-
-**Kind**: global function  
-
-| Param | Description |
-| --- | --- |
-| pluginOptions | Options to pass to the plugin |
-
-<a name="milkyReport"></a>
-
-## milkyReport(options)
-Reporter for milky-tslint
-
-**Kind**: global function  
-
-| Param | Description |
-| --- | --- |
-| options | Reporter options |
-

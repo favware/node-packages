@@ -59,22 +59,3 @@ const { readYaml } = require('@favware/yamlreader');
 const data = readYaml('/path/to/some/yaml/file');
 console.log(data) // => JavaScript object with the keys from the yaml
 ```
-
-# Documentation
-
-<a name="readYaml"></a>
-
-## readYaml(filepath, [options]) ⇒ <code>object</code>
-**Kind**: global function  
-**Returns**: <code>object</code> - JSON-fied data  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| filepath | <code>string</code> | Path to the yaml file to parse |
-| [options] | <code>YamlReaderOptions</code> | Options for the YAML parser and fs file reader |
-
-**Example**  
-```ts
-const data = readYaml('/path/to/some/yaml/file');
-// => JavaScript object with the keys from the yaml
-```
