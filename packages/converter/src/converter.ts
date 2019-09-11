@@ -1,4 +1,4 @@
-import { ConverterError, definitions, roundNumber } from '.';
+import { ConverterError, definitions, roundNumber } from './helpers';
 import { ConvertOptions, MeasurementSystemData, UnitData, UnitDefinition, System } from './interfaces';
 
 /**
