@@ -150,24 +150,24 @@
 				<h2>Index</h2>
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
-						<section class="tsd-index-section tsd-is-private tsd-is-private-protected">
+						<section class="tsd-index-section ">
 							<h3>Enumerations</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-enum tsd-parent-kind-module tsd-is-private"><a href="../enums/_favware_querystring.functionsource.html" class="tsd-kind-icon">Function<wbr>Source</a></li>
+								<li class="tsd-kind-enum tsd-parent-kind-module"><a href="../enums/_favware_querystring.functionsource.html" class="tsd-kind-icon">Function<wbr>Source</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
 							<h3>Interfaces</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/_favware_querystring.parseoptions.html" class="tsd-kind-icon">Parse<wbr>Options</a></li>
-								<li class="tsd-kind-interface tsd-parent-kind-module tsd-is-private"><a href="../interfaces/_favware_querystring.querystringobject.html" class="tsd-kind-icon">Querystring<wbr>Object</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/_favware_querystring.querystringobject.html" class="tsd-kind-icon">Querystring<wbr>Object</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/_favware_querystring.stringifyoptions.html" class="tsd-kind-icon">Stringify<wbr>Options</a></li>
 							</ul>
 						</section>
-						<section class="tsd-index-section tsd-is-private tsd-is-private-protected">
+						<section class="tsd-index-section ">
 							<h3>Type aliases</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-type-alias tsd-parent-kind-module tsd-is-private"><a href="_favware_querystring.html#querystringerror" class="tsd-kind-icon">Querystring<wbr>Error</a></li>
+								<li class="tsd-kind-type-alias tsd-parent-kind-module"><a href="_favware_querystring.html#querystringerror" class="tsd-kind-icon">Querystring<wbr>Error</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
@@ -180,29 +180,21 @@
 					</div>
 				</section>
 			</section>
-			<section class="tsd-panel-group tsd-member-group tsd-is-private tsd-is-private-protected">
+			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Type aliases</h2>
-				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module tsd-is-private">
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module">
 					<a name="querystringerror" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagPrivate">Private</span> Querystring<wbr>Error</h3>
+					<h3>Querystring<wbr>Error</h3>
 					<div class="tsd-signature tsd-kind-icon">Querystring<wbr>Error<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span><span class="tsd-signature-symbol"> &amp; </span><a href="../interfaces/_favware_querystring.querystringobject.html" class="tsd-signature-type">QuerystringObject</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/favware/node-packages/blob/7b3cfca/packages/querystring/src/types.ts#L41">packages/querystring/src/types.ts:41</a></li>
+							<li>Defined in <a href="https://github.com/favware/node-packages/blob/2534ddd/packages/querystring/src/types.ts#L26">packages/querystring/src/types.ts:26</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Extension to generic object defining an absolute error property</p>
 						</div>
-						<dl class="tsd-comment-tags">
-							<dt>typedef</dt>
-							<dd><p>{QuerystringError} QuerystringError Generic Error Object</p>
-							</dd>
-							<dt>property</dt>
-							<dd><p>{string} err Error with a string value</p>
-							</dd>
-						</dl>
 					</div>
 				</section>
 			</section>
@@ -218,7 +210,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/favware/node-packages/blob/7b3cfca/packages/querystring/src/querystring.ts#L96">packages/querystring/src/querystring.ts:96</a></li>
+									<li>Defined in <a href="https://github.com/favware/node-packages/blob/2534ddd/packages/querystring/src/querystring.ts#L94">packages/querystring/src/querystring.ts:94</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -238,9 +230,15 @@
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> options: <a href="../interfaces/_favware_querystring.parseoptions.html" class="tsd-signature-type">ParseOptions</a><span class="tsd-signature-symbol"> =&nbsp;{ separator: &#x27;&amp;&#x27;, equals: &#x27;&#x3D;&#x27; }</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>Options for the parse, see {@link IParseOptions}</p>
+										</div>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="../interfaces/_favware_querystring.querystringobject.html" class="tsd-signature-type">QuerystringObject</a></h4>
+							<p>A JavaScript object of the parsed parameters</p>
 						</li>
 					</ul>
 				</section>
@@ -254,7 +252,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/favware/node-packages/blob/7b3cfca/packages/querystring/src/querystring.ts#L47">packages/querystring/src/querystring.ts:47</a></li>
+									<li>Defined in <a href="https://github.com/favware/node-packages/blob/2534ddd/packages/querystring/src/querystring.ts#L47">packages/querystring/src/querystring.ts:47</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -274,9 +272,15 @@
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> options: <a href="../interfaces/_favware_querystring.stringifyoptions.html" class="tsd-signature-type">StringifyOptions</a><span class="tsd-signature-symbol"> =&nbsp;{ separator: &#x27;&amp;&#x27;, equals: &#x27;&#x3D;&#x27;, includeQuestion: false }</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>Options for the stringify, see {@link IStringifyOptions}</p>
+										</div>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+							<p>The stringified query object</p>
 						</li>
 					</ul>
 				</section>
@@ -295,10 +299,16 @@
 						<a href="_favware_crypto.html">@favware/crypto</a>
 					</li>
 					<li class=" tsd-kind-module">
+						<a href="_favware_eslint_config.html">@favware/eslint-<wbr>config</a>
+					</li>
+					<li class=" tsd-kind-module">
 						<a href="_favware_milky_tslint.html">@favware/milky-<wbr>tslint</a>
 					</li>
 					<li class="current tsd-kind-module">
 						<a href="_favware_querystring.html">@favware/querystring</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="_favware_tslint_config.html">@favware/tslint-<wbr>config</a>
 					</li>
 					<li class=" tsd-kind-module">
 						<a href="_favware_unescape.html">@favware/unescape</a>
@@ -316,19 +326,19 @@
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
-					<li class=" tsd-kind-enum tsd-parent-kind-module tsd-is-private">
+					<li class=" tsd-kind-enum tsd-parent-kind-module">
 						<a href="../enums/_favware_querystring.functionsource.html" class="tsd-kind-icon">Function<wbr>Source</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-module">
 						<a href="../interfaces/_favware_querystring.parseoptions.html" class="tsd-kind-icon">Parse<wbr>Options</a>
 					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-is-private">
+					<li class=" tsd-kind-interface tsd-parent-kind-module">
 						<a href="../interfaces/_favware_querystring.querystringobject.html" class="tsd-kind-icon">Querystring<wbr>Object</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-module">
 						<a href="../interfaces/_favware_querystring.stringifyoptions.html" class="tsd-kind-icon">Stringify<wbr>Options</a>
 					</li>
-					<li class=" tsd-kind-type-alias tsd-parent-kind-module tsd-is-private">
+					<li class=" tsd-kind-type-alias tsd-parent-kind-module">
 						<a href="_favware_querystring.html#querystringerror" class="tsd-kind-icon">Querystring<wbr>Error</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-module">

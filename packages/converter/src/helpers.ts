@@ -1,5 +1,8 @@
 import { UnitDefinition, System } from './interfaces';
 
+/**
+ * All the unit definitions used by the library
+ */
 export const definitions: UnitDefinition[] = [
   {
     name: 'acceleration',
@@ -375,7 +378,7 @@ export const definitions: UnitDefinition[] = [
 export class ConverterError extends Error {
   /**
      * Create an ConverterError
-     * @param {string} message The message the error should show
+     * @param message The message the error should show
      */
   constructor(message: string) {
     super(message);
@@ -389,9 +392,9 @@ export class ConverterError extends Error {
  * Rounds any number to a given precision
  * @method
  * @name roundNumber
- * @param {number} num The number to round
- * @param {number} [precision = 8] Optional: The precision to use, defaults to 8
- * @returns {number} rounded off number
+ * @param num The number to round
+ * @param precision The precision to use
+ * @returns rounded off number
  */
 export const roundNumber = (num: number, precision = 8): number => {
   if (!num.toString().includes('e')) {

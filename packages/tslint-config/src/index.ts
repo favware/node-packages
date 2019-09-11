@@ -1,4 +1,5 @@
-const config = {
+/** Default TSLint configuration for Favware projects */
+export const config = {
   rules: {
     align: [
       true,

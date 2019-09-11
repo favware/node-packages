@@ -1,102 +1,11 @@
 import chars from './chars';
+import { ZalgoOptions, ZalgoCountsMap } from './interfaces';
+import { hasOwnProperty, unicodeStringSplitter, randomizer, ZalgoError } from './utils';
 
 /**
- * Options for the Zalgo screw up
- * @typedef {ZalgoOptions} IZalgoOptions Options for the Zalgo
- * @property {boolean} up Whether the zalgo should go up
- * @property {boolean} middle Whether the zalgo should go in the middle
- * @property {boolean} down Whether the zalgo should go downards
- * @property {'mini' | 'maxi'} size Whether the zalgo should be mini or maxi
- */
-export interface ZalgoOptions {
-  up?: boolean;
-  middle?: boolean;
-  down?: boolean;
-  size?: 'mini' | 'maxi' | '';
-}
-
-/**
- * Counts map for the zalgo
- * @typedef {ZalgoCountsMap} IZalgoCountsMap
- * @property {number} up
- * @property {number} middle
- * @property {number} down
- * @private
- */
-interface ZalgoCountsMap {
-  up: number;
-  middle: number;
-  down: number;
-
-  [indexSingature: string]: number;
-}
-
-/**
- * @class
- * @name AwesomeZalgoError
- * @private
- */
-class AwesomeZalgoError extends Error {
-  /**
-     * Create an AwesomeZalgoError
-     * @param {string} message The message the error should show
-     * @private
-     */
-  constructor(message: string) {
-    super(message);
-    this.message = message;
-    this.name = 'AwesomeZalgoError';
-    this.stack = '';
-  }
-}
-
-/**
- * Splits a string into unicode compatible characters
- * @param {string} splittable The text to start splitting
- * @private
- */
-const unicodeStringSplitter = (splittable: string): string[] => {
-  // eslint-disable-next-line max-len, no-misleading-character-class
-  const multicharRegex = /([\uD800-\uDBFF])([\uDC00-\uDFFF])([\uD800-\uDBFF])?([\uDC00-\uDFFF])?|([0-9])?([\0-\u02FF\u0370-\u1AAF\u1B00-\u1DBF\u1E00-\u20CF\u2100-\uD7FF\uE000-\uFE1F\uFE30-\uFFFF]|[\uD800-\uDBFF][\uDC00-\uDFFF]|[\uD800-\uDBFF](?![\uDC00-\uDFFF])|(?:[^\uD800-\uDBFF]|^)[\uDC00-\uDFFF])([\u0300-\u036F\u1AB0-\u1AFF\u1DC0-\u1DFF\u20D0-\u20FF\uFE20-\uFE2F\uFE0F]+)/g;
-  const characters = splittable.replace(multicharRegex, '•').split('');
-
-  let m: RegExpExecArray | null;
-  let ri = 0;
-
-  // eslint-disable-next-line no-cond-assign
-  while (m = multicharRegex.exec(splittable)) {
-    m.index -= ri;
-    ri += m[0].length - 1;
-    characters.splice(m.index, 1, m[0]);
-  }
-
-  return characters;
-};
-
-/**
- * Checks if object has a certain property
- * @param obj Object to traverse
- * @param prop Property to find
- * @private
- */
-const hasOwnProperty = <O extends {}, K extends keyof O>(obj: O, prop: K) => obj && prop in obj;
-
-/**
- * Draws a random number given any maximum
- * @param {number} maximum Maximum to randomize towards
- * @private
- */
-const randomizer = (maximum: number): number => ~~(Math.random() * maximum);
-
-/**
- * @method
- * @name zalgo
- * @description Zalgolize any text
- * @param {string} text Input text to zalgolize
- * @param {ZalgoOptions} [options] Options for the Zalgo
- * @returns {string}
+ * Zalgofies any given text
  *
- * @example
+ * ```ts
  * const zalgo = require('@favware/zalgo');
  * // import zalgo from '@favware/zalgo';
  *
@@ -105,6 +14,12 @@ const randomizer = (maximum: number): number => ~~(Math.random() * maximum);
  *
  *
  * // > ŝ̜̩͇̼̥̼́̏͢o͎͊͜ḿ̛̩̳̖͕̞̩̭ͪe͖̺̣̹̺̋̀͛̽͝ ̖͍̭͓̯̠͑͑͢t̼̪̋͌͢eͯ̋͏͖͎͍̩̭̮x̢͚̄̾̀̈ͧ̓ͩ̚t̪ͫ͝
+ *```
+ *
+ *
+ * @param text Input text to zalgolize
+ * @param options Options for the Zalgo
+ * @returns The door to hell
  *
  */
 export const zalgo = (text: string, options: ZalgoOptions = {
@@ -160,20 +75,16 @@ export const zalgo = (text: string, options: ZalgoOptions = {
 
     return result;
   } catch (err) {
-    if (/(?:no_input)/i.test(err.toString())) throw new AwesomeZalgoError('The zalgo function at least requires some text as input!');
-    if (/(?:not_a_string)/i.test(err.toString())) throw new AwesomeZalgoError('The zalgo function expects input of type string as first argument!');
+    if (/(?:no_input)/i.test(err.toString())) throw new ZalgoError('The zalgo function at least requires some text as input!');
+    if (/(?:not_a_string)/i.test(err.toString())) throw new ZalgoError('The zalgo function expects input of type string as first argument!');
     throw err;
   }
 };
 
 /**
- * @method
- * @name banish
- * @description De-zalgolize any text
- * @param {string} purgeable Text to remove zalgo from
- * @returns {string}
+ * De-zalgolize any text
  *
- * @example
+ * ```ts
  * const { banish } = require('@favware/zalgo');
  * // import { basnish } from '@favware/zalgo';
  *
@@ -182,7 +93,10 @@ export const zalgo = (text: string, options: ZalgoOptions = {
  *
  *
  * // > some text
+ * ```
  *
+ * @param purgeable Text to remove zalgo from
+ * @returns The door to heaven
  */
 export const banish = (purgeable: string): string => {
   try {
@@ -191,8 +105,8 @@ export const banish = (purgeable: string): string => {
 
     return purgeable.replace(chars.pattern!, '');
   } catch (err) {
-    if (/(?:no_input)/i.test(err.toString())) throw new AwesomeZalgoError('The banish function at least requires some text as input!');
-    if (/(?:not_a_string)/i.test(err.toString())) throw new AwesomeZalgoError('The banish function expects input of type string as first argument!');
+    if (/(?:no_input)/i.test(err.toString())) throw new ZalgoError('The banish function at least requires some text as input!');
+    if (/(?:not_a_string)/i.test(err.toString())) throw new ZalgoError('The banish function expects input of type string as first argument!');
     throw err;
   }
 };

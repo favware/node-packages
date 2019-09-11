@@ -1,5 +1,6 @@
 import { SpeedtestServerConfig, speedtestClientConfig } from './types';
 
+/** Generates a random IP address */
 const randomIp = (): string => {
   const min = 10;
   const max = 255;
@@ -11,6 +12,7 @@ const randomIp = (): string => {
   return `${group1}.${group2}.${group3}.${group4}`;
 };
 
+/** Resolves a platform from the process to a human readable format */
 const fetchPlatform = (platform: 'win32' | 'darwin' | string) => {
   switch (platform) {
     case 'win32':
@@ -22,6 +24,7 @@ const fetchPlatform = (platform: 'win32' | 'darwin' | string) => {
   }
 };
 
+/** Fallback speedtest server data */
 export const baseServerData: SpeedtestServerConfig[] = [
   {
     url: 'http://ams.host.speedtest.net:8080/speedtest/upload.php',
@@ -40,6 +43,7 @@ export const baseServerData: SpeedtestServerConfig[] = [
   }
 ];
 
+/** Fallback speedtest client configuration */
 export const baseClientData: speedtestClientConfig = {
   client: {
     ip: randomIp(),
@@ -79,6 +83,7 @@ export const baseClientData: speedtestClientConfig = {
   },
 };
 
+/** Standard request headers to send to speedtest */
 export const standardHeaders = {
   'user-agent': `NodeJS/${process.version.slice(1)} (${fetchPlatform(process.platform.toLowerCase())}}) @favware/speedtest`,
   'content-type': 'application-x-www-form-urlencoded',

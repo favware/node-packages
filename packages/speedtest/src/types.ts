@@ -1,12 +1,18 @@
+/** Options for the speedtest */
 export type SpeedtestOptions = Partial<{
+  /** Maximum time the speedtest is allowed to take */
   maxTime: number;
+  /** Maximum servers that should be checked for the speedtest */
   maxServers: number;
+  /** The amount of pings that should be send */
   pingCount: number;
+  /** Additional request headers to attach to the requests */
   headers: {
     [key: string]: string;
   };
 }>;
 
+/** Client configuration for the speedtest */
 export interface SpeedtestConfigData {
   settings: {
     client: {
@@ -117,6 +123,7 @@ export interface SpeedtestConfigData {
   };
 }
 
+/** Server configuration of a speedtest server */
 export interface SpeedtestServerData {
   settings: {
     servers: {
@@ -125,8 +132,10 @@ export interface SpeedtestServerData {
   };
 }
 
+/** Stripped down speedtest client configuration */
 export type speedtestClientConfig = Pick<SpeedtestConfigData['settings'], 'client' | 'times' | 'download' | 'upload'>;
 
+/** Configuration of a single speedtest server */
 export interface SpeedtestServerConfig {
   url: string;
   lat: string;
@@ -144,11 +153,13 @@ export interface SpeedtestServerConfig {
   [key: string]: string | number;
 }
 
+/** Latitude/Longitude object */
 export interface LatLng {
   lat: number;
   lng: number;
 }
 
+/** Speedtest information */
 export interface SpeedtestInfo {
   config: speedtestClientConfig;
   servers: SpeedtestServerConfig[];

@@ -124,6 +124,12 @@
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
+							<h3>Interfaces</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/_favware_yamlreader.fsoptions.html" class="tsd-kind-icon">Fs<wbr>Options</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
 							<h3>Type aliases</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-type-alias tsd-parent-kind-module"><a href="_favware_yamlreader.html#yamlreaderoptions" class="tsd-kind-icon">Yaml<wbr>Reader<wbr>Options</a></li>
@@ -143,56 +149,17 @@
 				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module">
 					<a name="yamlreaderoptions" class="tsd-anchor"></a>
 					<h3>Yaml<wbr>Reader<wbr>Options</h3>
-					<div class="tsd-signature tsd-kind-icon">Yaml<wbr>Reader<wbr>Options<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">DumpOptions</span><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-type">FsOptions</span></div>
+					<div class="tsd-signature tsd-kind-icon">Yaml<wbr>Reader<wbr>Options<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">DumpOptions</span><span class="tsd-signature-symbol"> &amp; </span><a href="../interfaces/_favware_yamlreader.fsoptions.html" class="tsd-signature-type">FsOptions</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/favware/node-packages/blob/7b3cfca/packages/yamlreader/src/index.ts#L39">packages/yamlreader/src/index.ts:39</a></li>
+							<li>Defined in <a href="https://github.com/favware/node-packages/blob/2534ddd/packages/yamlreader/src/index.ts#L22">packages/yamlreader/src/index.ts:22</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>YAMLReaderOptions for configuring both <code>fs</code> and <code>js-yaml</code>
-								See <a href="https://github.com/nodeca/js-yaml#safeload-string---options-">js-yaml configuration</a> for more details
-							Also see {@link fsOptions}</p>
+							See <a href="https://github.com/nodeca/js-yaml#safeload-string---options- " class="external"> js-yaml configuration</a> and <a href="../interfaces/_favware_yamlreader.fsoptions.html">FsOptions</a> for details</p>
 						</div>
-						<dl class="tsd-comment-tags">
-							<dt>typedef</dt>
-							<dd><p>{YamlReaderOptions} YamlReaderOptions Options for the YAML parser</p>
-							</dd>
-							<dt>property</dt>
-							<dd><p>{number} [indent=2] indentation width to use (in spaces).</p>
-							</dd>
-							<dt>property</dt>
-							<dd><p>{boolean} [noArrayIndent=false] when true, will not add an indentation level to array elements</p>
-							</dd>
-							<dt>property</dt>
-							<dd><p>{boolean} [skipInvalid=false] do not throw on invalid types (like function in the safe schema) and skip pairs and single values with such types</p>
-							</dd>
-							<dt>property</dt>
-							<dd><p>{number} [flowLevel=-1] specifies level of nesting, when to switch from block to flow style for collections. -1 means block style everwhere</p>
-							</dd>
-							<dt>property</dt>
-							<dd><p>{string} [styles] Each tag may have own set of styles.  - &quot;tag&quot; =&gt; &quot;style&quot; map.</p>
-							</dd>
-							<dt>property</dt>
-							<dd><p>{SchemaDefinition} [schema=YAML.DEFAULT_SAFE_SCHEMA] specifies a schema to use</p>
-							</dd>
-							<dt>property</dt>
-							<dd><p>{boolean} [sortKeys=false] if <code>true</code>, sort keys when dumping YAML. If a function, use the function to sort the keys</p>
-							</dd>
-							<dt>property</dt>
-							<dd><p>{number} [lineWidth=80] set max line width</p>
-							</dd>
-							<dt>property</dt>
-							<dd><p>{boolean} [noRefs=false] if <code>true</code>, don&#39;t convert duplicate objects into references</p>
-							</dd>
-							<dt>property</dt>
-							<dd><p>{boolean} [noCompatMode=false] if <code>true</code> don&#39;t try to be compatible with older yaml versions. Currently: don&#39;t quote &quot;yes&quot;, &quot;no&quot; and so on, as required for YAML 1.1</p>
-							</dd>
-							<dt>property</dt>
-							<dd><p>{boolean} [condenseFlow=false] if <code>true</code> flow sequences will be condensed, omitting the space between <code>a, b</code>. Eg. <code>&#39;[a,b]&#39;</code></p>
-							</dd>
-						</dl>
 					</div>
 				</section>
 			</section>
@@ -208,9 +175,15 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/favware/node-packages/blob/7b3cfca/packages/yamlreader/src/index.ts#L67">packages/yamlreader/src/index.ts:67</a></li>
+									<li>Defined in <a href="https://github.com/favware/node-packages/blob/2534ddd/packages/yamlreader/src/index.ts#L46">packages/yamlreader/src/index.ts:46</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Reads a YAML file and outputs a JavaScript object</p>
+								</div>
+								<pre><code class="language-ts"><span class="hljs-keyword">const</span> data = readYaml(<span class="hljs-string">'/path/to/some/yaml/file'</span>);</code></pre>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
@@ -223,10 +196,14 @@
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <a href="_favware_yamlreader.html#yamlreaderoptions" class="tsd-signature-type">YamlReaderOptions</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>Options for the YAML parser and fs file reader</p>
+										</div>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
-							<p>JSON-fied data</p>
 						</li>
 					</ul>
 				</section>
@@ -245,10 +222,16 @@
 						<a href="_favware_crypto.html">@favware/crypto</a>
 					</li>
 					<li class=" tsd-kind-module">
+						<a href="_favware_eslint_config.html">@favware/eslint-<wbr>config</a>
+					</li>
+					<li class=" tsd-kind-module">
 						<a href="_favware_milky_tslint.html">@favware/milky-<wbr>tslint</a>
 					</li>
 					<li class=" tsd-kind-module">
 						<a href="_favware_querystring.html">@favware/querystring</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="_favware_tslint_config.html">@favware/tslint-<wbr>config</a>
 					</li>
 					<li class=" tsd-kind-module">
 						<a href="_favware_unescape.html">@favware/unescape</a>
@@ -268,6 +251,9 @@
 				<ul class="before-current">
 					<li class=" tsd-kind-class tsd-parent-kind-module">
 						<a href="../classes/_favware_yamlreader.yamlreadererror.html" class="tsd-kind-icon">Yaml<wbr>Reader<wbr>Error</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-module">
+						<a href="../interfaces/_favware_yamlreader.fsoptions.html" class="tsd-kind-icon">Fs<wbr>Options</a>
 					</li>
 					<li class=" tsd-kind-type-alias tsd-parent-kind-module">
 						<a href="_favware_yamlreader.html#yamlreaderoptions" class="tsd-kind-icon">Yaml<wbr>Reader<wbr>Options</a>

@@ -133,9 +133,9 @@ const pingServers = async (servers: SpeedtestServerConfig[], count: number) => {
 export const speedtest = async (options: SpeedtestOptions = {}) => { // eslint-disable-line
 
   /**
- * Gets Speedtest Configuration
- * If no client configuration could be found it will default to a client based in Amsterdam, The Netherlands
- */
+   * Gets Speedtest Configuration
+   * If no client configuration could be found it will default to a client based in Amsterdam, The Netherlands
+   */
   const getSpeedtestClientConfig = async (): Promise<speedtestClientConfig> => {
     try {
       const requestConfig = await fetch('https://www.speedtest.net/speedtest-config.php');
@@ -158,9 +158,9 @@ export const speedtest = async (options: SpeedtestOptions = {}) => { // eslint-d
   };
 
   /**
- * Gets the configuration of a speedtest server
- * If no server could configuration could be found it will default to a server in Amsterdam, The Netherlands
- */
+   * Gets the configuration of a speedtest server
+   * If no server could configuration could be found it will default to a server in Amsterdam, The Netherlands
+   */
   const getSpeedtestServerConfig = async (clientLocation: { lat: string; lon: string }): Promise<SpeedtestServerConfig[]> => {
     try {
       const requestServers = await fetch('https://www.speedtest.net/speedtest-servers.php');
@@ -189,8 +189,8 @@ export const speedtest = async (options: SpeedtestOptions = {}) => { // eslint-d
   };
 
   // @ts-ignore
-const startDownload = (speedInfo: SpeedtestInfo, speedtestOptions: SpeedtestOptions, iterator = 0,) => { // eslint-disable-line
-  // @ts-ignore
+  const startDownload = (speedInfo: SpeedtestInfo, speedtestOptions: SpeedtestOptions, iterator = 0, ) => { // eslint-disable-line
+    // @ts-ignore
     if (iterator > speedInfo.bestServers.length || iterator >= speedtestOptions.maxServers!) return startUpload();
 
     const server = speedInfo.bestServers[iterator];
@@ -205,7 +205,7 @@ const startDownload = (speedInfo: SpeedtestInfo, speedtestOptions: SpeedtestOpti
     }
 
     speedtest.events.emit('testserver', server);
-  // Left of here on 2019-08-11
+    // Left of here on 2019-08-11
   };
 
   // @ts-ignore

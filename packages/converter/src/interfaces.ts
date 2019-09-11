@@ -1,59 +1,48 @@
-/**
- * Measure system data
- * @typedef {MeasurementSystemData} IMeasurementSystemData measure system data for primary and secondary
- * @property {string} default The default unit to use
- * @property {number} ratio The ratio to convert to other measurement system
- * @property {function} [transform] A transformation function when a simple ratio is not enough
- */
+/** Measure system data */
 export interface MeasurementSystemData {
+  /** The default unit to use */
   default: string;
+  /** The ratio to convert to other measurement system */
   ratio: number;
 
-  transform? (arg: string | number): number;
+  /** A transformation function when a simple ratio is not enough */
+  transform?(arg: string | number): number;
 }
 
-/**
- * Array of supported unit definitions
- * @typedef {UnitDefinition} IUnitDefinition array of all definitions
- */
+/** Array of supported unit definitions */
 export interface UnitDefinition {
+  /** Name of the unit definition */
   name: string;
+  /** Primary measurement system data */
   primary: MeasurementSystemData;
+  /** Secondary measurement system data */
   secondary?: MeasurementSystemData;
+  /** Unit data that belongs to this unit's definition */
   data: UnitData[];
 }
 
-/**
- * Single property of definitions
- * @typedef {UnitData} IUnitData unit definition property
- * @property {string} id ID of the unit
- * @property {number} multiplier Multiplier for the unit
- * @property {number} valueShift A zero value shift to use instead of a multiplier
- * @property {boolean} isSecondary whether this data prop belongs to a secondary system
- */
+/** Single property of definitions */
 export interface UnitData {
+  /** ID of the unit */
   id: string;
+  /** Whether the unit is of primary or secondary system */
   system: System;
+  /** Multiplier for the unit */
   multiplier: number;
+  /** A zero value shift to use instead of a multiplier */
   valueShift?: number;
 }
 
-/**
- * Options for the convert method
- * @typedef {ConvertOptions} IConvertOptions options for the convert method
- * @property {number} precision The decimal precision to return
- */
+/** Options for the convert method */
 export interface ConvertOptions {
+  /** The decimal precision to return */
   precision: number;
 }
 
-/**
- * Predefined options for the unit system
- * @typedef {System} System unit system enum
- * @property {System.PRIMARY} Primary for when the unit is of the primary system
- * @property {System.SECONDARY} Secondary for when the unit is of the secondary system
- */
+/** Predefined options for the unit system */
 export enum System {
+  /** For when the unit is of the primary system */
   PRIMARY = 'primary',
+  /** For when the unit is of the secondary system */
   SECONDARY = 'secondary',
 }

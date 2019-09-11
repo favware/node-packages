@@ -2,20 +2,15 @@ import prism from 'prism-media';
 import { Readable } from 'stream';
 import ytdl, { downloadOptions as YTDLDownloadOptions, videoFormat as YTDLVideoFormat, videoInfo } from 'ytdl-core';
 
-/**
- * @typedef PrismVideoFormat
- * @summary Custom type for ytdl videoFormat to include missing property
- * @property {number} [audio_sample_rate] - The sample rate of the audio format
- */
+/** Custom type for ytdl videoFormat to include missing property */
 export type PrismVideoFormat = YTDLVideoFormat & {
+  /** The sample rate of the audio format */
   audio_sample_rate?: string;
 };
 
 /**
- * @function filter
- * @param  {PrismVideoFormat} format Video format to check
- * @return {boolean} Whether the video format has a supported format
- * @private
+ * @param  format Video format to check
+ * @return Whether the video format has a supported format
  */
 const filter = (format: PrismVideoFormat): boolean => {
   return format.audioEncoding === 'opus' &&
@@ -24,10 +19,8 @@ const filter = (format: PrismVideoFormat): boolean => {
 };
 
 /**
- * @function nextBestFormat
- * @param  {PrismVideoFormat[]} formats List of formats to search
- * @return {PrismVideoFormat} Best determined format available for the video stream
- * @private
+ * @param formats List of formats to search
+ * @return Best determined format available for the video stream
  */
 const nextBestFormat = (formats: PrismVideoFormat[]): PrismVideoFormat => {
   formats = formats
@@ -38,10 +31,9 @@ const nextBestFormat = (formats: PrismVideoFormat[]): PrismVideoFormat => {
 };
 
 /**
- * @function play
- * @param  {string} url YouTube Video URL that should be played
- * @param  {YTDLDownloadOptions} [options] Any extra options to pass to ytdl, see {@link https://github.com/fent/node-ytdl-core/#ytdlurl-options}
- * @return {Promise<Readable>} Readable Stream ({@link https://nodejs.org/api/stream.html#stream_class_stream_readable})
+ * @param url YouTube Video URL that should be played
+ * @param options Any extra options to pass to ytdl, see {@link https://github.com/fent/node-ytdl-core/#ytdlurl-options}
+ * @return The playing song in a readable stream, see {@link https://nodejs.org/api/stream.html#stream_class_stream_readable | NodeJS.ReadableStream}
  */
 export const play = async (url: string, options: YTDLDownloadOptions = {}): Promise<Readable> => {
   return new Promise((resolve, reject) => {
