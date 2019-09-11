@@ -16,10 +16,7 @@
     "prebuild": "yarn lint && yarn test",
     "build": "rollup -c rollup.config.js",
     "ci:build": "rollup -c rollup.config.js",
-    "start": "yarn build -w",
-    "docs": "jsdoc2md --template ./docs/template.hbs --files ./docsbuild/*.js --example-lang ts --partial ./docs/partials/desc.hbs --partial ./docs/partials/reponame.hbs --partial ./docs/partials/siteurl.hbs > ./README.md",
-    "docs:clean": "rimraf ./docsbuild",
-    "docs:build": "tsc -p ./tsconfig.docs.json"
+    "start": "yarn build -w"
   },
   "peerDependencies": {
     "eslint": ">=6"

@@ -1,0 +1,380 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>@favware/crypto | Favware Node Packages</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="../assets/js/search.js" data-base="..">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="../index.html" class="title">Favware Node Packages</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="../globals.html">Globals</a>
+				</li>
+				<li>
+					<a href="_favware_crypto.html">@favware/crypto</a>
+				</li>
+			</ul>
+			<h1>Module @favware/crypto</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div align="center">
+						<p>
+							<a href="https://favware.tech/crypto"><img src="https://storage.googleapis.com/data-sunlight-146313.appspot.com/website-project-icons/crypto.png" height="200" alt="logo"/></a>
+						</p>
+						<p>
+							<h1> @favware/crypto</h1>
+							<h3> Easily generate a random cryptographic</h3>
+						</p>
+					</div>
+					<hr>
+					<p><strong>Project Status</strong></p>
+					<p><a href="https://github.com/favware/node-packages/blob/master/LICENSE.md"><img src="https://img.shields.io/github/license/favware/node-packages?logo=github&style=flat-square" alt="GitHub"></a>
+						<a href="https://circleci.com/gh/favware/node-packages/tree/master"><img src="https://img.shields.io/circleci/build/github/favware/node-packages?logo=circleci&style=flat-square" alt="CircleCI"></a>
+					<a href="https://codecov.io/gh/favware/node-packages"><img src="https://img.shields.io/codecov/c/github/favware/node-packages?logo=codecov&style=flat-square" alt="Codecov"></a></p>
+					<p><strong>Bundle Sizes</strong></p>
+					<p><a href="https://bundlephobia.com/result?p=@favware/crypto"><img src="https://img.shields.io/bundlephobia/min/@favware/crypto?label=crypto%20-%20minified&logo=webpack&style=flat-square" alt="npm bundle size"></a>
+						<a href="https://bundlephobia.com/result?p=@favware/crypto"><img src="https://img.shields.io/bundlephobia/minzip/@favware/crypto?label=crypto%20-%20minzipped&logo=webpack&style=flat-square" alt="npm bundle size"></a>
+					<a href="https://www.npmjs.com/package/@favware/crypto"><img src="https://img.shields.io/npm/v/@favware/crypto?color=crimson&label=crypto%20version&logo=npm&style=flat-square" alt="npm"></a></p>
+					<p><strong>Social Media and Donations</strong></p>
+					<p><a href="https://favware.tech/redirect/server"><img src="https://img.shields.io/discord/512303595966824458?color=697EC4&label=Join%20Discord%20Server&logo=discord&logoColor=FDFEFE&style=flat-square" alt="Join Discord server"></a>
+						<a href="https://twitter.com/Favna_/follow"><img src="https://img.shields.io/twitter/follow/favna_?label=Follow%20@Favna_&logo=twitter&colorB=1DA1F2&style=flat-square" alt="Twitter Follow"></a>
+						<a href="https://www.patreon.com/bePatron?u=9336537"><img src="https://img.shields.io/badge/patreon-donate-brightgreen.svg?label=Donate%20with%20Patreon&logo=patreon&colorB=F96854&style=flat-square&link=https://www.patreon.com/bePatron?u=9336537" alt="Patreon Donate"></a>
+					<a href="https://www.patreon.com/bePatron?u=9336537"><img src="https://img.shields.io/badge/paypal-donate-brightgreen.svg?label=Donate%20with%20Paypal&logo=paypal&colorB=00457C&style=flat-square&link=https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=XMAYCF9SDHZ34" alt="PayPal Donate"></a></p>
+					<hr>
+					<p>This package is a full rework of my old package <code>csprng-64</code> but now far better. I decided to release it as a completely separate package and deprecate the previous one as the entire code base was changed and I wasn&#39;t fond of the previous name either.</p>
+					<p><strong>Key Features</strong></p>
+					<ul>
+						<li>Generates secure random numbers using <code>crypto.randomBytes()</code>. Numbers can be of any magnitude and in any base from 2 to 64.</li>
+						<li>Typesafe</li>
+						<li>Bundled with Rollup for maximum size reduction (only 1kB minified + gzipped!), ES module support and browser support</li>
+						<li>Generated TypeScript declarations</li>
+						<li>Treeshakeable in Webpack</li>
+					</ul>
+					<a href="#install" id="install" style="color: inherit; text-decoration: none;">
+						<h1>Install</h1>
+					</a>
+					<p>Install with <a href="https://yarnpkg.com">yarn</a> or <a href="https://www.npmjs.com/">npm</a>:</p>
+					<pre><code class="language-sh">yarn add @favware/crypto
+
+<span class="hljs-comment"># npm install @favware/crypto</span></code></pre>
+					<hr>
+					<a href="#usage" id="usage" style="color: inherit; text-decoration: none;">
+						<h1>Usage</h1>
+					</a>
+					<p>Call the function passing the number of required bits, and the radix of the
+					output.</p>
+					<pre><code class="language-js"><span class="hljs-keyword">const</span> { crypto } = <span class="hljs-built_in">require</span>(<span class="hljs-string">'@favware/crypto'</span>);
+<span class="hljs-comment">// import crypto from '@favware/crypto';</span>
+
+<span class="hljs-comment">// Takes a bit length and base parameter</span>
+<span class="hljs-comment">// base examples are base64 or base32</span>
+crypto(<span class="hljs-number">160</span>, <span class="hljs-number">64</span>);
+
+<span class="hljs-comment">// You can also import the predefined Radix's so you can be sure you're using a supported radix</span>
+<span class="hljs-keyword">const</span> { Radix } = <span class="hljs-built_in">require</span>(<span class="hljs-string">'@favware/crypto'</span>);
+<span class="hljs-comment">// import Radix from '@favware/crypto'</span>
+crypto(<span class="hljs-number">160</span>, Radix.base64);</code></pre>
+				</div>
+			</section>
+			<section class="tsd-panel-group tsd-index-group">
+				<h2>Index</h2>
+				<section class="tsd-panel tsd-index-panel">
+					<div class="tsd-index-content">
+						<section class="tsd-index-section ">
+							<h3>Enumerations</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-enum tsd-parent-kind-module"><a href="../enums/_favware_crypto.radix.html" class="tsd-kind-icon">Radix</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Classes</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/_favware_crypto.cryptoerror.html" class="tsd-kind-icon">Crypto<wbr>Error</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Variables</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-variable tsd-parent-kind-module"><a href="_favware_crypto.html#characters" class="tsd-kind-icon">CHARACTERS</a></li>
+								<li class="tsd-kind-variable tsd-parent-kind-module"><a href="_favware_crypto.html#default_bits" class="tsd-kind-icon">DEFAULT_<wbr>BITS</a></li>
+								<li class="tsd-kind-variable tsd-parent-kind-module"><a href="_favware_crypto.html#default_radix" class="tsd-kind-icon">DEFAULT_<wbr>RADIX</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Functions</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="_favware_crypto.html#crypto" class="tsd-kind-icon">crypto</a></li>
+							</ul>
+						</section>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Variables</h2>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-module">
+					<a name="characters" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> CHARACTERS</h3>
+					<div class="tsd-signature tsd-kind-icon">CHARACTERS<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> =&nbsp;&#x27;ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/&#x27;.split(&#x27;&#x27;)</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/favware/node-packages/blob/d09f2ab/packages/crypto/src/util.ts#L36">packages/crypto/src/util.ts:36</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-module">
+					<a name="default_bits" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> DEFAULT_<wbr>BITS</h3>
+					<div class="tsd-signature tsd-kind-icon">DEFAULT_<wbr>BITS<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">36</span><span class="tsd-signature-symbol"> =&nbsp;36</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/favware/node-packages/blob/d09f2ab/packages/crypto/src/util.ts#L26">packages/crypto/src/util.ts:26</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<dl class="tsd-comment-tags">
+							<dt>constant</dt>
+							<dd></dd>
+							<dt>type</dt>
+							<dd><p>{number}</p>
+							</dd>
+							<dt>default</dt>
+							<dd></dd>
+							<dt>name</dt>
+							<dd><p>DEFAULT_BITS</p>
+							</dd>
+						</dl>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-module">
+					<a name="default_radix" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> DEFAULT_<wbr>RADIX</h3>
+					<div class="tsd-signature tsd-kind-icon">DEFAULT_<wbr>RADIX<span class="tsd-signature-symbol">:</span> <a href="../enums/_favware_crypto.radix.html#base64" class="tsd-signature-type">base64</a><span class="tsd-signature-symbol"> =&nbsp;Radix.base64</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/favware/node-packages/blob/d09f2ab/packages/crypto/src/util.ts#L34">packages/crypto/src/util.ts:34</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<dl class="tsd-comment-tags">
+							<dt>constant</dt>
+							<dd></dd>
+							<dt>type</dt>
+							<dd><p>{number}</p>
+							</dd>
+							<dt>default</dt>
+							<dd></dd>
+							<dt>name</dt>
+							<dd><p>DEFAULT_RADIX</p>
+							</dd>
+						</dl>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Functions</h2>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="crypto" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> crypto</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">crypto<span class="tsd-signature-symbol">(</span>bits<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, radix<span class="tsd-signature-symbol">?: </span><a href="../enums/_favware_crypto.radix.html" class="tsd-signature-type">Radix</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/favware/node-packages/blob/d09f2ab/packages/crypto/src/crypto.ts#L13">packages/crypto/src/crypto.ts:13</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Generates a cryptographic string given an amount of bits and a base radix</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> bits: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> =&nbsp;DEFAULT_BITS</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> radix: <a href="../enums/_favware_crypto.radix.html" class="tsd-signature-type">Radix</a><span class="tsd-signature-symbol"> =&nbsp;DEFAULT_RADIX</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+							<p>The cryptographic string</p>
+						</li>
+					</ul>
+				</section>
+			</section>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class="globals  ">
+						<a href="../globals.html"><em>Globals</em></a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="_favware_converter.html">@favware/converter</a>
+					</li>
+					<li class="current tsd-kind-module">
+						<a href="_favware_crypto.html">@favware/crypto</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="_favware_milky_tslint.html">@favware/milky-<wbr>tslint</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="_favware_querystring.html">@favware/querystring</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="_favware_unescape.html">@favware/unescape</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="_favware_yamlreader.html">@favware/yamlreader</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="_favware_ytdl_prismplayer.html">@favware/ytdl-<wbr>prismplayer</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="_favware_zalgo.html">@favware/zalgo</a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+					<li class=" tsd-kind-enum tsd-parent-kind-module">
+						<a href="../enums/_favware_crypto.radix.html" class="tsd-kind-icon">Radix</a>
+					</li>
+					<li class=" tsd-kind-class tsd-parent-kind-module">
+						<a href="../classes/_favware_crypto.cryptoerror.html" class="tsd-kind-icon">Crypto<wbr>Error</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-parent-kind-module">
+						<a href="_favware_crypto.html#characters" class="tsd-kind-icon">CHARACTERS</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-parent-kind-module">
+						<a href="_favware_crypto.html#default_bits" class="tsd-kind-icon">DEFAULT_<wbr>BITS</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-parent-kind-module">
+						<a href="_favware_crypto.html#default_radix" class="tsd-kind-icon">DEFAULT_<wbr>RADIX</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="_favware_crypto.html#crypto" class="tsd-kind-icon">crypto</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-module"><span class="tsd-kind-icon">Module</span></li>
+				<li class="tsd-kind-object-literal"><span class="tsd-kind-icon">Object literal</span></li>
+				<li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
+				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
+				<li class="tsd-kind-function tsd-has-type-parameter"><span class="tsd-kind-icon">Function with type parameter</span></li>
+				<li class="tsd-kind-index-signature"><span class="tsd-kind-icon">Index signature</span></li>
+				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
+				<li class="tsd-kind-type-alias tsd-has-type-parameter"><span class="tsd-kind-icon">Type alias with type parameter</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-enum"><span class="tsd-kind-icon">Enumeration</span></li>
+				<li class="tsd-kind-enum-member"><span class="tsd-kind-icon">Enumeration member</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-enum"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-enum"><span class="tsd-kind-icon">Method</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
+				<li class="tsd-kind-interface tsd-has-type-parameter"><span class="tsd-kind-icon">Interface with type parameter</span></li>
+				<li class="tsd-kind-constructor tsd-parent-kind-interface"><span class="tsd-kind-icon">Constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-interface"><span class="tsd-kind-icon">Method</span></li>
+				<li class="tsd-kind-index-signature tsd-parent-kind-interface"><span class="tsd-kind-icon">Index signature</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
+				<li class="tsd-kind-class tsd-has-type-parameter"><span class="tsd-kind-icon">Class with type parameter</span></li>
+				<li class="tsd-kind-constructor tsd-parent-kind-class"><span class="tsd-kind-icon">Constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-class"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class"><span class="tsd-kind-icon">Accessor</span></li>
+				<li class="tsd-kind-index-signature tsd-parent-kind-class"><span class="tsd-kind-icon">Index signature</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited accessor</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected accessor</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private accessor</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static property</span></li>
+				<li class="tsd-kind-call-signature tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static method</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="../assets/js/main.js"></script>
+<script>if (location.protocol == 'file:') document.write('<script src="../assets/js/search.js"><' + '/script>');</script>
+</body>
+</html>
