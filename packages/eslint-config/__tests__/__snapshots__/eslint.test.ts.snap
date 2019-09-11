@@ -62,7 +62,7 @@ Object {
     ],
     "@typescript-eslint/consistent-type-definitions": Array [
       "error",
-      "type",
+      "interface",
     ],
     "@typescript-eslint/explicit-function-return-type": "off",
     "@typescript-eslint/func-call-spacing": Array [
@@ -71,6 +71,12 @@ Object {
     "@typescript-eslint/indent": Array [
       "error",
       2,
+    ],
+    "@typescript-eslint/interface-name-prefix": Array [
+      "error",
+      Object {
+        "prefixWithI": "never",
+      },
     ],
     "@typescript-eslint/member-ordering": "error",
     "@typescript-eslint/no-empty-function": "error",
