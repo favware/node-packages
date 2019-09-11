@@ -111,7 +111,7 @@ Converts input from one unit to another unit
 | value | <code>number</code> | The input value to convert |
 | fromUnit | <code>string</code> | The unit to convert from |
 | toUnit | <code>string</code> | The unit to convert to |
-| [options] | <code>IConvertOptions</code> | Options for the conversion |
+| [options] | <code>ConvertOptions</code> | Options for the conversion |
 
 <a name="roundNumber"></a>
 

@@ -112,7 +112,7 @@ Zalgolize any text
 | Param | Type | Description |
 | --- | --- | --- |
 | text | <code>string</code> | Input text to zalgolize |
-| [options] | <code>IZalgoOptions</code> | Options for the Zalgo |
+| [options] | <code>ZalgoOptions</code> | Options for the Zalgo |
 
 **Example**  
 ```ts
