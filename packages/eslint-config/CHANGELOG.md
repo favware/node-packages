@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.4](https://github.com/favware/node-packages/compare/@favware/eslint-config@3.0.3...@favware/eslint-config@3.0.4) (2019-09-11)
+
+**Note:** Version bump only for package @favware/eslint-config
+
+
+
+
+
 ## [3.0.3](https://github.com/favware/node-packages/compare/@favware/eslint-config@3.0.2...@favware/eslint-config@3.0.3) (2019-09-11)
 
 

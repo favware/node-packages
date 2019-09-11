@@ -1,6 +1,6 @@
 {
   "name": "@favware/unescape",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Convert HTML entities to HTML characters, e.g. `&gt;` converts to `>`.",
   "author": "@favware",
   "license": "MIT",
