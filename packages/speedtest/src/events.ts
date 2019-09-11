@@ -3,14 +3,13 @@ import StrictEventEmitter from 'strict-event-emitter-types';
 import { EventEmitter } from 'events';
 import { SpeedtestServerConfig, speedtestClientConfig } from './types';
 
-/**
- * @typedef SpeedEvents events output by this library
- */
+/** Events output by this library */
 export interface SpeedEvents {
   /**
    * Fired when data is download.
    * The progress in percent is passed through.
    *
+   * @remarks
    * Note that if more than 1 server is used for download testing,
    * this will run to 100% multiple times
    */

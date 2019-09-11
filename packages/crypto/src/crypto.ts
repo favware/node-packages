@@ -4,11 +4,10 @@ import { CHARACTERS, CryptoError, DEFAULT_BITS, DEFAULT_RADIX, Radix } from './u
 
 /**
  * Generates a cryptographic string given an amount of bits and a base radix
- * @param {number} [bits=DEFAULT_BITS] The amount of bits to generate
- * @param {Radix} [radix=DEFAULT_RADIX] The radix to generate for
- * @returns {string} The cryptographic string
- * @function
- * @name crypto
+ *
+ * @param bits The amount of bits to generate
+ * @param radix The radix to generate for
+ * @returns The cryptographic string
  */
 export const crypto = (bits: number = DEFAULT_BITS, radix: Radix = DEFAULT_RADIX): string => {
   try {

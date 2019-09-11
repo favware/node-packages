@@ -1,4 +1,5 @@
-const config = {
+/** Default ESLint configuration for Favware projects */
+export const config = {
   root: true,
   parser: '@typescript-eslint/parser',
   parserOptions: {

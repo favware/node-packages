@@ -11,22 +11,12 @@ import eventemitter from './events';
 // eslint-disable-next-line
 const map = require('map-stream');
 
-/**
- * Helper function to check if a value is a string
- * @param {any} value to check whether or not it is a string
- * @returns {boolean} Returns true if the value is a string
- * @ignore
- */
-const isString = (value: any): boolean => {
-  return typeof value === 'string';
+/** TypeGuard to ensure param is string */
+export const isString = (str: string | unknown): str is string => {
+  return typeof str === 'string';
 };
 
-/**
- * Returns the TSLint from the options, or if not set, the default TSLint.
- * @param {PluginOptions} options
- * @returns {any} TSLint module
- * @ignore
- */
+/** Returns the TSLint from the options, or if not set, the default TSLint. */
 const getTslint = (options: PluginOptions): any => {
   if (options && options.tslint) {
     return options.tslint;
@@ -37,9 +27,9 @@ const getTslint = (options: PluginOptions): any => {
 
 /**
  * Log an event or error
- * @param {string} message Message that should be logged
- * @param {LogLevels} [level] Logging level, one of {@link LogLevels}
- * @ignore
+ *
+ * @param message Message that should be logged
+ * @param level Logging level, one of {@link LogLevels}
  */
 const log = (message: string, level?: LogLevels) => {
   const prefix = `[${chalk.gray(moment().format('HH:mm:ss'))}] [${chalk.cyan('@favware/milky-tslint')}]`;
@@ -59,9 +49,9 @@ const log = (message: string, level?: LogLevels) => {
 let unscopedPluginOptions: PluginOptions;
 
 /**
- * @method milkyLint
- * @description TSLint plugin for Gulp
- * @param pluginOptions Options to pass to the plugin
+ * TSLint plugin for Gulp
+ *
+ * @param pluginOptions Options to pass to the plugin, see {@link PluginOptions}
  */
 export const milkyLint = (pluginOptions: PluginOptions = {}) => {
   unscopedPluginOptions = pluginOptions;
@@ -97,9 +87,8 @@ export const milkyLint = (pluginOptions: PluginOptions = {}) => {
 };
 
 /**
- * @method milkyReport
- * @description Reporter for milky-tslint
- * @param options Reporter options
+ * Reporter for milky-tslint
+ * @param options options for the report, see {@link ReportOptions}
  */
 export const milkyReport = (options: ReportOptions = {
   emitError: false, reportLimit: 0, summarizeFailureOutput: true, allowWarnings: false,

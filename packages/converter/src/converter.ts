@@ -3,11 +3,11 @@ import { ConvertOptions, MeasurementSystemData, UnitData, UnitDefinition, System
 
 /**
  * Converts input from one unit to another unit
- * @param {number} value The input value to convert
- * @param {string} fromUnit The unit to convert from
- * @param {string} toUnit The unit to convert to
- * @param {ConvertOptions} [options] Options for the conversion
- * @returns {number | string} Will return a number if the function succeeded or a string with an error message if not
+ * @param value The input value to convert
+ * @param fromUnit The unit to convert from
+ * @param toUnit The unit to convert to
+ * @param options _(Optional)_ Options for the conversion
+ * @returns Will return a number if the function succeeded or a string with an error message if not
  */
 export const convert = (value: number, fromUnit: string, toUnit: string, options: ConvertOptions = { precision: 8 }): number | string => {
   try {

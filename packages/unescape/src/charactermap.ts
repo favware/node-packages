@@ -1,15 +1,12 @@
 /**
- * @constant
- * @name charSets
- *
- * @description
  * For performance, this library only handles a subset of most common entities.
  *
- * Either log the charsets or check them out on [the favware website](https://favware.tech/unescape)
+ * Either log the charsets or check them out on {@link https://favware.tech/unescape | the documentation}
  *
- * @example
+ * ```ts
  * const { charSets } = require('@favware/unescape');
  * console.log(charSets)
+ * ```
  */
 export const charSets: { [key: string]: string } = {
   '&quot;': '"',

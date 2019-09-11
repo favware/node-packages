@@ -127,9 +127,16 @@ banish(<span class="hljs-string">'ŝ̜̩͇̼̥̼́̏͢o͎͊͜ḿ̛̩̳̖͕̞ͪ�
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
 						<section class="tsd-index-section ">
+							<h3>Classes</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/_favware_zalgo.zalgoerror.html" class="tsd-kind-icon">Zalgo<wbr>Error</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
 							<h3>Interfaces</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/_favware_zalgo.chars.html" class="tsd-kind-icon">Chars</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/_favware_zalgo.zalgocountsmap.html" class="tsd-kind-icon">Zalgo<wbr>Counts<wbr>Map</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/_favware_zalgo.zalgooptions.html" class="tsd-kind-icon">Zalgo<wbr>Options</a></li>
 							</ul>
 						</section>
@@ -137,6 +144,9 @@ banish(<span class="hljs-string">'ŝ̜̩͇̼̥̼́̏͢o͎͊͜ḿ̛̩̳̖͕̞ͪ�
 							<h3>Functions</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-function tsd-parent-kind-module"><a href="_favware_zalgo.html#banish" class="tsd-kind-icon">banish</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter"><a href="_favware_zalgo.html#hasownproperty" class="tsd-kind-icon">has<wbr>Own<wbr>Property</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="_favware_zalgo.html#randomizer" class="tsd-kind-icon">randomizer</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="_favware_zalgo.html#unicodestringsplitter" class="tsd-kind-icon">unicode<wbr>String<wbr>Splitter</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module"><a href="_favware_zalgo.html#zalgo" class="tsd-kind-icon">zalgo</a></li>
 							</ul>
 						</section>
@@ -161,9 +171,22 @@ banish(<span class="hljs-string">'ŝ̜̩͇̼̥̼́̏͢o͎͊͜ḿ̛̩̳̖͕̞ͪ�
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/favware/node-packages/blob/7b3cfca/packages/zalgo/src/zalgo.ts#L187">packages/zalgo/src/zalgo.ts:187</a></li>
+									<li>Defined in <a href="https://github.com/favware/node-packages/blob/2534ddd/packages/zalgo/src/zalgo.ts#L101">packages/zalgo/src/zalgo.ts:101</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>De-zalgolize any text</p>
+								</div>
+								<pre><code class="language-ts"><span class="hljs-keyword">const</span> { banish } = <span class="hljs-built_in">require</span>(<span class="hljs-string">'@favware/zalgo'</span>);
+<span class="hljs-comment">// import { basnish } from '@favware/zalgo';</span>
+
+<span class="hljs-comment">// Banish usage</span>
+banish(<span class="hljs-string">'ŝ̜̩͇̼̥̼́̏͢o͎͊͜ḿ̛̩̳̖͕̞̩̭ͪe͖̺̣̹̺̋̀͛̽͝ ̖͍̭͓̯̠͑͑͢t̼̪̋͌͢eͯ̋͏͖͎͍̩̭̮x̢͚̄̾̀̈ͧ̓ͩ̚t̪ͫ͝'</span>)
+
+
+<span class="hljs-comment">// &gt; some text</span></code></pre>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
@@ -176,6 +199,126 @@ banish(<span class="hljs-string">'ŝ̜̩͇̼̥̼́̏͢o͎͊͜ḿ̛̩̳̖͕̞ͪ�
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+							<p>The door to heaven</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter">
+					<a name="hasownproperty" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> has<wbr>Own<wbr>Property</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter">
+						<li class="tsd-signature tsd-kind-icon">has<wbr>Own<wbr>Property&lt;O, K&gt;<span class="tsd-signature-symbol">(</span>obj<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">O</span>, prop<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">K</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">O[K]</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in packages/zalgo/src/utils.ts:43</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Checks if object has a certain property</p>
+								</div>
+							</div>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>O<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">__type</span></h4>
+								</li>
+								<li>
+									<h4>K<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">keyof O</span></h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>obj: <span class="tsd-signature-type">O</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>Object to traverse</p>
+										</div>
+									</div>
+								</li>
+								<li>
+									<h5>prop: <span class="tsd-signature-type">K</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>Property to find</p>
+										</div>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">false</span>
+								<span class="tsd-signature-symbol"> | </span>
+								<span class="tsd-signature-type">O[K]</span>
+							</h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="randomizer" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> randomizer</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">randomizer<span class="tsd-signature-symbol">(</span>maximum<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in packages/zalgo/src/utils.ts:50</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Draws a random number given any maximum</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>maximum: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>Maximum to randomize towards</p>
+										</div>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="unicodestringsplitter" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> unicode<wbr>String<wbr>Splitter</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">unicode<wbr>String<wbr>Splitter<span class="tsd-signature-symbol">(</span>splittable<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in packages/zalgo/src/utils.ts:19</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Splits a string into unicode compatible characters</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>splittable: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>The text to start splitting</p>
+										</div>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -189,9 +332,22 @@ banish(<span class="hljs-string">'ŝ̜̩͇̼̥̼́̏͢o͎͊͜ḿ̛̩̳̖͕̞ͪ�
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/favware/node-packages/blob/7b3cfca/packages/zalgo/src/zalgo.ts#L110">packages/zalgo/src/zalgo.ts:110</a></li>
+									<li>Defined in <a href="https://github.com/favware/node-packages/blob/2534ddd/packages/zalgo/src/zalgo.ts#L25">packages/zalgo/src/zalgo.ts:25</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Zalgofies any given text</p>
+								</div>
+								<pre><code class="language-ts"><span class="hljs-keyword">const</span> zalgo = <span class="hljs-built_in">require</span>(<span class="hljs-string">'@favware/zalgo'</span>);
+<span class="hljs-comment">// import zalgo from '@favware/zalgo';</span>
+
+<span class="hljs-comment">// Zalgo usage</span>
+zalgo(<span class="hljs-string">'some text'</span>)
+
+
+<span class="hljs-comment">// &gt; ŝ̜̩͇̼̥̼́̏͢o͎͊͜ḿ̛̩̳̖͕̞̩̭ͪe͖̺̣̹̺̋̀͛̽͝ ̖͍̭͓̯̠͑͑͢t̼̪̋͌͢eͯ̋͏͖͎͍̩̭̮x̢͚̄̾̀̈ͧ̓ͩ̚t̪ͫ͝</span></code></pre>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
@@ -204,9 +360,15 @@ banish(<span class="hljs-string">'ŝ̜̩͇̼̥̼́̏͢o͎͊͜ḿ̛̩̳̖͕̞ͪ�
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> options: <a href="../interfaces/_favware_zalgo.zalgooptions.html" class="tsd-signature-type">ZalgoOptions</a><span class="tsd-signature-symbol"> =&nbsp;{up: true, middle: true, down: true, size: &#x27;&#x27;,}</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>Options for the Zalgo</p>
+										</div>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+							<p>The door to hell</p>
 						</li>
 					</ul>
 				</section>
@@ -219,22 +381,16 @@ banish(<span class="hljs-string">'ŝ̜̩͇̼̥̼́̏͢o͎͊͜ḿ̛̩̳̖͕̞ͪ�
 					<div class="tsd-signature tsd-kind-icon">chars<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/favware/node-packages/blob/7b3cfca/packages/zalgo/src/chars.ts#L31">packages/zalgo/src/chars.ts:31</a></li>
+							<li>Defined in <a href="https://github.com/favware/node-packages/blob/2534ddd/packages/zalgo/src/chars.ts#L13">packages/zalgo/src/chars.ts:13</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
-						<dl class="tsd-comment-tags">
-							<dt>constant</dt>
-							<dd></dd>
-							<dt>name</dt>
-							<dd><p>chars</p>
-							</dd>
-							<dt>example</dt>
-							<dd><p>const { chars } = require(&#39;@favware/zalgo&#39;);
-								// import { chars } from &#39;@favware/zalgo&#39;</p>
-								<p>console.log(chars);</p>
-							</dd>
-						</dl>
+						<div class="lead">
+							<p>Supported Zalgo characters, based on <a href="https://metacpan.org/pod/Acme::Zalgo " class="external"> Acme::Zalgo</a></p>
+						</div>
+						<pre><code class="language-ts"><span class="hljs-keyword">const</span> { chars } = <span class="hljs-built_in">require</span>(<span class="hljs-string">'@favware/zalgo'</span>);
+
+<span class="hljs-built_in">console</span>.log(chars);</code></pre>
 					</div>
 					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
 						<a name="chars-1.down" class="tsd-anchor"></a>
@@ -242,7 +398,7 @@ banish(<span class="hljs-string">'ŝ̜̩͇̼̥̼́̏͢o͎͊͜ḿ̛̩̳̖͕̞ͪ�
 						<div class="tsd-signature tsd-kind-icon">down<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> =&nbsp;[ &#x27;̖&#x27;, &#x27;̗&#x27;, &#x27;̘&#x27;, &#x27;̙&#x27;, &#x27;̜&#x27;, &#x27;̝&#x27;, &#x27;̞&#x27;, &#x27;̟&#x27;, &#x27;̠&#x27;, &#x27;̤&#x27;, &#x27;̥&#x27;, &#x27;̦&#x27;, &#x27;̩&#x27;, &#x27;̪&#x27;, &#x27;̫&#x27;, &#x27;̬&#x27;, &#x27;̭&#x27;, &#x27;̮&#x27;, &#x27;̯&#x27;, &#x27;̰&#x27;, &#x27;̱&#x27;, &#x27;̲&#x27;, &#x27;̳&#x27;, &#x27;̹&#x27;, &#x27;̺&#x27;, &#x27;̻&#x27;, &#x27;̼&#x27;, &#x27;ͅ&#x27;, &#x27;͇&#x27;, &#x27;͈&#x27;, &#x27;͉&#x27;, &#x27;͍&#x27;, &#x27;͎&#x27;, &#x27;͓&#x27;, &#x27;͔&#x27;, &#x27;͕&#x27;, &#x27;͖&#x27;, &#x27;͙&#x27;, &#x27;͚&#x27;, &#x27;̣&#x27; ]</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/favware/node-packages/blob/7b3cfca/packages/zalgo/src/chars.ts#L34">packages/zalgo/src/chars.ts:34</a></li>
+								<li>Defined in <a href="https://github.com/favware/node-packages/blob/2534ddd/packages/zalgo/src/chars.ts#L16">packages/zalgo/src/chars.ts:16</a></li>
 							</ul>
 						</aside>
 					</section>
@@ -252,7 +408,7 @@ banish(<span class="hljs-string">'ŝ̜̩͇̼̥̼́̏͢o͎͊͜ḿ̛̩̳̖͕̞ͪ�
 						<div class="tsd-signature tsd-kind-icon">middle<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> =&nbsp;[ &#x27;̕&#x27;, &#x27;̛&#x27;, &#x27;̀&#x27;, &#x27;́&#x27;, &#x27;͘&#x27;, &#x27;̡&#x27;, &#x27;̢&#x27;, &#x27;̧&#x27;, &#x27;̨&#x27;, &#x27;̴&#x27;, &#x27;̵&#x27;, &#x27;̶&#x27;, &#x27;͏&#x27;, &#x27;͜&#x27;, &#x27;͝&#x27;, &#x27;͞&#x27;, &#x27;͟&#x27;, &#x27;͠&#x27;, &#x27;͢&#x27;, &#x27;̸&#x27;, &#x27;̷&#x27;, &#x27;͡&#x27;, &#x27;҉&#x27; ]</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/favware/node-packages/blob/7b3cfca/packages/zalgo/src/chars.ts#L33">packages/zalgo/src/chars.ts:33</a></li>
+								<li>Defined in <a href="https://github.com/favware/node-packages/blob/2534ddd/packages/zalgo/src/chars.ts#L15">packages/zalgo/src/chars.ts:15</a></li>
 							</ul>
 						</aside>
 					</section>
@@ -262,7 +418,7 @@ banish(<span class="hljs-string">'ŝ̜̩͇̼̥̼́̏͢o͎͊͜ḿ̛̩̳̖͕̞ͪ�
 						<div class="tsd-signature tsd-kind-icon">up<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> =&nbsp;[ &#x27;̍&#x27;, &#x27;̎&#x27;, &#x27;̄&#x27;, &#x27;̅&#x27;, &#x27;̿&#x27;, &#x27;̑&#x27;, &#x27;̆&#x27;, &#x27;̐&#x27;, &#x27;͒&#x27;, &#x27;͗&#x27;, &#x27;͑&#x27;, &#x27;̇&#x27;, &#x27;̈&#x27;, &#x27;̊&#x27;, &#x27;͂&#x27;, &#x27;̓&#x27;, &#x27;̈́&#x27;, &#x27;͊&#x27;, &#x27;͋&#x27;, &#x27;͌&#x27;, &#x27;̃&#x27;, &#x27;̂&#x27;, &#x27;̌&#x27;, &#x27;͐&#x27;, &#x27;̀&#x27;, &#x27;́&#x27;, &#x27;̋&#x27;, &#x27;̏&#x27;, &#x27;̒&#x27;, &#x27;̓&#x27;, &#x27;̔&#x27;, &#x27;̽&#x27;, &#x27;̉&#x27;, &#x27;ͣ&#x27;, &#x27;ͤ&#x27;, &#x27;ͥ&#x27;, &#x27;ͦ&#x27;, &#x27;ͧ&#x27;, &#x27;ͨ&#x27;, &#x27;ͩ&#x27;, &#x27;ͪ&#x27;, &#x27;ͫ&#x27;, &#x27;ͬ&#x27;, &#x27;ͭ&#x27;, &#x27;ͮ&#x27;, &#x27;ͯ&#x27;, &#x27;̾&#x27;, &#x27;͛&#x27;, &#x27;͆&#x27;, &#x27;̚&#x27; ]</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/favware/node-packages/blob/7b3cfca/packages/zalgo/src/chars.ts#L32">packages/zalgo/src/chars.ts:32</a></li>
+								<li>Defined in <a href="https://github.com/favware/node-packages/blob/2534ddd/packages/zalgo/src/chars.ts#L14">packages/zalgo/src/chars.ts:14</a></li>
 							</ul>
 						</aside>
 					</section>
@@ -282,10 +438,16 @@ banish(<span class="hljs-string">'ŝ̜̩͇̼̥̼́̏͢o͎͊͜ḿ̛̩̳̖͕̞ͪ�
 						<a href="_favware_crypto.html">@favware/crypto</a>
 					</li>
 					<li class=" tsd-kind-module">
+						<a href="_favware_eslint_config.html">@favware/eslint-<wbr>config</a>
+					</li>
+					<li class=" tsd-kind-module">
 						<a href="_favware_milky_tslint.html">@favware/milky-<wbr>tslint</a>
 					</li>
 					<li class=" tsd-kind-module">
 						<a href="_favware_querystring.html">@favware/querystring</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="_favware_tslint_config.html">@favware/tslint-<wbr>config</a>
 					</li>
 					<li class=" tsd-kind-module">
 						<a href="_favware_unescape.html">@favware/unescape</a>
@@ -303,14 +465,29 @@ banish(<span class="hljs-string">'ŝ̜̩͇̼̥̼́̏͢o͎͊͜ḿ̛̩̳̖͕̞ͪ�
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
+					<li class=" tsd-kind-class tsd-parent-kind-module">
+						<a href="../classes/_favware_zalgo.zalgoerror.html" class="tsd-kind-icon">Zalgo<wbr>Error</a>
+					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-module">
 						<a href="../interfaces/_favware_zalgo.chars.html" class="tsd-kind-icon">Chars</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-module">
+						<a href="../interfaces/_favware_zalgo.zalgocountsmap.html" class="tsd-kind-icon">Zalgo<wbr>Counts<wbr>Map</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-module">
 						<a href="../interfaces/_favware_zalgo.zalgooptions.html" class="tsd-kind-icon">Zalgo<wbr>Options</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-module">
 						<a href="_favware_zalgo.html#banish" class="tsd-kind-icon">banish</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter">
+						<a href="_favware_zalgo.html#hasownproperty" class="tsd-kind-icon">has<wbr>Own<wbr>Property</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="_favware_zalgo.html#randomizer" class="tsd-kind-icon">randomizer</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="_favware_zalgo.html#unicodestringsplitter" class="tsd-kind-icon">unicode<wbr>String<wbr>Splitter</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-module">
 						<a href="_favware_zalgo.html#zalgo" class="tsd-kind-icon">zalgo</a>
