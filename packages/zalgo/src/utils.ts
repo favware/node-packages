@@ -40,7 +40,7 @@ export const unicodeStringSplitter = (splittable: string): string[] => {
  * @param obj Object to traverse
  * @param prop Property to find
  */
-export const hasOwnProperty = <O extends {}, K extends keyof O>(obj: O, prop: K) => obj && prop in obj && obj[prop];
+export const hasOwnProperty = <O extends {}, K extends keyof O>(obj: O, prop: K) => obj && obj[prop];
 
 /**
  * Draws a random number given any maximum
