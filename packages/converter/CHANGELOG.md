@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.1.0](https://github.com/favware/node-packages/compare/@favware/converter@1.0.6...@favware/converter@1.1.0) (2019-09-12)
+
+
+### Features
+
+* **converter:** new convertion: length to feet and inches ([c43a781](https://github.com/favware/node-packages/commit/c43a781))
+
+
+
+
+
 ## [1.0.6](https://github.com/favware/node-packages/compare/@favware/converter@1.0.5...@favware/converter@1.0.6) (2019-09-11)
 
 
