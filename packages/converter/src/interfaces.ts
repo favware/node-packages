@@ -31,6 +31,12 @@ export interface UnitData {
   multiplier: number;
   /** A zero value shift to use instead of a multiplier */
   valueShift?: number;
+  /**
+   * A unique transformation when default ratio and multiplier do not apply.
+   *
+   * @returns the final value returned by the convertion
+   */
+  uniqueTransform?: (value: number) => string;
 }
 
 /** Options for the convert method */

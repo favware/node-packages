@@ -1,4 +1,23 @@
-import { UnitDefinition, System } from './interfaces';
+import { System, UnitDefinition } from './interfaces';
+
+/**
+ * Rounds any number to a given precision
+ * @method
+ * @name roundNumber
+ * @param num The number to round
+ * @param precision The precision to use
+ * @returns rounded off number
+ */
+export const roundNumber = (num: number, precision = 8): number => {
+  if (!num.toString().includes('e')) {
+    return Number(`${Math.round(Number(`${num}e+${precision}`))}e-${precision}`);
+  }
+  const arr = `${num}`.split('e');
+  let sig = '';
+  if (Number(arr[1]) + precision > 0) sig = '+';
+
+  return Number(`${Math.round(Number(`${Number(arr[0])}e${sig}${Number(arr[1]) + precision}`))}e-${precision}`);
+};
 
 /**
  * All the unit definitions used by the library
@@ -159,6 +178,20 @@ export const definitions: UnitDefinition[] = [
       { id: 'yd', system: System.SECONDARY, multiplier: 3 },
       { id: 'ft-us', system: System.SECONDARY, multiplier: 1.000002 },
       { id: 'ft', system: System.SECONDARY, multiplier: 1 },
+      {
+        id: 'fti',
+        system: System.SECONDARY,
+        multiplier: 1,
+        uniqueTransform:
+          (value: number) => (
+            `
+              ${Math.floor(value)} ${Math.floor(value) === 1 ? 'foot' : 'feet'}
+              and ${roundNumber(value % 1 * 12, 0)} inches
+            `
+              .replace(/(?:\n(?:\s*))+/g, ' ')
+              .replace(/^ (.+) $/, '$1')
+          ),
+      },
       { id: 'fathom', system: System.SECONDARY, multiplier: 6 },
       { id: 'mi', system: System.SECONDARY, multiplier: 5280 },
       { id: 'nmi', system: System.SECONDARY, multiplier: 6076.12 }
@@ -387,22 +420,3 @@ export class ConverterError extends Error {
     this.stack = '';
   }
 }
-
-/**
- * Rounds any number to a given precision
- * @method
- * @name roundNumber
- * @param num The number to round
- * @param precision The precision to use
- * @returns rounded off number
- */
-export const roundNumber = (num: number, precision = 8): number => {
-  if (!num.toString().includes('e')) {
-    return Number(`${Math.round(Number(`${num}e+${precision}`))}e-${precision}`);
-  }
-  const arr = `${num}`.split('e');
-  let sig = '';
-  if (Number(arr[1]) + precision > 0) sig = '+';
-
-  return Number(`${Math.round(Number(`${Number(arr[0])}e${sig}${Number(arr[1]) + precision}`))}e-${precision}`);
-};

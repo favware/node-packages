@@ -1,5 +1,5 @@
 import { ConverterError, definitions, roundNumber } from './helpers';
-import { ConvertOptions, MeasurementSystemData, UnitData, UnitDefinition, System } from './interfaces';
+import { ConvertOptions, System, UnitData, UnitDefinition } from './interfaces';
 
 /**
  * Converts input from one unit to another unit
@@ -9,7 +9,9 @@ import { ConvertOptions, MeasurementSystemData, UnitData, UnitDefinition, System
  * @param options _(Optional)_ Options for the conversion
  * @returns Will return a number if the function succeeded or a string with an error message if not
  */
-export const convert = (value: number, fromUnit: string, toUnit: string, options: ConvertOptions = { precision: 8 }): number | string => {
+export const convert = (
+  value: number, fromUnit: string, toUnit: string, options: ConvertOptions = { precision: 8 }
+): number | string => {
   try {
     if (!value || !fromUnit || !toUnit) throw new Error('missing_input');
     if (typeof value !== 'number') throw new Error('value_not_number');
@@ -39,22 +41,28 @@ export const convert = (value: number, fromUnit: string, toUnit: string, options
 
     if (!definitionData.name) throw new Error('no_data_found');
 
-    const fromData = definitionData.data.filter((unit: UnitData) => unit.id === fromUnit)[0];
-    const toData = definitionData.data.filter((unit: UnitData) => unit.id === toUnit)[0];
+    const fromData = definitionData.data.find(unit => unit.id === fromUnit);
+    const toData = definitionData.data.find(unit => unit.id === toUnit);
+    if (!fromData) throw new Error('fromUnit_not_supported');
+    if (!toData) throw new Error('toUnit_not_supported');
+    if (fromData.uniqueTransform) throw new Error('fromUnit_has_uniqueTransform');
+
     let result = value * fromData.multiplier;
 
     if (fromData.valueShift) result -= fromData.valueShift;
 
     if (fromData.system !== toData.system) {
-      const transform = (definitionData[fromData.system] as MeasurementSystemData).transform; // eslint-disable-line @typescript-eslint/unbound-method
+      const transform = definitionData[fromData.system]!.transform; // eslint-disable-line @typescript-eslint/unbound-method
       if (typeof transform === 'function') {
         result = transform(result);
       } else {
-        result *= (definitionData[fromData.system] as MeasurementSystemData).ratio;
+        result *= definitionData[fromData.system]!.ratio;
       }
     }
 
     if (toData.valueShift) result += toData.valueShift;
+
+    if (toData.uniqueTransform) return toData.uniqueTransform(result);
 
     return roundNumber(result / toData.multiplier, options.precision);
   } catch (err) {
@@ -65,6 +73,18 @@ export const convert = (value: number, fromUnit: string, toUnit: string, options
     if (/(?:fromUnit_not_supported)/i.test(err.toString())) throw new ConverterError('Your fromUnit is not supported by this library');
     if (/(?:toUnit_not_supported)/i.test(err.toString())) throw new ConverterError('Your toUnit is not supported by this library');
     if (/(?:no_data_found)/i.test(err.toString())) throw new ConverterError(`Cannot convert incompatible unit of ${fromUnit} to ${toUnit}`);
+    if (/(?:fromUnit_has_uniqueTransform)/i.test(err.toString())) {
+      throw new ConverterError(
+        `
+          Looks like your from unit had a "unique transform".
+          Units with a unique transform can only be used as the "toUnit"
+          as they return the final conversion result.
+        `
+          .replace(/(?:\n(?:\s*))+/g, ' ')
+          .replace(/^ (.+) $/, '$1')
+      );
+    }
+
     throw new ConverterError(`Unhandled Error, please contact the developer of the package. Message: ${err.toString()}`);
   }
 };

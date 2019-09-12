@@ -114,6 +114,26 @@ describe('verify transform ratio works', () => {
   });
 });
 
+describe('verify unique ratios work', () => {
+  test('should support meters to feet and inch', () => {
+    const expected = '5 feet and 7 inches';
+    const actual = convert(1.7, 'm', 'fti');
+    expect(actual).toBe(expected);
+  });
+
+  test('should support non-defaults to fti', () => {
+    const expected = '8815 feet and 7 inches';
+    const actual = convert(2.687, 'km', 'fti');
+    expect(actual).toBe(expected);
+  });
+
+  test('should be 0 inches for rounded feet', () => {
+    const expected = '1 foot and 0 inches';
+    const actual = convert(1, 'ft', 'fti');
+    expect(actual).toBe(expected);
+  });
+});
+
 describe('verify support for options', () => {
   test('modifying decimals with bit to kilobit', () => {
     const expected = 0.00098;
