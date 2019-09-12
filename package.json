@@ -9,7 +9,7 @@
     "test": "jest",
     "build": "lerna run build --parallel --ignore @favware/speedtest",
     "docs": "typedoc",
-    "prepublishOnly": "concurrently \"yarn build\" \"yarn docs\"",
+    "prepublishOnly": "yarn build",
     "commit": "git-cz",
     "cz": "git-cz",
     "up": "yarn upgrade-interactive",
