@@ -46,7 +46,12 @@ export default opts => {
       }),
       commonjs(),
       terser({ ecma: 6 }),
-      copy({targets: [ { src: 'docs/example.js', dest: 'dist/' } ]}),
+      copy(
+        {
+          targets: [ { src: 'docs/example.js', dest: 'dist/' } ],
+          copyOnce: true,
+        }
+      ),
       ...plugins
     ],
   };
