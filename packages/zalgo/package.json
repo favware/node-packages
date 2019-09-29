@@ -17,11 +17,6 @@
     "build": "rollup -c rollup.config.js",
     "start": "yarn build -w"
   },
-  "peerDependencies": {
-    "@types/node": ">=8",
-    "prism-media": ">=1",
-    "ytdl-core": ">=0.29.5"
-  },
   "files": [
     "dist"
   ],
