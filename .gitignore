@@ -23,6 +23,7 @@ docsbuild/
 logs/
 coverage/
 *.log*
+tsconfig.tsbuildinfo
 
 # IDE Settings
 .idea/
