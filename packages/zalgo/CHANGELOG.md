@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.1.0](https://github.com/favware/node-packages/compare/@favware/zalgo@1.0.6...@favware/zalgo@1.1.0) (2019-10-13)
+
+
+### Features
+
+* standardize TS configuration ([47696f4](https://github.com/favware/node-packages/commit/47696f4e1dd2632b305ff9789cdd6c473fa709ca))
+
+
+
+
+
 ## [1.0.6](https://github.com/favware/node-packages/compare/@favware/zalgo@1.0.5...@favware/zalgo@1.0.6) (2019-09-29)
 
 

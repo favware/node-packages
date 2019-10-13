@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.2.0](https://github.com/favware/node-packages/compare/@favware/speedtest@0.1.3...@favware/speedtest@0.2.0) (2019-10-13)
+
+
+### Features
+
+* standardize TS configuration ([47696f4](https://github.com/favware/node-packages/commit/47696f4e1dd2632b305ff9789cdd6c473fa709ca))
+
+
+
+
+
 ## [0.1.3](https://github.com/favware/node-packages/compare/@favware/speedtest@0.1.2...@favware/speedtest@0.1.3) (2019-09-11)
 
 

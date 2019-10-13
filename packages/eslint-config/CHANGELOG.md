@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.1.0](https://github.com/favware/node-packages/compare/@favware/eslint-config@3.0.5...@favware/eslint-config@3.1.0) (2019-10-13)
+
+
+### Features
+
+* standardize TS configuration ([47696f4](https://github.com/favware/node-packages/commit/47696f4e1dd2632b305ff9789cdd6c473fa709ca))
+
+
+
+
+
 ## [3.0.5](https://github.com/favware/node-packages/compare/@favware/eslint-config@3.0.4...@favware/eslint-config@3.0.5) (2019-09-11)
 
 **Note:** Version bump only for package @favware/eslint-config

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.1.0](https://github.com/favware/node-packages/compare/@favware/milky-tslint@1.0.10...@favware/milky-tslint@1.1.0) (2019-10-13)
+
+
+### Features
+
+* standardize TS configuration ([47696f4](https://github.com/favware/node-packages/commit/47696f4e1dd2632b305ff9789cdd6c473fa709ca))
+
+
+
+
+
 ## [1.0.10](https://github.com/favware/node-packages/compare/@favware/milky-tslint@1.0.9...@favware/milky-tslint@1.0.10) (2019-09-11)
 
 **Note:** Version bump only for package @favware/milky-tslint
