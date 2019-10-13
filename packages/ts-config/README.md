@@ -4,7 +4,7 @@
   </p>
 
   <p>
-<h1> @favware/tsconfig</h1>
+<h1> @favware/ts-config</h1>
 <h3> Standardized TSConfig for Favware projects </h3>
   </p>
 </div>
@@ -19,9 +19,9 @@
 
 **Bundle Sizes**
 
-[![npm bundle size](https://img.shields.io/bundlephobia/min/@favware/tsconfig?label=tsconfig%20-%20minified&logo=webpack&style=flat-square)](https://bundlephobia.com/result?p=@favware/tsconfig)
-[![npm bundle size](https://img.shields.io/bundlephobia/minzip/@favware/tsconfig?label=tsconfig%20-%20minzipped&logo=webpack&style=flat-square)](https://bundlephobia.com/result?p=@favware/tsconfig)
-[![npm](https://img.shields.io/npm/v/@favware/tsconfig?color=crimson&label=tsconfig%20version&logo=npm&style=flat-square)](https://www.npmjs.com/package/@favware/tsconfig)
+[![npm bundle size](https://img.shields.io/bundlephobia/min/@favware/ts-config?label=tsconfig%20-%20minified&logo=webpack&style=flat-square)](https://bundlephobia.com/result?p=@favware/ts-config)
+[![npm bundle size](https://img.shields.io/bundlephobia/minzip/@favware/ts-config?label=tsconfig%20-%20minzipped&logo=webpack&style=flat-square)](https://bundlephobia.com/result?p=@favware/ts-config)
+[![npm](https://img.shields.io/npm/v/@favware/ts-config?color=crimson&label=tsconfig%20version&logo=npm&style=flat-square)](https://www.npmjs.com/package/@favware/ts-config)
 
 **Social Media and Donations**
 
@@ -37,9 +37,9 @@
 Install with [yarn](https://yarnpkg.com) or [npm](https://www.npmjs.com/):
 
 ```sh
-yarn add @favware/tsconfig
+yarn add @favware/ts-config
 
-# npm install @favware/tsconfig
+# npm install @favware/ts-config
 ```
 
 # Usage
@@ -47,7 +47,16 @@ yarn add @favware/tsconfig
 ```json
 // in your tsconfig.json
 {
-  "extends": "@favware/tsconfig"
+  "extends": "@favware/ts-config",
+  "compilerOptions": {
+    "outDir": "build/",
+    "rootDir": "src/",
+  },
+  "include": ["src"],
+  "exclude": [
+    "node_modules",
+    "**/*.test.ts"
+  ]
 }
 ```
 

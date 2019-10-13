@@ -1,6 +1,6 @@
 {
-  "name": "@favware/tsconfig",
-  "version": "1.1.1",
+  "name": "@favware/ts-config",
+  "version": "1.0.0",
   "description": "Shareable TypeScript configuration for all Favware projects",
   "author": "@favware",
   "license": "MIT",
@@ -10,7 +10,7 @@
     "test": "jest",
     "lint": "eslint src --ext ts --fix -c ../../.eslintrc",
     "prebuild": "yarn lint",
-    "build": "tsc"
+    "build": "tsc -p tsconfig.build.json"
   },
   "peerDependencies": {
     "typescript": ">=3"

@@ -45,8 +45,8 @@
 [![npm bundle size](https://img.shields.io/bundlephobia/min/@favware/zalgo?label=zalgo%20-%20minified&logo=webpack&style=flat-square)](https://bundlephobia.com/result?p=@favware/zalgo)
 [![npm bundle size](https://img.shields.io/bundlephobia/minzip/@favware/zalgo?label=zalgo%20-%20minzipped&logo=webpack&style=flat-square)](https://bundlephobia.com/result?p=@favware/zalgo)
 
-[![npm bundle size](https://img.shields.io/bundlephobia/min/@favware/tsconfig?label=tsconfig%20-%20minified&logo=webpack&style=flat-square)](https://bundlephobia.com/result?p=@favware/tsconfig)
-[![npm bundle size](https://img.shields.io/bundlephobia/minzip/@favware/tsconfig?label=tsconfig%20-%20minzipped&logo=webpack&style=flat-square)](https://bundlephobia.com/result?p=@favware/tsconfig)
+[![npm bundle size](https://img.shields.io/bundlephobia/min/@favware/ts-config?label=tsconfig%20-%20minified&logo=webpack&style=flat-square)](https://bundlephobia.com/result?p=@favware/ts-config)
+[![npm bundle size](https://img.shields.io/bundlephobia/minzip/@favware/ts-config?label=tsconfig%20-%20minzipped&logo=webpack&style=flat-square)](https://bundlephobia.com/result?p=@favware/ts-config)
 
 **NPM Versions**
 
@@ -62,7 +62,7 @@
 [![npm](https://img.shields.io/npm/v/@favware/ytdl-prismplayer?color=crimson&label=ytdl-prismplayer%20version&logo=npm&style=flat-square)](https://www.npmjs.com/package/@favware/ytdl-prismplayer)
 [![npm](https://img.shields.io/npm/v/@favware/zalgo?color=crimson&label=zalgo%20version&logo=npm&style=flat-square)](https://www.npmjs.com/package/@favware/zalgo)
 
-[![npm](https://img.shields.io/npm/v/@favware/tsconfig?color=crimson&label=tsconfig%20version&logo=npm&style=flat-square)](https://www.npmjs.com/package/@favware/tsconfig)
+[![npm](https://img.shields.io/npm/v/@favware/ts-config?color=crimson&label=tsconfig%20version&logo=npm&style=flat-square)](https://www.npmjs.com/package/@favware/ts-config)
 
 **Social Media and Donations**
 
