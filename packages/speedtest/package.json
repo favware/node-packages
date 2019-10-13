@@ -7,7 +7,6 @@
   "license": "MIT",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
-  "jsnext:main": "dist/index.es.js",
   "types": "dist/index.d.ts",
   "runkitExampleFilename": "dist/example.js",
   "homepage": "https://github.com/favware/node-packages/tree/master/packages/speedtest#readme",
@@ -19,7 +18,7 @@
     "start": "yarn build -w"
   },
   "dependencies": {
-    "fast-xml-parser": "^3.12.20",
+    "fast-xml-parser": "^3.13.0",
     "node-fetch": "^2.6.0",
     "strict-event-emitter-types": "^2.0.0"
   },

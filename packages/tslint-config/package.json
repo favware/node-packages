@@ -6,7 +6,6 @@
   "license": "MIT",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
-  "jsnext:main": "dist/index.es.js",
   "types": "dist/index.d.ts",
   "homepage": "https://github.com/favware/node-packages/tree/master/packages/tslint-config#readme",
   "scripts": {
