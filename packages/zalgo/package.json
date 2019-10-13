@@ -42,5 +42,8 @@
   "directories": {
     "lib": "src",
     "test": "__tests__"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

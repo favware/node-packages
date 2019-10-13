@@ -35,5 +35,8 @@
     "favware",
     "typescript",
     "ts"
-  ]
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
 }
