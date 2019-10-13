@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "@favware/speedtest",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Speedtest utility to test your internet speed",
   "author": "@favware",
   "license": "MIT",
