@@ -1,29 +1,13 @@
 {
+  "extends": "./packages/tsconfig/tsconfig.json",
   "compilerOptions": {
-    "module": "esnext",
+    "rootDir": "packages",
     "target": "es6",
-    "lib": [
-      "esnext",
-      "dom"
-    ],
     "allowJs": false,
-    "allowSyntheticDefaultImports": true,
-    "declaration": true,
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
-    "moduleResolution": "node",
-    "newLine": "lf",
-    "noFallthroughCasesInSwitch": true,
-    "noImplicitReturns": true,
-    "noImplicitThis": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "sourceMap": true,
-    "strict": true
+    "incremental": false
   },
-  "exclude": [
-    "node_modules",
-    "**/*.test.ts"
+  "include": [
+    "packages/**/*.ts"
   ],
   "typedocOptions": {
     "out": "./docs/",

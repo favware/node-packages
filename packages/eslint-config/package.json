@@ -14,7 +14,6 @@
     "lint": "eslint src __tests__ --ext js,ts --fix -c ../../.eslintrc",
     "prebuild": "yarn lint && yarn test",
     "build": "rollup -c rollup.config.js",
-    "ci:build": "rollup -c rollup.config.js",
     "start": "yarn build -w"
   },
   "peerDependencies": {
