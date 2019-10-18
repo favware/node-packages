@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.1.3](https://github.com/favware/node-packages/compare/@favware/eslint-config@3.1.2...@favware/eslint-config@3.1.3) (2019-10-18)
+
+
+### Bug Fixes
+
+* **eslint-config:** bump down eslint parser to fix macos/windows bug ([a4a0018](https://github.com/favware/node-packages/commit/a4a00183304a7389249fc0e1ca2f24260fe53410))
+
+
+
+
+
 ## [3.1.2](https://github.com/favware/node-packages/compare/@favware/eslint-config@3.1.1...@favware/eslint-config@3.1.2) (2019-10-13)
 
 
