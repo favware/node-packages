@@ -5686,10 +5686,15 @@ mimic-fn@^2.0.0, mimic-fn@^2.1.0:
   resolved "https://registry.yarnpkg.com/mimic-fn/-/mimic-fn-2.1.0.tgz#7ed2c2ccccaf84d3ffcb7a69b57711fc2083401b"
   integrity sha512-OqbOk5oEQeAZ8WXWydlu9HJjz9WVdEIvamMCcXmuqUYjTknH/sqsWvhQ3vgwKFRR1HpjvNBKQ37nbJgYzGqGcg==
 
-miniget@^1.4.0, miniget@^1.6.0:
+miniget@^1.4.0:
   version "1.6.0"
   resolved "https://registry.yarnpkg.com/miniget/-/miniget-1.6.0.tgz#33e4bb46ed2860e15d3a94f9fe99f44f7c275a69"
   integrity sha512-CELIsH/oJfnDHixh7j//7H7PyQYkoMxgaTtzdoD08PYjyLW0YuYqxeIZGjLx59WF2/eapCLkQE4N5ppj82DW+A==
+
+miniget@^1.6.0:
+  version "1.6.1"
+  resolved "https://registry.yarnpkg.com/miniget/-/miniget-1.6.1.tgz#f1ae08a34e06a2b1c3ace568384ea0def2fe5813"
+  integrity sha512-I5oBwZmcaOuJrjQn7lpS29HM+aAZDbzKbX5ouxVyhFYdg6fA6YKOTwOCgzZQwlHuMek3FlCxz6eNrd4pOXbwOA==
 
 minimatch@3.0.4, minimatch@^3.0.0, minimatch@^3.0.4:
   version "3.0.4"

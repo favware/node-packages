@@ -76,6 +76,24 @@ describe('verify all supported characters', () => {
     expect(unescape('&#160;')).toBe(' ');
     expect(unescape('&#xa0;')).toBe(' ');
   });
+
+  test('should unescape Right Single Quotation Mark', () => {
+    expect(unescape('&rsquo;')).toBe('’');
+    expect(unescape('&#8217;')).toBe('’');
+    expect(unescape('&#x2019;')).toBe('’');
+  });
+
+  test('should unescape Left Single Quotation Mark', () => {
+    expect(unescape('&lsquo;')).toBe('‘');
+    expect(unescape('&#8216;')).toBe('‘');
+    expect(unescape('&#x2018;')).toBe('‘');
+  });
+
+  test('should unescape Horizontal Ellipsis', () => {
+    expect(unescape('&hellip;')).toBe('…');
+    expect(unescape('&#8230;')).toBe('…');
+    expect(unescape('&#x2026;')).toBe('…');
+  });
 });
 
 describe('verify that function parses correctly', () => {

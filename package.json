@@ -68,7 +68,7 @@
   "husky": {
     "hooks": {
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "pre-commit": "yarn scripts:validateNoOnly && yarn lint-staged"
+      "pre-commit": "yarn scripts:validateNoOnly && yarn lint-staged -d"
     }
   },
   "commitlint": {
@@ -77,8 +77,8 @@
     ]
   },
   "lint-staged": {
-    "*.{js,ts,tsx}": [
-      "run-p lint test",
+    "*.{js,ts}": [
+      "yarn lint",
       "git add"
     ],
     "packages/eslint-config/src/index.ts": [
