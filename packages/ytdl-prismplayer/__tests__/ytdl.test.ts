@@ -1,5 +1,4 @@
 import play, { PrismVideoFormat, play as NamedPlay } from '../src';
-import { Readable } from 'stream';
 
 describe('ytdl-prismplayer', () => {
   test('should match snapshot', () => {
@@ -45,14 +44,5 @@ describe('ytdl-prismplayer', () => {
 
     expect(data.profile).toBe('baseline');
     expect(data).toMatchSnapshot();
-  });
-
-  test('should resolve play function', async () => {
-    const stream = await play('https://youtu.be/y3OzHBEcymw');
-    expect(stream).toBeInstanceOf(Readable);
-  });
-
-  test('play function should match snapshot', () => {
-    expect(play).toMatchSnapshot();
   });
 });

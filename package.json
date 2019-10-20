@@ -42,7 +42,7 @@
     "jest": "^24.9.0",
     "jest-circus": "^24.9.0",
     "jsonfile": "^5.0.0",
-    "lerna": "^3.18.1",
+    "lerna": "~3.17.0",
     "lint-staged": "^9.4.2",
     "open-cli": "^5.0.0",
     "prism-media": "^1.1.0",
@@ -68,7 +68,7 @@
   "husky": {
     "hooks": {
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "pre-commit": "yarn scripts:validateNoOnly && yarn lint-staged -d"
+      "pre-commit": "yarn scripts:validateNoOnly && yarn lint-staged"
     }
   },
   "commitlint": {
