@@ -46,6 +46,9 @@ export const charSets: { [key: string]: string } = {
   '&#162;': '¢',
   '&#xa2;': '¢',
 
+  '&#36;': '$',
+  '&#x24;': '$',
+
   '&euro;': '€',
   '&#8364;': '€',
 
@@ -72,4 +75,8 @@ export const charSets: { [key: string]: string } = {
   '&hellip;': '…',
   '&#8230;': '…',
   '&#x2026;': '…',
+
+  '&trade;': '™',
+  '&#8482;': '™',
+  '&#x2122;': '™',
 };
