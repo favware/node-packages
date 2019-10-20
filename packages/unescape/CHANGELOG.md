@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.3.0](https://github.com/favware/node-packages/compare/@favware/unescape@1.2.0...@favware/unescape@1.3.0) (2019-10-20)
+
+
+### Features
+
+* **unescape:** added dollar and trademark entities ([5f332a9](https://github.com/favware/node-packages/commit/5f332a9cff59406519f0a718712723642949db67))
+
+
+
+
+
 # [1.2.0](https://github.com/favware/node-packages/compare/@favware/unescape@1.1.2...@favware/unescape@1.2.0) (2019-10-20)
 
 
