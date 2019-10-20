@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.2.0](https://github.com/favware/node-packages/compare/@favware/unescape@1.1.2...@favware/unescape@1.2.0) (2019-10-20)
+
+
+### Features
+
+* add support for additional HTML entities ([2a724b9](https://github.com/favware/node-packages/commit/2a724b9a14e843b9a512e518a52614b8a8566e7c))
+
+
+
+
+
 ## [1.1.2](https://github.com/favware/node-packages/compare/@favware/unescape@1.1.1...@favware/unescape@1.1.2) (2019-10-13)
 
 
