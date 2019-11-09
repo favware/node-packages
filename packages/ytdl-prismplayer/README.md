@@ -32,7 +32,7 @@
 ---
 
 For compatible videos, this module uses [prism-media](https://github.com/amishshah/prism-media)
-to extract Opus audio from a stream without having to pipe it through FFmpeg first. This greatly
+to extract Opus or Vorbis audio from a stream without having to pipe it through FFmpeg first. This greatly
 reduces the processing power required, making playback smoother and allowing you to play over
 more connections simultaneously.
 
@@ -40,7 +40,7 @@ For videos where the required codec (webm + opus) isn't available, the module wi
 using FFmpeg to encode the stream in Opus. Many new videos on YouTube are available in this codec
 so hopefully this isn't frequent.
 
-Put simply, this module finds the most efficient way to extract a stream of Opus audio from a
+Put simply, this module finds the most efficient way to extract a stream of Opus or Vorbis audio from a
 YouTube video.
 
 # Install
@@ -82,6 +82,13 @@ async function play(connection, url) {
     connection.play(await ytdl(url), {
         type: 'opus'
     });
+}
+
+// You can prefer vorbis instead of opus
+async function play(connection, url) {
+  connection.play(await ytdl(url, {}, { preferredFormat: 'vorbis' }), {
+    type: 'opus'
+  });
 }
 ```
 
