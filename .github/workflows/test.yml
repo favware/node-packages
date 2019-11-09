@@ -36,7 +36,5 @@ jobs:
 
     - name: Install Deps
       run: yarn
-    - name: Build Project
-      run: yarn build
     - name: Test
       run: yarn test
