@@ -1,0 +1,24 @@
+name: Update API Docs
+
+on:
+  release:
+
+jobs:
+  UpdateDocs:
+    name: Update API Docs
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: Install Deps
+      run: yarn
+    - name: Run Docs
+      run: yarn docs
+    - name: Commit any changes
+      run: |
+        git config --local user.email "favwarebot@gmail.com"
+        git config --local user.name "Favware-bot"
+        git commit -sam "docs(api): update API docs"
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
