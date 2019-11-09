@@ -13,19 +13,12 @@ jobs:
       with:
         node-version: 12
 
-    - name: Log stuff for testing
-      run: |
-        pwd
-        ls -al
-        echo ""
-
     - name: Cache node modules
       uses: actions/cache@v1
       with:
         path: node_modules
-        key: ${{ runner.OS }}-yarn-${{ hashFiles('yarn.lock') }}
+        key: ${{ runner.OS }}-yarn-${{ hashFiles('**/yarn.lock') }}
         restore-keys: |
-          ${{ runner.OS }}-yarn-${{ hashFiles('yarn.lock') }}
           ${{ runner.OS }}-yarn-${{ env.cache-name }}-
           ${{ runner.OS }}-yarn-
           ${{ runner.OS }}-
@@ -55,6 +48,7 @@ jobs:
         path: node_modules
         key: ${{ runner.OS }}-yarn-${{ hashFiles('**/yarn.lock') }}
         restore-keys: |
+          ${{ runner.OS }}-yarn-${{ hashFiles('**/yarn.lock') }}
           ${{ runner.OS }}-yarn-${{ env.cache-name }}-
           ${{ runner.OS }}-yarn-
           ${{ runner.OS }}-
