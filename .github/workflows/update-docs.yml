@@ -2,6 +2,7 @@ name: Update API Docs
 
 on:
   release:
+    types: [published, created]
   create:
 
 jobs:
@@ -34,7 +35,7 @@ jobs:
       run: |
         git config --local user.email "favwarebot@gmail.com"
         git config --local user.name "Favware-bot"
-        git commit -sam "docs(api): update API docs"
+        git commit -nsam "docs(api): update API docs"
     - name: Push changes
       uses: ad-m/github-push-action@master
       with:
