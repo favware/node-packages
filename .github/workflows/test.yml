@@ -23,6 +23,7 @@ jobs:
         node-version: ${{ matrix.node_version }}
 
     - name: Cache node modules
+      if: matrix.os != 'windows-latest'
       uses: actions/cache@v1
       with:
         path: node_modules
