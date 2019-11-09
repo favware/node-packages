@@ -44,7 +44,7 @@
     "lerna": "^3.18.4",
     "lint-staged": "^9.4.2",
     "open-cli": "^5.0.0",
-    "prism-media": "^1.1.0",
+    "prism-media": "github:CatsMiaow/prism-media#master",
     "rollup": "^1.26.3",
     "rollup-plugin-cleaner": "^1.0.0",
     "rollup-plugin-commonjs": "^10.1.0",

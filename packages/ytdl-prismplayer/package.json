@@ -18,7 +18,7 @@
   },
   "peerDependencies": {
     "@types/node": ">=10",
-    "prism-media": ">=1",
+    "prism-media": "github:CatsMiaow/prism-media#master",
     "ytdl-core": ">=1"
   },
   "files": [
