@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.4.0](https://github.com/favware/node-packages/compare/@favware/ytdl-prismplayer@2.3.4...@favware/ytdl-prismplayer@2.4.0) (2019-11-09)
+
+
+### Features
+
+* **ytdl-prismplayer:** option to prefer vorbis streams instead of opus ([abadf46](https://github.com/favware/node-packages/commit/abadf46ea78dc67e0f49b5623a60006e901eb2b4))
+
+
+
+
+
 ## [2.3.4](https://github.com/favware/node-packages/compare/@favware/ytdl-prismplayer@2.3.3...@favware/ytdl-prismplayer@2.3.4) (2019-11-09)
 
 
