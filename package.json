@@ -7,7 +7,7 @@
   "scripts": {
     "lint": "eslint scripts/ packages/** --fix --ext ts",
     "test": "jest",
-    "build": "lerna run build --parallel --ignore @favware/speedtest",
+    "build": "lerna run build --parallel",
     "docs": "typedoc",
     "prepublishOnly": "yarn build",
     "commit": "git-cz",

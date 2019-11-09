@@ -19,9 +19,6 @@
       "**/*.js"
     ],
     "mode": "modules",
-    "lernaExclude": [
-      "@favware/speedtest"
-    ],
     "pathExclude": [
       "scripts/duplicateESLintConfig",
       "scripts/validateNoOnly"
