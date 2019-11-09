@@ -1,8 +1,7 @@
 name: Update API Docs
 
 on:
-  release:
-    types: [created]
+  create:
 
 jobs:
   UpdateDocs:
