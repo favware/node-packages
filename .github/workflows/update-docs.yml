@@ -31,7 +31,7 @@ jobs:
       run: yarn docs
     - name: Commit any changes
       run: |
-        GITHUB_REPO_URL="https://${GITHUB_ACTOR}:${{ secrets.GITHUB_TOKEN }}@github.com/${GITHUB_REPOSITORY}.git";
+        GITHUB_REPO_URL="https://${GITHUB_ACTOR}:${{ secrets.PUSH_TOKEN }}@github.com/${GITHUB_REPOSITORY}.git";
         git config --local user.email "favwarebot@gmail.com";
         git config --local user.name "Favware-bot";
         git commit -nsam "docs(api): update API docs";
