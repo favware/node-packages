@@ -31,10 +31,8 @@ jobs:
       run: yarn docs
     - name: Commit any changes
       run: |
-        git config --local user.email "favwarebot@gmail.com"
-        git config --local user.name "Favware-bot"
-        git commit -nsam "docs(api): update API docs"
-    - name: Push changes
-      uses: ad-m/github-push-action@master
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_REPO_URL="https://${GITHUB_ACTOR}:${{ secrets.GITHUB_TOKEN }}@github.com/${GITHUB_REPOSITORY}.git";
+        git config --local user.email "favwarebot@gmail.com";
+        git config --local user.name "Favware-bot";
+        git commit -nsam "docs(api): update API docs";
+        git push "${GITHUB_REPO_URL}" HEAD:master --follow-tags;
