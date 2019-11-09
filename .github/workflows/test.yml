@@ -26,12 +26,12 @@ jobs:
       uses: actions/cache@v1
       with:
         path: node_modules
-        key: ${{ runner.OS }}-yarn-${{ hashFiles('**/yarn.lock') }}
+        key: ${{ matrix.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
         restore-keys: |
-          ${{ runner.OS }}-yarn-${{ hashFiles('**/yarn.lock') }}
-          ${{ runner.OS }}-yarn-${{ env.cache-name }}-
-          ${{ runner.OS }}-yarn-
-          ${{ runner.OS }}-
+          ${{ matrix.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          ${{ matrix.os }}-yarn-${{ env.cache-name }}-
+          ${{ matrix.os }}-yarn-
+          ${{ matrix.os }}-
 
     - name: Install Deps
       run: yarn
