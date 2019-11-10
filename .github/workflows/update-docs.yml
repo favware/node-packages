@@ -1,7 +1,8 @@
 name: Update API Docs
 
 on:
-  create:
+  schedule:
+    - cron:  '0 2 * * *'
 
 jobs:
   UpdateDocs:
