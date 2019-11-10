@@ -290,11 +290,6 @@
     "color": "b60205"
   },
   {
-    "name": "Type: Sharding",
-    "description": "Issues and PRs related to sharding.",
-    "color": "1d76db"
-  },
-  {
     "name": "Type: Typo",
     "description": "Issues and PRs related to typos in the documentation or code.",
     "color": "c5def5"

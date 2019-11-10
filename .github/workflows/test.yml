@@ -16,25 +16,18 @@ jobs:
         os: [ubuntu-latest, windows-latest, macOS-latest]
 
     steps:
-    - uses: actions/checkout@v1
+    - name: Checkout Project
+      uses: actions/checkout@v1
     - name: Use Node.js ${{ matrix.node_version }}
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node_version }}
-
-    - name: Cache node modules
-      if: matrix.os != 'windows-latest'
+    - name: Restore CI Cache
       uses: actions/cache@v1
       with:
         path: node_modules
-        key: ${{ matrix.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
-        restore-keys: |
-          ${{ matrix.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
-          ${{ matrix.os }}-yarn-${{ env.cache-name }}-
-          ${{ matrix.os }}-yarn-
-          ${{ matrix.os }}-
-
-    - name: Install Deps
+        key: ${{ runner.os }}-${{ matrix.node_version }}-${{ hashFiles(matrix.os == 'windows-latest' && '**\yarn.lock' || '**/yarn.lock') }}
+    - name: Install Dependencies
       run: yarn
     - name: Test
       run: yarn test
