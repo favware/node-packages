@@ -100,7 +100,7 @@ export const play = async (
       ...vorbisPrismArgs
     ],
   });
-  const opus = new prism.opus.Encoder({ frameSize: 960, channels: 2, rate: 4800 });
+  const opus = new prism.opus.Encoder({ frameSize: 960, channels: 2, rate: 48000 });
   const stream = transcoder.pipe(transcoder).pipe(opus);
 
   stream.on('close', () => {
