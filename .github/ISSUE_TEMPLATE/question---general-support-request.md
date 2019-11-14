@@ -1,8 +1,8 @@
 ---
 name: Question / General support request
 about: Ask for help in Discord instead - https://favware.tech/redirect/server
-title: '[Question]: '
-labels: 'Question 🤔'
+title: 'question: '
+labels: 'Type: Question'
 assignees: ''
 
 ---

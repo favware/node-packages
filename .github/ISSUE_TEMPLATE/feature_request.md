@@ -1,8 +1,8 @@
 ---
 name: Feature request
 about: Request a feature for any package
-title: '[Request]: '
-labels: 'Addition 📤, Improvement 🎗️'
+title: 'feat: '
+labels: 'Meta: Feature'
 assignees: ''
 
 ---
