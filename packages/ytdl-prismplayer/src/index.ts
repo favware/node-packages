@@ -67,14 +67,22 @@ export const play = async (
   if (canDemux) ytdlOptions = { ...ytdlOptions, filter: shouldUseVorbis ? filterVorbis : filter };
   else if (Number(info.length_seconds) !== 0) ytdlOptions = { ...ytdlOptions, filter: shouldUseVorbis ? undefined : 'audioonly' };
   if (canDemux) {
-    let demuxer: prism.vorbis.WebmDemuxer | prism.opus.WebmDemuxer;
     if (shouldUseVorbis) {
-      demuxer = new prism.vorbis.WebmDemuxer();
-    } else {
-      demuxer = new prism.opus.WebmDemuxer();
-    }
+      const demuxer = new prism.vorbis.WebmDemuxer();
+      const transformer = new prism.opus.OggDemuxer();
 
-    return ytdl.downloadFromInfo(info, ytdlOptions).pipe(demuxer).on('end', () => demuxer.destroy());
+      return ytdl
+        .downloadFromInfo(info, ytdlOptions)
+        .pipe(demuxer)
+        .pipe(transformer)
+        .on('end', () => demuxer.destroy());
+    }
+    const demuxer = new prism.opus.WebmDemuxer();
+
+    return ytdl
+      .downloadFromInfo(info, ytdlOptions)
+      .pipe(demuxer)
+      .on('end', () => demuxer.destroy());
   }
 
   const vorbisPrismArgs = shouldUseVorbis ? [ '-b:a', '192k' ] : [];
