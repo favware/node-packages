@@ -31,7 +31,7 @@
     "@types/node-fetch": "^2.5.3",
     "@types/rollup-plugin-progress": "^1.1.0",
     "@types/through": "^0.0.29",
-    "chalk": "^2.4.2",
+    "chalk": "^3.0.0",
     "common-tags": "^1.8.0",
     "concurrently": "^5.0.0",
     "cz-conventional-changelog": "^3.0.2",
