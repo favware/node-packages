@@ -12,7 +12,7 @@
     "prepublishOnly": "yarn build",
     "commit": "git-cz",
     "cz": "git-cz",
-    "up": "yarn upgrade-interactive",
+    "up": "yarn upgrade-interactive --latest",
     "docs:serve": "concurrently \"serve docs\" \"open-cli http://localhost:5000\"",
     "scripts:runner": "ts-node -P tsconfig.eslint.json",
     "scripts:validateNoOnly": "yarn scripts:runner scripts/validateNoOnly",
