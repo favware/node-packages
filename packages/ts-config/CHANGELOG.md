@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.1](https://github.com/favware/node-packages/compare/@favware/ts-config@1.1.0...@favware/ts-config@1.1.1) (2019-11-25)
+
+
+### Bug Fixes
+
+* **ts-config:** fixed target by setting it to supported type ([387c875](https://github.com/favware/node-packages/commit/387c87534803e3b526d479564d60fd5d96479085))
+
+
+
+
+
 # [1.1.0](https://github.com/favware/node-packages/compare/@favware/ts-config@1.0.2...@favware/ts-config@1.1.0) (2019-11-10)
 
 

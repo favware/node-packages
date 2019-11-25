@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.4.1](https://github.com/favware/node-packages/compare/@favware/ytdl-prismplayer@2.4.0...@favware/ytdl-prismplayer@2.4.1) (2019-11-25)
+
+
+### Bug Fixes
+
+* vorbis streams pass through transformer ([#105](https://github.com/favware/node-packages/issues/105)) ([24b853f](https://github.com/favware/node-packages/commit/24b853f628e7a173278e8cc8cccf4182082110e6))
+
+
+
+
+
 # [2.4.0](https://github.com/favware/node-packages/compare/@favware/ytdl-prismplayer@2.3.4...@favware/ytdl-prismplayer@2.4.0) (2019-11-09)
 
 
