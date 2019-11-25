@@ -3,7 +3,7 @@
   "compilerOptions": {
     "moduleResolution": "node",
     "module": "esnext",
-    "target": "es2020",
+    "target": "es2019",
     "newLine": "lf",
     "lib": ["esnext", "dom" ],
     "emitDecoratorMetadata": true,
