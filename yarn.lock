@@ -8329,9 +8329,9 @@ typedoc-default-themes@^0.6.1:
     underscore "^1.9.1"
 
 typedoc-plugin-lerna-packages@^0.2.1:
-  version "0.2.1"
-  resolved "https://registry.yarnpkg.com/typedoc-plugin-lerna-packages/-/typedoc-plugin-lerna-packages-0.2.1.tgz#abb095116ba1a4866df391127e34ef1708346945"
-  integrity sha512-rYYWUFI9AjDIjOUbK915Bgd/pCGc9sIDEvSlKFW22LCMVsOfgTkw/UFEksVp/bxqVGcr24GzXXb/IUYsWKkl9Q==
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/typedoc-plugin-lerna-packages/-/typedoc-plugin-lerna-packages-0.2.2.tgz#171ffd20d73f2216d4ffd6582bc5dab4d6da3fa0"
+  integrity sha512-9k180mqhdPxJi7ozX0ZsaSjZlHQLiXUgVPoTRn4/33rV4u9boC77BBCd/YKYlSWBkrFjEkTBfbeMe/i53hTTMQ==
 
 typedoc-plugin-nojekyll@^1.0.1:
   version "1.0.1"
