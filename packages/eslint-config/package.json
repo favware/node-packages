@@ -20,9 +20,9 @@
     "eslint": ">=6"
   },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "~2.8.0",
-    "@typescript-eslint/parser": "~2.8.0",
-    "eslint-plugin-jest": "^23.0.3"
+    "@typescript-eslint/eslint-plugin": "~2.9.0",
+    "@typescript-eslint/parser": "~2.9.0",
+    "eslint-plugin-jest": "^23.1.1"
   },
   "files": [
     "dist"
