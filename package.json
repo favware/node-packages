@@ -90,5 +90,8 @@
       "path": "./node_modules/cz-conventional-changelog"
     }
   },
-  "dependencies": {}
+  "dependencies": {},
+  "resolutions": {
+    "**/**/serialize-javascript": "^2.1.1"
+  }
 }
