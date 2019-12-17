@@ -1,5 +1,5 @@
 /** Interface for the characters object */
-export interface Chars {
+export interface Chars extends Record<string, string[] | RegExp | undefined> {
   /** All characters */
   all?: string[];
   /** Characters going up */
@@ -10,9 +10,6 @@ export interface Chars {
   down: string[];
   /** Stored RegExp pattern */
   pattern?: RegExp;
-
-  /** Index Signature for TS parsing */
-  [indexSignature: string]: string[] | RegExp | undefined;
 }
 
 /** Options for the Zalgo screw up */
@@ -28,10 +25,8 @@ export interface ZalgoOptions {
 }
 
 /** Counts map for the zalgo */
-export interface ZalgoCountsMap {
+export interface ZalgoCountsMap extends Record<string, number> {
   up: number;
   middle: number;
   down: number;
-
-  [indexSingature: string]: number;
 }

@@ -1,11 +1,15 @@
 import prism from 'prism-media';
 import { Readable } from 'stream';
-import ytdl, { downloadOptions as YTDLDownloadOptions, videoFormat as YTDLVideoFormat } from 'ytdl-core';
+import ytdl, { downloadOptions as YTDLDownloadOptions, videoFormat as YTDLVideoFormat, videoInfo as YTDLVideoInfo } from 'ytdl-core';
 
 /** Custom type for ytdl videoFormat to include missing property */
-export interface PrismVideoFormat extends YTDLVideoFormat {
+export interface PrismVideoFormat extends YTDLVideoFormat, YTDLVideoInfo {
   /** The sample rate of the audio format */
   audio_sample_rate?: string;
+  /** The type of audio encoding for the stream */
+  audioEncoding: 'mp3' | 'vorbis' | 'aac' | 'opus' | 'flac';
+  /** Overwrite formats to return PrismVideoFormat */
+  formats: PrismVideoFormat[];
 }
 
 /** Options for ytdl-prismplayer */
@@ -25,8 +29,8 @@ const filterVorbis = (format: PrismVideoFormat) => format.audioEncoding === 'vor
  */
 const nextBestFormat = (formats: PrismVideoFormat[]): PrismVideoFormat => {
   formats = formats
-    .filter(format => format.audioBitrate)
-    .sort((a, b) => b.audioBitrate - a.audioBitrate);
+    .filter(format => format.bitrate)
+    .sort((a, b) => Number(b.bitrate) - Number(a.bitrate));
 
   return formats.find(format => !format.bitrate) || formats[0];
 };
@@ -59,13 +63,14 @@ export const play = async (
   ytdlOptions: YTDLDownloadOptions = {},
   prismPlayerOptions: YtdlPrismPlayerOptions = { preferredFormat: 'opus' }
 ): Promise<Readable | prism.opus.Encoder> => {
-  const info = await ytdl.getInfo(url);
+  const info = await ytdl.getInfo(url) as unknown as PrismVideoFormat;
   const shouldUseVorbis = prismPlayerOptions.preferredFormat === 'vorbis';
+
+  ytdlOptions = { ...ytdlOptions, filter: shouldUseVorbis ? undefined : 'audioonly' };
 
   const format = info.formats.find(shouldUseVorbis ? filterVorbis : filter);
   const canDemux = format && Number(info.length_seconds) !== 0;
-  if (canDemux) ytdlOptions = { ...ytdlOptions, filter: shouldUseVorbis ? filterVorbis : filter };
-  else if (Number(info.length_seconds) !== 0) ytdlOptions = { ...ytdlOptions, filter: shouldUseVorbis ? undefined : 'audioonly' };
+
   if (canDemux) {
     if (shouldUseVorbis) {
       const demuxer = new prism.vorbis.WebmDemuxer();
@@ -113,9 +118,7 @@ export const play = async (
 
 export default play;
 export {
-  chooseFormat, downloadFromInfo, downloadOptions,
-  filterFormats, getBasicInfo, getInfo,
-  getURLVideoID, getVideoID, relatedVideo,
-  validateID, validateURL, videoFormat,
-  videoInfo
+  chooseFormat, downloadFromInfo, downloadOptions, filterFormats, getBasicInfo,
+  getInfo, getURLVideoID, getVideoID, relatedVideo,
+  validateID, validateURL, videoFormat, videoInfo
 } from 'ytdl-core';
