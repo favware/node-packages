@@ -24,10 +24,10 @@
     "@commitlint/config-conventional": "^8.2.0",
     "@types/common-tags": "^1.8.0",
     "@types/glob": "^7.1.1",
-    "@types/jest": "^24.0.24",
+    "@types/jest": "^24.0.25",
     "@types/js-yaml": "^3.12.1",
     "@types/jsonfile": "^5.0.0",
-    "@types/node": "^12.12.21",
+    "@types/node": "^13.1.1",
     "@types/node-fetch": "^2.5.3",
     "@types/rollup-plugin-progress": "^1.1.0",
     "@types/through": "^0.0.29",
@@ -45,7 +45,7 @@
     "lint-staged": "^9.5.0",
     "open-cli": "^5.0.0",
     "prism-media": "github:amishshah/prism-media#master",
-    "rollup": "^1.27.13",
+    "rollup": "^1.27.14",
     "rollup-plugin-cleaner": "^1.0.0",
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-copy": "^3.1.0",
@@ -62,7 +62,7 @@
     "typedoc-plugin-lerna-packages": "^0.2.2",
     "typedoc-plugin-nojekyll": "^1.0.1",
     "typescript": "^3.7.4",
-    "ytdl-core": "^1.0.3"
+    "ytdl-core": "^1.0.5"
   },
   "husky": {
     "hooks": {
