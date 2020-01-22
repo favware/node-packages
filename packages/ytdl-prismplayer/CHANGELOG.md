@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.5.0](https://github.com/favware/node-packages/compare/@favware/ytdl-prismplayer@2.4.3...@favware/ytdl-prismplayer@2.5.0) (2020-01-22)
+
+### Features
+
+- **eslint-config:** clean out eslint config, remove a lot of rules ([e54b40e](https://github.com/favware/node-packages/commit/e54b40ea61f9eaf1221abc8c42a30b09bb5bca24))
+
 ## [2.4.3](https://github.com/favware/node-packages/compare/@favware/ytdl-prismplayer@2.4.1...@favware/ytdl-prismplayer@2.4.3) (2019-11-25)
 
 **Note:** Version bump only for package @favware/ytdl-prismplayer
