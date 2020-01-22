@@ -124,7 +124,7 @@ export const parse = (qs = '', options: ParseOptions = { separator: '&', equals:
       const k = decodeURIComponent(kstr);
       const v = decodeURIComponent(vstr);
 
-      if (!obj.hasOwnProperty(k)) {
+      if (!(k in obj)) {
         obj[k] = v;
       } else if (Array.isArray(obj[k])) {
         obj[k].push(v);

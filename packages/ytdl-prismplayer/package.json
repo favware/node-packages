@@ -18,7 +18,7 @@
   },
   "peerDependencies": {
     "@types/node": ">=10",
-    "prism-media": "github:amishshah/prism-media#master",
+    "prism-media": "^1.2.0",
     "ytdl-core": ">=1"
   },
   "files": [

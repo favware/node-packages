@@ -1,12 +1,26 @@
-import chalk from 'chalk';
-import eslintConfig from '../packages/eslint-config/src/';
-import { writeFileSync as writeJson } from 'jsonfile';
-import path from 'path';
+import { green, red } from "chalk";
+import { writeJSONAtomic } from "fs-nextra";
+import { sync as glob } from "glob";
+import { join } from "path";
+import eslintConfig from "../packages/eslint-config/src/";
 
-const rootConfigPath = path.join(__dirname, '../.eslintrc');
+(async () => {
+  try {
+    await Promise.all(
+      glob("**/.eslintrc", {
+        cwd: join(__dirname, "../"),
+        ignore: "node_modules/**",
+        dot: true
+      })
+        .map(file => join(__dirname, "../", file))
+        .map(file => writeJSONAtomic(file, eslintConfig))
+    );
 
-writeJson(rootConfigPath, eslintConfig);
-
-// eslint-disable-next-line no-console
-console.log(chalk.green('Duplicated ESLint config'));
-process.exit(0);
+    // eslint-disable-next-line no-console
+    console.log(green("Duplicated ESLint config"));
+    process.exit(0);
+  } catch (error) {
+    console.error(red(error));
+    process.exit(1);
+  }
+})();

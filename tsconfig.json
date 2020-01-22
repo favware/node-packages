@@ -1,13 +1,13 @@
 {
   "extends": "./packages/ts-config/tsconfig.json",
   "compilerOptions": {
-    "rootDir": "packages",
     "target": "es6",
     "allowJs": false,
     "incremental": false
   },
   "include": [
-    "packages/**/*.ts"
+    "packages/**/*.ts",
+    "scripts"
   ],
   "typedocOptions": {
     "out": "./docs/",
