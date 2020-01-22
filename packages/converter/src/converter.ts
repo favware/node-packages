@@ -8,6 +8,15 @@ import { ConvertOptions, System, UnitData, UnitDefinition } from './interfaces';
  * @param toUnit The unit to convert to
  * @param options _(Optional)_ Options for the conversion
  * @returns Will return a number if the function succeeded or a string with an error message if not
+ * @example
+ * ```ts
+ * convert(5, 'm', 'ft')
+ * ```
+ *
+ * @example
+ * ```ts
+ * convert(5, 'c', 'f', { precision: 2 })
+ * ```
  */
 export const convert = (
   value: number,
