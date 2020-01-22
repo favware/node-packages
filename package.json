@@ -74,7 +74,7 @@
   },
   "lint-staged": {
     "*.{js,ts}": [
-      "eslint --fix --ext js,ts --debug"
+      "eslint --fix --ext js,ts"
     ],
     "packages/eslint-config/src/index.ts": [
       "yarn scripts:duplicateESLintConfig"

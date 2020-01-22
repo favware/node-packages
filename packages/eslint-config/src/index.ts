@@ -1,4 +1,12 @@
-/** Default ESLint configuration for Favware projects */
+/**
+ * Default ESLint configuration for Favware projects
+ * @example
+ * ```json
+ * {
+ *   "extends": "@favware"
+ * }
+ * ```
+ */
 export const config = {
   root: true,
   parser: '@typescript-eslint/parser',

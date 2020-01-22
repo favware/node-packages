@@ -44,6 +44,20 @@ const handleQuerystringError = (err: string, source: FunctionSource): string | Q
  * @param obj Object to stringify
  * @param options Options for the stringify, see {@link IStringifyOptions}
  * @returns The stringified query object
+ * @example
+ * ```ts
+ * stringify({prop: 'value', prop2: 'value2'})
+ * ```
+ *
+ * @example
+ * ```ts
+ * stringify({prop: 'value', prop2: 'value2'}, {separator: '&', equals: '=', includeQuestion: false})
+ * ```
+ *
+ * @example
+ * ```ts
+ * stringify({prop: 'value', prop2: 'value2'}, {separator: '&&', equals: '=', includeQuestion: true})
+ * ```
  */
 export const stringify = (
   obj: QuerystringObject,
@@ -92,6 +106,20 @@ export const stringify = (
  * @param qs Querystring to parse
  * @param options Options for the parse, see {@link IParseOptions}
  * @returns A JavaScript object of the parsed parameters
+ * @example
+ * ```ts
+ * parse('?prop=value&prop2=value2')
+ * ```
+ *
+ * @example
+ * ```ts
+ * parse('?prop=value&prop2=value2', {separator: '&', equals: '='})
+ * ```
+ *
+ * @example
+ * ```ts
+ * parse('prop=value&&prop2=value2', {separator: '&&', equals: '='})
+ * ```
  */
 export const parse = (qs = '', options: ParseOptions = { separator: '&', equals: '=' }): QuerystringObject => {
   try {

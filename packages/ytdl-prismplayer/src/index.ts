@@ -42,10 +42,8 @@ const nextBestFormat = (formats: PrismVideoFormat[]): PrismVideoFormat => {
  * @param url YouTube Video URL that should be played
  * @param ytdlOptions Any extra options to pass to ytdl, see {@link https://github.com/fent/node-ytdl-core/#ytdlurl-options | ytdl options}
  * @return The playing song in a readable stream, see {@link https://nodejs.org/api/stream.html#stream_class_stream_readable | NodeJS#ReadableStream}
- *
+ * @example
  * ```js
- * const ytdl = require('@favware/ytdl-prismplayer');
- *
  * // Defaults to opus
  * async function play(connection, url) {
  *   connection.play(await ytdl(url}), {

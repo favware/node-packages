@@ -5,22 +5,13 @@ import { hasOwnProperty, unicodeStringSplitter, randomizer, ZalgoError } from '.
 /**
  * Zalgofies any given text
  *
- * ```ts
- * const zalgo = require('@favware/zalgo');
- * // import zalgo from '@favware/zalgo';
- *
- * // Zalgo usage
- * zalgo('some text')
- *
- *
- * // > ŝ̜̩͇̼̥̼́̏͢o͎͊͜ḿ̛̩̳̖͕̞̩̭ͪe͖̺̣̹̺̋̀͛̽͝ ̖͍̭͓̯̠͑͑͢t̼̪̋͌͢eͯ̋͏͖͎͍̩̭̮x̢͚̄̾̀̈ͧ̓ͩ̚t̪ͫ͝
- *```
- *
- *
  * @param text Input text to zalgolize
  * @param options Options for the Zalgo
  * @returns The door to hell
- *
+ * @example
+ * ```ts
+ * zalgo('some text') // ==> ŝ̜̩͇̼̥̼́̏͢o͎͊͜ḿ̛̩̳̖͕̞̩̭ͪe͖̺̣̹̺̋̀͛̽͝ ̖͍̭͓̯̠͑͑͢t̼̪̋͌͢eͯ̋͏͖͎͍̩̭̮x̢͚̄̾̀̈ͧ̓ͩ̚t̪ͫ͝
+ *```
  */
 export const zalgo = (
   text: string,
@@ -92,20 +83,12 @@ export const zalgo = (
 
 /**
  * De-zalgolize any text
- *
- * ```ts
- * const { banish } = require('@favware/zalgo');
- * // import { basnish } from '@favware/zalgo';
- *
- * // Banish usage
- * banish('ŝ̜̩͇̼̥̼́̏͢o͎͊͜ḿ̛̩̳̖͕̞̩̭ͪe͖̺̣̹̺̋̀͛̽͝ ̖͍̭͓̯̠͑͑͢t̼̪̋͌͢eͯ̋͏͖͎͍̩̭̮x̢͚̄̾̀̈ͧ̓ͩ̚t̪ͫ͝')
- *
- *
- * // > some text
- * ```
- *
  * @param purgeable Text to remove zalgo from
  * @returns The door to heaven
+ * @example
+ * ```ts
+ * banish('ŝ̜̩͇̼̥̼́̏͢o͎͊͜ḿ̛̩̳̖͕̞̩̭ͪe͖̺̣̹̺̋̀͛̽͝ ̖͍̭͓̯̠͑͑͢t̼̪̋͌͢eͯ̋͏͖͎͍̩̭̮x̢͚̄̾̀̈ͧ̓ͩ̚t̪ͫ͝') // ==> some text
+ * ```
  */
 export const banish = (purgeable: string): string => {
   try {

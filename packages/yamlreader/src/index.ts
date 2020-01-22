@@ -28,12 +28,12 @@ export class YamlReaderError extends Error {
 /**
  * Reads a YAML file and outputs a JavaScript object
  *
+ * @param filepath Path to the yaml file to parse
+ * @param options Options for the YAML parser and fs file reader
+ * @example
  * ```ts
  * const data = readYaml('/path/to/some/yaml/file');
  * ```
- *
- * @param filepath Path to the yaml file to parse
- * @param options Options for the YAML parser and fs file reader
  */
 export const readYaml = (filepath: string, options?: YamlReaderOptions) => {
   let str;

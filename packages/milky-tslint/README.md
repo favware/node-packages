@@ -1,4 +1,14 @@
 <div align="center">
+
+<h1> <b><i>DEPRECATED</i></b>
+
+TSLint has been deprecated in favor of ESLint. Please see
+<a href="https://github.com/palantir/tslint/issues/4534">this TSLint issue</a> for more information.
+
+</h1>
+
+---
+
   <p>
   <a href="https://favware.tech/milkylint"><img src="https://storage.googleapis.com/data-sunlight-146313.appspot.com/website-project-icons/milkylint.png" height="200" alt="logo"/></a>
   </p>

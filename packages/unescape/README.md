@@ -1,4 +1,13 @@
 <div align="center">
+
+<h1> <b><i>DEPRECATED</i></b>
+
+Work on this package has stopped in favor of <a href="https://www.npmjs.com/package/confusables">confusables</a> from developer <a href="https://github.com/gc">gc</a>, a package which I have also contributed to and has a much better feature set and far better performance
+
+</h1>
+
+---
+
   <p>
   <a href="https://favware.tech/unescape"><img src="https://storage.googleapis.com/data-sunlight-146313.appspot.com/website-project-icons/unescape.png" height="200" alt="logo"/></a>
   </p>

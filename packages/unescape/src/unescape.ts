@@ -41,6 +41,20 @@ const isArrayOfOnlyStrings = (array: unknown): array is string[] => {
  * @param input input string to unescape
  * @param values rest values
  * @returns Unescaped string
+ * @example
+ * ```ts
+ * unescape('&lt;div&gt;abc&lt;/div&gt;')
+ * ```
+ *
+ * @example
+ * ```ts
+ * unescape`&lt;div&gt;abc&lt;/div&gt;`
+ * ```
+ *
+ * @example
+ * ```ts
+ * unescape`awesome text with some ${text} section`
+ * ```
  */
 export const unescape = (input: string | string[] | TemplateStringsArray, ...values: string[]): string => {
   const regex: RegExp = toRegex();
