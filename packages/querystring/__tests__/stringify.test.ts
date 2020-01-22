@@ -66,9 +66,9 @@ describe('Error checking', () => {
   /* eslint-disable @typescript-eslint/ban-ts-ignore */
   test('should work with wrong options', () => {
     const expected = 'prop%value=prop2%value2';
-    // @ts-ignore
     const actual = stringify(
       { prop: 'value', prop2: 'value2' },
+      // @ts-ignore
       { separator: '=', equals: '%', includeQeustion: true }
     );
     expect(actual).toMatchSnapshot();
@@ -77,9 +77,9 @@ describe('Error checking', () => {
 
   test('should work with invalid separator and equals options', () => {
     const expected = '?prop=value&prop2=value2';
-    // @ts-ignore
     const actual = stringify(
       { prop: 'value', prop2: 'value2' },
+      // @ts-ignore
       { separator: null, equals: null, includeQuestion: true }
     );
     expect(actual).toMatchSnapshot();
