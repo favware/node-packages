@@ -40,17 +40,17 @@ export interface TSLintFile {
   contents: Buffer | any;
 
   /** Whether the file is a stream */
-  isStream (): boolean;
+  isStream(): boolean;
 
   /** Whether the file is null */
-  isNull (): boolean;
+  isNull(): boolean;
 }
 
 /** Logging levels used by the plugin */
 export enum LogLevels {
   ERROR = 'error',
   INFO = 'info',
-  WARN = 'warn',
+  WARN = 'warn'
 }
 
 /** TSLint formatters supported by the linter */
@@ -66,5 +66,5 @@ export enum LintFormatters {
   STYLISH = 'stylish',
   TAP = 'tap',
   VERBOSE = 'verbose',
-  VSO = 'vso',
+  VSO = 'vso'
 }

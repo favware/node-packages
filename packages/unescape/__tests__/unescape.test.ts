@@ -9,10 +9,10 @@ describe('verify all supported characters', () => {
   });
 
   test('should unescape single quotation mark (apostrophe)', () => {
-    expect(unescape('&apos;')).toBe('\'');
-    expect(unescape('&#39;')).toBe('\'');
-    expect(unescape('&#039;')).toBe('\'');
-    expect(unescape('&#x27;')).toBe('\'');
+    expect(unescape('&apos;')).toBe("'");
+    expect(unescape('&#39;')).toBe("'");
+    expect(unescape('&#039;')).toBe("'");
+    expect(unescape('&#x27;')).toBe("'");
   });
 
   test('should unescape ampersand', () => {

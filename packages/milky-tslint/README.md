@@ -49,22 +49,25 @@ yarn add @favware/milky-tslint tslint
 # Usage
 
 ```js
-const tslint = require("tslint");
+const tslint = require('tslint');
 const ts = require('typescript');
-const {milkyLint, milkyReport} = require("milky-tslint");
+const { milkyLint, milkyReport } = require('milky-tslint');
 
-gulp.task("lint", () => {
-    const lintProgram = tslint.Linter.createProgram('./tsconfig.json', '.');
-    ts.getPreEmitDiagnostics(lintProgram);
+gulp.task('lint', () => {
+  const lintProgram = tslint.Linter.createProgram('./tsconfig.json', '.');
+  ts.getPreEmitDiagnostics(lintProgram);
 
-    return gulp.src(tsSource)
-        .pipe(milkyLint({
-            formatter: 'stylish',
-            program: lintProgram,
-            tslint: tslint,
-            fix: !!argv.fix,
-        }))
-        .pipe(milkyReport());
+  return gulp
+    .src(tsSource)
+    .pipe(
+      milkyLint({
+        formatter: 'stylish',
+        program: lintProgram,
+        tslint: tslint,
+        fix: !!argv.fix
+      })
+    )
+    .pipe(milkyReport());
 });
 ```
 
@@ -97,6 +100,7 @@ used by specifying the `formatter` and `formattersDirectory` properties on the o
 `milky-tslint`.
 
 If there is at least one failure a PluginError is emitted after execution of the reporters:
+
 ```javascript
 [gulp] Error in plugin 'milky-tslint': Failed to lint: input.ts
 ```
@@ -104,36 +108,45 @@ If there is at least one failure a PluginError is emitted after execution of the
 You can prevent editing the error by setting emitError in report options to false.
 
 ```js
-gulp.task("lint-noerroremit", () => {
-    const lintProgram = tslint.Linter.createProgram('./tsconfig.json', '.');
-    ts.getPreEmitDiagnostics(lintProgram);
+gulp.task('lint-noerroremit', () => {
+  const lintProgram = tslint.Linter.createProgram('./tsconfig.json', '.');
+  ts.getPreEmitDiagnostics(lintProgram);
 
-    return gulp.src(tsSource)
-        .pipe(milkyLint({
-            formatter: 'stylish',
-            program: lintProgram,
-            tslint: tslint,
-            fix: !!argv.fix,
-        }))
-        .pipe(milkyReport({
-            emitError: false
-        }));
+  return gulp
+    .src(tsSource)
+    .pipe(
+      milkyLint({
+        formatter: 'stylish',
+        program: lintProgram,
+        tslint: tslint,
+        fix: !!argv.fix
+      })
+    )
+    .pipe(
+      milkyReport({
+        emitError: false
+      })
+    );
 });
 ```
 
 tslint.json can be supplied as a parameter by setting the configuration property.
+
 ```js
-gulp.task("tslint-json", () =>
-    gulp.src("input.ts")
-        .pipe(milkyLint({
-            configuration: {
-              rules: {
-                "class-name": true,
-                // ...
-              }
-            }
-        }))
-        .pipe(milkyReport.report())
+gulp.task('tslint-json', () =>
+  gulp
+    .src('input.ts')
+    .pipe(
+      milkyLint({
+        configuration: {
+          rules: {
+            'class-name': true
+            // ...
+          }
+        }
+      })
+    )
+    .pipe(milkyReport.report())
 );
 ```
 
@@ -152,30 +165,40 @@ doesn't need to be tslint.json.
 You can optionally specify a report limit in the .report options that will turn off reporting for files after the limit has been reached. If the limit is 0 or less, the limit is ignored, which is the default setting.
 
 ```js
-gulp.task("tslint", () =>
-    gulp.src(["input.ts",])
-        .pipe(milkyLint({
-            formatter: "prose"
-        }))
-        .pipe(milkyReport.report({
-            reportLimit: 2
-        }))
+gulp.task('tslint', () =>
+  gulp
+    .src(['input.ts'])
+    .pipe(
+      milkyLint({
+        formatter: 'prose'
+      })
+    )
+    .pipe(
+      milkyReport.report({
+        reportLimit: 2
+      })
+    )
 );
 ```
 
 ## Allowing Warnings
 
-TSLint 5.0 introduced support for a "warning" severity for linting errors.  By default, warnings cause `milky-tslint` to emit an error to maintain backwards-compatibility with previous versions.  To let the build succeed in the presence of warnings, use the `allowWarnings` report option.
+TSLint 5.0 introduced support for a "warning" severity for linting errors. By default, warnings cause `milky-tslint` to emit an error to maintain backwards-compatibility with previous versions. To let the build succeed in the presence of warnings, use the `allowWarnings` report option.
 
 ```javascript
-gulp.task("tslint", () =>
-    gulp.src("input.ts")
-        .pipe(milkyLint({
-            formatter: "prose"
-        }))
-        .pipe(milkyReport.report({
-            allowWarnings: true
-        }))
+gulp.task('tslint', () =>
+  gulp
+    .src('input.ts')
+    .pipe(
+      milkyLint({
+        formatter: 'prose'
+      })
+    )
+    .pipe(
+      milkyReport.report({
+        allowWarnings: true
+      })
+    )
 );
 ```
 
@@ -183,13 +206,13 @@ gulp.task("tslint", () =>
 
 ```js
 const tslintOptions = {
-    configuration: {},
-    fix: false,
-    formatter: 'stylish',
-    formattersDirectory: null,
-    rulesDirectory: null,
-    tslint: null,
-    program: null
+  configuration: {},
+  fix: false,
+  formatter: 'stylish',
+  formattersDirectory: null,
+  rulesDirectory: null,
+  tslint: null,
+  program: null
 };
 ```
 
@@ -197,10 +220,10 @@ const tslintOptions = {
 
 ```js
 const reportOptions = {
-    emitError: false,
-    reportLimit: 0,
-    summarizeFailureOutput: true,
-    allowWarnings: false
+  emitError: false,
+  reportLimit: 0,
+  summarizeFailureOutput: true,
+  allowWarnings: false
 };
 ```
 

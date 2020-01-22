@@ -3,15 +3,7 @@ import yaml, { DumpOptions } from 'js-yaml';
 
 /** FS Options */
 export interface FsOptions {
-  encoding?:
-  | 'utf8'
-  | 'ascii'
-  | 'utf16le'
-  | 'ucs2'
-  | 'base64'
-  | 'latin1'
-  | 'binary'
-  | 'hex';
+  encoding?: 'utf8' | 'ascii' | 'utf16le' | 'ucs2' | 'base64' | 'latin1' | 'binary' | 'hex';
   flag?: string;
 }
 
@@ -45,7 +37,7 @@ export class YamlReaderError extends Error {
  */
 export const readYaml = (filepath: string, options?: YamlReaderOptions) => {
   let str;
-  const opts = {...options, filename: filepath};
+  const opts = { ...options, filename: filepath };
 
   try {
     str = fs.readFileSync(filepath, options);

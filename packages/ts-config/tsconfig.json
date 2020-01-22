@@ -5,7 +5,7 @@
     "module": "esnext",
     "target": "es2019",
     "newLine": "lf",
-    "lib": ["esnext", "dom" ],
+    "lib": ["esnext", "dom"],
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "esModuleInterop": true,

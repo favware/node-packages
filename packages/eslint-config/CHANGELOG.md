@@ -7,109 +7,57 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @favware/eslint-config
 
-
-
-
-
 ## [3.1.5](https://github.com/favware/node-packages/compare/@favware/eslint-config@3.1.4...@favware/eslint-config@3.1.5) (2019-11-10)
 
 **Note:** Version bump only for package @favware/eslint-config
-
-
-
-
 
 ## [3.1.4](https://github.com/favware/node-packages/compare/@favware/eslint-config@3.1.3...@favware/eslint-config@3.1.4) (2019-11-09)
 
 **Note:** Version bump only for package @favware/eslint-config
 
-
-
-
-
 ## [3.1.3](https://github.com/favware/node-packages/compare/@favware/eslint-config@3.1.2...@favware/eslint-config@3.1.3) (2019-10-18)
-
 
 ### Bug Fixes
 
-* **eslint-config:** bump down eslint parser to fix macos/windows bug ([a4a0018](https://github.com/favware/node-packages/commit/a4a00183304a7389249fc0e1ca2f24260fe53410))
-
-
-
-
+- **eslint-config:** bump down eslint parser to fix macos/windows bug ([a4a0018](https://github.com/favware/node-packages/commit/a4a00183304a7389249fc0e1ca2f24260fe53410))
 
 ## [3.1.2](https://github.com/favware/node-packages/compare/@favware/eslint-config@3.1.1...@favware/eslint-config@3.1.2) (2019-10-13)
 
-
 ### Bug Fixes
 
-* completely re-do tsconfig standardized ([9eb030f](https://github.com/favware/node-packages/commit/9eb030fdf1deb75d5ae8b273d0e9c359bcb985a1))
-
-
-
-
+- completely re-do tsconfig standardized ([9eb030f](https://github.com/favware/node-packages/commit/9eb030fdf1deb75d5ae8b273d0e9c359bcb985a1))
 
 ## [3.1.1](https://github.com/favware/node-packages/compare/@favware/eslint-config@3.1.0...@favware/eslint-config@3.1.1) (2019-10-13)
 
 **Note:** Version bump only for package @favware/eslint-config
 
-
-
-
-
 # [3.1.0](https://github.com/favware/node-packages/compare/@favware/eslint-config@3.0.5...@favware/eslint-config@3.1.0) (2019-10-13)
-
 
 ### Features
 
-* standardize TS configuration ([47696f4](https://github.com/favware/node-packages/commit/47696f4e1dd2632b305ff9789cdd6c473fa709ca))
-
-
-
-
+- standardize TS configuration ([47696f4](https://github.com/favware/node-packages/commit/47696f4e1dd2632b305ff9789cdd6c473fa709ca))
 
 ## [3.0.5](https://github.com/favware/node-packages/compare/@favware/eslint-config@3.0.4...@favware/eslint-config@3.0.5) (2019-09-11)
 
 **Note:** Version bump only for package @favware/eslint-config
 
-
-
-
-
 ## [3.0.4](https://github.com/favware/node-packages/compare/@favware/eslint-config@3.0.3...@favware/eslint-config@3.0.4) (2019-09-11)
 
 **Note:** Version bump only for package @favware/eslint-config
 
-
-
-
-
 ## [3.0.3](https://github.com/favware/node-packages/compare/@favware/eslint-config@3.0.2...@favware/eslint-config@3.0.3) (2019-09-11)
-
 
 ### Bug Fixes
 
-* **eslint-config:** disable newly introduced eslint rule ([20e0c52](https://github.com/favware/node-packages/commit/20e0c52))
-
-
-
-
+- **eslint-config:** disable newly introduced eslint rule ([20e0c52](https://github.com/favware/node-packages/commit/20e0c52))
 
 ## [3.0.2](https://github.com/favware/node-packages/compare/@favware/eslint-config@3.0.1...@favware/eslint-config@3.0.2) (2019-08-21)
 
 **Note:** Version bump only for package @favware/eslint-config
 
-
-
-
-
 ## 3.0.1 (2019-08-18)
 
 **Note:** Version bump only for package @favware/eslint-config
-
-
-
-
 
 # Changelog
 
@@ -117,50 +65,52 @@ All notable changes to this project will be documented in this file. See [standa
 
 ## [3.0.0](https://github.com/favware/eslint-config/compare/v2.0.2...v3.0.0) (2019-08-15)
 
-
 ### ⚠ BREAKING CHANGES
 
-* Drop node 8 support ([1026273](https://github.com/favware/eslint-config/commit/1026273))
+- Drop node 8 support ([1026273](https://github.com/favware/eslint-config/commit/1026273))
 
 ### [2.0.2](https://github.com/favware/eslint-config/compare/v2.0.0...v2.0.2) (2019-08-15)
 
-
 ### Bug Fixes
 
-* **\:** disable the rule "restrict-plus-operands" ([625d05b](https://github.com/favware/eslint-config/commit/625d05b))
-* add  eslint-plugin-jest to dependencies ([27c1523](https://github.com/favware/eslint-config/commit/27c1523))
+- **\:** disable the rule "restrict-plus-operands" ([625d05b](https://github.com/favware/eslint-config/commit/625d05b))
+- add eslint-plugin-jest to dependencies ([27c1523](https://github.com/favware/eslint-config/commit/27c1523))
 
 ### [2.0.1](https://github.com/favware/eslint-config/compare/v2.0.0...v2.0.1) (2019-08-15)
 
-
 ### Bug Fixes
 
-* add  eslint-plugin-jest to dependencies ([27c1523](https://github.com/favware/eslint-config/commit/27c1523))
+- add eslint-plugin-jest to dependencies ([27c1523](https://github.com/favware/eslint-config/commit/27c1523))
 
 ## [2.0.0] - 2019-08-15
+
 ### BREAKING CHANGES
+
 - Upgraded @typescript-eslint/parser to v2.0.0. Taken from their breaking changelog:
-  * removed some rules from recommended config
-  * recommended config changes are considered breaking
-  * by default we will now throw when a file is not in the `project` provided
-  * Merges both no-angle-bracket-type-assertion and no-object-literal-type-assertion into one rule
-  * **eslint-plugin:** both 'eslint-recommended' and 'recommended' have changed.
-  * **eslint-plugin:** removing rules
-  * changes config structure
+
+  - removed some rules from recommended config
+  - recommended config changes are considered breaking
+  - by default we will now throw when a file is not in the `project` provided
+  - Merges both no-angle-bracket-type-assertion and no-object-literal-type-assertion into one rule
+  - **eslint-plugin:** both 'eslint-recommended' and 'recommended' have changed.
+  - **eslint-plugin:** removing rules
+  - changes config structure
 
   ```ts
   type ArrayOption = 'array' | 'generic' | 'array-simple';
   type Options = [
     {
       // default case for all arrays
-      default: ArrayOption,
+      default: ArrayOption;
       // optional override for readonly arrays
-      readonly?: ArrayOption,
-    },
+      readonly?: ArrayOption;
+    }
   ];
   ```
-  * **eslint-plugin:** changing default rule config
-  * Node 6 is no longer supported
+
+  - **eslint-plugin:** changing default rule config
+  - Node 6 is no longer supported
+
 - You now need to create a `tsconfig.eslint.json` which extends `tsconfig.json`. Recommended content:
   ```json
   {
@@ -169,35 +119,23 @@ All notable changes to this project will be documented in this file. See [standa
       "allowJs": true,
       "checkJs": true
     },
-    "includes": [
-      "src",
-      "test",
-      "tests",
-      "typings",
-      "**/__tests__",
-      "**/*.tsx",
-      "**/*.ts",
-      "**/*.js"
-    ],
-    "exclude": [
-      "**/node_modules",
-      "**/build",
-      "**/bin",
-      "**/out",
-      "**/dist",
-      "**/coverage"
-    ]
+    "includes": ["src", "test", "tests", "typings", "**/__tests__", "**/*.tsx", "**/*.ts", "**/*.js"],
+    "exclude": ["**/node_modules", "**/build", "**/bin", "**/out", "**/dist", "**/coverage"]
   }
   ```
 
 ## [1.0.1] - 2019-08-11
+
 ### Changed
+
 - Disabled 2 rules:
   - `@typescript-eslint/promise-function-async`
   - `require-atomic-updates`
 
 ## [1.0.0] - 2019-07-14
+
 ### Added
+
 - Initial release
 
 [2.0.0]: https://github.com/favware/eslint-config/compare/v1.0.1...v2.0.0

@@ -34,6 +34,7 @@
 This package is a full rework of my old package `csprng-64` but now far better. I decided to release it as a completely separate package and deprecate the previous one as the entire code base was changed and I wasn't fond of the previous name either.
 
 **Key Features**
+
 - Generates secure random numbers using `crypto.randomBytes()`. Numbers can be of any magnitude and in any base from 2 to 64.
 - Typesafe
 - Bundled with Rollup for maximum size reduction (only 1kB minified + gzipped!), ES module support and browser support
@@ -50,7 +51,7 @@ yarn add @favware/crypto
 # npm install @favware/crypto
 ```
 
-* * *
+---
 
 # Usage
 

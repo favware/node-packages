@@ -1,7 +1,5 @@
 {
-  "packages": [
-    "packages/*"
-  ],
+  "packages": ["packages/*"],
   "version": "independent",
   "npmClient": "yarn",
   "useWorkspaces": true,
@@ -18,11 +16,7 @@
     },
     "create": {
       "license": "MIT",
-      "keywords": [
-        "favware",
-        "typescript",
-        "ts"
-      ]
+      "keywords": ["favware", "typescript", "ts"]
     }
   }
 }

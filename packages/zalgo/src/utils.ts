@@ -1,8 +1,8 @@
 export class ZalgoError extends Error {
   /**
-     * Create a ZalgoError
-     * @param message The message the error should show
-     */
+   * Create a ZalgoError
+   * @param message The message the error should show
+   */
   constructor(message: string) {
     super(message);
     this.message = message;
@@ -25,7 +25,7 @@ export const unicodeStringSplitter = (splittable: string): string[] => {
   let ri = 0;
 
   // eslint-disable-next-line no-cond-assign
-  while (m = multicharRegex.exec(splittable)) {
+  while ((m = multicharRegex.exec(splittable))) {
     m.index -= ri;
     ri += m[0].length - 1;
     characters.splice(m.index, 1, m[0]);

@@ -61,7 +61,7 @@ export const milkyLint = (pluginOptions: PluginOptions = {}) => {
     formatter: pluginOptions.formatter || LintFormatters.STYLISH,
     formattersDirectory: pluginOptions.formattersDirectory || undefined,
     quiet: pluginOptions.quiet || false,
-    rulesDirectory: pluginOptions.rulesDirectory || undefined,
+    rulesDirectory: pluginOptions.rulesDirectory || undefined
   };
 
   const linter = getTslint(pluginOptions);
@@ -71,9 +71,10 @@ export const milkyLint = (pluginOptions: PluginOptions = {}) => {
     if (file.isNull()) return cb(null, file);
     if (file.isStream()) return cb(new PluginError('@favware/milky-tslint', 'streaming is not supported'));
 
-    const configuration = !pluginOptions.configuration || isString(pluginOptions.configuration)
-      ? linter.Configuration.findConfiguration(pluginOptions.configuration || null, file.path).results
-      : pluginOptions.configuration;
+    const configuration =
+      !pluginOptions.configuration || isString(pluginOptions.configuration)
+        ? linter.Configuration.findConfiguration(pluginOptions.configuration || null, file.path).results
+        : pluginOptions.configuration;
 
     tslint.lint(file.path, file.contents.toString(), configuration);
     file.tslint = tslint.getResult();
@@ -90,9 +91,14 @@ export const milkyLint = (pluginOptions: PluginOptions = {}) => {
  * Reporter for milky-tslint
  * @param options options for the report, see {@link ReportOptions}
  */
-export const milkyReport = (options: ReportOptions = {
-  emitError: false, reportLimit: 0, summarizeFailureOutput: true, allowWarnings: false,
-}) => {
+export const milkyReport = (
+  options: ReportOptions = {
+    emitError: false,
+    reportLimit: 0,
+    summarizeFailureOutput: true,
+    allowWarnings: false
+  }
+) => {
   if (!options.emitError) options.emitError = false;
   if (!options.reportLimit) options.reportLimit = 0;
   if (!options.summarizeFailureOutput) options.summarizeFailureOutput = true;
@@ -112,7 +118,10 @@ export const milkyReport = (options: ReportOptions = {
         errorFiles.push(file);
         allFailures = allFailures.concat(file.tslint.failures);
 
-        if (options.reportLimit !== undefined && (options.reportLimit <= 0 || (options.reportLimit && options.reportLimit > totalReported))) {
+        if (
+          options.reportLimit !== undefined &&
+          (options.reportLimit <= 0 || (options.reportLimit && options.reportLimit > totalReported))
+        ) {
           if (file.tslint.output !== undefined) console.log(file.tslint.output);
 
           totalReported += errorCount;
@@ -126,7 +135,9 @@ export const milkyReport = (options: ReportOptions = {
         const FormatterConstructor = TSLint.findFormatter(unscopedPluginOptions.formatter!)!;
         const formatter = new FormatterConstructor();
 
-        const warnings = (file.tslint as TSLint.LintResult).failures.filter(failure => failure.getRuleSeverity() === 'warning');
+        const warnings = (file.tslint as TSLint.LintResult).failures.filter(
+          failure => failure.getRuleSeverity() === 'warning'
+        );
         log(formatter.format(warnings), LogLevels.WARN);
       }
     }
@@ -156,7 +167,10 @@ export const milkyReport = (options: ReportOptions = {
         return log(errorOutput, LogLevels.WARN);
       }
     } else if (options && options.summarizeFailureOutput) {
-      return log('🎉  Awesome, your linting is Milky Clean! Get yourself a glass of 🥛  for the awesome work!', LogLevels.INFO);
+      return log(
+        '🎉  Awesome, your linting is Milky Clean! Get yourself a glass of 🥛  for the awesome work!',
+        LogLevels.INFO
+      );
     }
 
     return milkyReport.eventEmitter.emit('end');

@@ -34,6 +34,7 @@
 Easily unescape HTML entities in both the backend and the frontend
 
 **Key Features**
+
 - Useable in NodeJS through package manager of choice
 - Typesafe
 - Bundled with Rollup for maximum size reduction (only 1kB minified + gzipped!), ES module support and browser support
@@ -50,7 +51,7 @@ yarn add @favware/unescape
 # npm install @favware/unescape
 ```
 
-* * *
+---
 
 # Usage
 

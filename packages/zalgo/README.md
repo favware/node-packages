@@ -31,7 +31,7 @@
 
 ---
 
-This library uses the Zalgo character set from  [Acme::Zalgo](https://metacpan.org/pod/Acme::Zalgo)
+This library uses the Zalgo character set from [Acme::Zalgo](https://metacpan.org/pod/Acme::Zalgo)
 
 # Install
 
@@ -43,7 +43,7 @@ yarn add @favware/zalgo
 # npm install @favware/zalgo
 ```
 
-* * *
+---
 
 # Usage
 
@@ -53,16 +53,12 @@ const { zalgo, banish, chars } = require('awesome-zalgo');
 // import zalgo, { banish, chars } from 'awesome-zalgo';
 
 // Zalgo usage
-zalgo('some text')
-
+zalgo('some text');
 
 // > ŝ̜̩͇̼̥̼́̏͢o͎͊͜ḿ̛̩̳̖͕̞̩̭ͪe͖̺̣̹̺̋̀͛̽͝ ̖͍̭͓̯̠͑͑͢t̼̪̋͌͢eͯ̋͏͖͎͍̩̭̮x̢͚̄̾̀̈ͧ̓ͩ̚t̪ͫ͝
 
-
-
 // Banish usage
-banish('ŝ̜̩͇̼̥̼́̏͢o͎͊͜ḿ̛̩̳̖͕̞̩̭ͪe͖̺̣̹̺̋̀͛̽͝ ̖͍̭͓̯̠͑͑͢t̼̪̋͌͢eͯ̋͏͖͎͍̩̭̮x̢͚̄̾̀̈ͧ̓ͩ̚t̪ͫ͝')
-
+banish('ŝ̜̩͇̼̥̼́̏͢o͎͊͜ḿ̛̩̳̖͕̞̩̭ͪe͖̺̣̹̺̋̀͛̽͝ ̖͍̭͓̯̠͑͑͢t̼̪̋͌͢eͯ̋͏͖͎͍̩̭̮x̢͚̄̾̀̈ͧ̓ͩ̚t̪ͫ͝');
 
 // > some text
 

@@ -29,7 +29,7 @@ export const definitions: UnitDefinition[] = [
     data: [
       { id: 'gf', system: System.PRIMARY, multiplier: 9.80665 },
       { id: 'm/s2', system: System.PRIMARY, multiplier: 1 }
-    ],
+    ]
   },
   {
     name: 'angle',
@@ -39,8 +39,8 @@ export const definitions: UnitDefinition[] = [
       { id: 'deg', system: System.PRIMARY, multiplier: 1 },
       { id: 'grad', system: System.PRIMARY, multiplier: 9 / 10 },
       { id: 'arcmin', system: System.PRIMARY, multiplier: 1 / 60 },
-      { id: 'arcsec', system: System.PRIMARY, multiplier: 1 / 3.6e+3 }
-    ],
+      { id: 'arcsec', system: System.PRIMARY, multiplier: 1 / 3.6e3 }
+    ]
   },
   {
     name: 'apparentPower',
@@ -48,10 +48,10 @@ export const definitions: UnitDefinition[] = [
     data: [
       { id: 'va', system: System.PRIMARY, multiplier: 1 },
       { id: 'miva', system: System.PRIMARY, multiplier: 1e-3 },
-      { id: 'kva', system: System.PRIMARY, multiplier: 1e+3 },
-      { id: 'mva', system: System.PRIMARY, multiplier: 1e+6 },
-      { id: 'gva', system: System.PRIMARY, multiplier: 1e+9 }
-    ],
+      { id: 'kva', system: System.PRIMARY, multiplier: 1e3 },
+      { id: 'mva', system: System.PRIMARY, multiplier: 1e6 },
+      { id: 'gva', system: System.PRIMARY, multiplier: 1e9 }
+    ]
   },
   {
     name: 'area',
@@ -61,15 +61,15 @@ export const definitions: UnitDefinition[] = [
       { id: 'mm2', system: System.PRIMARY, multiplier: 1e-6 },
       { id: 'cm2', system: System.PRIMARY, multiplier: 1e-4 },
       { id: 'm2', system: System.PRIMARY, multiplier: 1 },
-      { id: 'dm', system: System.PRIMARY, multiplier: 1e+2 },
-      { id: 'ha', system: System.PRIMARY, multiplier: 1e+4 },
-      { id: 'km2', system: System.PRIMARY, multiplier: 1e+6 },
+      { id: 'dm', system: System.PRIMARY, multiplier: 1e2 },
+      { id: 'ha', system: System.PRIMARY, multiplier: 1e4 },
+      { id: 'km2', system: System.PRIMARY, multiplier: 1e6 },
       { id: 'in2', system: System.SECONDARY, multiplier: 1 / 144 },
       { id: 'yd2', system: System.SECONDARY, multiplier: 9 },
       { id: 'ft2', system: System.SECONDARY, multiplier: 1 },
       { id: 'ac', system: System.SECONDARY, multiplier: 43560 },
       { id: 'mi2', system: System.SECONDARY, multiplier: 27878400 }
-    ],
+    ]
   },
   {
     name: 'charge',
@@ -80,7 +80,7 @@ export const definitions: UnitDefinition[] = [
       { id: 'mico', system: System.PRIMARY, multiplier: 1e-6 },
       { id: 'nco', system: System.PRIMARY, multiplier: 1e-9 },
       { id: 'pco', system: System.PRIMARY, multiplier: 1e-12 }
-    ],
+    ]
   },
   {
     name: 'current',
@@ -88,8 +88,8 @@ export const definitions: UnitDefinition[] = [
     data: [
       { id: 'a', system: System.PRIMARY, multiplier: 1 },
       { id: 'ma', system: System.PRIMARY, multiplier: 1e-3 },
-      { id: 'ka', system: System.PRIMARY, multiplier: 1e+3 }
-    ],
+      { id: 'ka', system: System.PRIMARY, multiplier: 1e3 }
+    ]
   },
   {
     name: 'digital',
@@ -106,7 +106,7 @@ export const definitions: UnitDefinition[] = [
       { id: 'mby', system: System.SECONDARY, multiplier: 1048576 },
       { id: 'gby', system: System.SECONDARY, multiplier: 1073741824 },
       { id: 'tby', system: System.SECONDARY, multiplier: 1099511627776 }
-    ],
+    ]
   },
   {
     name: 'each',
@@ -114,29 +114,29 @@ export const definitions: UnitDefinition[] = [
     data: [
       { id: 'ea', system: System.PRIMARY, multiplier: 1 },
       { id: 'dz', system: System.PRIMARY, multiplier: 12 }
-    ],
+    ]
   },
   {
     name: 'energy',
     primary: { default: 'j', ratio: 1 },
     data: [
       { id: 'j', system: System.PRIMARY, multiplier: 1 },
-      { id: 'kj', system: System.PRIMARY, multiplier: 1e+3 },
-      { id: 'wh', system: System.PRIMARY, multiplier: 3.6e+3 },
+      { id: 'kj', system: System.PRIMARY, multiplier: 1e3 },
+      { id: 'wh', system: System.PRIMARY, multiplier: 3.6e3 },
       { id: 'miwh', system: System.PRIMARY, multiplier: 3.6 },
-      { id: 'kwh', system: System.PRIMARY, multiplier: 3.6e+6 },
-      { id: 'mwh', system: System.PRIMARY, multiplier: 3.6e+9 },
-      { id: 'gwh', system: System.PRIMARY, multiplier: 3.6e+12 }
-    ],
+      { id: 'kwh', system: System.PRIMARY, multiplier: 3.6e6 },
+      { id: 'mwh', system: System.PRIMARY, multiplier: 3.6e9 },
+      { id: 'gwh', system: System.PRIMARY, multiplier: 3.6e12 }
+    ]
   },
   {
     name: 'force',
     primary: { default: 'n', ratio: 1 },
     data: [
       { id: 'n', system: System.PRIMARY, multiplier: 1 },
-      { id: 'kn', system: System.PRIMARY, multiplier: 1e+3 },
+      { id: 'kn', system: System.PRIMARY, multiplier: 1e3 },
       { id: 'lbf', system: System.PRIMARY, multiplier: 4.44822 }
-    ],
+    ]
   },
   {
     name: 'frequency',
@@ -144,14 +144,14 @@ export const definitions: UnitDefinition[] = [
     data: [
       { id: 'mihz', system: System.PRIMARY, multiplier: 1e-3 },
       { id: 'hz', system: System.PRIMARY, multiplier: 1 },
-      { id: 'khz', system: System.PRIMARY, multiplier: 1e+3 },
-      { id: 'mhz', system: System.PRIMARY, multiplier: 1e+6 },
-      { id: 'ghz', system: System.PRIMARY, multiplier: 1e+9 },
-      { id: 'thz', system: System.PRIMARY, multiplier: 1e+12 },
+      { id: 'khz', system: System.PRIMARY, multiplier: 1e3 },
+      { id: 'mhz', system: System.PRIMARY, multiplier: 1e6 },
+      { id: 'ghz', system: System.PRIMARY, multiplier: 1e9 },
+      { id: 'thz', system: System.PRIMARY, multiplier: 1e12 },
       { id: 'rpm', system: System.PRIMARY, multiplier: 1 / 60 },
-      { id: 'deg/s', system: System.PRIMARY, multiplier: 1 / 3.6e+2 },
+      { id: 'deg/s', system: System.PRIMARY, multiplier: 1 / 3.6e2 },
       { id: 'rad/s', system: System.PRIMARY, multiplier: 1 / (Math.PI * 2) }
-    ],
+    ]
   },
   {
     name: 'illuminance',
@@ -160,7 +160,7 @@ export const definitions: UnitDefinition[] = [
     data: [
       { id: 'lx', system: System.PRIMARY, multiplier: 1 },
       { id: 'ft-cd', system: System.SECONDARY, multiplier: 1 }
-    ],
+    ]
   },
   {
     name: 'length',
@@ -173,7 +173,7 @@ export const definitions: UnitDefinition[] = [
       { id: 'm', system: System.PRIMARY, multiplier: 1 },
       { id: 'dem', system: System.PRIMARY, multiplier: 10 },
       { id: 'hm', system: System.PRIMARY, multiplier: 100 },
-      { id: 'km', system: System.PRIMARY, multiplier: 1e+3 },
+      { id: 'km', system: System.PRIMARY, multiplier: 1e3 },
       { id: 'in', system: System.SECONDARY, multiplier: 12 },
       { id: 'yd', system: System.SECONDARY, multiplier: 3 },
       { id: 'ft-us', system: System.SECONDARY, multiplier: 1.000002 },
@@ -182,20 +182,18 @@ export const definitions: UnitDefinition[] = [
         id: 'fti',
         system: System.SECONDARY,
         multiplier: 1,
-        uniqueTransform:
-          (value: number) => (
-            `
+        uniqueTransform: (value: number) =>
+          `
               ${Math.floor(value)} ${Math.floor(value) === 1 ? 'foot' : 'feet'}
-              and ${roundNumber(value % 1 * 12, 0)} inches
+              and ${roundNumber((value % 1) * 12, 0)} inches
             `
-              .replace(/(?:\n(?:\s*))+/g, ' ')
-              .replace(/^ (.+) $/, '$1')
-          ),
+            .replace(/(?:\n(?:\s*))+/g, ' ')
+            .replace(/^ (.+) $/, '$1')
       },
       { id: 'fathom', system: System.SECONDARY, multiplier: 6 },
       { id: 'mi', system: System.SECONDARY, multiplier: 5280 },
       { id: 'nmi', system: System.SECONDARY, multiplier: 6076.12 }
-    ],
+    ]
   },
   {
     name: 'mass',
@@ -206,11 +204,11 @@ export const definitions: UnitDefinition[] = [
       { id: 'mg', system: System.PRIMARY, multiplier: 1e-3 },
       { id: 'g', system: System.PRIMARY, multiplier: 1 },
       { id: 'kg', system: System.PRIMARY, multiplier: 1000 },
-      { id: 'mt', system: System.PRIMARY, multiplier: 1e+6 },
+      { id: 'mt', system: System.PRIMARY, multiplier: 1e6 },
       { id: 'oz', system: System.SECONDARY, multiplier: 1 / 16 },
       { id: 'lb', system: System.SECONDARY, multiplier: 1 },
-      { id: 't', system: System.SECONDARY, multiplier: 2e+3 }
-    ],
+      { id: 't', system: System.SECONDARY, multiplier: 2e3 }
+    ]
   },
   {
     name: 'pace',
@@ -221,7 +219,7 @@ export const definitions: UnitDefinition[] = [
       { id: 's/m', system: System.PRIMARY, multiplier: 1 },
       { id: 'min/min', system: System.SECONDARY, multiplier: 0.0113636 },
       { id: 's/ft', system: System.SECONDARY, multiplier: 1 }
-    ],
+    ]
   },
   {
     name: 'partsPer',
@@ -231,7 +229,7 @@ export const definitions: UnitDefinition[] = [
       { id: 'ppb', system: System.PRIMARY, multiplier: 1e-3 },
       { id: 'ppt', system: System.PRIMARY, multiplier: 1e-6 },
       { id: 'ppq', system: System.PRIMARY, multiplier: 1e-9 }
-    ],
+    ]
   },
   {
     name: 'power',
@@ -239,10 +237,10 @@ export const definitions: UnitDefinition[] = [
     data: [
       { id: 'w', system: System.PRIMARY, multiplier: 1 },
       { id: 'miw', system: System.PRIMARY, multiplier: 1e-3 },
-      { id: 'kw', system: System.PRIMARY, multiplier: 1e+3 },
-      { id: 'mew', system: System.PRIMARY, multiplier: 1e+6 },
-      { id: 'gw', system: System.PRIMARY, multiplier: 1e+9 }
-    ],
+      { id: 'kw', system: System.PRIMARY, multiplier: 1e3 },
+      { id: 'mew', system: System.PRIMARY, multiplier: 1e6 },
+      { id: 'gw', system: System.PRIMARY, multiplier: 1e9 }
+    ]
   },
   {
     name: 'pressure',
@@ -252,12 +250,12 @@ export const definitions: UnitDefinition[] = [
       { id: 'pa', system: System.PRIMARY, multiplier: 1e-3 },
       { id: 'hpa', system: System.PRIMARY, multiplier: 1e-1 },
       { id: 'kpa', system: System.PRIMARY, multiplier: 1 },
-      { id: 'mpa', system: System.PRIMARY, multiplier: 1e+3 },
+      { id: 'mpa', system: System.PRIMARY, multiplier: 1e3 },
       { id: 'bar', system: System.PRIMARY, multiplier: 100 },
       { id: 'torr', system: System.PRIMARY, multiplier: 101325 / 760000 },
       { id: 'psi', system: System.SECONDARY, multiplier: 1e-3 },
       { id: 'ksi', system: System.SECONDARY, multiplier: 1 }
-    ],
+    ]
   },
   {
     name: 'reactiveEnergy',
@@ -265,10 +263,10 @@ export const definitions: UnitDefinition[] = [
     data: [
       { id: 'varh', system: System.PRIMARY, multiplier: 1 },
       { id: 'mivarh', system: System.PRIMARY, multiplier: 1e-3 },
-      { id: 'kvarh', system: System.PRIMARY, multiplier: 1e+3 },
-      { id: 'mvarh', system: System.PRIMARY, multiplier: 1e+6 },
-      { id: 'gvarh', system: System.PRIMARY, multiplier: 1e+9 }
-    ],
+      { id: 'kvarh', system: System.PRIMARY, multiplier: 1e3 },
+      { id: 'mvarh', system: System.PRIMARY, multiplier: 1e6 },
+      { id: 'gvarh', system: System.PRIMARY, multiplier: 1e9 }
+    ]
   },
   {
     name: 'reactivePower',
@@ -276,10 +274,10 @@ export const definitions: UnitDefinition[] = [
     data: [
       { id: 'var', system: System.PRIMARY, multiplier: 1 },
       { id: 'mivar', system: System.PRIMARY, multiplier: 1e-3 },
-      { id: 'kvar', system: System.PRIMARY, multiplier: 1e+3 },
-      { id: 'mvar', system: System.PRIMARY, multiplier: 1e+6 },
-      { id: 'gvar', system: System.PRIMARY, multiplier: 1e+9 }
-    ],
+      { id: 'kvar', system: System.PRIMARY, multiplier: 1e3 },
+      { id: 'mvar', system: System.PRIMARY, multiplier: 1e6 },
+      { id: 'gvar', system: System.PRIMARY, multiplier: 1e9 }
+    ]
   },
   {
     name: 'speed',
@@ -291,26 +289,38 @@ export const definitions: UnitDefinition[] = [
       { id: 'mph', system: System.SECONDARY, multiplier: 1 },
       { id: 'knot', system: System.SECONDARY, multiplier: 1.150779 },
       { id: 'ft/s', system: System.SECONDARY, multiplier: 0.681818 }
-    ],
+    ]
   },
   {
     name: 'temperature',
-    primary: { default: 'c', ratio: 1, transform: (C: number) => (C * 9 / 5) + 32 },
+    primary: { default: 'c', ratio: 1, transform: (C: number) => (C * 9) / 5 + 32 },
     secondary: { default: 'f', ratio: 1, transform: (F: number) => (F - 32) * (5 / 9) },
     data: [
       {
-        id: 'c', system: System.PRIMARY, multiplier: 1, valueShift: 0,
+        id: 'c',
+        system: System.PRIMARY,
+        multiplier: 1,
+        valueShift: 0
       },
       {
-        id: 'k', system: System.PRIMARY, multiplier: 1, valueShift: 273.15,
+        id: 'k',
+        system: System.PRIMARY,
+        multiplier: 1,
+        valueShift: 273.15
       },
       {
-        id: 'f', system: System.SECONDARY, multiplier: 1, valueShift: 0,
+        id: 'f',
+        system: System.SECONDARY,
+        multiplier: 1,
+        valueShift: 0
       },
       {
-        id: 'r', system: System.SECONDARY, multiplier: 1, valueShift: 459.67,
+        id: 'r',
+        system: System.SECONDARY,
+        multiplier: 1,
+        valueShift: 459.67
       }
-    ],
+    ]
   },
   {
     name: 'time',
@@ -323,9 +333,9 @@ export const definitions: UnitDefinition[] = [
       { id: 'h', system: System.PRIMARY, multiplier: 60 * 60 },
       { id: 'd', system: System.PRIMARY, multiplier: 60 * 60 * 24 },
       { id: 'week', system: System.PRIMARY, multiplier: 60 * 60 * 24 * 7 },
-      { id: 'month', system: System.PRIMARY, multiplier: 60 * 60 * 24 * 365.25 / 12 },
+      { id: 'month', system: System.PRIMARY, multiplier: (60 * 60 * 24 * 365.25) / 12 },
       { id: 'year', system: System.PRIMARY, multiplier: 60 * 60 * 24 * 365.25 }
-    ],
+    ]
   },
   {
     name: 'voltage',
@@ -333,8 +343,8 @@ export const definitions: UnitDefinition[] = [
     data: [
       { id: 'v', system: System.PRIMARY, multiplier: 1 },
       { id: 'mv', system: System.PRIMARY, multiplier: 1e-3 },
-      { id: 'kv', system: System.PRIMARY, multiplier: 1e+3 }
-    ],
+      { id: 'kv', system: System.PRIMARY, multiplier: 1e3 }
+    ]
   },
   {
     name: 'volume',
@@ -347,9 +357,9 @@ export const definitions: UnitDefinition[] = [
       { id: 'cl', system: System.PRIMARY, multiplier: 1e-2 },
       { id: 'dl', system: System.PRIMARY, multiplier: 1e-1 },
       { id: 'l', system: System.PRIMARY, multiplier: 1 },
-      { id: 'kl', system: System.PRIMARY, multiplier: 1e+3 },
-      { id: 'm3', system: System.PRIMARY, multiplier: 1e+3 },
-      { id: 'km3', system: System.PRIMARY, multiplier: 1e+12 },
+      { id: 'kl', system: System.PRIMARY, multiplier: 1e3 },
+      { id: 'm3', system: System.PRIMARY, multiplier: 1e3 },
+      { id: 'km3', system: System.PRIMARY, multiplier: 1e12 },
       { id: 'tsp', system: System.SECONDARY, multiplier: 1 / 6 },
       { id: 'tbs', system: System.SECONDARY, multiplier: 1 / 2 },
       { id: 'in3', system: System.SECONDARY, multiplier: 0.55411 },
@@ -360,7 +370,7 @@ export const definitions: UnitDefinition[] = [
       { id: 'gal', system: System.SECONDARY, multiplier: 128 },
       { id: 'ft3', system: System.SECONDARY, multiplier: 957.506 },
       { id: 'yd3', system: System.SECONDARY, multiplier: 25852.7 }
-    ],
+    ]
   },
   {
     name: 'volumeFlowRate',
@@ -374,45 +384,45 @@ export const definitions: UnitDefinition[] = [
       { id: 'dl/s', system: System.PRIMARY, multiplier: 1e-1 },
       { id: 'l/s', system: System.PRIMARY, multiplier: 1 },
       { id: 'l/min', system: System.PRIMARY, multiplier: 1 / 60 },
-      { id: 'l/h', system: System.PRIMARY, multiplier: 1 / 3.6e+3 },
-      { id: 'kl/s', system: System.PRIMARY, multiplier: 1e+3 },
+      { id: 'l/h', system: System.PRIMARY, multiplier: 1 / 3.6e3 },
+      { id: 'kl/s', system: System.PRIMARY, multiplier: 1e3 },
       { id: 'kl/min', system: System.PRIMARY, multiplier: 50 / 3 },
       { id: 'kl/h', system: System.PRIMARY, multiplier: 5 / 18 },
-      { id: 'm3/s', system: System.PRIMARY, multiplier: 1e+3 },
+      { id: 'm3/s', system: System.PRIMARY, multiplier: 1e3 },
       { id: 'm3/min', system: System.PRIMARY, multiplier: 50 / 3 },
       { id: 'm3/h', system: System.PRIMARY, multiplier: 5 / 18 },
-      { id: 'km3/h', system: System.PRIMARY, multiplier: 1e+12 },
+      { id: 'km3/h', system: System.PRIMARY, multiplier: 1e12 },
       { id: 'tsp/s', system: System.SECONDARY, multiplier: 1 / 6 },
       { id: 'tbs/s', system: System.SECONDARY, multiplier: 1 / 2 },
       { id: 'in3/s', system: System.SECONDARY, multiplier: 0.55411 },
       { id: 'in3/min', system: System.SECONDARY, multiplier: 0.55411 / 60 },
-      { id: 'in3/h', system: System.SECONDARY, multiplier: 0.55411 / 3.6e+3 },
+      { id: 'in3/h', system: System.SECONDARY, multiplier: 0.55411 / 3.6e3 },
       { id: 'fl-oz/s', system: System.SECONDARY, multiplier: 1 },
       { id: 'fl-oz/min', system: System.SECONDARY, multiplier: 1 / 60 },
-      { id: 'fl-oz/h', system: System.SECONDARY, multiplier: 1 / 3.6e+3 },
+      { id: 'fl-oz/h', system: System.SECONDARY, multiplier: 1 / 3.6e3 },
       { id: 'cup/s', system: System.SECONDARY, multiplier: 8 },
       { id: 'pnt/s', system: System.SECONDARY, multiplier: 16 },
       { id: 'pnt/min', system: System.SECONDARY, multiplier: 16 / 60 },
-      { id: 'pnt/h', system: System.SECONDARY, multiplier: 16 / 3.6e+3 },
+      { id: 'pnt/h', system: System.SECONDARY, multiplier: 16 / 3.6e3 },
       { id: 'qt/s', system: System.SECONDARY, multiplier: 32 },
       { id: 'gal/s', system: System.SECONDARY, multiplier: 128 },
       { id: 'gal/min', system: System.SECONDARY, multiplier: 128 / 60 },
-      { id: 'gal/h', system: System.SECONDARY, multiplier: 128 / 3.6e+3 },
+      { id: 'gal/h', system: System.SECONDARY, multiplier: 128 / 3.6e3 },
       { id: 'ft3/s', system: System.SECONDARY, multiplier: 957.506 },
       { id: 'ft3/min', system: System.SECONDARY, multiplier: 957.506 / 60 },
-      { id: 'ft3/h', system: System.SECONDARY, multiplier: 957.506 / 3.6e+3 },
+      { id: 'ft3/h', system: System.SECONDARY, multiplier: 957.506 / 3.6e3 },
       { id: 'yd3/s', system: System.SECONDARY, multiplier: 25852.7 },
       { id: 'yd3/min', system: System.SECONDARY, multiplier: 25852.7 / 60 },
-      { id: 'yd3/h', system: System.SECONDARY, multiplier: 25852.7 / 3.6e+3 }
-    ],
+      { id: 'yd3/h', system: System.SECONDARY, multiplier: 25852.7 / 3.6e3 }
+    ]
   }
 ];
 
 export class ConverterError extends Error {
   /**
-     * Create an ConverterError
-     * @param message The message the error should show
-     */
+   * Create an ConverterError
+   * @param message The message the error should show
+   */
   constructor(message: string) {
     super(message);
     this.message = message;

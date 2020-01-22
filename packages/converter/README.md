@@ -34,6 +34,7 @@
 An awesome and typesafe unit converter for NodeJS
 
 **Key Features**
+
 - Typesafe
 - Supports many different units
 - Bundled with Rollup for maximum size reduction (only 1kB minified + gzipped!), ES module support and browser support
@@ -54,7 +55,7 @@ yarn add @favware/converter
 # Usage
 
 ```js
-const {convert, definitions} = require('@favware/converter');
+const { convert, definitions } = require('@favware/converter');
 // Or for babel / typescript:
 // import convert, { definitions } from '@favware/converter';
 
@@ -62,7 +63,7 @@ const {convert, definitions} = require('@favware/converter');
 console.log(convert(100, 'g', 'lb')); // 0.22
 
 // Specify decimal precision
-console.log(convert(100, 'g', 'lb', {precision: 3})); // 0.220
+console.log(convert(100, 'g', 'lb', { precision: 3 })); // 0.220
 
 // Will not work if you pass units of different groups
 console.log(convert(100, 'g', 'm')); // ConverterError: g and m and not in the same definition group

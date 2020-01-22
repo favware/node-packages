@@ -1,8 +1,13 @@
 import {
-  chooseFormat, downloadFromInfo,
-  filterFormats, getBasicInfo, getInfo,
-  getURLVideoID, getVideoID,
-  validateID, validateURL
+  chooseFormat,
+  downloadFromInfo,
+  filterFormats,
+  getBasicInfo,
+  getInfo,
+  getURLVideoID,
+  getVideoID,
+  validateID,
+  validateURL
 } from '../src';
 
 describe('ytdl-core validation', () => {

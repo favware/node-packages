@@ -33,5 +33,5 @@ export enum FunctionSource {
   /** For when the source is {@link parse} */
   Parse = 'parse',
   /** For when the source is {@link stringify} */
-  Stringify = 'stringify',
+  Stringify = 'stringify'
 }

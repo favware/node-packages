@@ -6,23 +6,6 @@
     "module": "commonjs",
     "moduleResolution": "node"
   },
-  "include": [
-    "src",
-    "test",
-    "tests",
-    "typings",
-    "**/__tests__",
-    "**/*.tsx",
-    "**/*.ts",
-    "**/*.js"
-  ],
-  "exclude": [
-    "**/node_modules",
-    "**/build",
-    "**/bin",
-    "**/out",
-    "**/dist",
-    "**/coverage",
-    "**/*.d.ts"
-  ]
+  "include": ["src", "test", "tests", "typings", "**/__tests__", "**/*.tsx", "**/*.ts", "**/*.js"],
+  "exclude": ["**/node_modules", "**/build", "**/bin", "**/out", "**/dist", "**/coverage", "**/*.d.ts"]
 }

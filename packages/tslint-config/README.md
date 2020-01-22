@@ -45,9 +45,7 @@ yarn add @favware/eslint-config
 
 ```json
 {
-  "extends": [
-    "@favware/eslint-config"
-  ]
+  "extends": ["@favware/eslint-config"]
 }
 ```
 

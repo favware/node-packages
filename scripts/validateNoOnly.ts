@@ -1,25 +1,22 @@
-import glob from "glob";
-import path from "path";
-import { readFile } from "fs-nextra";
-import chalk from "chalk";
-import { stripIndents } from "common-tags";
+import glob from 'glob';
+import path from 'path';
+import { readFile } from 'fs-nextra';
+import chalk from 'chalk';
+import { stripIndents } from 'common-tags';
 
 (async () => {
   const files = glob
-    .sync("**/*.test.?(j|t)s?(x)", { cwd: path.join(__dirname, "../packages") })
-    .map(file => path.join(__dirname, "../packages", file));
+    .sync('**/*.test.?(j|t)s?(x)', { cwd: path.join(__dirname, '../packages') })
+    .map(file => path.join(__dirname, '../packages', file));
 
-  const onlyPattern = new RegExp(
-    /(?:describe\.only|it\.only|test\.only)/,
-    "gm"
-  );
+  const onlyPattern = new RegExp(/(?:describe\.only|it\.only|test\.only)/, 'gm');
 
   let shouldError = false;
   const badFiles: string[] = [];
   const badPatterns: string[] = [];
 
   for (const file of files) {
-    const fileContent = await readFile(file, { encoding: "utf8" });
+    const fileContent = await readFile(file, { encoding: 'utf8' });
     const fileHasPattern = fileContent.match(onlyPattern);
 
     if (fileHasPattern && fileHasPattern.length) {
@@ -36,16 +33,14 @@ import { stripIndents } from "common-tags";
     console.error(
       stripIndents(
         `
-      ${chalk.red("\nLooks like you left focused tests, I found these hits:")}
+      ${chalk.red('\nLooks like you left focused tests, I found these hits:')}
       ${badPatterns
         .map(
           (pattern, index) =>
-            `- ${chalk.cyan(pattern)} \t${
-              pattern.includes("describe") ? "" : "\t"
-            }  in \t ${badFiles[index]}`
+            `- ${chalk.cyan(pattern)} \t${pattern.includes('describe') ? '' : '\t'}  in \t ${badFiles[index]}`
         )
-        .join("\n")}
-      ${chalk.cyan("Please remove all the focused tests!\n")}
+        .join('\n')}
+      ${chalk.cyan('Please remove all the focused tests!\n')}
     `
       )
     );

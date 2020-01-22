@@ -32,6 +32,7 @@
 ---
 
 **Key Features**
+
 - Useable in NodeJS through package manager of choice
 - Typesafe
 - Bundled with Rollup for maximum size reduction (only 1kB minified + gzipped!) and ES module support
@@ -47,7 +48,7 @@ yarn add @favware/yamlreader
 # npm install @favware/yamlreader
 ```
 
-* * *
+---
 
 # Usage
 
@@ -56,7 +57,7 @@ const { readYaml } = require('@favware/yamlreader');
 // import readYaml from '@favware/yamlreader'
 
 const data = readYaml('/path/to/some/yaml/file');
-console.log(data) // => JavaScript object with the keys from the yaml
+console.log(data); // => JavaScript object with the keys from the yaml
 ```
 
 ## [API Documentation](https://favware.github.io/node-packages/modules/_favware_yamlreader.html)

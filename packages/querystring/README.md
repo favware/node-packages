@@ -34,6 +34,7 @@
 NodeJS' Querystring, but then with far stronger safety net.
 
 **Key Features**
+
 - Useable in the browser through [jsDelivr](https://www.jsdelivr.com/package/npm/@favware/querystring), [unpkg](https://unpkg.com/@favware/querystring) and [bundle.run](https://bundle.run/@favware/querystring@2.0.0)
 - Useable in NodeJS through package manager of choice
 - Typesafe
@@ -51,7 +52,7 @@ yarn add @favware/querystring
 # npm install @favware/querystring
 ```
 
-* * *
+---
 
 # Usage
 
@@ -64,15 +65,15 @@ const { stringify } = require('@favware/querystring');
 // import { stringify } from '@favware/querystring';
 // with ES modules you can also use a default import for stringify!
 
-console.log(stringify({prop: 'value', prop2: 'value2'}));
+console.log(stringify({ prop: 'value', prop2: 'value2' }));
 //=> '?prop=value&prop2=value2'
 
 // supply options
-console.log(stringify({prop: 'value', prop2: 'value2'}, {separator: '&', equals: '=', includeQuestion: true}));
+console.log(stringify({ prop: 'value', prop2: 'value2' }, { separator: '&', equals: '=', includeQuestion: true }));
 //=> '?prop=value&prop2=value2'
 
 // customize options
-console.log(stringify({prop: 'value', prop2: 'value2'}, {separator: '&&', equals: '=', includeQuestion: false}));
+console.log(stringify({ prop: 'value', prop2: 'value2' }, { separator: '&&', equals: '=', includeQuestion: false }));
 //=> 'prop=value&&prop2=value2'
 ```
 
@@ -88,11 +89,11 @@ console.log(parse('?prop=value&prop2=value2'));
 //=> {prop: 'value', prop2: 'value2'}
 
 // supply options
-console.log(parse('?prop=value&prop2=value2', {separator: '&', equals: '='}));
+console.log(parse('?prop=value&prop2=value2', { separator: '&', equals: '=' }));
 //=> {prop: 'value', prop2: 'value2'}
 
 // customize options
-console.log(parse('prop=value&&prop2=value2', {separator: '&&', equals: '='}));
+console.log(parse('prop=value&&prop2=value2', { separator: '&&', equals: '=' }));
 //=> {prop: 'value', prop2: 'value2'}
 ```
 

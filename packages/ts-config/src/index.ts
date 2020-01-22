@@ -10,5 +10,5 @@ export const testBuild = <T extends unknown>(param?: T) => {
     return { key: param };
   }
 
-  return [ param ];
+  return [param];
 };

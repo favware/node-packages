@@ -1,85 +1,35 @@
 /** Default TSLint configuration for Favware projects */
 export const config = {
   rules: {
-    align: [
-      true,
-      'parameters',
-      'statements',
-      'members',
-      'elements'
-    ],
-    'array-type': [
-      true,
-      'array'
-    ],
-    'arrow-parens': [
-      true,
-      'ban-single-arg-parens'
-    ],
+    align: [true, 'parameters', 'statements', 'members', 'elements'],
+    'array-type': [true, 'array'],
+    'arrow-parens': [true, 'ban-single-arg-parens'],
     'arrow-return-shorthand': true,
     'await-promise': true,
     'ban-comma-operator': true,
     'binary-expression-operand-order': true,
     'class-name': true,
-    'comment-format': [
-      true,
-      'check-space',
-      'check-uppercase'
-    ],
-    curly: [
-      true,
-      'ignore-same-line'
-    ],
-    'cyclomatic-complexity': [
-      true,
-      25
-    ],
+    'comment-format': [true, 'check-space', 'check-uppercase'],
+    curly: [true, 'ignore-same-line'],
+    'cyclomatic-complexity': [true, 25],
     encoding: true,
     eofline: false,
     forin: false,
     'import-spacing': true,
-    indent: [
-      true,
-      'spaces',
-      2
-    ],
+    indent: [true, 'spaces', 2],
     'label-position': true,
-    'linebreak-style': [
-      true,
-      'LF'
-    ],
-    'max-classes-per-file': [
-      true,
-      1
-    ],
-    'max-line-length': [
-      true,
-      200
-    ],
-    'member-ordering': [
-      true,
-      {order: 'fields-first'}
-    ],
+    'linebreak-style': [true, 'LF'],
+    'max-classes-per-file': [true, 1],
+    'max-line-length': [true, 200],
+    'member-ordering': [true, { order: 'fields-first' }],
     'newline-before-return': false,
     'no-angle-bracket-type-assertion': true,
     'no-arg': true,
     'no-bitwise': false,
     'no-boolean-literal-compare': true,
     'no-conditional-assignment': true,
-    'no-consecutive-blank-lines': [
-      true,
-      2
-    ],
-    'no-console': [
-      true,
-      'log',
-      'error',
-      'group',
-      'groupEnd',
-      'groupCollapsed',
-      'table',
-      'trace'
-    ],
+    'no-consecutive-blank-lines': [true, 2],
+    'no-console': [true, 'log', 'error', 'group', 'groupEnd', 'groupCollapsed', 'table', 'trace'],
     'no-construct': true,
     'no-debugger': true,
     'no-duplicate-imports': true,
@@ -104,66 +54,30 @@ export const config = {
     'no-string-literal': true,
     'no-string-throw': true,
     'no-this-assignment': true,
-    'no-trailing-whitespace': [
-      true,
-      'ignore-jsdoc'
-    ],
+    'no-trailing-whitespace': [true, 'ignore-jsdoc'],
     'no-unsafe-finally': true,
     'no-unused-expression': true,
     'no-var-keyword': true,
     'no-var-requires': true,
     'number-literal-format': true,
-    'object-literal-key-quotes': [
-      true,
-      'as-needed'
-    ],
-    'object-literal-shorthand': [
-      true
-    ],
-    'object-literal-sort-keys': [
-      true,
-      'match-declaration-order-only'
-    ],
-    'one-line': [
-      true,
-      'check-open-brace',
-      'check-catch',
-      'check-else',
-      'check-whitespace'
-    ],
+    'object-literal-key-quotes': [true, 'as-needed'],
+    'object-literal-shorthand': [true],
+    'object-literal-sort-keys': [true, 'match-declaration-order-only'],
+    'one-line': [true, 'check-open-brace', 'check-catch', 'check-else', 'check-whitespace'],
     'only-arrow-functions': true,
     'ordered-imports': true,
-    'prefer-conditional-expression': [
-      true,
-      'check-else-if'
-    ],
-    'prefer-const': [
-      true,
-      {destructuring: 'all'}
-    ],
+    'prefer-conditional-expression': [true, 'check-else-if'],
+    'prefer-const': [true, { destructuring: 'all' }],
     'prefer-for-of': true,
     'prefer-method-signature': true,
     'prefer-object-spread': true,
     'prefer-template': true,
     'promise-function-async': false,
-    quotemark: [
-      true,
-      'single',
-      'jsx-single'
-    ],
+    quotemark: [true, 'single', 'jsx-single'],
     radix: true,
-    semicolon: [
-      true,
-      'always'
-    ],
-    'space-before-function-paren': [
-      true,
-      'always'
-    ],
-    'space-within-parens': [
-      true,
-      0
-    ],
+    semicolon: [true, 'always'],
+    'space-before-function-paren': [true, 'always'],
+    'space-within-parens': [true, 0],
     'switch-default': true,
     'trailing-comma': [
       true,
@@ -172,10 +86,10 @@ export const config = {
           objects: 'always',
           arrays: 'never',
           functions: 'never',
-          typeLiterals: 'ignore',
+          typeLiterals: 'ignore'
         },
         esSpecCompliant: true,
-        singleline: 'never',
+        singleline: 'never'
       }
     ],
     'triple-equals': true,
@@ -183,13 +97,8 @@ export const config = {
     'unnecessary-else': true,
     'no-tautology-expression': true,
     'static-this': true,
-    'variable-name': [
-      true,
-      'ban-keywords',
-      'check-format',
-      'require-const-for-all-caps'
-    ],
-  },
+    'variable-name': [true, 'ban-keywords', 'check-format', 'require-const-for-all-caps']
+  }
 };
 
 module.exports = config;

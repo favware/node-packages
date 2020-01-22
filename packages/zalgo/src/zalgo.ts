@@ -22,9 +22,15 @@ import { hasOwnProperty, unicodeStringSplitter, randomizer, ZalgoError } from '.
  * @returns The door to hell
  *
  */
-export const zalgo = (text: string, options: ZalgoOptions = {
-  up: true, middle: true, down: true, size: '',
-}): string => {
+export const zalgo = (
+  text: string,
+  options: ZalgoOptions = {
+    up: true,
+    middle: true,
+    down: true,
+    size: ''
+  }
+): string => {
   try {
     if (!text) throw new Error('no_input');
     if (typeof text !== 'string') throw new Error('not_a_string');
@@ -56,7 +62,8 @@ export const zalgo = (text: string, options: ZalgoOptions = {
       counts = { up: 0, middle: 0, down: 0 };
 
       if (options.size === 'mini') counts = { up: randomizer(8), middle: randomizer(2), down: randomizer(8) };
-      else if (options.size === 'maxi') counts = { up: randomizer(16) + 3, middle: randomizer(4) + 1, down: randomizer(64) + 3 };
+      else if (options.size === 'maxi')
+        counts = { up: randomizer(16) + 3, middle: randomizer(4) + 1, down: randomizer(64) + 3 };
       else counts = { up: randomizer(8) + 1, middle: randomizer(3), down: randomizer(8) + 1 };
 
       result += text[i];
@@ -75,8 +82,10 @@ export const zalgo = (text: string, options: ZalgoOptions = {
 
     return result;
   } catch (err) {
-    if (/(?:no_input)/i.test(err.toString())) throw new ZalgoError('The zalgo function at least requires some text as input!');
-    if (/(?:not_a_string)/i.test(err.toString())) throw new ZalgoError('The zalgo function expects input of type string as first argument!');
+    if (/(?:no_input)/i.test(err.toString()))
+      throw new ZalgoError('The zalgo function at least requires some text as input!');
+    if (/(?:not_a_string)/i.test(err.toString()))
+      throw new ZalgoError('The zalgo function expects input of type string as first argument!');
     throw err;
   }
 };
@@ -105,8 +114,10 @@ export const banish = (purgeable: string): string => {
 
     return purgeable.replace(chars.pattern!, '');
   } catch (err) {
-    if (/(?:no_input)/i.test(err.toString())) throw new ZalgoError('The banish function at least requires some text as input!');
-    if (/(?:not_a_string)/i.test(err.toString())) throw new ZalgoError('The banish function expects input of type string as first argument!');
+    if (/(?:no_input)/i.test(err.toString()))
+      throw new ZalgoError('The banish function at least requires some text as input!');
+    if (/(?:not_a_string)/i.test(err.toString()))
+      throw new ZalgoError('The banish function expects input of type string as first argument!');
     throw err;
   }
 };

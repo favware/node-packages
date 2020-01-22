@@ -50,5 +50,5 @@ export enum System {
   /** For when the unit is of the primary system */
   PRIMARY = 'primary',
   /** For when the unit is of the secondary system */
-  SECONDARY = 'secondary',
+  SECONDARY = 'secondary'
 }

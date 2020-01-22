@@ -8,7 +8,8 @@ import { FunctionSource, ParseOptions, QuerystringError, QuerystringObject, Stri
  *
  * @param v Input to check for primitive type
  */
-const stringifyPrimitive = (v: any): string => { // eslint-disable-line @typescript-eslint/no-explicit-any
+const stringifyPrimitive = <T extends unknown>(v: T): string => {
+  // eslint-disable-line @typescript-eslint/no-explicit-any
   switch (typeof v) {
     case 'string':
       return v;
@@ -44,27 +45,28 @@ const handleQuerystringError = (err: string, source: FunctionSource): string | Q
  * @param options Options for the stringify, see {@link IStringifyOptions}
  * @returns The stringified query object
  */
-export const stringify = (obj: QuerystringObject, options: StringifyOptions = { separator: '&', equals: '=', includeQuestion: false }): string => {
+export const stringify = (
+  obj: QuerystringObject,
+  options: StringifyOptions = { separator: '&', equals: '=', includeQuestion: false }
+): string => {
   try {
     if (!obj || Object.keys(obj).length <= 0) throw new Error('object_is_empty');
     if (typeof obj !== 'object') throw new Error('input_not_object');
     if (!options.separator) options.separator = '&';
     if (!options.equals) options.equals = '=';
     if (!options.includeQuestion) options.includeQuestion = false;
-    const keys = Object.keys(obj).sort() // eslint-disable-line @typescript-eslint/require-array-sort-compare
+    const keys = Object.keys(obj)
+      .sort() // eslint-disable-line @typescript-eslint/require-array-sort-compare
       .map(key => {
         const ks = encodeURIComponent(stringifyPrimitive(key)) + options.equals!;
         if (obj[key] === undefined || obj[key] === null) return '';
         if (Array.isArray(obj[key])) {
-          return obj[key]
-            .map((v: string) => ks + encodeURIComponent(stringifyPrimitive(v)))
-            .join(options.separator);
+          return obj[key].map((v: string) => ks + encodeURIComponent(stringifyPrimitive(v))).join(options.separator);
         }
 
-        return (
-          ks + encodeURIComponent(stringifyPrimitive(obj[key]))
-        );
-      }).filter(Boolean);
+        return ks + encodeURIComponent(stringifyPrimitive(obj[key]));
+      })
+      .filter(Boolean);
 
     if (options.includeQuestion) keys[0] = `?${keys[0]}`;
 
@@ -129,7 +131,7 @@ export const parse = (qs = '', options: ParseOptions = { separator: '&', equals:
       } else if (Array.isArray(obj[k])) {
         obj[k].push(v);
       } else {
-        obj[k] = [ obj[k], v ];
+        obj[k] = [obj[k], v];
       }
     }
 

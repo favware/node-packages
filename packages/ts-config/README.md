@@ -49,13 +49,10 @@ yarn add @favware/ts-config
   "extends": "@favware/ts-config",
   "compilerOptions": {
     "outDir": "build/",
-    "rootDir": "src/",
+    "rootDir": "src/"
   },
   "include": ["src"],
-  "exclude": [
-    "node_modules",
-    "**/*.test.ts"
-  ]
+  "exclude": ["node_modules", "**/*.test.ts"]
 }
 ```
 

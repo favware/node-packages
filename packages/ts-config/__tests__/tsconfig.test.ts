@@ -14,6 +14,6 @@ describe('TSConfig Test Build', () => {
   });
 
   test('should fallback to array if param instance of none', () => {
-    expect(testBuild()).toStrictEqual([ undefined ]);
+    expect(testBuild()).toStrictEqual([undefined]);
   });
 });

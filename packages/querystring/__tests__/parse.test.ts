@@ -17,15 +17,15 @@ describe('Standard Behaviour', () => {
   });
 
   test('should work when key exists multiple times', () => {
-    const expected = { prop: [ 'value', 'value' ] };
+    const expected = { prop: ['value', 'value'] };
     const actual = parse('?prop=value&prop=value');
     expect(actual).toMatchSnapshot();
     expect(actual).toMatchObject(expected);
   });
 
   test('should work when key has array-like value', () => {
-    const expected = { prop: '[\'value\', \'value\']' };
-    const actual = parse('?prop=[\'value\', \'value\']');
+    const expected = { prop: "['value', 'value']" };
+    const actual = parse("?prop=['value', 'value']");
     expect(actual).toMatchSnapshot();
     expect(actual).toMatchObject(expected);
   });
@@ -110,7 +110,122 @@ describe('Standard Behaviour', () => {
     prop=value&prop0=value&prop1=value&prop2=value&prop3=value&prop4=value&prop5=value&prop6=value&prop7=value&prop8=value&prop9=value&prop10=value&prop11=value&prop12=value&prop13=value&prop14=value&prop15=value&prop16=value&prop17=value&prop18=value&prop19=value&prop20=value&
     prop=value&prop0=value&prop1=value&prop2=value&prop3=value&prop4=value&prop5=value&prop6=value&prop7=value&prop8=value&prop9=value&prop10=value&prop11=value&prop12=value&prop13=value&prop14=value&prop15=value&prop16=value&prop17=value&prop18=value&prop19=value&prop20=value&
     `.replace(/ /gm, '');
-    const expected = { prop: [ 'value', 'value', 'value', 'value', 'value', 'value', 'value', 'value', 'value', 'value', 'value', 'value', 'value', 'value', 'value', 'value', 'value', 'value', 'value', 'value', 'value', 'value', 'value', 'value', 'value', 'value', 'value', 'value', 'value', 'value', 'value', 'value', 'value', 'value', 'value', 'value', 'value', 'value', 'value', 'value', 'value', 'value', 'value', 'value', 'value', 'value', 'value', 'value', 'value', 'value', 'value', 'value', 'value', 'value', 'value' ], prop2: [ 'value', 'value', 'value', 'value', 'value', 'value', 'value', 'value', 'value', 'value', 'value', 'value', 'value', 'value', 'value', 'value', 'value', 'value', 'value', 'value', 'value', 'value', 'value', 'value', 'value', 'value', 'value', 'value', 'value', 'value', 'value', 'value', 'value', 'value', 'value', 'value', 'value', 'value', 'value', 'value', 'value', 'value', 'value', 'value', 'value', 'value', 'value', 'value', 'value', 'value', 'value', 'value', 'value', 'value', 'value' ] };
+    const expected = {
+      prop: [
+        'value',
+        'value',
+        'value',
+        'value',
+        'value',
+        'value',
+        'value',
+        'value',
+        'value',
+        'value',
+        'value',
+        'value',
+        'value',
+        'value',
+        'value',
+        'value',
+        'value',
+        'value',
+        'value',
+        'value',
+        'value',
+        'value',
+        'value',
+        'value',
+        'value',
+        'value',
+        'value',
+        'value',
+        'value',
+        'value',
+        'value',
+        'value',
+        'value',
+        'value',
+        'value',
+        'value',
+        'value',
+        'value',
+        'value',
+        'value',
+        'value',
+        'value',
+        'value',
+        'value',
+        'value',
+        'value',
+        'value',
+        'value',
+        'value',
+        'value',
+        'value',
+        'value',
+        'value',
+        'value',
+        'value'
+      ],
+      prop2: [
+        'value',
+        'value',
+        'value',
+        'value',
+        'value',
+        'value',
+        'value',
+        'value',
+        'value',
+        'value',
+        'value',
+        'value',
+        'value',
+        'value',
+        'value',
+        'value',
+        'value',
+        'value',
+        'value',
+        'value',
+        'value',
+        'value',
+        'value',
+        'value',
+        'value',
+        'value',
+        'value',
+        'value',
+        'value',
+        'value',
+        'value',
+        'value',
+        'value',
+        'value',
+        'value',
+        'value',
+        'value',
+        'value',
+        'value',
+        'value',
+        'value',
+        'value',
+        'value',
+        'value',
+        'value',
+        'value',
+        'value',
+        'value',
+        'value',
+        'value',
+        'value',
+        'value',
+        'value',
+        'value',
+        'value'
+      ]
+    };
     /* eslint-enable max-len */
     const actual = parse(`?${keys}`, { separator: '&', equals: '=' });
     expect(actual).toMatchSnapshot();
@@ -131,7 +246,9 @@ describe('Error checking', () => {
   });
 
   test('should error with wrong input', () => {
-    const expected = { err: '@Favware/Querystring: Your input was not an string. Please supply a string when using Parse' };
+    const expected = {
+      err: '@Favware/Querystring: Your input was not an string. Please supply a string when using Parse'
+    };
     // @ts-ignore
     const actual = parse({ prop: 'value', prop2: 'value2' });
     expect(actual).toMatchSnapshot();

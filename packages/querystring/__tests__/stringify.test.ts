@@ -10,7 +10,7 @@ describe('Standard Behaviour', () => {
 
   test('should work with empty input and custom options', () => {
     const expected = '?';
-    const actual = stringify({}, {separator: '&', equals: '=', includeQuestion: true});
+    const actual = stringify({}, { separator: '&', equals: '=', includeQuestion: true });
     expect(actual).toMatchSnapshot();
     expect(actual).toBe(expected);
   });
@@ -24,7 +24,7 @@ describe('Standard Behaviour', () => {
       prop4: 6,
       prop5: false,
       prop6: Infinity,
-      prop7: [ 'value1', 'value2' ],
+      prop7: ['value1', 'value2']
     });
     expect(actual).toMatchSnapshot();
     expect(actual).toBe(expected);
@@ -34,7 +34,7 @@ describe('Standard Behaviour', () => {
     const expected = '';
     const actual = stringify({
       prop: undefined,
-      prop2: null,
+      prop2: null
     });
 
     expect(actual).toMatchSnapshot();
@@ -43,26 +43,34 @@ describe('Standard Behaviour', () => {
 
   test('should work with valid options', () => {
     const expected = '?prop=value&prop2=value2';
-    const actual = stringify({prop: 'value', prop2: 'value2'}, {separator: '&', equals: '=', includeQuestion: true});
+    const actual = stringify(
+      { prop: 'value', prop2: 'value2' },
+      { separator: '&', equals: '=', includeQuestion: true }
+    );
     expect(actual).toMatchSnapshot();
     expect(actual).toBe(expected);
   });
 
   test('confirm default export works', () => {
     const expected = '?prop=value&prop2=value2';
-    const actual = stringify({prop: 'value', prop2: 'value2'}, {separator: '&', equals: '=', includeQuestion: true});
+    const actual = stringify(
+      { prop: 'value', prop2: 'value2' },
+      { separator: '&', equals: '=', includeQuestion: true }
+    );
     expect(actual).toMatchSnapshot();
     expect(actual).toBe(expected);
   });
 });
-
 
 describe('Error checking', () => {
   /* eslint-disable @typescript-eslint/ban-ts-ignore */
   test('should work with wrong options', () => {
     const expected = 'prop%value=prop2%value2';
     // @ts-ignore
-    const actual = stringify({prop: 'value', prop2: 'value2'}, {separator: '=', equals: '%', includeQeustion: true});
+    const actual = stringify(
+      { prop: 'value', prop2: 'value2' },
+      { separator: '=', equals: '%', includeQeustion: true }
+    );
     expect(actual).toMatchSnapshot();
     expect(actual).toBe(expected);
   });
@@ -70,7 +78,10 @@ describe('Error checking', () => {
   test('should work with invalid separator and equals options', () => {
     const expected = '?prop=value&prop2=value2';
     // @ts-ignore
-    const actual = stringify({prop: 'value', prop2: 'value2'}, {separator: null, equals: null, includeQuestion: true});
+    const actual = stringify(
+      { prop: 'value', prop2: 'value2' },
+      { separator: null, equals: null, includeQuestion: true }
+    );
     expect(actual).toMatchSnapshot();
     expect(actual).toBe(expected);
   });

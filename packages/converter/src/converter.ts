@@ -10,7 +10,10 @@ import { ConvertOptions, System, UnitData, UnitDefinition } from './interfaces';
  * @returns Will return a number if the function succeeded or a string with an error message if not
  */
 export const convert = (
-  value: number, fromUnit: string, toUnit: string, options: ConvertOptions = { precision: 8 }
+  value: number,
+  fromUnit: string,
+  toUnit: string,
+  options: ConvertOptions = { precision: 8 }
 ): number | string => {
   try {
     if (!value || !fromUnit || !toUnit) throw new Error('missing_input');
@@ -31,7 +34,7 @@ export const convert = (
       name: '',
       primary: { default: '', ratio: 1, transform: undefined },
       secondary: { default: '', ratio: 1, transform: undefined },
-      data: [ { id: '', system: System.PRIMARY, multiplier: 1 } ],
+      data: [{ id: '', system: System.PRIMARY, multiplier: 1 }]
     };
 
     Object.values(definitions).forEach((definition: UnitDefinition) => {
@@ -66,13 +69,19 @@ export const convert = (
 
     return roundNumber(result / toData.multiplier, options.precision);
   } catch (err) {
-    if (/(?:missing_input)/i.test(err.toString())) throw new ConverterError('You are lacking some input arguments, please supply all arguments');
-    if (/(?:value_not_number)/i.test(err.toString())) throw new ConverterError('Your input value is not of type number');
-    if (/(?:fromUnit_not_string)/i.test(err.toString())) throw new ConverterError('Your fromUnit is not of type string');
+    if (/(?:missing_input)/i.test(err.toString()))
+      throw new ConverterError('You are lacking some input arguments, please supply all arguments');
+    if (/(?:value_not_number)/i.test(err.toString()))
+      throw new ConverterError('Your input value is not of type number');
+    if (/(?:fromUnit_not_string)/i.test(err.toString()))
+      throw new ConverterError('Your fromUnit is not of type string');
     if (/(?:toUnit_not_string)/i.test(err.toString())) throw new ConverterError('Your toUnit is not of type string');
-    if (/(?:fromUnit_not_supported)/i.test(err.toString())) throw new ConverterError('Your fromUnit is not supported by this library');
-    if (/(?:toUnit_not_supported)/i.test(err.toString())) throw new ConverterError('Your toUnit is not supported by this library');
-    if (/(?:no_data_found)/i.test(err.toString())) throw new ConverterError(`Cannot convert incompatible unit of ${fromUnit} to ${toUnit}`);
+    if (/(?:fromUnit_not_supported)/i.test(err.toString()))
+      throw new ConverterError('Your fromUnit is not supported by this library');
+    if (/(?:toUnit_not_supported)/i.test(err.toString()))
+      throw new ConverterError('Your toUnit is not supported by this library');
+    if (/(?:no_data_found)/i.test(err.toString()))
+      throw new ConverterError(`Cannot convert incompatible unit of ${fromUnit} to ${toUnit}`);
     if (/(?:fromUnit_has_uniqueTransform)/i.test(err.toString())) {
       throw new ConverterError(
         `
@@ -85,6 +94,8 @@ export const convert = (
       );
     }
 
-    throw new ConverterError(`Unhandled Error, please contact the developer of the package. Message: ${err.toString()}`);
+    throw new ConverterError(
+      `Unhandled Error, please contact the developer of the package. Message: ${err.toString()}`
+    );
   }
 };

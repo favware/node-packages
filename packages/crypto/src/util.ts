@@ -1,5 +1,11 @@
 /** Possible options to use as the radix */
-export enum Radix {'base16' = 16, 'base32' = 32, 'base36' = 36, 'base58' = 58, 'base64' = 64}
+export enum Radix {
+  'base16' = 16,
+  'base32' = 32,
+  'base36' = 36,
+  'base58' = 58,
+  'base64' = 64
+}
 
 export class CryptoError extends Error {
   constructor(message: string) {

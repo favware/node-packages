@@ -47,7 +47,6 @@ YouTube video.
 
 Install with [yarn](https://yarnpkg.com) or [npm](https://www.npmjs.com/):
 
-
 ```sh
 yarn add @favware/ytdl-prismplayer ytdl-core prism-media
 
@@ -55,7 +54,7 @@ yarn add @favware/ytdl-prismplayer ytdl-core prism-media
 # ytdl-core and prism-media are mandatory peer dependencies
 ```
 
-* * *
+---
 
 # Usage
 
@@ -68,7 +67,7 @@ const ytdl = require('@favware/ytdl-prismplayer');
 // import ytdl from '@favware/ytdl-prismplayer'
 
 async function play(connection, url) {
-    connection.playOpusStream(await ytdl(url));
+  connection.playOpusStream(await ytdl(url));
 }
 ```
 
@@ -79,9 +78,9 @@ const ytdl = require('@favware/ytdl-prismplayer');
 // import ytdl from '@favware/ytdl-prismplayer'
 
 async function play(connection, url) {
-    connection.play(await ytdl(url), {
-        type: 'opus'
-    });
+  connection.play(await ytdl(url), {
+    type: 'opus'
+  });
 }
 
 // You can prefer vorbis instead of opus

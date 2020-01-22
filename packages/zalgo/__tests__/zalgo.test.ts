@@ -43,7 +43,7 @@ describe('Option Testing', () => {
   });
 
   test('should support maxi zalgo', () => {
-    const text = 'I\'m sorry, Dave. I\'m afraid I can\'t do that.';
+    const text = "I'm sorry, Dave. I'm afraid I can't do that.";
     const evil = zalgo(text, { size: 'maxi' });
 
     expect(chars.pattern!.test(evil)).toBe(true);

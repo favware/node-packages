@@ -7,81 +7,44 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @favware/zalgo
 
-
-
-
-
 ## [1.1.2](https://github.com/favware/node-packages/compare/@favware/zalgo@1.1.1...@favware/zalgo@1.1.2) (2019-10-13)
-
 
 ### Bug Fixes
 
-* completely re-do tsconfig standardized ([9eb030f](https://github.com/favware/node-packages/commit/9eb030fdf1deb75d5ae8b273d0e9c359bcb985a1))
-
-
-
-
+- completely re-do tsconfig standardized ([9eb030f](https://github.com/favware/node-packages/commit/9eb030fdf1deb75d5ae8b273d0e9c359bcb985a1))
 
 ## [1.1.1](https://github.com/favware/node-packages/compare/@favware/zalgo@1.1.0...@favware/zalgo@1.1.1) (2019-10-13)
 
 **Note:** Version bump only for package @favware/zalgo
 
-
-
-
-
 # [1.1.0](https://github.com/favware/node-packages/compare/@favware/zalgo@1.0.6...@favware/zalgo@1.1.0) (2019-10-13)
-
 
 ### Features
 
-* standardize TS configuration ([47696f4](https://github.com/favware/node-packages/commit/47696f4e1dd2632b305ff9789cdd6c473fa709ca))
-
-
-
-
+- standardize TS configuration ([47696f4](https://github.com/favware/node-packages/commit/47696f4e1dd2632b305ff9789cdd6c473fa709ca))
 
 ## [1.0.6](https://github.com/favware/node-packages/compare/@favware/zalgo@1.0.5...@favware/zalgo@1.0.6) (2019-09-29)
 
-
 ### Bug Fixes
 
-* **zalgo:** remove unnecessary peer dependencies ([74e6af6](https://github.com/favware/node-packages/commit/74e6af6))
-
-
-
-
+- **zalgo:** remove unnecessary peer dependencies ([74e6af6](https://github.com/favware/node-packages/commit/74e6af6))
 
 ## [1.0.5](https://github.com/favware/node-packages/compare/@favware/zalgo@1.0.4...@favware/zalgo@1.0.5) (2019-09-11)
 
-
 ### Bug Fixes
 
-* **zalgo:** fix prop in obj not being valid ([807be90](https://github.com/favware/node-packages/commit/807be90))
-
-
-
-
+- **zalgo:** fix prop in obj not being valid ([807be90](https://github.com/favware/node-packages/commit/807be90))
 
 ## [1.0.4](https://github.com/favware/node-packages/compare/@favware/zalgo@1.0.3...@favware/zalgo@1.0.4) (2019-09-11)
 
 **Note:** Version bump only for package @favware/zalgo
 
-
-
-
-
 ## [1.0.3](https://github.com/favware/node-packages/compare/@favware/zalgo@1.0.2...@favware/zalgo@1.0.3) (2019-08-21)
 
 **Note:** Version bump only for package @favware/zalgo
 
-
-
-
-
 ## 1.0.2 (2019-08-18)
-
 
 ### Reverts
 
-* "ci: another attempt to fix CI config" ([37c385f](https://github.com/favware/node-packages/commit/37c385f))
+- "ci: another attempt to fix CI config" ([37c385f](https://github.com/favware/node-packages/commit/37c385f))

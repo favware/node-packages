@@ -1,4 +1,4 @@
-import {charSets} from '.';
+import { charSets } from '.';
 
 let regexCache: RegExp | null = null;
 
@@ -22,7 +22,6 @@ const isArrayOfOnlyStrings = (array: unknown): array is string[] => {
 
   return false;
 };
-
 
 /**
  * Unescapes any given string

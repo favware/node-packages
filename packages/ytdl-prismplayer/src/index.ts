@@ -1,6 +1,10 @@
 import prism from 'prism-media';
 import { Readable } from 'stream';
-import ytdl, { downloadOptions as YTDLDownloadOptions, videoFormat as YTDLVideoFormat, videoInfo as YTDLVideoInfo } from 'ytdl-core';
+import ytdl, {
+  downloadOptions as YTDLDownloadOptions,
+  videoFormat as YTDLVideoFormat,
+  videoInfo as YTDLVideoInfo
+} from 'ytdl-core';
 
 /** Custom type for ytdl videoFormat to include missing property */
 export interface PrismVideoFormat extends YTDLVideoFormat, YTDLVideoInfo {
@@ -18,7 +22,8 @@ export interface YtdlPrismPlayerOptions {
 }
 
 /** Filters out formats for opus encoded streams */
-const filter = (format: PrismVideoFormat) => format.audioEncoding === 'opus' && format.container === 'webm' && Number(format.audio_sample_rate) === 48000;
+const filter = (format: PrismVideoFormat) =>
+  format.audioEncoding === 'opus' && format.container === 'webm' && Number(format.audio_sample_rate) === 48000;
 
 /** Filters out formats for vorbis encoded streams */
 const filterVorbis = (format: PrismVideoFormat) => format.audioEncoding === 'vorbis' && format.container === 'webm';
@@ -28,9 +33,7 @@ const filterVorbis = (format: PrismVideoFormat) => format.audioEncoding === 'vor
  * @return Best determined format available for the video stream
  */
 const nextBestFormat = (formats: PrismVideoFormat[]): PrismVideoFormat => {
-  formats = formats
-    .filter(format => format.bitrate)
-    .sort((a, b) => Number(b.bitrate) - Number(a.bitrate));
+  formats = formats.filter(format => format.bitrate).sort((a, b) => Number(b.bitrate) - Number(a.bitrate));
 
   return formats.find(format => !format.bitrate) || formats[0];
 };
@@ -63,7 +66,7 @@ export const play = async (
   ytdlOptions: YTDLDownloadOptions = {},
   prismPlayerOptions: YtdlPrismPlayerOptions = { preferredFormat: 'opus' }
 ): Promise<Readable | prism.opus.Encoder> => {
-  const info = await ytdl.getInfo(url) as unknown as PrismVideoFormat;
+  const info = ((await ytdl.getInfo(url)) as unknown) as PrismVideoFormat;
   const shouldUseVorbis = prismPlayerOptions.preferredFormat === 'vorbis';
 
   ytdlOptions = { ...ytdlOptions, filter: shouldUseVorbis ? undefined : 'audioonly' };
@@ -90,20 +93,29 @@ export const play = async (
       .on('end', () => demuxer.destroy());
   }
 
-  const vorbisPrismArgs = shouldUseVorbis ? [ '-b:a', '192k' ] : [];
+  const vorbisPrismArgs = shouldUseVorbis ? ['-b:a', '192k'] : [];
   const transcoder = new prism.FFmpeg({
     args: [
-      '-reconnect', '1',
-      '-reconnect_streamed', '1',
-      '-reconnect_delay_max', '5',
-      '-i', nextBestFormat(info.formats).url,
-      '-analyzeduration', '0',
-      '-loglevel', '0',
-      '-f', 's16le',
-      '-ar', '48000',
-      '-ac', '2',
+      '-reconnect',
+      '1',
+      '-reconnect_streamed',
+      '1',
+      '-reconnect_delay_max',
+      '5',
+      '-i',
+      nextBestFormat(info.formats).url,
+      '-analyzeduration',
+      '0',
+      '-loglevel',
+      '0',
+      '-f',
+      's16le',
+      '-ar',
+      '48000',
+      '-ac',
+      '2',
       ...vorbisPrismArgs
-    ],
+    ]
   });
   const opus = new prism.opus.Encoder({ frameSize: 960, channels: 2, rate: 48000 });
   const stream = transcoder.pipe(transcoder).pipe(opus);
@@ -118,7 +130,17 @@ export const play = async (
 
 export default play;
 export {
-  chooseFormat, downloadFromInfo, downloadOptions, filterFormats, getBasicInfo,
-  getInfo, getURLVideoID, getVideoID, relatedVideo,
-  validateID, validateURL, videoFormat, videoInfo
+  chooseFormat,
+  downloadFromInfo,
+  downloadOptions,
+  filterFormats,
+  getBasicInfo,
+  getInfo,
+  getURLVideoID,
+  getVideoID,
+  relatedVideo,
+  validateID,
+  validateURL,
+  videoFormat,
+  videoInfo
 } from 'ytdl-core';

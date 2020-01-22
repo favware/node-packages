@@ -5,24 +5,14 @@
     "allowJs": false,
     "incremental": false
   },
-  "include": [
-    "packages/**/*.ts",
-    "scripts"
-  ],
+  "include": ["packages/**/*.ts", "scripts"],
   "typedocOptions": {
     "out": "./docs/",
     "readme": "./README.md",
     "name": "Favware Node Packages",
-    "exclude": [
-      "**/node_modules/**",
-      "**/*.test.ts",
-      "**/*.js"
-    ],
+    "exclude": ["**/node_modules/**", "**/*.test.ts", "**/*.js"],
     "mode": "modules",
-    "pathExclude": [
-      "scripts/duplicateESLintConfig",
-      "scripts/validateNoOnly"
-    ],
+    "pathExclude": ["scripts/duplicateESLintConfig", "scripts/validateNoOnly"],
     "excludeExternals": true,
     "excludePrivate": true,
     "excludeProtected": true,

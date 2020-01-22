@@ -2,7 +2,7 @@
 class StreamBinary {
   private readonly bases: any;
 
-  constructor(sequence: Buffer, bits: number = (sequence instanceof Buffer ? 8 : 1)) {
+  constructor(sequence: Buffer, bits: number = sequence instanceof Buffer ? 8 : 1) {
     const n = sequence.length;
 
     let binary: any = '';
@@ -17,7 +17,7 @@ class StreamBinary {
 
     binary = binary.split('').map((bin: string) => parseInt(bin, 2));
 
-    this.bases = {'2': binary};
+    this.bases = { '2': binary };
   }
 
   private static get(sequence: Buffer, offset: number) {

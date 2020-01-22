@@ -6,12 +6,12 @@ const fixturesDir = path.join(__dirname, '..', '__fixtures__');
 
 test('it should read the yaml file asynchronously', () => {
   const actual = readYaml(path.resolve(fixturesDir, 'passer.yml'));
-  expect(actual).toMatchObject({foo: {bar: 'baz', qux: true }});
+  expect(actual).toMatchObject({ foo: { bar: 'baz', qux: true } });
 });
 
 test('it should support options', () => {
-  const actual = readYaml(path.resolve(fixturesDir, 'passer.yml'), {schema: YAML.FAILSAFE_SCHEMA});
-  expect(actual).toMatchObject({foo: {bar: 'baz', qux: 'true' }});
+  const actual = readYaml(path.resolve(fixturesDir, 'passer.yml'), { schema: YAML.FAILSAFE_SCHEMA });
+  expect(actual).toMatchObject({ foo: { bar: 'baz', qux: 'true' } });
 });
 
 test('it should fail when it cannot parse the file as YAML', () => {
