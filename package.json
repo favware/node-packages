@@ -1,7 +1,9 @@
 {
   "name": "root",
   "private": true,
-  "workspaces": ["packages/*"],
+  "workspaces": [
+    "packages/*"
+  ],
   "scripts": {
     "lint": "eslint scripts/ packages/** --fix --ext ts",
     "test": "jest",
@@ -66,11 +68,17 @@
     }
   },
   "commitlint": {
-    "extends": ["@commitlint/config-conventional"]
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
   },
   "lint-staged": {
-    "*.{js,ts}": ["yarn lint"],
-    "packages/eslint-config/src/index.ts": ["yarn scripts:duplicateESLintConfig"]
+    "*.{js,ts}": [
+      "eslint --fix --ext ts"
+    ],
+    "packages/eslint-config/src/index.ts": [
+      "yarn scripts:duplicateESLintConfig"
+    ]
   },
   "config": {
     "commitizen": {
