@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>TSLintFile | Favware Node Packages</title>
+	<title>Chars | Favware Node Packages</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -52,24 +52,36 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="../modules/_favware_milky_tslint.html">@favware/milky-tslint</a>
+					<a href="../modules/_favware_zalgo.html">@favware/zalgo</a>
 				</li>
 				<li>
-					<a href="_favware_milky_tslint.tslintfile.html">TSLintFile</a>
+					<a href="_favware_zalgo.chars-2.html">Chars</a>
 				</li>
 			</ul>
-			<h1>Interface TSLintFile</h1>
+			<h1>Interface Chars</h1>
 		</div>
 	</div>
 </header>
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>Interface for the characters object</p>
+					</div>
+				</div>
+			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">TSLintFile</span>
+						<span class="tsd-signature-symbol">{}</span>
+						<ul class="tsd-hierarchy">
+							<li>
+								<span class="target">Chars</span>
+							</li>
+						</ul>
 					</li>
 				</ul>
 			</section>
@@ -80,17 +92,11 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_favware_milky_tslint.tslintfile.html#contents" class="tsd-kind-icon">contents</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_favware_milky_tslint.tslintfile.html#path" class="tsd-kind-icon">path</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_favware_milky_tslint.tslintfile.html#relative" class="tsd-kind-icon">relative</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_favware_milky_tslint.tslintfile.html#tslint" class="tsd-kind-icon">tslint</a></li>
-							</ul>
-						</section>
-						<section class="tsd-index-section ">
-							<h3>Methods</h3>
-							<ul class="tsd-index-list">
-								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="_favware_milky_tslint.tslintfile.html#isnull" class="tsd-kind-icon">is<wbr>Null</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="_favware_milky_tslint.tslintfile.html#isstream" class="tsd-kind-icon">is<wbr>Stream</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_favware_zalgo.chars-2.html#all" class="tsd-kind-icon">all</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_favware_zalgo.chars-2.html#down" class="tsd-kind-icon">down</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_favware_zalgo.chars-2.html#middle" class="tsd-kind-icon">middle</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_favware_zalgo.chars-2.html#pattern" class="tsd-kind-icon">pattern</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_favware_zalgo.chars-2.html#up" class="tsd-kind-icon">up</a></li>
 							</ul>
 						</section>
 					</div>
@@ -99,111 +105,79 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="contents" class="tsd-anchor"></a>
-					<h3>contents</h3>
-					<div class="tsd-signature tsd-kind-icon">contents<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Buffer</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">any</span></div>
+					<a name="all" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> all</h3>
+					<div class="tsd-signature tsd-kind-icon">all<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/favware/node-packages/blob/ce894b8/packages/milky-tslint/src/types.ts#L40">packages/milky-tslint/src/types.ts:40</a></li>
+							<li>Defined in <a href="https://github.com/favware/node-packages/blob/21661cc/packages/zalgo/src/interfaces.ts#L4">packages/zalgo/src/interfaces.ts:4</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>The contents of the file</p>
+							<p>All characters</p>
 						</div>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="path" class="tsd-anchor"></a>
-					<h3>path</h3>
-					<div class="tsd-signature tsd-kind-icon">path<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<a name="down" class="tsd-anchor"></a>
+					<h3>down</h3>
+					<div class="tsd-signature tsd-kind-icon">down<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/favware/node-packages/blob/ce894b8/packages/milky-tslint/src/types.ts#L36">packages/milky-tslint/src/types.ts:36</a></li>
+							<li>Defined in <a href="https://github.com/favware/node-packages/blob/21661cc/packages/zalgo/src/interfaces.ts#L10">packages/zalgo/src/interfaces.ts:10</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>The path to the file</p>
+							<p>Characters going below</p>
 						</div>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="relative" class="tsd-anchor"></a>
-					<h3>relative</h3>
-					<div class="tsd-signature tsd-kind-icon">relative<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<a name="middle" class="tsd-anchor"></a>
+					<h3>middle</h3>
+					<div class="tsd-signature tsd-kind-icon">middle<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/favware/node-packages/blob/ce894b8/packages/milky-tslint/src/types.ts#L38">packages/milky-tslint/src/types.ts:38</a></li>
+							<li>Defined in <a href="https://github.com/favware/node-packages/blob/21661cc/packages/zalgo/src/interfaces.ts#L8">packages/zalgo/src/interfaces.ts:8</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>The relative path to the file</p>
+							<p>Characters in the middle</p>
 						</div>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="tslint" class="tsd-anchor"></a>
-					<h3>tslint</h3>
-					<div class="tsd-signature tsd-kind-icon">tslint<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span></div>
+					<a name="pattern" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> pattern</h3>
+					<div class="tsd-signature tsd-kind-icon">pattern<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/favware/node-packages/blob/ce894b8/packages/milky-tslint/src/types.ts#L34">packages/milky-tslint/src/types.ts:34</a></li>
+							<li>Defined in <a href="https://github.com/favware/node-packages/blob/21661cc/packages/zalgo/src/interfaces.ts#L12">packages/zalgo/src/interfaces.ts:12</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>The TSLint instance</p>
+							<p>Stored RegExp pattern</p>
 						</div>
 					</div>
 				</section>
-			</section>
-			<section class="tsd-panel-group tsd-member-group ">
-				<h2>Methods</h2>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
-					<a name="isnull" class="tsd-anchor"></a>
-					<h3>is<wbr>Null</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-						<li class="tsd-signature tsd-kind-icon">is<wbr>Null<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/favware/node-packages/blob/ce894b8/packages/milky-tslint/src/types.ts#L46">packages/milky-tslint/src/types.ts:46</a></li>
-								</ul>
-							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Whether the file is null</p>
-								</div>
-							</div>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
-					<a name="isstream" class="tsd-anchor"></a>
-					<h3>is<wbr>Stream</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-						<li class="tsd-signature tsd-kind-icon">is<wbr>Stream<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/favware/node-packages/blob/ce894b8/packages/milky-tslint/src/types.ts#L43">packages/milky-tslint/src/types.ts:43</a></li>
-								</ul>
-							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Whether the file is a stream</p>
-								</div>
-							</div>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
-						</li>
-					</ul>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="up" class="tsd-anchor"></a>
+					<h3>up</h3>
+					<div class="tsd-signature tsd-kind-icon">up<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/favware/node-packages/blob/21661cc/packages/zalgo/src/interfaces.ts#L6">packages/zalgo/src/interfaces.ts:6</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Characters going up</p>
+						</div>
+					</div>
 				</section>
 			</section>
 		</div>
@@ -222,7 +196,7 @@
 					<li class=" tsd-kind-module">
 						<a href="../modules/_favware_eslint_config.html">@favware/eslint-<wbr>config</a>
 					</li>
-					<li class="current tsd-kind-module">
+					<li class=" tsd-kind-module">
 						<a href="../modules/_favware_milky_tslint.html">@favware/milky-<wbr>tslint</a>
 					</li>
 					<li class=" tsd-kind-module">
@@ -243,66 +217,93 @@
 					<li class=" tsd-kind-module">
 						<a href="../modules/_favware_ytdl_prismplayer.html">@favware/ytdl-<wbr>prismplayer</a>
 					</li>
-					<li class=" tsd-kind-module">
+					<li class="current tsd-kind-module">
 						<a href="../modules/_favware_zalgo.html">@favware/zalgo</a>
 					</li>
 				</ul>
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
-					<li class=" tsd-kind-enum tsd-parent-kind-module">
-						<a href="../enums/_favware_milky_tslint.lintformatters.html" class="tsd-kind-icon">Lint<wbr>Formatters</a>
+					<li class=" tsd-kind-reference tsd-parent-kind-module">
+						<a href="../modules/_favware_zalgo.html#chars" class="tsd-kind-icon">Chars</a>
 					</li>
-					<li class=" tsd-kind-enum tsd-parent-kind-module">
-						<a href="../enums/_favware_milky_tslint.loglevels.html" class="tsd-kind-icon">Log<wbr>Levels</a>
+					<li class=" tsd-kind-reference tsd-parent-kind-module">
+						<a href="../modules/_favware_zalgo.html#zalgocountsmap" class="tsd-kind-icon">Zalgo<wbr>Counts<wbr>Map</a>
 					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module">
-						<a href="_favware_milky_tslint.milkyevents.html" class="tsd-kind-icon">Milky<wbr>Events</a>
+					<li class=" tsd-kind-reference tsd-parent-kind-module">
+						<a href="../modules/_favware_zalgo.html#zalgoerror" class="tsd-kind-icon">Zalgo<wbr>Error</a>
 					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module">
-						<a href="_favware_milky_tslint.pluginoptions.html" class="tsd-kind-icon">Plugin<wbr>Options</a>
+					<li class=" tsd-kind-reference tsd-parent-kind-module">
+						<a href="../modules/_favware_zalgo.html#zalgooptions" class="tsd-kind-icon">Zalgo<wbr>Options</a>
 					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module">
-						<a href="_favware_milky_tslint.reportoptions.html" class="tsd-kind-icon">Report<wbr>Options</a>
+					<li class=" tsd-kind-reference tsd-parent-kind-module">
+						<a href="../modules/_favware_zalgo.html#banish" class="tsd-kind-icon">banish</a>
+					</li>
+					<li class=" tsd-kind-reference tsd-parent-kind-module">
+						<a href="../modules/_favware_zalgo.html#chars-1" class="tsd-kind-icon">chars</a>
+					</li>
+					<li class=" tsd-kind-reference tsd-parent-kind-module">
+						<a href="../modules/_favware_zalgo.html#hasownproperty" class="tsd-kind-icon">has<wbr>Own<wbr>Property</a>
+					</li>
+					<li class=" tsd-kind-reference tsd-parent-kind-module">
+						<a href="../modules/_favware_zalgo.html#randomizer" class="tsd-kind-icon">randomizer</a>
+					</li>
+					<li class=" tsd-kind-reference tsd-parent-kind-module">
+						<a href="../modules/_favware_zalgo.html#unicodestringsplitter" class="tsd-kind-icon">unicode<wbr>String<wbr>Splitter</a>
+					</li>
+					<li class=" tsd-kind-reference tsd-parent-kind-module">
+						<a href="../modules/_favware_zalgo.html#zalgo" class="tsd-kind-icon">zalgo</a>
+					</li>
+					<li class=" tsd-kind-class tsd-parent-kind-module">
+						<a href="../classes/_favware_zalgo.zalgoerror-1.html" class="tsd-kind-icon">Zalgo<wbr>Error</a>
 					</li>
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-interface tsd-parent-kind-module">
-						<a href="_favware_milky_tslint.tslintfile.html" class="tsd-kind-icon">TSLint<wbr>File</a>
+						<a href="_favware_zalgo.chars-2.html" class="tsd-kind-icon">Chars</a>
 						<ul>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_favware_milky_tslint.tslintfile.html#contents" class="tsd-kind-icon">contents</a>
+								<a href="_favware_zalgo.chars-2.html#all" class="tsd-kind-icon">all</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_favware_milky_tslint.tslintfile.html#path" class="tsd-kind-icon">path</a>
+								<a href="_favware_zalgo.chars-2.html#down" class="tsd-kind-icon">down</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_favware_milky_tslint.tslintfile.html#relative" class="tsd-kind-icon">relative</a>
+								<a href="_favware_zalgo.chars-2.html#middle" class="tsd-kind-icon">middle</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_favware_milky_tslint.tslintfile.html#tslint" class="tsd-kind-icon">tslint</a>
+								<a href="_favware_zalgo.chars-2.html#pattern" class="tsd-kind-icon">pattern</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-interface">
-								<a href="_favware_milky_tslint.tslintfile.html#isnull" class="tsd-kind-icon">is<wbr>Null</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-interface">
-								<a href="_favware_milky_tslint.tslintfile.html#isstream" class="tsd-kind-icon">is<wbr>Stream</a>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="_favware_zalgo.chars-2.html#up" class="tsd-kind-icon">up</a>
 							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
-					<li class=" tsd-kind-variable tsd-parent-kind-module">
-						<a href="../modules/_favware_milky_tslint.html#eventemitter" class="tsd-kind-icon">eventemitter</a>
+					<li class=" tsd-kind-interface tsd-parent-kind-module">
+						<a href="_favware_zalgo.zalgocountsmap-1.html" class="tsd-kind-icon">Zalgo<wbr>Counts<wbr>Map</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-module">
+						<a href="_favware_zalgo.zalgooptions-1.html" class="tsd-kind-icon">Zalgo<wbr>Options</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-module">
-						<a href="../modules/_favware_milky_tslint.html#isstring" class="tsd-kind-icon">is<wbr>String</a>
+						<a href="../modules/_favware_zalgo.html#banish-1" class="tsd-kind-icon">banish</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter">
+						<a href="../modules/_favware_zalgo.html#hasownproperty-1" class="tsd-kind-icon">has<wbr>Own<wbr>Property</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-module">
-						<a href="../modules/_favware_milky_tslint.html#milkylint" class="tsd-kind-icon">milky<wbr>Lint</a>
+						<a href="../modules/_favware_zalgo.html#randomizer-1" class="tsd-kind-icon">randomizer</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-module">
-						<a href="../modules/_favware_milky_tslint.html#milkyreport" class="tsd-kind-icon">milky<wbr>Report</a>
+						<a href="../modules/_favware_zalgo.html#unicodestringsplitter-1" class="tsd-kind-icon">unicode<wbr>String<wbr>Splitter</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="../modules/_favware_zalgo.html#zalgo-1" class="tsd-kind-icon">zalgo</a>
+					</li>
+					<li class=" tsd-kind-object-literal tsd-parent-kind-module">
+						<a href="../modules/_favware_zalgo.html#chars-3" class="tsd-kind-icon">chars</a>
 					</li>
 				</ul>
 			</nav>

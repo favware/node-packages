@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>ReportOptions | Favware Node Packages</title>
+	<title>ConverterError | Favware Node Packages</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -52,13 +52,13 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="../modules/_favware_milky_tslint.html">@favware/milky-tslint</a>
+					<a href="../modules/_favware_converter.html">@favware/converter</a>
 				</li>
 				<li>
-					<a href="_favware_milky_tslint.reportoptions.html">ReportOptions</a>
+					<a href="_favware_converter.convertererror-1.html">ConverterError</a>
 				</li>
 			</ul>
-			<h1>Interface ReportOptions</h1>
+			<h1>Class ConverterError</h1>
 		</div>
 	</div>
 </header>
@@ -69,7 +69,12 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">ReportOptions</span>
+						<a href="_favware_converter.convertererror-1.html#error" class="tsd-signature-type">Error</a>
+						<ul class="tsd-hierarchy">
+							<li>
+								<span class="target">ConverterError</span>
+							</li>
+						</ul>
 					</li>
 				</ul>
 			</section>
@@ -78,78 +83,103 @@
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
 						<section class="tsd-index-section ">
+							<h3>Constructors</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="_favware_converter.convertererror-1.html#constructor" class="tsd-kind-icon">constructor</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_favware_milky_tslint.reportoptions.html#allowwarnings" class="tsd-kind-icon">allow<wbr>Warnings</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_favware_milky_tslint.reportoptions.html#emiterror" class="tsd-kind-icon">emit<wbr>Error</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_favware_milky_tslint.reportoptions.html#reportlimit" class="tsd-kind-icon">report<wbr>Limit</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_favware_milky_tslint.reportoptions.html#summarizefailureoutput" class="tsd-kind-icon">summarize<wbr>Failure<wbr>Output</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_favware_converter.convertererror-1.html#message" class="tsd-kind-icon">message</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_favware_converter.convertererror-1.html#name" class="tsd-kind-icon">name</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_favware_converter.convertererror-1.html#stack" class="tsd-kind-icon">stack</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="_favware_converter.convertererror-1.html#error" class="tsd-kind-icon">Error</a></li>
 							</ul>
 						</section>
 					</div>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Constructors</h2>
+				<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class">
+					<a name="constructor" class="tsd-anchor"></a>
+					<h3>constructor</h3>
+					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Converter<wbr>Error<span class="tsd-signature-symbol">(</span>message<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_favware_converter.convertererror-1.html" class="tsd-signature-type">ConverterError</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/favware/node-packages/blob/21661cc/packages/converter/src/helpers.ts#L421">packages/converter/src/helpers.ts:421</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Create an ConverterError</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>message: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>The message the error should show</p>
+										</div>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="_favware_converter.convertererror-1.html" class="tsd-signature-type">ConverterError</a></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="allowwarnings" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> allow<wbr>Warnings</h3>
-					<div class="tsd-signature tsd-kind-icon">allow<wbr>Warnings<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></div>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+					<a name="message" class="tsd-anchor"></a>
+					<h3>message</h3>
+					<div class="tsd-signature tsd-kind-icon">message<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
+						<p>Inherited from <a href="_favware_converter.convertererror-1.html">ConverterError</a>.<a href="_favware_converter.convertererror-1.html#message">message</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/favware/node-packages/blob/ce894b8/packages/milky-tslint/src/types.ts#L29">packages/milky-tslint/src/types.ts:29</a></li>
+							<li>Defined in node_modules/typedoc/node_modules/typescript/lib/lib.es5.d.ts:974</li>
 						</ul>
 					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>Whether to allow lint warnings</p>
-						</div>
-					</div>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="emiterror" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> emit<wbr>Error</h3>
-					<div class="tsd-signature tsd-kind-icon">emit<wbr>Error<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></div>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+					<a name="name" class="tsd-anchor"></a>
+					<h3>name</h3>
+					<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
+						<p>Inherited from <a href="_favware_converter.convertererror-1.html">ConverterError</a>.<a href="_favware_converter.convertererror-1.html#name">name</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/favware/node-packages/blob/ce894b8/packages/milky-tslint/src/types.ts#L23">packages/milky-tslint/src/types.ts:23</a></li>
+							<li>Defined in node_modules/typedoc/node_modules/typescript/lib/lib.es5.d.ts:973</li>
 						</ul>
 					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>Whether to emit errors</p>
-						</div>
-					</div>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="reportlimit" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> report<wbr>Limit</h3>
-					<div class="tsd-signature tsd-kind-icon">report<wbr>Limit<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></div>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+					<a name="stack" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> stack</h3>
+					<div class="tsd-signature tsd-kind-icon">stack<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
+						<p>Inherited from <a href="_favware_converter.convertererror-1.html">ConverterError</a>.<a href="_favware_converter.convertererror-1.html#stack">stack</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/favware/node-packages/blob/ce894b8/packages/milky-tslint/src/types.ts#L25">packages/milky-tslint/src/types.ts:25</a></li>
+							<li>Defined in node_modules/typedoc/node_modules/typescript/lib/lib.es5.d.ts:975</li>
 						</ul>
 					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>The limit of the amount of reports to return</p>
-						</div>
-					</div>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="summarizefailureoutput" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> summarize<wbr>Failure<wbr>Output</h3>
-					<div class="tsd-signature tsd-kind-icon">summarize<wbr>Failure<wbr>Output<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></div>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
+					<a name="error" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> Error</h3>
+					<div class="tsd-signature tsd-kind-icon">Error<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">ErrorConstructor</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/favware/node-packages/blob/ce894b8/packages/milky-tslint/src/types.ts#L27">packages/milky-tslint/src/types.ts:27</a></li>
+							<li>Defined in node_modules/typedoc/node_modules/typescript/lib/lib.es5.d.ts:984</li>
 						</ul>
 					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>Whether to summarize the failure output after run</p>
-						</div>
-					</div>
 				</section>
 			</section>
 		</div>
@@ -159,7 +189,7 @@
 					<li class="globals  ">
 						<a href="../globals.html"><em>Globals</em></a>
 					</li>
-					<li class=" tsd-kind-module">
+					<li class="current tsd-kind-module">
 						<a href="../modules/_favware_converter.html">@favware/converter</a>
 					</li>
 					<li class=" tsd-kind-module">
@@ -168,7 +198,7 @@
 					<li class=" tsd-kind-module">
 						<a href="../modules/_favware_eslint_config.html">@favware/eslint-<wbr>config</a>
 					</li>
-					<li class="current tsd-kind-module">
+					<li class=" tsd-kind-module">
 						<a href="../modules/_favware_milky_tslint.html">@favware/milky-<wbr>tslint</a>
 					</li>
 					<li class=" tsd-kind-module">
@@ -196,53 +226,65 @@
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
-					<li class=" tsd-kind-enum tsd-parent-kind-module">
-						<a href="../enums/_favware_milky_tslint.lintformatters.html" class="tsd-kind-icon">Lint<wbr>Formatters</a>
+					<li class=" tsd-kind-reference tsd-parent-kind-module">
+						<a href="../modules/_favware_converter.html#convertererror" class="tsd-kind-icon">Converter<wbr>Error</a>
+					</li>
+					<li class=" tsd-kind-reference tsd-parent-kind-module">
+						<a href="../modules/_favware_converter.html#convert" class="tsd-kind-icon">convert</a>
+					</li>
+					<li class=" tsd-kind-reference tsd-parent-kind-module">
+						<a href="../modules/_favware_converter.html#definitions" class="tsd-kind-icon">definitions</a>
+					</li>
+					<li class=" tsd-kind-reference tsd-parent-kind-module">
+						<a href="../modules/_favware_converter.html#roundnumber" class="tsd-kind-icon">round<wbr>Number</a>
 					</li>
 					<li class=" tsd-kind-enum tsd-parent-kind-module">
-						<a href="../enums/_favware_milky_tslint.loglevels.html" class="tsd-kind-icon">Log<wbr>Levels</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module">
-						<a href="_favware_milky_tslint.milkyevents.html" class="tsd-kind-icon">Milky<wbr>Events</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module">
-						<a href="_favware_milky_tslint.pluginoptions.html" class="tsd-kind-icon">Plugin<wbr>Options</a>
+						<a href="../enums/_favware_converter.system.html" class="tsd-kind-icon">System</a>
 					</li>
 				</ul>
 				<ul class="current">
-					<li class="current tsd-kind-interface tsd-parent-kind-module">
-						<a href="_favware_milky_tslint.reportoptions.html" class="tsd-kind-icon">Report<wbr>Options</a>
+					<li class="current tsd-kind-class tsd-parent-kind-module">
+						<a href="_favware_converter.convertererror-1.html" class="tsd-kind-icon">Converter<wbr>Error</a>
 						<ul>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_favware_milky_tslint.reportoptions.html#allowwarnings" class="tsd-kind-icon">allow<wbr>Warnings</a>
+							<li class=" tsd-kind-constructor tsd-parent-kind-class">
+								<a href="_favware_converter.convertererror-1.html#constructor" class="tsd-kind-icon">constructor</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_favware_milky_tslint.reportoptions.html#emiterror" class="tsd-kind-icon">emit<wbr>Error</a>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+								<a href="_favware_converter.convertererror-1.html#message" class="tsd-kind-icon">message</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_favware_milky_tslint.reportoptions.html#reportlimit" class="tsd-kind-icon">report<wbr>Limit</a>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+								<a href="_favware_converter.convertererror-1.html#name" class="tsd-kind-icon">name</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_favware_milky_tslint.reportoptions.html#summarizefailureoutput" class="tsd-kind-icon">summarize<wbr>Failure<wbr>Output</a>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+								<a href="_favware_converter.convertererror-1.html#stack" class="tsd-kind-icon">stack</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-static">
+								<a href="_favware_converter.convertererror-1.html#error" class="tsd-kind-icon">Error</a>
 							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
 					<li class=" tsd-kind-interface tsd-parent-kind-module">
-						<a href="_favware_milky_tslint.tslintfile.html" class="tsd-kind-icon">TSLint<wbr>File</a>
+						<a href="../interfaces/_favware_converter.convertoptions.html" class="tsd-kind-icon">Convert<wbr>Options</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-module">
+						<a href="../interfaces/_favware_converter.measurementsystemdata.html" class="tsd-kind-icon">Measurement<wbr>System<wbr>Data</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-module">
+						<a href="../interfaces/_favware_converter.unitdata.html" class="tsd-kind-icon">Unit<wbr>Data</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-module">
+						<a href="../interfaces/_favware_converter.unitdefinition.html" class="tsd-kind-icon">Unit<wbr>Definition</a>
 					</li>
 					<li class=" tsd-kind-variable tsd-parent-kind-module">
-						<a href="../modules/_favware_milky_tslint.html#eventemitter" class="tsd-kind-icon">eventemitter</a>
+						<a href="../modules/_favware_converter.html#definitions-1" class="tsd-kind-icon">definitions</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-module">
-						<a href="../modules/_favware_milky_tslint.html#isstring" class="tsd-kind-icon">is<wbr>String</a>
+						<a href="../modules/_favware_converter.html#convert-1" class="tsd-kind-icon">convert</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-module">
-						<a href="../modules/_favware_milky_tslint.html#milkylint" class="tsd-kind-icon">milky<wbr>Lint</a>
-					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-module">
-						<a href="../modules/_favware_milky_tslint.html#milkyreport" class="tsd-kind-icon">milky<wbr>Report</a>
+						<a href="../modules/_favware_converter.html#roundnumber-1" class="tsd-kind-icon">round<wbr>Number</a>
 					</li>
 				</ul>
 			</nav>

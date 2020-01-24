@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>StringifyOptions | Favware Node Packages</title>
+	<title>ZalgoCountsMap | Favware Node Packages</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -52,13 +52,13 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="../modules/_favware_querystring.html">@favware/querystring</a>
+					<a href="../modules/_favware_zalgo.html">@favware/zalgo</a>
 				</li>
 				<li>
-					<a href="_favware_querystring.stringifyoptions.html">StringifyOptions</a>
+					<a href="_favware_zalgo.zalgocountsmap-1.html">ZalgoCountsMap</a>
 				</li>
 			</ul>
-			<h1>Interface StringifyOptions</h1>
+			<h1>Interface ZalgoCountsMap</h1>
 		</div>
 	</div>
 </header>
@@ -68,7 +68,7 @@
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>Options for the <a href="../modules/_favware_querystring.html#stringify">stringify</a> function</p>
+						<p>Counts map for the zalgo</p>
 					</div>
 				</div>
 			</section>
@@ -76,7 +76,12 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">StringifyOptions</span>
+						<span class="tsd-signature-symbol">{}</span>
+						<ul class="tsd-hierarchy">
+							<li>
+								<span class="target">ZalgoCountsMap</span>
+							</li>
+						</ul>
 					</li>
 				</ul>
 			</section>
@@ -87,9 +92,9 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_favware_querystring.stringifyoptions.html#equals" class="tsd-kind-icon">equals</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_favware_querystring.stringifyoptions.html#includequestion" class="tsd-kind-icon">include<wbr>Question</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_favware_querystring.stringifyoptions.html#separator" class="tsd-kind-icon">separator</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_favware_zalgo.zalgocountsmap-1.html#down" class="tsd-kind-icon">down</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_favware_zalgo.zalgocountsmap-1.html#middle" class="tsd-kind-icon">middle</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_favware_zalgo.zalgocountsmap-1.html#up" class="tsd-kind-icon">up</a></li>
 							</ul>
 						</section>
 					</div>
@@ -98,49 +103,34 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="equals" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> equals</h3>
-					<div class="tsd-signature tsd-kind-icon">equals<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
+					<a name="down" class="tsd-anchor"></a>
+					<h3>down</h3>
+					<div class="tsd-signature tsd-kind-icon">down<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/favware/node-packages/blob/ce894b8/packages/querystring/src/types.ts#L6">packages/querystring/src/types.ts:6</a></li>
+							<li>Defined in <a href="https://github.com/favware/node-packages/blob/21661cc/packages/zalgo/src/interfaces.ts#L31">packages/zalgo/src/interfaces.ts:31</a></li>
 						</ul>
 					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>Equals sign the querystring should use</p>
-						</div>
-					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="includequestion" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> include<wbr>Question</h3>
-					<div class="tsd-signature tsd-kind-icon">include<wbr>Question<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></div>
+					<a name="middle" class="tsd-anchor"></a>
+					<h3>middle</h3>
+					<div class="tsd-signature tsd-kind-icon">middle<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/favware/node-packages/blob/ce894b8/packages/querystring/src/types.ts#L8">packages/querystring/src/types.ts:8</a></li>
+							<li>Defined in <a href="https://github.com/favware/node-packages/blob/21661cc/packages/zalgo/src/interfaces.ts#L30">packages/zalgo/src/interfaces.ts:30</a></li>
 						</ul>
 					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>Whether the querystring should be automatically prefixed with a <code>?</code></p>
-						</div>
-					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="separator" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> separator</h3>
-					<div class="tsd-signature tsd-kind-icon">separator<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
+					<a name="up" class="tsd-anchor"></a>
+					<h3>up</h3>
+					<div class="tsd-signature tsd-kind-icon">up<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/favware/node-packages/blob/ce894b8/packages/querystring/src/types.ts#L4">packages/querystring/src/types.ts:4</a></li>
+							<li>Defined in <a href="https://github.com/favware/node-packages/blob/21661cc/packages/zalgo/src/interfaces.ts#L29">packages/zalgo/src/interfaces.ts:29</a></li>
 						</ul>
 					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>Separator the querystring should get</p>
-						</div>
-					</div>
 				</section>
 			</section>
 		</div>
@@ -162,7 +152,7 @@
 					<li class=" tsd-kind-module">
 						<a href="../modules/_favware_milky_tslint.html">@favware/milky-<wbr>tslint</a>
 					</li>
-					<li class="current tsd-kind-module">
+					<li class=" tsd-kind-module">
 						<a href="../modules/_favware_querystring.html">@favware/querystring</a>
 					</li>
 					<li class=" tsd-kind-module">
@@ -180,48 +170,87 @@
 					<li class=" tsd-kind-module">
 						<a href="../modules/_favware_ytdl_prismplayer.html">@favware/ytdl-<wbr>prismplayer</a>
 					</li>
-					<li class=" tsd-kind-module">
+					<li class="current tsd-kind-module">
 						<a href="../modules/_favware_zalgo.html">@favware/zalgo</a>
 					</li>
 				</ul>
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
-					<li class=" tsd-kind-enum tsd-parent-kind-module">
-						<a href="../enums/_favware_querystring.functionsource.html" class="tsd-kind-icon">Function<wbr>Source</a>
+					<li class=" tsd-kind-reference tsd-parent-kind-module">
+						<a href="../modules/_favware_zalgo.html#chars" class="tsd-kind-icon">Chars</a>
+					</li>
+					<li class=" tsd-kind-reference tsd-parent-kind-module">
+						<a href="../modules/_favware_zalgo.html#zalgocountsmap" class="tsd-kind-icon">Zalgo<wbr>Counts<wbr>Map</a>
+					</li>
+					<li class=" tsd-kind-reference tsd-parent-kind-module">
+						<a href="../modules/_favware_zalgo.html#zalgoerror" class="tsd-kind-icon">Zalgo<wbr>Error</a>
+					</li>
+					<li class=" tsd-kind-reference tsd-parent-kind-module">
+						<a href="../modules/_favware_zalgo.html#zalgooptions" class="tsd-kind-icon">Zalgo<wbr>Options</a>
+					</li>
+					<li class=" tsd-kind-reference tsd-parent-kind-module">
+						<a href="../modules/_favware_zalgo.html#banish" class="tsd-kind-icon">banish</a>
+					</li>
+					<li class=" tsd-kind-reference tsd-parent-kind-module">
+						<a href="../modules/_favware_zalgo.html#chars-1" class="tsd-kind-icon">chars</a>
+					</li>
+					<li class=" tsd-kind-reference tsd-parent-kind-module">
+						<a href="../modules/_favware_zalgo.html#hasownproperty" class="tsd-kind-icon">has<wbr>Own<wbr>Property</a>
+					</li>
+					<li class=" tsd-kind-reference tsd-parent-kind-module">
+						<a href="../modules/_favware_zalgo.html#randomizer" class="tsd-kind-icon">randomizer</a>
+					</li>
+					<li class=" tsd-kind-reference tsd-parent-kind-module">
+						<a href="../modules/_favware_zalgo.html#unicodestringsplitter" class="tsd-kind-icon">unicode<wbr>String<wbr>Splitter</a>
+					</li>
+					<li class=" tsd-kind-reference tsd-parent-kind-module">
+						<a href="../modules/_favware_zalgo.html#zalgo" class="tsd-kind-icon">zalgo</a>
+					</li>
+					<li class=" tsd-kind-class tsd-parent-kind-module">
+						<a href="../classes/_favware_zalgo.zalgoerror-1.html" class="tsd-kind-icon">Zalgo<wbr>Error</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-module">
-						<a href="_favware_querystring.parseoptions.html" class="tsd-kind-icon">Parse<wbr>Options</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module">
-						<a href="_favware_querystring.querystringobject.html" class="tsd-kind-icon">Querystring<wbr>Object</a>
+						<a href="_favware_zalgo.chars-2.html" class="tsd-kind-icon">Chars</a>
 					</li>
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-interface tsd-parent-kind-module">
-						<a href="_favware_querystring.stringifyoptions.html" class="tsd-kind-icon">Stringify<wbr>Options</a>
+						<a href="_favware_zalgo.zalgocountsmap-1.html" class="tsd-kind-icon">Zalgo<wbr>Counts<wbr>Map</a>
 						<ul>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_favware_querystring.stringifyoptions.html#equals" class="tsd-kind-icon">equals</a>
+								<a href="_favware_zalgo.zalgocountsmap-1.html#down" class="tsd-kind-icon">down</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_favware_querystring.stringifyoptions.html#includequestion" class="tsd-kind-icon">include<wbr>Question</a>
+								<a href="_favware_zalgo.zalgocountsmap-1.html#middle" class="tsd-kind-icon">middle</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_favware_querystring.stringifyoptions.html#separator" class="tsd-kind-icon">separator</a>
+								<a href="_favware_zalgo.zalgocountsmap-1.html#up" class="tsd-kind-icon">up</a>
 							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
-					<li class=" tsd-kind-type-alias tsd-parent-kind-module">
-						<a href="../modules/_favware_querystring.html#querystringerror" class="tsd-kind-icon">Querystring<wbr>Error</a>
+					<li class=" tsd-kind-interface tsd-parent-kind-module">
+						<a href="_favware_zalgo.zalgooptions-1.html" class="tsd-kind-icon">Zalgo<wbr>Options</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-module">
-						<a href="../modules/_favware_querystring.html#parse" class="tsd-kind-icon">parse</a>
+						<a href="../modules/_favware_zalgo.html#banish-1" class="tsd-kind-icon">banish</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter">
+						<a href="../modules/_favware_zalgo.html#hasownproperty-1" class="tsd-kind-icon">has<wbr>Own<wbr>Property</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-module">
-						<a href="../modules/_favware_querystring.html#stringify" class="tsd-kind-icon">stringify</a>
+						<a href="../modules/_favware_zalgo.html#randomizer-1" class="tsd-kind-icon">randomizer</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="../modules/_favware_zalgo.html#unicodestringsplitter-1" class="tsd-kind-icon">unicode<wbr>String<wbr>Splitter</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="../modules/_favware_zalgo.html#zalgo-1" class="tsd-kind-icon">zalgo</a>
+					</li>
+					<li class=" tsd-kind-object-literal tsd-parent-kind-module">
+						<a href="../modules/_favware_zalgo.html#chars-3" class="tsd-kind-icon">chars</a>
 					</li>
 				</ul>
 			</nav>

@@ -116,7 +116,7 @@
 <span class="hljs-comment">// import ytdl from '@favware/ytdl-prismplayer'</span>
 
 <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">play</span>(<span class="hljs-params">connection, url</span>) </span>{
-    connection.playOpusStream(<span class="hljs-keyword">await</span> ytdl(url));
+  connection.playOpusStream(<span class="hljs-keyword">await</span> ytdl(url));
 }</code></pre>
 					<a href="#usage-in-discordjs-12x--master" id="usage-in-discordjs-12x--master" style="color: inherit; text-decoration: none;">
 						<h3>Usage in Discord.js 12.x / master</h3>
@@ -125,9 +125,9 @@
 <span class="hljs-comment">// import ytdl from '@favware/ytdl-prismplayer'</span>
 
 <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">play</span>(<span class="hljs-params">connection, url</span>) </span>{
-    connection.play(<span class="hljs-keyword">await</span> ytdl(url), {
-        <span class="hljs-attr">type</span>: <span class="hljs-string">'opus'</span>
-    });
+  connection.play(<span class="hljs-keyword">await</span> ytdl(url), {
+    <span class="hljs-attr">type</span>: <span class="hljs-string">'opus'</span>
+  });
 }
 
 <span class="hljs-comment">// You can prefer vorbis instead of opus</span>
@@ -173,7 +173,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/favware/node-packages/blob/ce894b8/packages/ytdl-prismplayer/src/index.ts#L57">packages/ytdl-prismplayer/src/index.ts:57</a></li>
+									<li>Defined in <a href="https://github.com/favware/node-packages/blob/21661cc/packages/ytdl-prismplayer/src/index.ts#L62">packages/ytdl-prismplayer/src/index.ts:62</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -187,7 +187,7 @@
 									</div>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> ytdlOptions: <span class="tsd-signature-type">YTDLDownloadOptions</span><span class="tsd-signature-symbol"> =&nbsp;{}</span></h5>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> ytdlOptions: <span class="tsd-signature-type">YTDLDownloadOptions</span><span class="tsd-signature-symbol"> = {}</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<div class="lead">
 											<p>Any extra options to pass to ytdl, see <a href="https://github.com/fent/node-ytdl-core/#ytdlurl-options " class="external"> ytdl options</a></p>
@@ -195,26 +195,11 @@
 									</div>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> prismPlayerOptions: <a href="../interfaces/_favware_ytdl_prismplayer.ytdlprismplayeroptions.html" class="tsd-signature-type">YtdlPrismPlayerOptions</a><span class="tsd-signature-symbol"> =&nbsp;{ preferredFormat: &#x27;opus&#x27; }</span></h5>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> prismPlayerOptions: <a href="../interfaces/_favware_ytdl_prismplayer.ytdlprismplayeroptions.html" class="tsd-signature-type">YtdlPrismPlayerOptions</a><span class="tsd-signature-symbol"> = { preferredFormat: &#x27;opus&#x27; }</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Readable</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Encoder</span><span class="tsd-signature-symbol">&gt;</span></h4>
 							<p>The playing song in a readable stream, see <a href="https://nodejs.org/api/stream.html#stream_class_stream_readable " class="external"> NodeJS#ReadableStream</a></p>
-							<pre><code class="language-js"><span class="hljs-keyword">const</span> ytdl = <span class="hljs-built_in">require</span>(<span class="hljs-string">'@favware/ytdl-prismplayer'</span>);
-
-<span class="hljs-comment">// Defaults to opus</span>
-<span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">play</span>(<span class="hljs-params">connection, url</span>) </span>{
-  connection.play(<span class="hljs-keyword">await</span> ytdl(url}), {
-    <span class="hljs-attr">type</span>: <span class="hljs-string">'opus'</span>
-  });
-}
-
-<span class="hljs-comment">// Or with vorbis:</span>
-<span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">play</span>(<span class="hljs-params">connection, url</span>) </span>{
-  connection.play(<span class="hljs-keyword">await</span> ytdl(url, {}, { <span class="hljs-attr">preferredFormat</span>: <span class="hljs-string">'vorbis'</span> }), {
-    <span class="hljs-attr">type</span>: <span class="hljs-string">'opus'</span>
-  });
-}</code></pre>
 						</li>
 					</ul>
 				</section>

@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>MilkyEvents | Favware Node Packages</title>
+	<title>ParseOptions | Favware Node Packages</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -52,13 +52,13 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="../modules/_favware_milky_tslint.html">@favware/milky-tslint</a>
+					<a href="../modules/_favware_querystring.html">@favware/querystring</a>
 				</li>
 				<li>
-					<a href="_favware_milky_tslint.milkyevents.html">MilkyEvents</a>
+					<a href="_favware_querystring.parseoptions-1.html">ParseOptions</a>
 				</li>
 			</ul>
-			<h1>Interface MilkyEvents</h1>
+			<h1>Interface ParseOptions</h1>
 		</div>
 	</div>
 </header>
@@ -68,7 +68,7 @@
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>MilkyEvents Events output by this library</p>
+						<p>Options for the <a href="../modules/_favware_querystring.html#parse">parse</a> function</p>
 					</div>
 				</div>
 			</section>
@@ -76,7 +76,7 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">MilkyEvents</span>
+						<span class="target">ParseOptions</span>
 					</li>
 				</ul>
 			</section>
@@ -87,9 +87,8 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_favware_milky_tslint.milkyevents.html#data" class="tsd-kind-icon">data</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_favware_milky_tslint.milkyevents.html#end" class="tsd-kind-icon">end</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_favware_milky_tslint.milkyevents.html#error" class="tsd-kind-icon">error</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_favware_querystring.parseoptions-1.html#equals" class="tsd-kind-icon">equals</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_favware_querystring.parseoptions-1.html#separator" class="tsd-kind-icon">separator</a></li>
 							</ul>
 						</section>
 					</div>
@@ -98,105 +97,33 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="data" class="tsd-anchor"></a>
-					<h3>data</h3>
-					<div class="tsd-signature tsd-kind-icon">data<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
+					<a name="equals" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> equals</h3>
+					<div class="tsd-signature tsd-kind-icon">equals<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/favware/node-packages/blob/ce894b8/packages/milky-tslint/src/events.ts#L9">packages/milky-tslint/src/events.ts:9</a></li>
+							<li>Defined in <a href="https://github.com/favware/node-packages/blob/21661cc/packages/querystring/src/types.ts#L16">packages/querystring/src/types.ts:16</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>Fired where there is linted data</p>
+							<p>Equals sign the querystring has</p>
 						</div>
-					</div>
-					<div class="tsd-type-declaration">
-						<h4>Type declaration</h4>
-						<ul class="tsd-parameters">
-							<li class="tsd-parameter-siganture">
-								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-property tsd-is-not-exported">
-									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>file<span class="tsd-signature-symbol">: </span><a href="_favware_milky_tslint.tslintfile.html" class="tsd-signature-type">TSLintFile</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-								</ul>
-								<ul class="tsd-descriptions">
-									<li class="tsd-description">
-										<h4 class="tsd-parameters-title">Parameters</h4>
-										<ul class="tsd-parameters">
-											<li>
-												<h5>file: <a href="_favware_milky_tslint.tslintfile.html" class="tsd-signature-type">TSLintFile</a></h5>
-											</li>
-										</ul>
-										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-									</li>
-								</ul>
-							</li>
-						</ul>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="end" class="tsd-anchor"></a>
-					<h3>end</h3>
-					<div class="tsd-signature tsd-kind-icon">end<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
+					<a name="separator" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> separator</h3>
+					<div class="tsd-signature tsd-kind-icon">separator<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/favware/node-packages/blob/ce894b8/packages/milky-tslint/src/events.ts#L13">packages/milky-tslint/src/events.ts:13</a></li>
+							<li>Defined in <a href="https://github.com/favware/node-packages/blob/21661cc/packages/querystring/src/types.ts#L14">packages/querystring/src/types.ts:14</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>Fired when lintin is complete</p>
+							<p>Separator the querystring has</p>
 						</div>
-					</div>
-					<div class="tsd-type-declaration">
-						<h4>Type declaration</h4>
-						<ul class="tsd-parameters">
-							<li class="tsd-parameter-siganture">
-								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-property tsd-is-not-exported">
-									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-								</ul>
-								<ul class="tsd-descriptions">
-									<li class="tsd-description">
-										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-									</li>
-								</ul>
-							</li>
-						</ul>
-					</div>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="error" class="tsd-anchor"></a>
-					<h3>error</h3>
-					<div class="tsd-signature tsd-kind-icon">error<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/favware/node-packages/blob/ce894b8/packages/milky-tslint/src/events.ts#L11">packages/milky-tslint/src/events.ts:11</a></li>
-						</ul>
-					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>Fired when an error occurs during linting</p>
-						</div>
-					</div>
-					<div class="tsd-type-declaration">
-						<h4>Type declaration</h4>
-						<ul class="tsd-parameters">
-							<li class="tsd-parameter-siganture">
-								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-property tsd-is-not-exported">
-									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>err<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">PluginError</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-								</ul>
-								<ul class="tsd-descriptions">
-									<li class="tsd-description">
-										<h4 class="tsd-parameters-title">Parameters</h4>
-										<ul class="tsd-parameters">
-											<li>
-												<h5>err: <span class="tsd-signature-type">PluginError</span></h5>
-											</li>
-										</ul>
-										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-									</li>
-								</ul>
-							</li>
-						</ul>
 					</div>
 				</section>
 			</section>
@@ -216,10 +143,10 @@
 					<li class=" tsd-kind-module">
 						<a href="../modules/_favware_eslint_config.html">@favware/eslint-<wbr>config</a>
 					</li>
-					<li class="current tsd-kind-module">
+					<li class=" tsd-kind-module">
 						<a href="../modules/_favware_milky_tslint.html">@favware/milky-<wbr>tslint</a>
 					</li>
-					<li class=" tsd-kind-module">
+					<li class="current tsd-kind-module">
 						<a href="../modules/_favware_querystring.html">@favware/querystring</a>
 					</li>
 					<li class=" tsd-kind-module">
@@ -244,50 +171,59 @@
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
-					<li class=" tsd-kind-enum tsd-parent-kind-module">
-						<a href="../enums/_favware_milky_tslint.lintformatters.html" class="tsd-kind-icon">Lint<wbr>Formatters</a>
+					<li class=" tsd-kind-reference tsd-parent-kind-module">
+						<a href="../modules/_favware_querystring.html#functionsource" class="tsd-kind-icon">Function<wbr>Source</a>
+					</li>
+					<li class=" tsd-kind-reference tsd-parent-kind-module">
+						<a href="../modules/_favware_querystring.html#parseoptions" class="tsd-kind-icon">Parse<wbr>Options</a>
+					</li>
+					<li class=" tsd-kind-reference tsd-parent-kind-module">
+						<a href="../modules/_favware_querystring.html#querystringerror" class="tsd-kind-icon">Querystring<wbr>Error</a>
+					</li>
+					<li class=" tsd-kind-reference tsd-parent-kind-module">
+						<a href="../modules/_favware_querystring.html#querystringobject" class="tsd-kind-icon">Querystring<wbr>Object</a>
+					</li>
+					<li class=" tsd-kind-reference tsd-parent-kind-module">
+						<a href="../modules/_favware_querystring.html#stringifyoptions" class="tsd-kind-icon">Stringify<wbr>Options</a>
+					</li>
+					<li class=" tsd-kind-reference tsd-parent-kind-module">
+						<a href="../modules/_favware_querystring.html#parse" class="tsd-kind-icon">parse</a>
+					</li>
+					<li class=" tsd-kind-reference tsd-parent-kind-module">
+						<a href="../modules/_favware_querystring.html#stringify" class="tsd-kind-icon">stringify</a>
 					</li>
 					<li class=" tsd-kind-enum tsd-parent-kind-module">
-						<a href="../enums/_favware_milky_tslint.loglevels.html" class="tsd-kind-icon">Log<wbr>Levels</a>
+						<a href="../enums/_favware_querystring.functionsource-1.html" class="tsd-kind-icon">Function<wbr>Source</a>
 					</li>
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-interface tsd-parent-kind-module">
-						<a href="_favware_milky_tslint.milkyevents.html" class="tsd-kind-icon">Milky<wbr>Events</a>
+						<a href="_favware_querystring.parseoptions-1.html" class="tsd-kind-icon">Parse<wbr>Options</a>
 						<ul>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_favware_milky_tslint.milkyevents.html#data" class="tsd-kind-icon">data</a>
+								<a href="_favware_querystring.parseoptions-1.html#equals" class="tsd-kind-icon">equals</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_favware_milky_tslint.milkyevents.html#end" class="tsd-kind-icon">end</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_favware_milky_tslint.milkyevents.html#error" class="tsd-kind-icon">error</a>
+								<a href="_favware_querystring.parseoptions-1.html#separator" class="tsd-kind-icon">separator</a>
 							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
 					<li class=" tsd-kind-interface tsd-parent-kind-module">
-						<a href="_favware_milky_tslint.pluginoptions.html" class="tsd-kind-icon">Plugin<wbr>Options</a>
+						<a href="_favware_querystring.querystringobject-1.html" class="tsd-kind-icon">Querystring<wbr>Object</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-module">
-						<a href="_favware_milky_tslint.reportoptions.html" class="tsd-kind-icon">Report<wbr>Options</a>
+						<a href="_favware_querystring.stringifyoptions-1.html" class="tsd-kind-icon">Stringify<wbr>Options</a>
 					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module">
-						<a href="_favware_milky_tslint.tslintfile.html" class="tsd-kind-icon">TSLint<wbr>File</a>
-					</li>
-					<li class=" tsd-kind-variable tsd-parent-kind-module">
-						<a href="../modules/_favware_milky_tslint.html#eventemitter" class="tsd-kind-icon">eventemitter</a>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-module">
+						<a href="../modules/_favware_querystring.html#querystringerror-1" class="tsd-kind-icon">Querystring<wbr>Error</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-module">
-						<a href="../modules/_favware_milky_tslint.html#isstring" class="tsd-kind-icon">is<wbr>String</a>
+						<a href="../modules/_favware_querystring.html#parse-1" class="tsd-kind-icon">parse</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-module">
-						<a href="../modules/_favware_milky_tslint.html#milkylint" class="tsd-kind-icon">milky<wbr>Lint</a>
-					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-module">
-						<a href="../modules/_favware_milky_tslint.html#milkyreport" class="tsd-kind-icon">milky<wbr>Report</a>
+						<a href="../modules/_favware_querystring.html#stringify-1" class="tsd-kind-icon">stringify</a>
 					</li>
 				</ul>
 			</nav>

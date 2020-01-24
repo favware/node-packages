@@ -65,6 +65,11 @@
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
 					<div align="center">
+						<h1> <b><i>DEPRECATED</i></b>
+							<p>TSLint has been deprecated in favor of ESLint. Please see
+							<a href="https://github.com/palantir/tslint/issues/4534">this TSLint issue</a> for more information.</p>
+						</h1>
+						<hr>
 						<p>
 							<a href="https://favware.tech/milkylint"><img src="https://storage.googleapis.com/data-sunlight-146313.appspot.com/website-project-icons/milkylint.png" height="200" alt="logo"/></a>
 						</p>
@@ -100,22 +105,25 @@
 					<a href="#usage" id="usage" style="color: inherit; text-decoration: none;">
 						<h1>Usage</h1>
 					</a>
-					<pre><code class="language-js"><span class="hljs-keyword">const</span> tslint = <span class="hljs-built_in">require</span>(<span class="hljs-string">"tslint"</span>);
+					<pre><code class="language-js"><span class="hljs-keyword">const</span> tslint = <span class="hljs-built_in">require</span>(<span class="hljs-string">'tslint'</span>);
 <span class="hljs-keyword">const</span> ts = <span class="hljs-built_in">require</span>(<span class="hljs-string">'typescript'</span>);
-<span class="hljs-keyword">const</span> {milkyLint, milkyReport} = <span class="hljs-built_in">require</span>(<span class="hljs-string">"milky-tslint"</span>);
+<span class="hljs-keyword">const</span> { milkyLint, milkyReport } = <span class="hljs-built_in">require</span>(<span class="hljs-string">'milky-tslint'</span>);
 
-gulp.task(<span class="hljs-string">"lint"</span>, () =&gt; {
-    <span class="hljs-keyword">const</span> lintProgram = tslint.Linter.createProgram(<span class="hljs-string">'./tsconfig.json'</span>, <span class="hljs-string">'.'</span>);
-    ts.getPreEmitDiagnostics(lintProgram);
+gulp.task(<span class="hljs-string">'lint'</span>, () =&gt; {
+  <span class="hljs-keyword">const</span> lintProgram = tslint.Linter.createProgram(<span class="hljs-string">'./tsconfig.json'</span>, <span class="hljs-string">'.'</span>);
+  ts.getPreEmitDiagnostics(lintProgram);
 
-    <span class="hljs-keyword">return</span> gulp.src(tsSource)
-        .pipe(milkyLint({
-            <span class="hljs-attr">formatter</span>: <span class="hljs-string">'stylish'</span>,
-            <span class="hljs-attr">program</span>: lintProgram,
-            <span class="hljs-attr">tslint</span>: tslint,
-            <span class="hljs-attr">fix</span>: !!argv.fix,
-        }))
-        .pipe(milkyReport());
+  <span class="hljs-keyword">return</span> gulp
+    .src(tsSource)
+    .pipe(
+      milkyLint({
+        <span class="hljs-attr">formatter</span>: <span class="hljs-string">'stylish'</span>,
+        <span class="hljs-attr">program</span>: lintProgram,
+        <span class="hljs-attr">tslint</span>: tslint,
+        <span class="hljs-attr">fix</span>: !!argv.fix
+      })
+    )
+    .pipe(milkyReport());
 });</code></pre>
 					<p>TSLint <a href="https://palantir.github.io/tslint/usage/type-checking/">Type Checking</a> will work if you first use the <code>createProgram</code> function as shown above. You should do this inside the gulp task, otherwise it will get cached and not function in consecutive runs of the task.</p>
 					<p><strong>tslint.json</strong> is attempted to be read from near the input file.
@@ -143,33 +151,41 @@ gulp.task(<span class="hljs-string">"lint"</span>, () =&gt; {
 					<p>If there is at least one failure a PluginError is emitted after execution of the reporters:</p>
 					<pre><code class="language-javascript">[gulp] <span class="hljs-built_in">Error</span> <span class="hljs-keyword">in</span> plugin <span class="hljs-string">'milky-tslint'</span>: Failed to lint: input.ts</code></pre>
 					<p>You can prevent editing the error by setting emitError in report options to false.</p>
-					<pre><code class="language-js">gulp.task(<span class="hljs-string">"lint-noerroremit"</span>, () =&gt; {
-    <span class="hljs-keyword">const</span> lintProgram = tslint.Linter.createProgram(<span class="hljs-string">'./tsconfig.json'</span>, <span class="hljs-string">'.'</span>);
-    ts.getPreEmitDiagnostics(lintProgram);
+					<pre><code class="language-js">gulp.task(<span class="hljs-string">'lint-noerroremit'</span>, () =&gt; {
+  <span class="hljs-keyword">const</span> lintProgram = tslint.Linter.createProgram(<span class="hljs-string">'./tsconfig.json'</span>, <span class="hljs-string">'.'</span>);
+  ts.getPreEmitDiagnostics(lintProgram);
 
-    <span class="hljs-keyword">return</span> gulp.src(tsSource)
-        .pipe(milkyLint({
-            <span class="hljs-attr">formatter</span>: <span class="hljs-string">'stylish'</span>,
-            <span class="hljs-attr">program</span>: lintProgram,
-            <span class="hljs-attr">tslint</span>: tslint,
-            <span class="hljs-attr">fix</span>: !!argv.fix,
-        }))
-        .pipe(milkyReport({
-            <span class="hljs-attr">emitError</span>: <span class="hljs-literal">false</span>
-        }));
+  <span class="hljs-keyword">return</span> gulp
+    .src(tsSource)
+    .pipe(
+      milkyLint({
+        <span class="hljs-attr">formatter</span>: <span class="hljs-string">'stylish'</span>,
+        <span class="hljs-attr">program</span>: lintProgram,
+        <span class="hljs-attr">tslint</span>: tslint,
+        <span class="hljs-attr">fix</span>: !!argv.fix
+      })
+    )
+    .pipe(
+      milkyReport({
+        <span class="hljs-attr">emitError</span>: <span class="hljs-literal">false</span>
+      })
+    );
 });</code></pre>
 					<p>tslint.json can be supplied as a parameter by setting the configuration property.</p>
-					<pre><code class="language-js">gulp.task(<span class="hljs-string">"tslint-json"</span>, () =&gt;
-    gulp.src(<span class="hljs-string">"input.ts"</span>)
-        .pipe(milkyLint({
-            <span class="hljs-attr">configuration</span>: {
-              <span class="hljs-attr">rules</span>: {
-                <span class="hljs-string">"class-name"</span>: <span class="hljs-literal">true</span>,
-                <span class="hljs-comment">// ...</span>
-              }
-            }
-        }))
-        .pipe(milkyReport.report())
+					<pre><code class="language-js">gulp.task(<span class="hljs-string">'tslint-json'</span>, () =&gt;
+  gulp
+    .src(<span class="hljs-string">'input.ts'</span>)
+    .pipe(
+      milkyLint({
+        <span class="hljs-attr">configuration</span>: {
+          <span class="hljs-attr">rules</span>: {
+            <span class="hljs-string">'class-name'</span>: <span class="hljs-literal">true</span>
+            <span class="hljs-comment">// ...</span>
+          }
+        }
+      })
+    )
+    .pipe(milkyReport.report())
 );</code></pre>
 					<p>You can also supply a file path to the configuration option, and the file name
 					doesn&#39;t need to be tslint.json.</p>
@@ -181,200 +197,63 @@ gulp.task(<span class="hljs-string">"lint"</span>, () =&gt; {
 						<h2>Report limits</h2>
 					</a>
 					<p>You can optionally specify a report limit in the .report options that will turn off reporting for files after the limit has been reached. If the limit is 0 or less, the limit is ignored, which is the default setting.</p>
-					<pre><code class="language-js">gulp.task(<span class="hljs-string">"tslint"</span>, () =&gt;
-    gulp.src([<span class="hljs-string">"input.ts"</span>,])
-        .pipe(milkyLint({
-            <span class="hljs-attr">formatter</span>: <span class="hljs-string">"prose"</span>
-        }))
-        .pipe(milkyReport.report({
-            <span class="hljs-attr">reportLimit</span>: <span class="hljs-number">2</span>
-        }))
+					<pre><code class="language-js">gulp.task(<span class="hljs-string">'tslint'</span>, () =&gt;
+  gulp
+    .src([<span class="hljs-string">'input.ts'</span>])
+    .pipe(
+      milkyLint({
+        <span class="hljs-attr">formatter</span>: <span class="hljs-string">'prose'</span>
+      })
+    )
+    .pipe(
+      milkyReport.report({
+        <span class="hljs-attr">reportLimit</span>: <span class="hljs-number">2</span>
+      })
+    )
 );</code></pre>
 					<a href="#allowing-warnings" id="allowing-warnings" style="color: inherit; text-decoration: none;">
 						<h2>Allowing Warnings</h2>
 					</a>
-					<p>TSLint 5.0 introduced support for a &quot;warning&quot; severity for linting errors.  By default, warnings cause <code>milky-tslint</code> to emit an error to maintain backwards-compatibility with previous versions.  To let the build succeed in the presence of warnings, use the <code>allowWarnings</code> report option.</p>
-					<pre><code class="language-javascript">gulp.task(<span class="hljs-string">"tslint"</span>, () =&gt;
-    gulp.src(<span class="hljs-string">"input.ts"</span>)
-        .pipe(milkyLint({
-            <span class="hljs-attr">formatter</span>: <span class="hljs-string">"prose"</span>
-        }))
-        .pipe(milkyReport.report({
-            <span class="hljs-attr">allowWarnings</span>: <span class="hljs-literal">true</span>
-        }))
+					<p>TSLint 5.0 introduced support for a &quot;warning&quot; severity for linting errors. By default, warnings cause <code>milky-tslint</code> to emit an error to maintain backwards-compatibility with previous versions. To let the build succeed in the presence of warnings, use the <code>allowWarnings</code> report option.</p>
+					<pre><code class="language-javascript">gulp.task(<span class="hljs-string">'tslint'</span>, () =&gt;
+  gulp
+    .src(<span class="hljs-string">'input.ts'</span>)
+    .pipe(
+      milkyLint({
+        <span class="hljs-attr">formatter</span>: <span class="hljs-string">'prose'</span>
+      })
+    )
+    .pipe(
+      milkyReport.report({
+        <span class="hljs-attr">allowWarnings</span>: <span class="hljs-literal">true</span>
+      })
+    )
 );</code></pre>
 					<a href="#all-default-tslint-options" id="all-default-tslint-options" style="color: inherit; text-decoration: none;">
 						<h2>All default tslint options</h2>
 					</a>
 					<pre><code class="language-js"><span class="hljs-keyword">const</span> tslintOptions = {
-    <span class="hljs-attr">configuration</span>: {},
-    <span class="hljs-attr">fix</span>: <span class="hljs-literal">false</span>,
-    <span class="hljs-attr">formatter</span>: <span class="hljs-string">'stylish'</span>,
-    <span class="hljs-attr">formattersDirectory</span>: <span class="hljs-literal">null</span>,
-    <span class="hljs-attr">rulesDirectory</span>: <span class="hljs-literal">null</span>,
-    <span class="hljs-attr">tslint</span>: <span class="hljs-literal">null</span>,
-    <span class="hljs-attr">program</span>: <span class="hljs-literal">null</span>
+  <span class="hljs-attr">configuration</span>: {},
+  <span class="hljs-attr">fix</span>: <span class="hljs-literal">false</span>,
+  <span class="hljs-attr">formatter</span>: <span class="hljs-string">'stylish'</span>,
+  <span class="hljs-attr">formattersDirectory</span>: <span class="hljs-literal">null</span>,
+  <span class="hljs-attr">rulesDirectory</span>: <span class="hljs-literal">null</span>,
+  <span class="hljs-attr">tslint</span>: <span class="hljs-literal">null</span>,
+  <span class="hljs-attr">program</span>: <span class="hljs-literal">null</span>
 };</code></pre>
 					<a href="#all-default-report-options" id="all-default-report-options" style="color: inherit; text-decoration: none;">
 						<h2>All default report options</h2>
 					</a>
 					<pre><code class="language-js"><span class="hljs-keyword">const</span> reportOptions = {
-    <span class="hljs-attr">emitError</span>: <span class="hljs-literal">false</span>,
-    <span class="hljs-attr">reportLimit</span>: <span class="hljs-number">0</span>,
-    <span class="hljs-attr">summarizeFailureOutput</span>: <span class="hljs-literal">true</span>,
-    <span class="hljs-attr">allowWarnings</span>: <span class="hljs-literal">false</span>
+  <span class="hljs-attr">emitError</span>: <span class="hljs-literal">false</span>,
+  <span class="hljs-attr">reportLimit</span>: <span class="hljs-number">0</span>,
+  <span class="hljs-attr">summarizeFailureOutput</span>: <span class="hljs-literal">true</span>,
+  <span class="hljs-attr">allowWarnings</span>: <span class="hljs-literal">false</span>
 };</code></pre>
 					<a href="#a-hrefhttpsfavwaregithubionode-packagesmodules_favware_milky_tslinthtmlapi-documentationa" id="a-hrefhttpsfavwaregithubionode-packagesmodules_favware_milky_tslinthtmlapi-documentationa" style="color: inherit; text-decoration: none;">
 						<h2><a href="https://favware.github.io/node-packages/modules/_favware_milky_tslint.html">API Documentation</a></h2>
 					</a>
 				</div>
-			</section>
-			<section class="tsd-panel-group tsd-index-group">
-				<h2>Index</h2>
-				<section class="tsd-panel tsd-index-panel">
-					<div class="tsd-index-content">
-						<section class="tsd-index-section ">
-							<h3>Enumerations</h3>
-							<ul class="tsd-index-list">
-								<li class="tsd-kind-enum tsd-parent-kind-module"><a href="../enums/_favware_milky_tslint.lintformatters.html" class="tsd-kind-icon">Lint<wbr>Formatters</a></li>
-								<li class="tsd-kind-enum tsd-parent-kind-module"><a href="../enums/_favware_milky_tslint.loglevels.html" class="tsd-kind-icon">Log<wbr>Levels</a></li>
-							</ul>
-						</section>
-						<section class="tsd-index-section ">
-							<h3>Interfaces</h3>
-							<ul class="tsd-index-list">
-								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/_favware_milky_tslint.milkyevents.html" class="tsd-kind-icon">Milky<wbr>Events</a></li>
-								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/_favware_milky_tslint.pluginoptions.html" class="tsd-kind-icon">Plugin<wbr>Options</a></li>
-								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/_favware_milky_tslint.reportoptions.html" class="tsd-kind-icon">Report<wbr>Options</a></li>
-								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/_favware_milky_tslint.tslintfile.html" class="tsd-kind-icon">TSLint<wbr>File</a></li>
-							</ul>
-						</section>
-						<section class="tsd-index-section ">
-							<h3>Variables</h3>
-							<ul class="tsd-index-list">
-								<li class="tsd-kind-variable tsd-parent-kind-module"><a href="_favware_milky_tslint.html#eventemitter" class="tsd-kind-icon">eventemitter</a></li>
-							</ul>
-						</section>
-						<section class="tsd-index-section ">
-							<h3>Functions</h3>
-							<ul class="tsd-index-list">
-								<li class="tsd-kind-function tsd-parent-kind-module"><a href="_favware_milky_tslint.html#isstring" class="tsd-kind-icon">is<wbr>String</a></li>
-								<li class="tsd-kind-function tsd-parent-kind-module"><a href="_favware_milky_tslint.html#milkylint" class="tsd-kind-icon">milky<wbr>Lint</a></li>
-								<li class="tsd-kind-function tsd-parent-kind-module"><a href="_favware_milky_tslint.html#milkyreport" class="tsd-kind-icon">milky<wbr>Report</a></li>
-							</ul>
-						</section>
-					</div>
-				</section>
-			</section>
-			<section class="tsd-panel-group tsd-member-group ">
-				<h2>Variables</h2>
-				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-module">
-					<a name="eventemitter" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagConst">Const</span> eventemitter</h3>
-					<div class="tsd-signature tsd-kind-icon">eventemitter<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">StrictEventEmitter</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">EventEmitter</span><span class="tsd-signature-symbol">, </span><a href="../interfaces/_favware_milky_tslint.milkyevents.html" class="tsd-signature-type">MilkyEvents</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> =&nbsp;new EventEmitter()</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/favware/node-packages/blob/ce894b8/packages/milky-tslint/src/events.ts#L16">packages/milky-tslint/src/events.ts:16</a></li>
-						</ul>
-					</aside>
-				</section>
-			</section>
-			<section class="tsd-panel-group tsd-member-group ">
-				<h2>Functions</h2>
-				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
-					<a name="isstring" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagConst">Const</span> is<wbr>String</h3>
-					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
-						<li class="tsd-signature tsd-kind-icon">is<wbr>String<span class="tsd-signature-symbol">(</span>str<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">str</span><span class="tsd-signature-symbol"> is </span><span class="tsd-signature-type">string</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/favware/node-packages/blob/ce894b8/packages/milky-tslint/src/milky.ts#L15">packages/milky-tslint/src/milky.ts:15</a></li>
-								</ul>
-							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>TypeGuard to ensure param is string</p>
-								</div>
-							</div>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>str: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">unknown</span></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">str</span><span class="tsd-signature-symbol"> is </span><span class="tsd-signature-type">string</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
-					<a name="milkylint" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagConst">Const</span> milky<wbr>Lint</h3>
-					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
-						<li class="tsd-signature tsd-kind-icon">milky<wbr>Lint<span class="tsd-signature-symbol">(</span>pluginOptions<span class="tsd-signature-symbol">?: </span><a href="../interfaces/_favware_milky_tslint.pluginoptions.html" class="tsd-signature-type">PluginOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/favware/node-packages/blob/ce894b8/packages/milky-tslint/src/milky.ts#L56">packages/milky-tslint/src/milky.ts:56</a></li>
-								</ul>
-							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>TSLint plugin for Gulp</p>
-								</div>
-							</div>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> pluginOptions: <a href="../interfaces/_favware_milky_tslint.pluginoptions.html" class="tsd-signature-type">PluginOptions</a><span class="tsd-signature-symbol"> =&nbsp;{}</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<div class="lead">
-											<p>Options to pass to the plugin, see <a href="../interfaces/_favware_milky_tslint.pluginoptions.html">PluginOptions</a></p>
-										</div>
-									</div>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
-					<a name="milkyreport" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagConst">Const</span> milky<wbr>Report</h3>
-					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
-						<li class="tsd-signature tsd-kind-icon">milky<wbr>Report<span class="tsd-signature-symbol">(</span>options<span class="tsd-signature-symbol">?: </span><a href="../interfaces/_favware_milky_tslint.reportoptions.html" class="tsd-signature-type">ReportOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ThroughStream</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/favware/node-packages/blob/ce894b8/packages/milky-tslint/src/milky.ts#L93">packages/milky-tslint/src/milky.ts:93</a></li>
-								</ul>
-							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Reporter for milky-tslint</p>
-								</div>
-							</div>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> options: <a href="../interfaces/_favware_milky_tslint.reportoptions.html" class="tsd-signature-type">ReportOptions</a><span class="tsd-signature-symbol"> =&nbsp;{emitError: false, reportLimit: 0, summarizeFailureOutput: true, allowWarnings: false,}</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<div class="lead">
-											<p>options for the report, see <a href="../interfaces/_favware_milky_tslint.reportoptions.html">ReportOptions</a></p>
-										</div>
-									</div>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">ThroughStream</span></h4>
-						</li>
-					</ul>
-				</section>
 			</section>
 		</div>
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
@@ -420,36 +299,6 @@ gulp.task(<span class="hljs-string">"lint"</span>, () =&gt; {
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
-					<li class=" tsd-kind-enum tsd-parent-kind-module">
-						<a href="../enums/_favware_milky_tslint.lintformatters.html" class="tsd-kind-icon">Lint<wbr>Formatters</a>
-					</li>
-					<li class=" tsd-kind-enum tsd-parent-kind-module">
-						<a href="../enums/_favware_milky_tslint.loglevels.html" class="tsd-kind-icon">Log<wbr>Levels</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module">
-						<a href="../interfaces/_favware_milky_tslint.milkyevents.html" class="tsd-kind-icon">Milky<wbr>Events</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module">
-						<a href="../interfaces/_favware_milky_tslint.pluginoptions.html" class="tsd-kind-icon">Plugin<wbr>Options</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module">
-						<a href="../interfaces/_favware_milky_tslint.reportoptions.html" class="tsd-kind-icon">Report<wbr>Options</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module">
-						<a href="../interfaces/_favware_milky_tslint.tslintfile.html" class="tsd-kind-icon">TSLint<wbr>File</a>
-					</li>
-					<li class=" tsd-kind-variable tsd-parent-kind-module">
-						<a href="_favware_milky_tslint.html#eventemitter" class="tsd-kind-icon">eventemitter</a>
-					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-module">
-						<a href="_favware_milky_tslint.html#isstring" class="tsd-kind-icon">is<wbr>String</a>
-					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-module">
-						<a href="_favware_milky_tslint.html#milkylint" class="tsd-kind-icon">milky<wbr>Lint</a>
-					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-module">
-						<a href="_favware_milky_tslint.html#milkyreport" class="tsd-kind-icon">milky<wbr>Report</a>
-					</li>
 				</ul>
 			</nav>
 		</div>
