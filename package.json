@@ -59,7 +59,7 @@
     "typedoc-plugin-lerna-packages": "^0.3.0",
     "typedoc-plugin-nojekyll": "^1.0.1",
     "typescript": "^3.7.5",
-    "ytdl-core": "^1.0.7"
+    "ytdl-core": "^2.0.0"
   },
   "husky": {
     "hooks": {
