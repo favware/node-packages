@@ -6,6 +6,13 @@ export interface StringifyOptions {
   equals?: string;
   /** Whether the querystring should be automatically prefixed with a `?` */
   includeQuestion?: boolean;
+  /**
+   * Whether to use [`encodeURIComponent`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent)
+   * on the parameters
+   *
+   * @default true
+   */
+  encodeUriComponents?: boolean;
 }
 
 /** Options for the {@link parse} function */
@@ -17,10 +24,7 @@ export interface ParseOptions {
 }
 
 /** Generic object for type definitions */
-export interface QuerystringObject {
-  /** String based key with value of any type */
-  [key: string]: string | number | boolean | any; // eslint-disable-line @typescript-eslint/no-explicit-any
-}
+export type QuerystringObject = Record<string, symbol | string | number | boolean | unknown>;
 
 /** Extension to generic object defining an absolute error property */
 export type QuerystringError = {

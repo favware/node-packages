@@ -60,6 +60,20 @@ describe('Standard Behaviour', () => {
     expect(actual).toMatchSnapshot();
     expect(actual).toBe(expected);
   });
+
+  test('should not encode Uri Components when specified', () => {
+    const expected = 'prop=value+_{}":';
+    const actual = stringify({ prop: 'value+_{}":' }, { encodeUriComponents: false });
+    expect(actual).toMatchSnapshot();
+    expect(actual).toBe(expected);
+  });
+
+  test('should encode Uri Components when specified', () => {
+    const expected = 'prop=value%2B_%7B%7D%22%3A';
+    const actual = stringify({ prop: 'value+_{}":' }, { encodeUriComponents: true });
+    expect(actual).toMatchSnapshot();
+    expect(actual).toBe(expected);
+  });
 });
 
 describe('Error checking', () => {
@@ -76,7 +90,7 @@ describe('Error checking', () => {
   });
 
   test('should work with invalid separator and equals options', () => {
-    const expected = '?prop=value&prop2=value2';
+    const expected = '?propnullvaluenullprop2nullvalue2';
     const actual = stringify(
       { prop: 'value', prop2: 'value2' },
       // @ts-ignore

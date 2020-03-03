@@ -8,19 +8,34 @@ import { FunctionSource, ParseOptions, QuerystringError, QuerystringObject, Stri
  *
  * @param v Input to check for primitive type
  */
-const stringifyPrimitive = <T extends unknown>(v: T): string => {
-  // eslint-disable-line @typescript-eslint/no-explicit-any
+function stringifyPrimitive<T extends unknown>(v: T, encode: boolean | undefined): string {
+  let primitive: string;
+
   switch (typeof v) {
     case 'string':
-      return v;
+      primitive = v;
+      break;
     case 'boolean':
-      return v ? 'true' : 'false';
+      primitive = v ? 'true' : 'false';
+      break;
     case 'number':
-      return isFinite(v) ? v.toString() : '';
+      primitive = isFinite(v) ? v.toString() : '';
+      break;
     default:
-      return '';
+      primitive = '';
   }
-};
+
+  return encode ? encodeURIComponent(primitive) : primitive;
+}
+
+/**
+ * Type safely checks if an object includes a given property without using the prototype
+ * @param obj Object to analyze
+ * @param prop Property to check for
+ */
+function objectHasProperty<O extends object>(obj: O, prop: keyof O) {
+  return obj && prop in obj;
+}
 
 /**
  * Gracefully handles errors thrown by other functions
@@ -28,7 +43,7 @@ const stringifyPrimitive = <T extends unknown>(v: T): string => {
  * @param err The error message to parse
  * @param source The source of the error, one of {@link FunctionSource}
  */
-const handleQuerystringError = (err: string, source: FunctionSource): string | QuerystringError => {
+function handleQuerystringError(err: string, source: FunctionSource): string | QuerystringError {
   switch (source) {
     case FunctionSource.Parse:
       return { err };
@@ -36,7 +51,7 @@ const handleQuerystringError = (err: string, source: FunctionSource): string | Q
     default:
       return err;
   }
-};
+}
 
 /**
  * Stringifies an object
@@ -59,26 +74,31 @@ const handleQuerystringError = (err: string, source: FunctionSource): string | Q
  * stringify({prop: 'value', prop2: 'value2'}, {separator: '&&', equals: '=', includeQuestion: true})
  * ```
  */
-export const stringify = (
+export function stringify(
   obj: QuerystringObject,
-  options: StringifyOptions = { separator: '&', equals: '=', includeQuestion: false }
-): string => {
+  options: StringifyOptions = { separator: '&', equals: '=', includeQuestion: false, encodeUriComponents: true }
+): string {
   try {
     if (!obj || Object.keys(obj).length <= 0) throw new Error('object_is_empty');
     if (typeof obj !== 'object') throw new Error('input_not_object');
-    if (!options.separator) options.separator = '&';
-    if (!options.equals) options.equals = '=';
-    if (!options.includeQuestion) options.includeQuestion = false;
+    if (!objectHasProperty(options, 'separator')) options.separator = '&';
+    if (!objectHasProperty(options, 'equals')) options.equals = '=';
+    if (!objectHasProperty(options, 'includeQuestion')) options.includeQuestion = false;
+    if (!objectHasProperty(options, 'encodeUriComponents')) options.encodeUriComponents = true;
+
     const keys = Object.keys(obj)
-      .sort() // eslint-disable-line @typescript-eslint/require-array-sort-compare
+      .sort()
       .map(key => {
-        const ks = encodeURIComponent(stringifyPrimitive(key)) + options.equals!;
+        const ks = stringifyPrimitive(key, options.encodeUriComponents) + options.equals!;
         if (obj[key] === undefined || obj[key] === null) return '';
         if (Array.isArray(obj[key])) {
-          return obj[key].map((v: string) => ks + encodeURIComponent(stringifyPrimitive(v))).join(options.separator);
+          // eslint-disable-next-line @typescript-eslint/no-explicit-any
+          return (obj[key] as any[])
+            .map((v: string) => ks + stringifyPrimitive(v, options.encodeUriComponents))
+            .join(options.separator);
         }
 
-        return ks + encodeURIComponent(stringifyPrimitive(obj[key]));
+        return ks + stringifyPrimitive(obj[key], options.encodeUriComponents);
       })
       .filter(Boolean);
 
@@ -87,7 +107,9 @@ export const stringify = (
     return keys.join(options.separator);
   } catch (err) {
     if (/object_is_empty/i.test(err.toString())) {
-      return `${options.includeQuestion ? '?' : ''}${encodeURIComponent(stringifyPrimitive(obj))}`;
+      return `${options.includeQuestion ? '?' : ''}${encodeURIComponent(
+        stringifyPrimitive(obj, options.encodeUriComponents)
+      )}`;
     }
     if (/input_not_object/i.test(err.toString())) {
       return handleQuerystringError(
@@ -98,7 +120,7 @@ export const stringify = (
 
     return err;
   }
-};
+}
 
 /**
  * Parses a querystring back to an object
@@ -121,7 +143,7 @@ export const stringify = (
  * parse('prop=value&&prop2=value2', {separator: '&&', equals: '='})
  * ```
  */
-export const parse = (qs = '', options: ParseOptions = { separator: '&', equals: '=' }): QuerystringObject => {
+export function parse(qs = '', options: ParseOptions = { separator: '&', equals: '=' }): QuerystringObject {
   try {
     if (typeof qs !== 'string') throw new Error('input_not_string');
     if (qs === '') return {};
@@ -157,7 +179,8 @@ export const parse = (qs = '', options: ParseOptions = { separator: '&', equals:
       if (!(k in obj)) {
         obj[k] = v;
       } else if (Array.isArray(obj[k])) {
-        obj[k].push(v);
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        (obj[k] as any[]).push(v);
       } else {
         obj[k] = [obj[k], v];
       }
@@ -174,6 +197,6 @@ export const parse = (qs = '', options: ParseOptions = { separator: '&', equals:
 
     return err;
   }
-};
+}
 
 export default stringify;

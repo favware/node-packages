@@ -2,13 +2,17 @@
 
 exports[`Error checking should error with wrong input 1`] = `"@Favware/Querystring: Your input was not an object. Please supply an object when using Stringify"`;
 
-exports[`Error checking should work with invalid separator and equals options 1`] = `"?prop=value&prop2=value2"`;
+exports[`Error checking should work with invalid separator and equals options 1`] = `"?propnullvaluenullprop2nullvalue2"`;
 
 exports[`Error checking should work with wrong options 1`] = `"prop%value=prop2%value2"`;
 
 exports[`Standard Behaviour confirm default export works 1`] = `"?prop=value&prop2=value2"`;
 
+exports[`Standard Behaviour should encode Uri Components when specified 1`] = `"prop=value%2B_%7B%7D%22%3A"`;
+
 exports[`Standard Behaviour should exclude props that are undefined or null 1`] = `""`;
+
+exports[`Standard Behaviour should not encode Uri Components when specified 1`] = `"prop=value+_{}\\":"`;
 
 exports[`Standard Behaviour should work with empty input 1`] = `""`;
 
