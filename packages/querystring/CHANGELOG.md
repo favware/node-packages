@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.3.0](https://github.com/favware/node-packages/compare/@favware/querystring@4.2.0...@favware/querystring@4.3.0) (2020-03-03)
+
+### Features
+
+- **querystring:** stringify: Option to disable uri encoding for params ([efc198c](https://github.com/favware/node-packages/commit/efc198c8d0aad5fe92a45022b9a9ddcfa6f9ad98))
+
 # [4.2.0](https://github.com/favware/node-packages/compare/@favware/querystring@4.1.3...@favware/querystring@4.2.0) (2020-01-22)
 
 ### Features

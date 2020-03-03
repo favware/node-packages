@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.3](https://github.com/favware/node-packages/compare/@favware/unescape@1.3.2...@favware/unescape@1.3.3) (2020-03-03)
+
+### Reverts
+
+- temporarily mark un-private to publish versions with new readme ([b28de71](https://github.com/favware/node-packages/commit/b28de7170e5d3fe052c5a4cfbe9fa1d1fd5b03ac))
+
 ## [1.3.2](https://github.com/favware/node-packages/compare/@favware/unescape@1.3.1...@favware/unescape@1.3.2) (2020-01-22)
 
 **Note:** Version bump only for package @favware/unescape

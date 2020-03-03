@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.3.0](https://github.com/favware/node-packages/compare/@favware/eslint-config@3.2.0...@favware/eslint-config@3.3.0) (2020-03-03)
+
+### Features
+
+- **eslint-config:** bump [@typescript-eslint](https://github.com/typescript-eslint) dependencies ([e81c71e](https://github.com/favware/node-packages/commit/e81c71ea2ef4e90869856e44322d754ca6dda278))
+
 # [3.2.0](https://github.com/favware/node-packages/compare/@favware/eslint-config@3.1.6...@favware/eslint-config@3.2.0) (2020-01-22)
 
 ### Features
