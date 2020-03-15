@@ -26,13 +26,8 @@
 
 [![npm bundle size](https://img.shields.io/bundlephobia/min/@favware/eslint-config?label=eslint-config%20-%20minified&logo=webpack&style=flat-square)](https://bundlephobia.com/result?p=@favware/eslint-config)
 [![npm bundle size](https://img.shields.io/bundlephobia/minzip/@favware/eslint-config?label=eslint-config%20-%20minzipped&logo=webpack&style=flat-square)](https://bundlephobia.com/result?p=@favware/eslint-config)
-[![npm bundle size](https://img.shields.io/bundlephobia/min/@favware/milky-tslint?label=milky-tslint%20-%20minified&logo=webpack&style=flat-square)](https://bundlephobia.com/result?p=@favware/milky-tslint)
-[![npm bundle size](https://img.shields.io/bundlephobia/minzip/@favware/milky-tslint?label=milky-tslint%20-%20minzipped&logo=webpack&style=flat-square)](https://bundlephobia.com/result?p=@favware/milky-tslint)
-
 [![npm bundle size](https://img.shields.io/bundlephobia/min/@favware/querystring?label=querystring%20-%20minified&logo=webpack&style=flat-square)](https://bundlephobia.com/result?p=@favware/querystring)
 [![npm bundle size](https://img.shields.io/bundlephobia/minzip/@favware/querystring?label=querystring%20-%20minzipped&logo=webpack&style=flat-square)](https://bundlephobia.com/result?p=@favware/querystring)
-[![npm bundle size](https://img.shields.io/bundlephobia/min/@favware/tslint-config?label=tslint-config%20-%20minified&logo=webpack&style=flat-square)](https://bundlephobia.com/result?p=@favware/tslint-config)
-[![npm bundle size](https://img.shields.io/bundlephobia/minzip/@favware/tslint-config?label=tslint-config%20-%20minzipped&logo=webpack&style=flat-square)](https://bundlephobia.com/result?p=@favware/tslint-config)
 
 [![npm bundle size](https://img.shields.io/bundlephobia/min/@favware/unescape?label=unescape%20-%20minified&logo=webpack&style=flat-square)](https://bundlephobia.com/result?p=@favware/unescape)
 [![npm bundle size](https://img.shields.io/bundlephobia/minzip/@favware/unescape?label=unescape%20-%20minzipped&logo=webpack&style=flat-square)](https://bundlephobia.com/result?p=@favware/unescape)
@@ -52,10 +47,8 @@
 [![npm](https://img.shields.io/npm/v/@favware/converter?color=crimson&label=converter%20version&logo=npm&style=flat-square)](https://www.npmjs.com/package/@favware/converter)
 [![npm](https://img.shields.io/npm/v/@favware/crypto?color=crimson&label=crypto%20version&logo=npm&style=flat-square)](https://www.npmjs.com/package/@favware/crypto)
 [![npm](https://img.shields.io/npm/v/@favware/eslint-config?color=crimson&label=eslint-config%20version&logo=npm&style=flat-square)](https://www.npmjs.com/package/@favware/eslint-config)
-[![npm](https://img.shields.io/npm/v/@favware/milky-tslint?color=crimson&label=milky-tslint%20version&logo=npm&style=flat-square)](https://www.npmjs.com/package/@favware/milky-tslint)
 [![npm](https://img.shields.io/npm/v/@favware/querystring?color=crimson&label=querystring%20version&logo=npm&style=flat-square)](https://www.npmjs.com/package/@favware/querystring)
 
-[![npm](https://img.shields.io/npm/v/@favware/tslint-config?color=crimson&label=tslint-config%20version&logo=npm&style=flat-square)](https://www.npmjs.com/package/@favware/tslint-config)
 [![npm](https://img.shields.io/npm/v/@favware/unescape?color=crimson&label=unescape%20version&logo=npm&style=flat-square)](https://www.npmjs.com/package/@favware/unescape)
 [![npm](https://img.shields.io/npm/v/@favware/yamlreader?color=crimson&label=yamlreader%20version&logo=npm&style=flat-square)](https://www.npmjs.com/package/@favware/yamlreader)
 [![npm](https://img.shields.io/npm/v/@favware/ytdl-prismplayer?color=crimson&label=ytdl-prismplayer%20version&logo=npm&style=flat-square)](https://www.npmjs.com/package/@favware/ytdl-prismplayer)
@@ -82,7 +75,7 @@ Before you can develop on packages in this repository you'll have to follow a fe
 
 1. Install NodeJS: https://nodejs.org/en/download/
 2. Install Yarn package manager: `npm i -g yarn`
-3. Globally install CLI tools: `yarn global add commitizen eslint jest-cli lerna rollup ts-node tslint typescript`
+3. Globally install CLI tools: `yarn global add commitizen eslint jest-cli lerna rollup ts-node typescript`
 
 ## API Documentation
 
