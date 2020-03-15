@@ -55,6 +55,6 @@ jobs:
           git commit -m "docs: api docs build for${GITHUB_SHA}" || true
           git push origin $TARGET_BRANCH
         env:
-          GITHUB_TOKEN: ${{ secrets.PUSH_TOKEN }}
-          GITHUB_ACTOR: favware-bot
+          GITHUB_USER: Favware-bot
           GITHUB_EMAIL: favwarebot@gmail.com
+          GITHUB_TOKEN: ${{ secrets.BOT_TOKEN }}
