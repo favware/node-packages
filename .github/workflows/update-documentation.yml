@@ -45,11 +45,11 @@ jobs:
           git clone $REPO out -b $TARGET_BRANCH
 
           echo -e "\n# Move the generated docs to the newly-checked-out repo, to be committed and pushed"
-          rsync -vau docs/ out/
+          rsync -vau docs/ README.md LICENSE.md out/
 
           echo -e "\n# Commit and push"
           cd out
-          git add --all .
+          git add --all
           git config user.name "${GITHUB_ACTOR}"
           git config user.email "${GITHUB_EMAIL}"
           git commit -m "docs: api docs build for${GITHUB_SHA}" || true
