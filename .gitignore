@@ -11,7 +11,7 @@ node_modules
 # Build Artifacts
 dist/
 build/
-docsbuild/
+docs/
 *.zip
 *.tar
 *.tar.xz
