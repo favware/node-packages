@@ -17,7 +17,7 @@
     "scripts:runner": "ts-node -P tsconfig.eslint.json",
     "scripts:validateNoOnly": "yarn scripts:runner scripts/validateNoOnly",
     "scripts:duplicateESLintConfig": "yarn scripts:runner scripts/duplicateESLintConfig",
-    "none": "echo \"\""
+    "now.sh": "rm -rf packages scripts node_modules"
   },
   "devDependencies": {
     "@commitlint/cli": "^8.3.5",
