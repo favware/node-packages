@@ -88,7 +88,7 @@ export function stringify(
 
     const keys = Object.keys(obj)
       .sort()
-      .map(key => {
+      .map((key) => {
         const ks = stringifyPrimitive(key, options.encodeUriComponents) + options.equals!;
         if (obj[key] === undefined || obj[key] === null) return '';
         if (Array.isArray(obj[key])) {

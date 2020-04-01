@@ -33,9 +33,9 @@ const filterVorbis = (format: PrismVideoFormat) => format.audioEncoding === 'vor
  * @return Best determined format available for the video stream
  */
 const nextBestFormat = (formats: PrismVideoFormat[]): PrismVideoFormat => {
-  formats = formats.filter(format => format.bitrate).sort((a, b) => Number(b.bitrate) - Number(a.bitrate));
+  formats = formats.filter((format) => format.bitrate).sort((a, b) => Number(b.bitrate) - Number(a.bitrate));
 
-  return formats.find(format => !format.bitrate) || formats[0];
+  return formats.find((format) => !format.bitrate) || formats[0];
 };
 
 /**

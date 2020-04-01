@@ -17,7 +17,7 @@ const toRegex = (): RegExp => {
 /** TypeGuard to ensure input is an array of only strings */
 const isArrayOfOnlyStrings = (array: unknown): array is string[] => {
   if (Array.isArray(array)) {
-    return array.every(val => typeof val === 'string');
+    return array.every((val) => typeof val === 'string');
   }
 
   return false;

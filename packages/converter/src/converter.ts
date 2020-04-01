@@ -53,8 +53,8 @@ export const convert = (
 
     if (!definitionData.name) throw new Error('no_data_found');
 
-    const fromData = definitionData.data.find(unit => unit.id === fromUnit);
-    const toData = definitionData.data.find(unit => unit.id === toUnit);
+    const fromData = definitionData.data.find((unit) => unit.id === fromUnit);
+    const toData = definitionData.data.find((unit) => unit.id === toUnit);
     if (!fromData) throw new Error('fromUnit_not_supported');
     if (!toData) throw new Error('toUnit_not_supported');
     if (fromData.uniqueTransform) throw new Error('fromUnit_has_uniqueTransform');
