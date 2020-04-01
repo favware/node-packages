@@ -1,6 +1,6 @@
 {
   "name": "@favware/ytdl-prismplayer",
-  "version": "2.5.0",
+  "version": "2.5.1",
   "description": "ytdl-core wrapper focused on efficiency for use in Discord music bots",
   "author": "@favware",
   "license": "MIT",
