@@ -1,0 +1,18 @@
+pull_request_rules:
+  - name: Automatic Depfu merging
+    conditions:
+      - approved-reviews-by=Favna
+      - base=master
+      - label~=^Meta:\ Dependencies
+      - title~=Yarn\ dependencies
+    actions:
+      merge:
+        method: squash
+  - name: Automatic Showndown Tier Merging
+    conditions:
+      - approved-reviews-by=Favna
+      - base=master
+      - author=Favware-bot
+    actions:
+      merge:
+        method: squash
