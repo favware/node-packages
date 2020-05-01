@@ -1,6 +1,6 @@
 <div align="center">
   <p>
-  <a href="https://favware.tech/awesome-yaml-reader"><img src="https://storage.googleapis.com/data-sunlight-146313.appspot.com/website-project-icons/awesome-yaml-reader.png" height="200" alt="logo"/></a>
+  <a href="https://favware.tech/awesome-yaml-reader"><img src="https://storage.googleapis.com/data-sunlight-146313.appspot.com/website-project-icons/yamlreader.png" height="200" alt="logo"/></a>
   </p>
 
   <p>
