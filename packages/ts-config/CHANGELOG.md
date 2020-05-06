@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0-canary.0](https://github.com/favware/node-packages/compare/@favware/ts-config@1.1.3...@favware/ts-config@2.0.0-canary.0) (2020-05-06)
+
+
+### Bug Fixes
+
+* reworked to compile with tsc rather than rollup ([0b7c6c8](https://github.com/favware/node-packages/commit/0b7c6c81fab75fd298eea8427bbee373d91306bb))
+
+
+### BREAKING CHANGES
+
+* The default target for ts-config and these packages is now CommonJS, which will
+work in NodeJS by default and get resolved in Rollup (with @rollup/plugin-commonjs) and Webpack as
+well. Furthermore no longer will packages be compiled with importHelpers so tslib is no longer a
+hidden required dependency.
+
+
+
+
+
 ## [1.1.3](https://github.com/favware/node-packages/compare/@favware/ts-config@1.1.2...@favware/ts-config@1.1.3) (2020-04-01)
 
 **Note:** Version bump only for package @favware/ts-config

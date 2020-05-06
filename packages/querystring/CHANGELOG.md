@@ -3,6 +3,30 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.0.0-canary.0](https://github.com/favware/node-packages/compare/@favware/querystring@4.3.1...@favware/querystring@5.0.0-canary.0) (2020-05-06)
+
+
+### Bug Fixes
+
+* reworked to compile with tsc rather than rollup ([0b7c6c8](https://github.com/favware/node-packages/commit/0b7c6c81fab75fd298eea8427bbee373d91306bb))
+* **querystring:** remove QuerystringObject in favour of better methods ([c6c5888](https://github.com/favware/node-packages/commit/c6c58885ea88d9c9b1bc48dfddb1f96c3f1af0d9))
+
+
+### BREAKING CHANGES
+
+* The default target for ts-config and these packages is now CommonJS, which will
+work in NodeJS by default and get resolved in Rollup (with @rollup/plugin-commonjs) and Webpack as
+well. Furthermore no longer will packages be compiled with importHelpers so tslib is no longer a
+hidden required dependency.
+* **querystring:** parse will now return generic parameter "R" which by default is Record<PropertyKey,
+unknown>. stringify will take a parameter of type I, which will get inferred from your input, or you
+can set it as a generic type argument. Furthermore, rather than returning an object with the error
+property this library will now throw the error so you get full stacktraces.
+
+
+
+
+
 ## [4.3.1](https://github.com/favware/node-packages/compare/@favware/querystring@4.3.0...@favware/querystring@4.3.1) (2020-04-01)
 
 **Note:** Version bump only for package @favware/querystring

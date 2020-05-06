@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.0.0-canary.0](https://github.com/favware/node-packages/compare/@favware/eslint-config@3.3.1...@favware/eslint-config@4.0.0-canary.0) (2020-05-06)
+
+
+### Bug Fixes
+
+* reworked to compile with tsc rather than rollup ([0b7c6c8](https://github.com/favware/node-packages/commit/0b7c6c81fab75fd298eea8427bbee373d91306bb))
+
+
+### BREAKING CHANGES
+
+* The default target for ts-config and these packages is now CommonJS, which will
+work in NodeJS by default and get resolved in Rollup (with @rollup/plugin-commonjs) and Webpack as
+well. Furthermore no longer will packages be compiled with importHelpers so tslib is no longer a
+hidden required dependency.
+
+
+
+
+
 ## [3.3.1](https://github.com/favware/node-packages/compare/@favware/eslint-config@3.3.0...@favware/eslint-config@3.3.1) (2020-04-01)
 
 **Note:** Version bump only for package @favware/eslint-config
