@@ -29,6 +29,6 @@ jobs:
           path: node_modules
           key: ${{ runner.os }}-${{ matrix.node_version }}-${{ hashFiles(matrix.os == 'windows-latest' && '**\yarn.lock' || '**/yarn.lock') }}
       - name: Install Dependencies
-        run: yarn
+        run: yarn --ignore-scripts --frozen-lockfile
       - name: Test
         run: yarn test
