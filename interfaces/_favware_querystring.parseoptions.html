@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>System | Favware Node Packages</title>
+	<title>ParseOptions | Favware Node Packages</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -52,13 +52,13 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="../modules/_favware_converter.html">@favware/converter</a>
+					<a href="../modules/_favware_querystring.html">@favware/querystring</a>
 				</li>
 				<li>
-					<a href="_favware_converter.system.html">System</a>
+					<a href="_favware_querystring.parseoptions.html">ParseOptions</a>
 				</li>
 			</ul>
-			<h1>Enumeration System</h1>
+			<h1>Interface ParseOptions</h1>
 		</div>
 	</div>
 </header>
@@ -68,53 +68,61 @@
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>Predefined options for the unit system</p>
+						<p>Options for the <a href="../modules/_favware_querystring.html#parse">parse</a> function</p>
 					</div>
 				</div>
+			</section>
+			<section class="tsd-panel tsd-hierarchy">
+				<h3>Hierarchy</h3>
+				<ul class="tsd-hierarchy">
+					<li>
+						<span class="target">ParseOptions</span>
+					</li>
+				</ul>
 			</section>
 			<section class="tsd-panel-group tsd-index-group">
 				<h2>Index</h2>
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
 						<section class="tsd-index-section ">
-							<h3>Enumeration members</h3>
+							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="_favware_converter.system.html#primary" class="tsd-kind-icon">PRIMARY</a></li>
-								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="_favware_converter.system.html#secondary" class="tsd-kind-icon">SECONDARY</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_favware_querystring.parseoptions.html#equals" class="tsd-kind-icon">equals</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_favware_querystring.parseoptions.html#separator" class="tsd-kind-icon">separator</a></li>
 							</ul>
 						</section>
 					</div>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
-				<h2>Enumeration members</h2>
-				<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
-					<a name="primary" class="tsd-anchor"></a>
-					<h3>PRIMARY</h3>
-					<div class="tsd-signature tsd-kind-icon">PRIMARY<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = &quot;primary&quot;</span></div>
+				<h2>Properties</h2>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="equals" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> equals</h3>
+					<div class="tsd-signature tsd-kind-icon">equals<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/favware/node-packages/blob/0b7c6c8/packages/converter/src/interfaces.ts#L51">packages/converter/src/interfaces.ts:51</a></li>
+							<li>Defined in <a href="https://github.com/favware/node-packages/blob/0b7c6c8/packages/querystring/src/index.ts#L23">packages/querystring/src/index.ts:23</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>For when the unit is of the primary system</p>
+							<p>Equals sign the querystring has</p>
 						</div>
 					</div>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
-					<a name="secondary" class="tsd-anchor"></a>
-					<h3>SECONDARY</h3>
-					<div class="tsd-signature tsd-kind-icon">SECONDARY<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = &quot;secondary&quot;</span></div>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="separator" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> separator</h3>
+					<div class="tsd-signature tsd-kind-icon">separator<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/favware/node-packages/blob/0b7c6c8/packages/converter/src/interfaces.ts#L53">packages/converter/src/interfaces.ts:53</a></li>
+							<li>Defined in <a href="https://github.com/favware/node-packages/blob/0b7c6c8/packages/querystring/src/index.ts#L21">packages/querystring/src/index.ts:21</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>For when the unit is of the secondary system</p>
+							<p>Separator the querystring has</p>
 						</div>
 					</div>
 				</section>
@@ -126,7 +134,7 @@
 					<li class="globals  ">
 						<a href="../globals.html"><em>Globals</em></a>
 					</li>
-					<li class="current tsd-kind-module">
+					<li class=" tsd-kind-module">
 						<a href="../modules/_favware_converter.html">@favware/converter</a>
 					</li>
 					<li class=" tsd-kind-module">
@@ -135,7 +143,7 @@
 					<li class=" tsd-kind-module">
 						<a href="../modules/_favware_eslint_config.html">@favware/eslint-<wbr>config</a>
 					</li>
-					<li class=" tsd-kind-module">
+					<li class="current tsd-kind-module">
 						<a href="../modules/_favware_querystring.html">@favware/querystring</a>
 					</li>
 					<li class=" tsd-kind-module">
@@ -157,56 +165,35 @@
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
-					<li class=" tsd-kind-reference tsd-parent-kind-module">
-						<a href="../modules/_favware_converter.html#convertererror" class="tsd-kind-icon">Converter<wbr>Error</a>
-					</li>
-					<li class=" tsd-kind-reference tsd-parent-kind-module">
-						<a href="../modules/_favware_converter.html#convert" class="tsd-kind-icon">convert</a>
-					</li>
-					<li class=" tsd-kind-reference tsd-parent-kind-module">
-						<a href="../modules/_favware_converter.html#definitions" class="tsd-kind-icon">definitions</a>
-					</li>
-					<li class=" tsd-kind-reference tsd-parent-kind-module">
-						<a href="../modules/_favware_converter.html#roundnumber" class="tsd-kind-icon">round<wbr>Number</a>
-					</li>
 				</ul>
 				<ul class="current">
-					<li class="current tsd-kind-enum tsd-parent-kind-module">
-						<a href="_favware_converter.system.html" class="tsd-kind-icon">System</a>
+					<li class="current tsd-kind-interface tsd-parent-kind-module">
+						<a href="_favware_querystring.parseoptions.html" class="tsd-kind-icon">Parse<wbr>Options</a>
 						<ul>
-							<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
-								<a href="_favware_converter.system.html#primary" class="tsd-kind-icon">PRIMARY</a>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="_favware_querystring.parseoptions.html#equals" class="tsd-kind-icon">equals</a>
 							</li>
-							<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
-								<a href="_favware_converter.system.html#secondary" class="tsd-kind-icon">SECONDARY</a>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="_favware_querystring.parseoptions.html#separator" class="tsd-kind-icon">separator</a>
 							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
-					<li class=" tsd-kind-class tsd-parent-kind-module">
-						<a href="../classes/_favware_converter.convertererror-1.html" class="tsd-kind-icon">Converter<wbr>Error</a>
-					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-module">
-						<a href="../interfaces/_favware_converter.convertoptions.html" class="tsd-kind-icon">Convert<wbr>Options</a>
+						<a href="_favware_querystring.stringifyoptions.html" class="tsd-kind-icon">Stringify<wbr>Options</a>
 					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module">
-						<a href="../interfaces/_favware_converter.measurementsystemdata.html" class="tsd-kind-icon">Measurement<wbr>System<wbr>Data</a>
+					<li class=" tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter">
+						<a href="../modules/_favware_querystring.html#objecthasproperty" class="tsd-kind-icon">object<wbr>Has<wbr>Property</a>
 					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module">
-						<a href="../interfaces/_favware_converter.unitdata.html" class="tsd-kind-icon">Unit<wbr>Data</a>
+					<li class=" tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter">
+						<a href="../modules/_favware_querystring.html#parse" class="tsd-kind-icon">parse</a>
 					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module">
-						<a href="../interfaces/_favware_converter.unitdefinition.html" class="tsd-kind-icon">Unit<wbr>Definition</a>
+					<li class=" tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter">
+						<a href="../modules/_favware_querystring.html#stringify" class="tsd-kind-icon">stringify</a>
 					</li>
-					<li class=" tsd-kind-variable tsd-parent-kind-module">
-						<a href="../modules/_favware_converter.html#definitions-1" class="tsd-kind-icon">definitions</a>
-					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-module">
-						<a href="../modules/_favware_converter.html#convert-1" class="tsd-kind-icon">convert</a>
-					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-module">
-						<a href="../modules/_favware_converter.html#roundnumber-1" class="tsd-kind-icon">round<wbr>Number</a>
+					<li class=" tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter">
+						<a href="../modules/_favware_querystring.html#stringifyprimitive" class="tsd-kind-icon">stringify<wbr>Primitive</a>
 					</li>
 				</ul>
 			</nav>
