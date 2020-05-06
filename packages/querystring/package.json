@@ -1,6 +1,6 @@
 {
   "name": "@favware/querystring",
-  "version": "5.0.0-canary.0",
+  "version": "5.0.0",
   "description": "Awesome and robust querystring",
   "author": "@favware",
   "license": "MIT",

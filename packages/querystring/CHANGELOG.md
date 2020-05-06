@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.0.0](https://github.com/favware/node-packages/compare/@favware/querystring@5.0.0-canary.0...@favware/querystring@5.0.0) (2020-05-06)
+
+**Note:** Version bump only for package @favware/querystring
+
+
+
+
+
 # [5.0.0-canary.0](https://github.com/favware/node-packages/compare/@favware/querystring@4.3.1...@favware/querystring@5.0.0-canary.0) (2020-05-06)
 
 

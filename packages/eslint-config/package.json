@@ -1,6 +1,6 @@
 {
   "name": "@favware/eslint-config",
-  "version": "4.0.0-canary.0",
+  "version": "4.0.0",
   "description": "Standard ESLint config for Favware projects written in TypeScript",
   "author": "@favware",
   "license": "MIT",

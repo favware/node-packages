@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0](https://github.com/favware/node-packages/compare/@favware/unescape@2.0.0-canary.0...@favware/unescape@2.0.0) (2020-05-06)
+
+**Note:** Version bump only for package @favware/unescape
+
+
+
+
+
 # [2.0.0-canary.0](https://github.com/favware/node-packages/compare/@favware/unescape@1.3.4...@favware/unescape@2.0.0-canary.0) (2020-05-06)
 
 

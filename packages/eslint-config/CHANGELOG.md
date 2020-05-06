@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.0.0](https://github.com/favware/node-packages/compare/@favware/eslint-config@4.0.0-canary.0...@favware/eslint-config@4.0.0) (2020-05-06)
+
+**Note:** Version bump only for package @favware/eslint-config
+
+
+
+
+
 # [4.0.0-canary.0](https://github.com/favware/node-packages/compare/@favware/eslint-config@3.3.1...@favware/eslint-config@4.0.0-canary.0) (2020-05-06)
 
 
