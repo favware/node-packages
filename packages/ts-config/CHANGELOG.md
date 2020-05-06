@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0-canary.1](https://github.com/favware/node-packages/compare/@favware/ts-config@2.0.0-canary.0...@favware/ts-config@2.0.0-canary.1) (2020-05-06)
+
+
+### Bug Fixes
+
+* **ts-config:** fix publish of tsconfig ([9c48933](https://github.com/favware/node-packages/commit/9c48933a131852c2354ac699e2378d93f35adbee))
+
+
+
+
+
 # [2.0.0-canary.0](https://github.com/favware/node-packages/compare/@favware/ts-config@1.1.3...@favware/ts-config@2.0.0-canary.0) (2020-05-06)
 
 
