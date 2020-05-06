@@ -1,19 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Error checking should error with wrong input 1`] = `
-Object {
-  "err": "@Favware/Querystring: Your input was not an string. Please supply a string when using Parse",
-}
-`;
-
 exports[`Error checking should work when passing invalid separator and equals 1`] = `
-Object {
-  "prop": "value",
-  "prop2": "value2",
-}
-`;
-
-exports[`Error checking should work with wrong options 1`] = `
 Object {
   "prop": "value",
   "prop2": "value2",

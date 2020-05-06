@@ -1,5 +1,5 @@
-import { parse } from '../src/querystring';
 import { oneLine } from 'common-tags';
+import { parse } from '../src';
 
 describe('Standard Behaviour', () => {
   test('should work with empty input', () => {
@@ -240,19 +240,14 @@ describe('Error checking', () => {
   test('should work with wrong options', () => {
     const expected = { prop: 'value', prop2: 'value2' };
     // @ts-ignore
-    const actual = parse('?prop%value&prop2%value2', { seperator: '&', equals: '%' });
-    expect(actual).toMatchSnapshot();
-    expect(actual).toMatchObject(expected);
+    expect(parse('?prop%value&prop2%value2', { seperator: '&', equals: '%' })).toMatchObject(expected);
   });
 
   test('should error with wrong input', () => {
-    const expected = {
-      err: '@Favware/Querystring: Your input was not an string. Please supply a string when using Parse'
-    };
     // @ts-ignore
-    const actual = parse({ prop: 'value', prop2: 'value2' });
-    expect(actual).toMatchSnapshot();
-    expect(actual).toMatchObject(expected);
+    expect(() => parse({ prop: 'value', prop2: 'value2' })).toThrowError(
+      '@Favware/Querystring: Your input was not an string. Please supply a string when using Parse.'
+    );
   });
 
   test('should work when passing invalid separator and equals', () => {

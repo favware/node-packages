@@ -101,11 +101,10 @@ describe('Error checking', () => {
   });
 
   test('should error with wrong input', () => {
-    const expected = '@Favware/Querystring: Your input was not an object. Please supply an object when using Stringify';
     // @ts-ignore
-    const actual = stringify('testing wrong input');
-    expect(actual).toMatchSnapshot();
-    expect(actual).toBe(expected);
+    expect(() => stringify('testing wrong input')).toThrowError(
+      '@Favware/Querystring: Your input was not an object. Please supply an object when using Stringify.'
+    );
   });
   /* eslint-enable @typescript-eslint/ban-ts-ignore */
 });

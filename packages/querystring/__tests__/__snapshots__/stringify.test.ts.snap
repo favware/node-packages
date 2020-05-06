@@ -1,7 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Error checking should error with wrong input 1`] = `"@Favware/Querystring: Your input was not an object. Please supply an object when using Stringify"`;
-
 exports[`Error checking should work with invalid separator and equals options 1`] = `"?propnullvaluenullprop2nullvalue2"`;
 
 exports[`Error checking should work with wrong options 1`] = `"prop%value=prop2%value2"`;
