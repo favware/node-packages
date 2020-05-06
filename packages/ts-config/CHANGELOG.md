@@ -7,10 +7,6 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @favware/ts-config
 
-
-
-
-
 ## [1.1.2](https://github.com/favware/node-packages/compare/@favware/ts-config@1.1.1...@favware/ts-config@1.1.2) (2020-01-22)
 
 **Note:** Version bump only for package @favware/ts-config

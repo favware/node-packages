@@ -7,17 +7,17 @@
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "types": "dist/index.d.ts",
-  "runkitExampleFilename": "dist/example.js",
   "homepage": "https://github.com/favware/node-packages/tree/master/packages/querystring#readme",
   "scripts": {
     "test": "jest",
     "lint": "eslint src __tests__ --ext js,ts --fix -c ../../.eslintrc",
     "prebuild": "yarn lint && yarn test",
-    "build": "rollup -c rollup.config.js",
+    "build": "rollup -c rollup.config.ts",
     "start": "yarn build -w"
   },
   "files": [
-    "dist"
+    "dist",
+    "!dist/.tsbuildinfo"
   ],
   "engines": {
     "node": ">=10",
@@ -46,5 +46,12 @@
   },
   "publishConfig": {
     "access": "public"
+  },
+  "devDependencies": {
+    "@rollup/plugin-node-resolve": "^7.1.3",
+    "rollup-plugin-typescript2": "^0.27.0",
+    "rollup": "^2.7.2",
+    "rollup-plugin-cleaner": "^1.0.0",
+    "rollup-plugin-terser": "^5.3.0"
   }
 }

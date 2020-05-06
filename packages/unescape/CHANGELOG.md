@@ -7,10 +7,6 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @favware/unescape
 
-
-
-
-
 ## [1.3.3](https://github.com/favware/node-packages/compare/@favware/unescape@1.3.2...@favware/unescape@1.3.3) (2020-03-03)
 
 ### Reverts

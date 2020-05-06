@@ -4,19 +4,22 @@
   "description": "Shareable TypeScript configuration for all Favware projects",
   "author": "@favware",
   "license": "MIT",
-  "main": "tsconfig.json",
+  "main": "dist/tsconfig.json",
   "homepage": "https://favware.tech",
   "scripts": {
     "test": "jest",
-    "lint": "eslint src --ext ts --fix -c ../../.eslintrc",
+    "lint": "eslint __tests__ scripts --ext ts --fix -c ../../.eslintrc",
     "prebuild": "yarn lint",
-    "build": "tsc -p tsconfig.build.json"
+    "build": "tsc -b __tests__ && tsc -b scripts",
+    "prepublishOnly": "node build/prepublish.js",
+    "postpublish": "node build/postpublish.js"
   },
   "peerDependencies": {
     "typescript": ">=3"
   },
   "files": [
-    "tsconfig.json"
+    "dist",
+    "!dist/.tsbuildinfo"
   ],
   "engines": {
     "node": ">=10",

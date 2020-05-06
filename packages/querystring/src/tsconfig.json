@@ -1,0 +1,11 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "rootDir": "./",
+    "outDir": "../dist",
+    "composite": true,
+    "tsBuildInfoFile": "../dist/.tsbuildinfo",
+    "target": "ES5"
+  },
+  "files": ["index.ts"]
+}

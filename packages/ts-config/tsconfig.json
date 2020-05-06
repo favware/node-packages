@@ -1,25 +1,10 @@
 {
-  "compileOnSave": true,
+  "extends": "./src/tsconfig.json",
   "compilerOptions": {
-    "moduleResolution": "node",
-    "module": "esnext",
-    "target": "es2019",
-    "newLine": "lf",
-    "lib": ["esnext", "dom"],
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "noFallthroughCasesInSwitch": true,
-    "noImplicitReturns": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "importHelpers": true,
-    "incremental": true,
-    "removeComments": false,
-    "declaration": true,
-    "sourceMap": true
-  }
+    "outDir": "build",
+    "rootDir": "__tests__",
+    "composite": true,
+    "tsBuildInfoFile": "./build/.tsbuildinfo"
+  },
+  "include": ["__tests__"]
 }

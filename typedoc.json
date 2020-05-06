@@ -1,0 +1,14 @@
+{
+  "inputFiles": ["./packages/**/src"],
+  "out": "./docs/",
+  "readme": "./README.md",
+  "name": "Favware Node Packages",
+  "exclude": ["**/node_modules/**", "**/*.test.ts", "**/*.js", "**/rollup.config.ts"],
+  "mode": "modules",
+  "pathExclude": ["scripts/duplicateESLintConfig", "scripts/validateNoOnly"],
+  "excludeExternals": true,
+  "excludePrivate": true,
+  "excludeProtected": true,
+  "excludeNotExported": true,
+  "tsconfig": "./tsconfig.base.json"
+}
