@@ -18,8 +18,7 @@
     "typescript": ">=3"
   },
   "files": [
-    "dist",
-    "!dist/.tsbuildinfo"
+    "tsconfig.json"
   ],
   "engines": {
     "node": ">=10",
