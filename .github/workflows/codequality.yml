@@ -51,8 +51,6 @@ jobs:
       - name: Install Dependencies
         run: yarn --ignore-scripts --frozen-lockfile
       - name: Compile TypeScript Projects
-        uses: icrawl/action-tsc@v1
-        with:
-          build: ./packages/converter ./packages/crypto ./packages/eslint-config ./packages/ts-config ./packages/unescape ./packages/yamlreader ./packages/ytdl-prismplayer ./packages/zalgo
+        run: yarn tsc -b packages/converter packages/crypto packages/eslint-config packages/ts-config packages/unescape packages/yamlreader packages/ytdl-prismplayer packages/zalgo
       - name: Compile Querystring with Rollup
         run: yarn build --scope @favware/querystring
