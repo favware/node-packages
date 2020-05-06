@@ -2,6 +2,6 @@
   "name": "root",
   "private": true,
   "scripts": {
-    "now.sh": "rm -rf packages scripts node_modules"
+    "now.sh": "mkdir docs && mv assets/ classes/ enums/ interfaces/ modules/ globals.html index.html docs/"
   }
 }
