@@ -64,7 +64,7 @@ export function objectHasProperty<O extends object>(obj: O, prop: keyof O) {
  * Stringifies an object
  *
  * @param obj Object to stringify
- * @param options Options for the stringify, see {@link IStringifyOptions}
+ * @param options Options for the stringify, see {@link StringifyOptions}
  * @returns The stringified query object
  * @example
  * ```ts
