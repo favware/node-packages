@@ -1,12 +1,11 @@
-import { copy, remove, rmdir } from 'fs-nextra';
+import { copy, remove } from 'fs-nextra';
 import { join, resolve } from 'path';
 
 async function postpublish() {
   const rootDir = resolve(__dirname, '..');
 
   await copy(join(rootDir, 'temp', 'tsconfig.json'), join(rootDir, 'tsconfig.json'));
-  await remove(join(rootDir, 'temp', 'tsconfig.json'));
-  await rmdir(join(rootDir, 'temp'));
+  await remove(join(rootDir, 'temp'));
 }
 
 postpublish();
