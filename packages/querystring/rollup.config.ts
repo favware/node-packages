@@ -1,6 +1,7 @@
 import cleaner from 'rollup-plugin-cleaner';
 import { terser } from 'rollup-plugin-terser';
 import typescript from 'rollup-plugin-typescript2';
+import { resolve as resolveDir } from 'path';
 
 export default {
   input: 'src/index.ts',
@@ -22,13 +23,11 @@ export default {
     cleaner({
       targets: ['./dist/']
     }),
-    typescript({
-      tsconfig: './src/tsconfig.json'
-    }),
+    typescript({ tsconfig: resolveDir(__dirname, 'src', 'tsconfig.json') }),
     terser({
       ecma: 5,
-      // eslint-disable-next-line @typescript-eslint/camelcase
-      compress: { drop_console: true },
+      // This will ensure that whenever Rollup is in watch (dev) mode, console logs will not be removed
+      compress: { drop_console: !Reflect.has(process.env, 'ROLLUP_WATCH') }, // eslint-disable-line @typescript-eslint/camelcase
       output: { comments: false }
     })
   ]
