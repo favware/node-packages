@@ -23,8 +23,8 @@
     "@commitlint/cli": "^8.3.5",
     "@commitlint/config-conventional": "^8.3.4",
     "@types/glob": "^7.1.1",
-    "@types/jest": "^25.2.1",
-    "@types/node": "^13.13.5",
+    "@types/jest": "^25.2.2",
+    "@types/node": "^13.13.6",
     "@types/node-fetch": "^2.5.7",
     "chalk": "^4.0.0",
     "cz-conventional-changelog": "^3.2.0",
@@ -34,7 +34,7 @@
     "husky": "^4.2.5",
     "jest": "^26.0.1",
     "jest-circus": "^26.0.1",
-    "lerna": "^3.20.2",
+    "lerna": "^3.21.0",
     "lint-staged": "^10.2.2",
     "prettier": "^2.0.5",
     "ts-jest": "^25.5.1",
@@ -42,7 +42,7 @@
     "typedoc": "~0.16",
     "typedoc-plugin-lerna-packages": "^0.3.0",
     "typedoc-plugin-nojekyll": "^1.0.1",
-    "typescript": "^3.8.3"
+    "typescript": "^3.9.2"
   },
   "husky": {
     "hooks": {
