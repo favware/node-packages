@@ -6,6 +6,11 @@
     "module": "commonjs",
     "moduleResolution": "node"
   },
-  "include": ["packages/**/*.ts", "packages/**/*.js", "scripts", "./jest.config.js"],
-  "exclude": ["packages/**/*.json"]
+  "include": [
+    "packages/**/*.ts",
+    "scripts",
+    "packages/**/jest.config.js",
+    "packages/**/__tests__/*.js",
+    "packages/**/__fixtures__/*.js"
+  ]
 }
