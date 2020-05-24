@@ -12,6 +12,7 @@ node_modules
 dist/
 build/
 docs/
+test_out/
 *.zip
 *.tar
 *.tar.xz
