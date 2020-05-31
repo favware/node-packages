@@ -56,6 +56,6 @@
   },
   "devDependencies": {
     "prism-media": "^1.2.1",
-    "ytdl-core": "^2.1.4"
+    "ytdl-core": "^2.1.5"
   }
 }
