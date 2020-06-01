@@ -13,18 +13,6 @@ export interface FsOptions {
  */
 export type YamlReaderOptions = DumpOptions & FsOptions;
 
-export class YamlReaderError extends Error {
-  /**
-   * Create a YamlReaderError
-   * @param {string} message The message the error should show
-   */
-  constructor(message: string) {
-    super(message);
-    this.message = message;
-    this.name = 'YamlReaderError';
-  }
-}
-
 /**
  * Reads a YAML file and outputs a JavaScript object
  *
@@ -43,10 +31,10 @@ export const readYaml = (filepath: string, options?: YamlReaderOptions) => {
     str = fs.readFileSync(filepath, options);
   } catch (err) {
     if (/(?:no such file or directory, open)/i.test(err.toString())) {
-      throw new YamlReaderError('You supplied a file that was not found, please check your file path');
+      throw 'You supplied a file that was not found, please check your file path';
     }
 
-    return err;
+    throw err;
   }
 
   try {
@@ -56,9 +44,9 @@ export const readYaml = (filepath: string, options?: YamlReaderOptions) => {
     return jsonData;
   } catch (err) {
     if (/(?:not_valid_yaml)/i.test(err.toString())) {
-      throw new YamlReaderError('It looks like the supplied file was not a valid YAML file!');
+      throw 'It looks like the supplied file was not a valid YAML file!';
     }
-    throw new YamlReaderError('Something went wrong parsing the YAML file');
+    throw 'Something went wrong parsing the YAML file';
   }
 };
 
