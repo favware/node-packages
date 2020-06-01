@@ -41,6 +41,7 @@ jobs:
 
   upload_coverage:
     name: upload coverage report
+    needs: test
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Project
