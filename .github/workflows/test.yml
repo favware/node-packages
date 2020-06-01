@@ -39,8 +39,8 @@ jobs:
           name: coverage
           path: coverage/
 
-  upload_coverage:
-    name: upload coverage report
+  upload_codecov:
+    name: upload coverage report to codecov
     needs: test
     runs-on: ubuntu-latest
     steps:
@@ -56,3 +56,20 @@ jobs:
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
           fail_ci_if_error: true
+
+  upload_coveralls:
+    name: upload coverage report to coveralls
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Project
+        uses: actions/checkout@v2
+      - name: Download Coverage report
+        uses: actions/download-artifact@v2-preview
+        with:
+          name: coverage
+          path: coverage/
+      - name: Coveralls Parallel
+        uses: coverallsapp/github-action@master
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
