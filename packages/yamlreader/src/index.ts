@@ -23,7 +23,7 @@ export type YamlReaderOptions = DumpOptions & FsOptions;
  * const data = readYaml('/path/to/some/yaml/file');
  * ```
  */
-export const readYaml = (filepath: string, options?: YamlReaderOptions) => {
+export const readYaml = <T = unknown>(filepath: string, options?: YamlReaderOptions): T => {
   let str;
   const opts = { ...options, filename: filepath };
 
