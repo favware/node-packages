@@ -1,4 +1,14 @@
 <div align="center">
+
+<h1> <b><i>DEPRECATED</i></b>
+
+Work on this package has stopped in favor of <a href="https://github.com/lavacord">lavacord</a>, a set of packages that aims to give great music support to your Discord bot using <a href="https://github.com/Frederikam/Lavalink">Lavalink</a>. Furthermore, we also no longer support the development of Discord.JS in favor of <a href="https://github.com/dirigeants/core">@klasa/core</a>
+
+</h1>
+
+---
+
+<div align="center">
   <p>
   <a href="https://favware.tech/prismplayer"><img src="https://storage.googleapis.com/data-sunlight-146313.appspot.com/website-project-icons/prismplayer.png" height="200" alt="logo"/></a>
   </p>
