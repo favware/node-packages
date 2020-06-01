@@ -27,7 +27,7 @@ export default {
     terser({
       ecma: 5,
       // This will ensure that whenever Rollup is in watch (dev) mode, console logs will not be removed
-      compress: { drop_console: !Reflect.has(process.env, 'ROLLUP_WATCH') }, // eslint-disable-line @typescript-eslint/camelcase
+      compress: { drop_console: !Reflect.has(process.env, 'ROLLUP_WATCH') }, // eslint-disable-line @typescript-eslint/naming-convention
       output: { comments: false }
     })
   ]

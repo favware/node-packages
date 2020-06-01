@@ -182,7 +182,7 @@ export const definitions: UnitDefinition[] = [
         id: 'fti',
         system: System.SECONDARY,
         multiplier: 1,
-        uniqueTransform: (value: number) =>
+        uniqueTransform: (value: number): string =>
           `
               ${Math.floor(value)} ${Math.floor(value) === 1 ? 'foot' : 'feet'}
               and ${roundNumber((value % 1) * 12, 0)} inches
@@ -293,8 +293,8 @@ export const definitions: UnitDefinition[] = [
   },
   {
     name: 'temperature',
-    primary: { default: 'c', ratio: 1, transform: (C: number) => (C * 9) / 5 + 32 },
-    secondary: { default: 'f', ratio: 1, transform: (F: number) => (F - 32) * (5 / 9) },
+    primary: { default: 'c', ratio: 1, transform: (celcius: number): number => (celcius * 9) / 5 + 32 },
+    secondary: { default: 'f', ratio: 1, transform: (fahrenheit: number): number => (fahrenheit - 32) * (5 / 9) },
     data: [
       {
         id: 'c',

@@ -77,12 +77,11 @@ describe('Standard Behaviour', () => {
 });
 
 describe('Error checking', () => {
-  /* eslint-disable @typescript-eslint/ban-ts-ignore */
   test('should work with wrong options', () => {
     const expected = 'prop%value=prop2%value2';
     const actual = stringify(
       { prop: 'value', prop2: 'value2' },
-      // @ts-ignore
+      // @ts-expect-error
       { separator: '=', equals: '%', includeQeustion: true }
     );
     expect(actual).toMatchSnapshot();
@@ -93,7 +92,8 @@ describe('Error checking', () => {
     const expected = '?propnullvaluenullprop2nullvalue2';
     const actual = stringify(
       { prop: 'value', prop2: 'value2' },
-      // @ts-ignore
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      // @ts-ignore ts-expect-error doesn't recognize this as a valid usecase yet
       { separator: null, equals: null, includeQuestion: true }
     );
     expect(actual).toMatchSnapshot();
@@ -101,10 +101,8 @@ describe('Error checking', () => {
   });
 
   test('should error with wrong input', () => {
-    // @ts-ignore
     expect(() => stringify('testing wrong input')).toThrowError(
       '@Favware/Querystring: Your input was not an object. Please supply an object when using Stringify.'
     );
   });
-  /* eslint-enable @typescript-eslint/ban-ts-ignore */
 });
