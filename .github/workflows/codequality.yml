@@ -25,6 +25,8 @@ jobs:
           key: ${{ runner.os }}-12-${{ hashFiles('**/yarn.lock') }}
       - name: Install Deps
         run: yarn
+      - name: Build ESLint config
+        run: yarn tsc -b packages/eslint-config
       - name: Run ESLint
         uses: icrawl/action-eslint@v1
         with:
