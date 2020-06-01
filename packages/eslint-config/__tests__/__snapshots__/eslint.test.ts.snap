@@ -26,6 +26,15 @@ Object {
   },
   "root": true,
   "rules": Object {
+    "@typescript-eslint/ban-ts-comment": Array [
+      "error",
+      Object {
+        "ts-check": false,
+        "ts-expect-error": false,
+        "ts-ignore": "allow-with-description",
+        "ts-nocheck": "allow-with-description",
+      },
+    ],
     "@typescript-eslint/consistent-type-definitions": Array [
       "error",
       "interface",

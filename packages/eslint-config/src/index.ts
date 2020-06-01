@@ -63,6 +63,15 @@ export const config = {
       { selector: 'enumMember', format: ['PascalCase'] },
       { selector: 'typeLike', format: ['PascalCase'] }
     ],
+    '@typescript-eslint/ban-ts-comment': [
+      'error',
+      {
+        'ts-expect-error': false,
+        'ts-ignore': 'allow-with-description',
+        'ts-nocheck': 'allow-with-description',
+        'ts-check': false
+      }
+    ],
 
     // Best Practices
     eqeqeq: ['error', 'smart'],
