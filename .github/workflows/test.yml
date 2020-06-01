@@ -31,4 +31,27 @@ jobs:
       - name: Install Dependencies
         run: yarn --ignore-scripts --frozen-lockfile
       - name: Test
-        run: yarn test
+        run: yarn test --coverage
+      - name: Store code coverage report
+        if: "(matrix.os == 'ubuntu-latest') && (matrix.node_version == 14)"
+        uses: actions/upload-artifact@v2-preview
+        with:
+          name: coverage
+          path: coverage/
+
+  upload_coverage:
+    name: upload coverage report
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Project
+        uses: actions/checkout@v2
+      - name: Download Coverage report
+        uses: actions/download-artifact@v2-preview
+        with:
+          name: coverage
+          path: coverage/
+      - name: Upload coverage report to codecov
+        uses: codecov/codecov-action@v1
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          fail_ci_if_error: true

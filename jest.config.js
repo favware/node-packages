@@ -8,5 +8,6 @@ module.exports = {
     'ts-jest': {
       tsConfig: '<rootDir>/tsconfig.base.json'
     }
-  }
+  },
+  coveragePathIgnorePatterns: ['<rootDir>/packages/ytdl-prismplayer', '<rootDir>/packages/unescape']
 };
