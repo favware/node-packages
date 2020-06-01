@@ -52,15 +52,6 @@ export function stringifyPrimitive<T extends unknown>(v: T, encode: boolean | un
 }
 
 /**
- * Type safely checks if an object includes a given property without using the prototype
- * @param obj Object to analyze
- * @param prop Property to check for
- */
-export function objectHasProperty<O extends object>(obj: O, prop: keyof O) {
-  return obj && prop in obj;
-}
-
-/**
  * Stringifies an object
  *
  * @param obj Object to stringify
@@ -88,10 +79,10 @@ export function stringify<I>(
   try {
     if (!obj || Object.keys(obj).length <= 0) throw new Error('object_is_empty');
     if (typeof obj !== 'object') throw new Error('input_not_object');
-    if (!objectHasProperty(options, 'separator')) options.separator = '&';
-    if (!objectHasProperty(options, 'equals')) options.equals = '=';
-    if (!objectHasProperty(options, 'includeQuestion')) options.includeQuestion = false;
-    if (!objectHasProperty(options, 'encodeUriComponents')) options.encodeUriComponents = true;
+    if (!Reflect.has(options, 'separator')) options.separator = '&';
+    if (!Reflect.has(options, 'equals')) options.equals = '=';
+    if (!Reflect.has(options, 'includeQuestion')) options.includeQuestion = false;
+    if (!Reflect.has(options, 'encodeUriComponents')) options.encodeUriComponents = true;
 
     const combinedValues: string[] = [];
     for (const [key, value] of Object.entries(obj)) {
