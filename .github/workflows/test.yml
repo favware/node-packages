@@ -49,7 +49,7 @@ jobs:
         with:
           name: coverage
           path: coverage/
-      - name: Upload coverage report to codecov
+      - name: Codecov Upload
         uses: codecov/codecov-action@v1
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
@@ -65,7 +65,7 @@ jobs:
         with:
           name: coverage
           path: coverage/
-      - name: Coveralls Parallel
+      - name: Coveralls Upload
         uses: coverallsapp/github-action@master
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
