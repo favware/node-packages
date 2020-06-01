@@ -65,63 +65,68 @@
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
 					<div align="center">
-						<p>
-							<a href="https://favware.tech/prismplayer"><img src="https://storage.googleapis.com/data-sunlight-146313.appspot.com/website-project-icons/prismplayer.png" height="200" alt="logo"/></a>
-						</p>
-						<p>
-							<h1> @favware/ytdl-prismplayer</h1>
-							<h3> A <a href="https://github.com/fent/node-ytdl-core/">ytdl-core</a> wrapper focused on efficiency for use in Discord music bots.</h3>
-						</p>
-					</div>
-					<hr>
-					<p><strong>Project Status</strong></p>
-					<p><a href="https://github.com/favware/node-packages/blob/master/LICENSE.md"><img src="https://img.shields.io/github/license/favware/node-packages?logo=github&style=flat-square" alt="GitHub"></a>
-					<a href="https://codecov.io/gh/favware/node-packages"><img src="https://img.shields.io/codecov/c/github/favware/node-packages?logo=codecov&style=flat-square" alt="Codecov"></a></p>
-					<p><strong>Bundle Sizes</strong></p>
-					<p><a href="https://bundlephobia.com/result?p=@favware/ytdl-prismplayer"><img src="https://img.shields.io/bundlephobia/min/@favware/ytdl-prismplayer?label=ytdl-prismplayer%20-%20minified&logo=webpack&style=flat-square" alt="npm bundle size"></a>
-						<a href="https://bundlephobia.com/result?p=@favware/ytdl-prismplayer"><img src="https://img.shields.io/bundlephobia/minzip/@favware/ytdl-prismplayer?label=ytdl-prismplayer%20-%20minzipped&logo=webpack&style=flat-square" alt="npm bundle size"></a>
-					<a href="https://www.npmjs.com/package/@favware/ytdl-prismplayer"><img src="https://img.shields.io/npm/v/@favware/ytdl-prismplayer?color=crimson&label=ytdl-prismplayer%20version&logo=npm&style=flat-square" alt="npm"></a></p>
-					<p><strong>Social Media and Donations</strong></p>
-					<p><a href="https://favware.tech/redirect/server"><img src="https://img.shields.io/discord/512303595966824458?color=697EC4&label=Join%20Discord%20Server&logo=discord&logoColor=FDFEFE&style=flat-square" alt="Join Discord server"></a>
-						<a href="https://twitter.com/Favna_/follow"><img src="https://img.shields.io/twitter/follow/favna_?label=Follow%20@Favna_&logo=twitter&colorB=1DA1F2&style=flat-square" alt="Twitter Follow"></a>
-						<a href="https://www.patreon.com/bePatron?u=9336537"><img src="https://img.shields.io/badge/patreon-donate-brightgreen.svg?label=Donate%20with%20Patreon&logo=patreon&colorB=F96854&style=flat-square&link=https://www.patreon.com/bePatron?u=9336537" alt="Patreon Donate"></a>
-					<a href="https://www.patreon.com/bePatron?u=9336537"><img src="https://img.shields.io/badge/paypal-donate-brightgreen.svg?label=Donate%20with%20Paypal&logo=paypal&colorB=00457C&style=flat-square&link=https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=XMAYCF9SDHZ34" alt="PayPal Donate"></a></p>
-					<hr>
-					<p>For compatible videos, this module uses <a href="https://github.com/amishshah/prism-media">prism-media</a>
-						to extract Opus or Vorbis audio from a stream without having to pipe it through FFmpeg first. This greatly
-						reduces the processing power required, making playback smoother and allowing you to play over
-					more connections simultaneously.</p>
-					<p>For videos where the required codec (webm + opus) isn&#39;t available, the module will fallback to
-						using FFmpeg to encode the stream in Opus. Many new videos on YouTube are available in this codec
-					so hopefully this isn&#39;t frequent.</p>
-					<p>Put simply, this module finds the most efficient way to extract a stream of Opus or Vorbis audio from a
-					YouTube video.</p>
-					<a href="#install" id="install" style="color: inherit; text-decoration: none;">
-						<h1>Install</h1>
-					</a>
-					<p>Install with <a href="https://yarnpkg.com">yarn</a> or <a href="https://www.npmjs.com/">npm</a>:</p>
-					<pre><code class="language-sh">yarn add @favware/ytdl-prismplayer ytdl-core prism-media
+						<h1> <b><i>DEPRECATED</i></b>
+							<p>Work on this package has stopped in favor of <a href="https://github.com/lavacord">lavacord</a>, a set of packages that aims to give great music support to your Discord bot using <a href="https://github.com/Frederikam/Lavalink">Lavalink</a>. Furthermore, we also no longer support the development of Discord.JS in favor of <a href="https://github.com/dirigeants/core">@klasa/core</a></p>
+						</h1>
+						<hr>
+						<div align="center">
+							<p>
+								<a href="https://favware.tech/prismplayer"><img src="https://storage.googleapis.com/data-sunlight-146313.appspot.com/website-project-icons/prismplayer.png" height="200" alt="logo"/></a>
+							</p>
+							<p>
+								<h1> @favware/ytdl-prismplayer</h1>
+								<h3> A <a href="https://github.com/fent/node-ytdl-core/">ytdl-core</a> wrapper focused on efficiency for use in Discord music bots.</h3>
+							</p>
+						</div>
+						<hr>
+						<p><strong>Project Status</strong></p>
+						<p><a href="https://github.com/favware/node-packages/blob/master/LICENSE.md"><img src="https://img.shields.io/github/license/favware/node-packages?logo=github&style=flat-square" alt="GitHub"></a>
+						<a href="https://codecov.io/gh/favware/node-packages"><img src="https://img.shields.io/codecov/c/github/favware/node-packages?logo=codecov&style=flat-square" alt="Codecov"></a></p>
+						<p><strong>Bundle Sizes</strong></p>
+						<p><a href="https://bundlephobia.com/result?p=@favware/ytdl-prismplayer"><img src="https://img.shields.io/bundlephobia/min/@favware/ytdl-prismplayer?label=ytdl-prismplayer%20-%20minified&logo=webpack&style=flat-square" alt="npm bundle size"></a>
+							<a href="https://bundlephobia.com/result?p=@favware/ytdl-prismplayer"><img src="https://img.shields.io/bundlephobia/minzip/@favware/ytdl-prismplayer?label=ytdl-prismplayer%20-%20minzipped&logo=webpack&style=flat-square" alt="npm bundle size"></a>
+						<a href="https://www.npmjs.com/package/@favware/ytdl-prismplayer"><img src="https://img.shields.io/npm/v/@favware/ytdl-prismplayer?color=crimson&label=ytdl-prismplayer%20version&logo=npm&style=flat-square" alt="npm"></a></p>
+						<p><strong>Social Media and Donations</strong></p>
+						<p><a href="https://favware.tech/redirect/server"><img src="https://img.shields.io/discord/512303595966824458?color=697EC4&label=Join%20Discord%20Server&logo=discord&logoColor=FDFEFE&style=flat-square" alt="Join Discord server"></a>
+							<a href="https://twitter.com/Favna_/follow"><img src="https://img.shields.io/twitter/follow/favna_?label=Follow%20@Favna_&logo=twitter&colorB=1DA1F2&style=flat-square" alt="Twitter Follow"></a>
+							<a href="https://www.patreon.com/bePatron?u=9336537"><img src="https://img.shields.io/badge/patreon-donate-brightgreen.svg?label=Donate%20with%20Patreon&logo=patreon&colorB=F96854&style=flat-square&link=https://www.patreon.com/bePatron?u=9336537" alt="Patreon Donate"></a>
+						<a href="https://www.patreon.com/bePatron?u=9336537"><img src="https://img.shields.io/badge/paypal-donate-brightgreen.svg?label=Donate%20with%20Paypal&logo=paypal&colorB=00457C&style=flat-square&link=https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=XMAYCF9SDHZ34" alt="PayPal Donate"></a></p>
+						<hr>
+						<p>For compatible videos, this module uses <a href="https://github.com/amishshah/prism-media">prism-media</a>
+							to extract Opus or Vorbis audio from a stream without having to pipe it through FFmpeg first. This greatly
+							reduces the processing power required, making playback smoother and allowing you to play over
+						more connections simultaneously.</p>
+						<p>For videos where the required codec (webm + opus) isn&#39;t available, the module will fallback to
+							using FFmpeg to encode the stream in Opus. Many new videos on YouTube are available in this codec
+						so hopefully this isn&#39;t frequent.</p>
+						<p>Put simply, this module finds the most efficient way to extract a stream of Opus or Vorbis audio from a
+						YouTube video.</p>
+						<a href="#install" id="install" style="color: inherit; text-decoration: none;">
+							<h1>Install</h1>
+						</a>
+						<p>Install with <a href="https://yarnpkg.com">yarn</a> or <a href="https://www.npmjs.com/">npm</a>:</p>
+						<pre><code class="language-sh">yarn add @favware/ytdl-prismplayer ytdl-core prism-media
 
 <span class="hljs-comment"># npm install @favware/ytdl-prismplayer ytdl-core prism-media</span>
 <span class="hljs-comment"># ytdl-core and prism-media are mandatory peer dependencies</span></code></pre>
-					<hr>
-					<a href="#usage" id="usage" style="color: inherit; text-decoration: none;">
-						<h1>Usage</h1>
-					</a>
-					<p>Usage depends on the version of Discord.JS you are using, examples below. You can pass the exact same arguments as you would with the ytdl-core module, with the exception that you must <code>await</code> the function call.</p>
-					<a href="#usage-in-discordjs-11x" id="usage-in-discordjs-11x" style="color: inherit; text-decoration: none;">
-						<h3>Usage in Discord.js 11.x</h3>
-					</a>
-					<pre><code class="language-js"><span class="hljs-keyword">const</span> ytdl = <span class="hljs-built_in">require</span>(<span class="hljs-string">'@favware/ytdl-prismplayer'</span>);
+						<hr>
+						<a href="#usage" id="usage" style="color: inherit; text-decoration: none;">
+							<h1>Usage</h1>
+						</a>
+						<p>Usage depends on the version of Discord.JS you are using, examples below. You can pass the exact same arguments as you would with the ytdl-core module, with the exception that you must <code>await</code> the function call.</p>
+						<a href="#usage-in-discordjs-11x" id="usage-in-discordjs-11x" style="color: inherit; text-decoration: none;">
+							<h3>Usage in Discord.js 11.x</h3>
+						</a>
+						<pre><code class="language-js"><span class="hljs-keyword">const</span> ytdl = <span class="hljs-built_in">require</span>(<span class="hljs-string">'@favware/ytdl-prismplayer'</span>);
 <span class="hljs-comment">// import ytdl from '@favware/ytdl-prismplayer'</span>
 
 <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">play</span>(<span class="hljs-params">connection, url</span>) </span>{
   connection.playOpusStream(<span class="hljs-keyword">await</span> ytdl(url));
 }</code></pre>
-					<a href="#usage-in-discordjs-12x--master" id="usage-in-discordjs-12x--master" style="color: inherit; text-decoration: none;">
-						<h3>Usage in Discord.js 12.x / master</h3>
-					</a>
-					<pre><code class="language-js"><span class="hljs-keyword">const</span> ytdl = <span class="hljs-built_in">require</span>(<span class="hljs-string">'@favware/ytdl-prismplayer'</span>);
+						<a href="#usage-in-discordjs-12x--master" id="usage-in-discordjs-12x--master" style="color: inherit; text-decoration: none;">
+							<h3>Usage in Discord.js 12.x / master</h3>
+						</a>
+						<pre><code class="language-js"><span class="hljs-keyword">const</span> ytdl = <span class="hljs-built_in">require</span>(<span class="hljs-string">'@favware/ytdl-prismplayer'</span>);
 <span class="hljs-comment">// import ytdl from '@favware/ytdl-prismplayer'</span>
 
 <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">play</span>(<span class="hljs-params">connection, url</span>) </span>{
@@ -136,10 +141,10 @@
     <span class="hljs-attr">type</span>: <span class="hljs-string">'opus'</span>
   });
 }</code></pre>
-					<a href="#api-documentation" id="api-documentation" style="color: inherit; text-decoration: none;">
-						<h2><a href="https://favware.github.io/node-packages/modules/_favware_ytdl_prismplayer.html">API Documentation</a></h2>
-					</a>
-				</div>
+						<a href="#api-documentation" id="api-documentation" style="color: inherit; text-decoration: none;">
+							<h2><a href="https://favware.github.io/node-packages/modules/_favware_ytdl_prismplayer.html">API Documentation</a></h2>
+						</a>
+					</div>
 			</section>
 			<section class="tsd-panel-group tsd-index-group">
 				<h2>Index</h2>
@@ -173,7 +178,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/favware/node-packages/blob/5632408/packages/ytdl-prismplayer/src/index.ts#L62">packages/ytdl-prismplayer/src/index.ts:62</a></li>
+									<li>Defined in <a href="https://github.com/favware/node-packages/blob/3cbd324/packages/ytdl-prismplayer/src/index.ts#L62">packages/ytdl-prismplayer/src/index.ts:62</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
