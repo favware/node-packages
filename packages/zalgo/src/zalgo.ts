@@ -1,6 +1,6 @@
 import chars from './chars';
 import { ZalgoOptions, ZalgoCountsMap } from './interfaces';
-import { hasOwnProperty, unicodeStringSplitter, randomizer, ZalgoError } from './utils';
+import { unicodeStringSplitter, randomizer } from './utils';
 
 /**
  * Zalgofies any given text
@@ -25,10 +25,10 @@ export const zalgo = (
   try {
     if (!text) throw new Error('no_input');
     if (typeof text !== 'string') throw new Error('not_a_string');
-    if (!hasOwnProperty(options, 'up')) options.up = true;
-    if (!hasOwnProperty(options, 'middle')) options.middle = true;
-    if (!hasOwnProperty(options, 'down')) options.down = true;
-    if (!hasOwnProperty(options, 'size')) options.size = '';
+    if (!Reflect.has(options, 'up')) options.up = true;
+    if (!Reflect.has(options, 'middle')) options.middle = true;
+    if (!Reflect.has(options, 'down')) options.down = true;
+    if (!Reflect.has(options, 'size')) options.size = '';
 
     const splitText = unicodeStringSplitter(text);
     const splitTextLength = splitText.length;
@@ -37,9 +37,9 @@ export const zalgo = (
     let result = '';
     const types: string[] = [];
 
-    if (hasOwnProperty(options, 'up')) types.push('up');
-    if (hasOwnProperty(options, 'middle')) types.push('middle');
-    if (hasOwnProperty(options, 'down')) types.push('down');
+    if (Reflect.has(options, 'up')) types.push('up');
+    if (Reflect.has(options, 'middle')) types.push('middle');
+    if (Reflect.has(options, 'down')) types.push('down');
 
     for (let i = 0; i < splitTextLength; i++) {
       if (chars.pattern!.test(splitText[i])) continue;
@@ -74,9 +74,9 @@ export const zalgo = (
     return result;
   } catch (err) {
     if (/(?:no_input)/i.test(err.toString()))
-      throw new ZalgoError('The zalgo function at least requires some text as input!');
+      throw SyntaxError('The zalgo function at least requires some text as input!');
     if (/(?:not_a_string)/i.test(err.toString()))
-      throw new ZalgoError('The zalgo function expects input of type string as first argument!');
+      throw new SyntaxError('The zalgo function expects input of type string as first argument!');
     throw err;
   }
 };
@@ -98,9 +98,9 @@ export const banish = (purgeable: string): string => {
     return purgeable.replace(chars.pattern!, '');
   } catch (err) {
     if (/(?:no_input)/i.test(err.toString()))
-      throw new ZalgoError('The banish function at least requires some text as input!');
+      throw new SyntaxError('The banish function at least requires some text as input!');
     if (/(?:not_a_string)/i.test(err.toString()))
-      throw new ZalgoError('The banish function expects input of type string as first argument!');
+      throw new SyntaxError('The banish function expects input of type string as first argument!');
     throw err;
   }
 };

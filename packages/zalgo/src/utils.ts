@@ -1,16 +1,3 @@
-export class ZalgoError extends Error {
-  /**
-   * Create a ZalgoError
-   * @param message The message the error should show
-   */
-  constructor(message: string) {
-    super(message);
-    this.message = message;
-    this.name = 'ZalgoError';
-    this.stack = '';
-  }
-}
-
 /**
  * Splits a string into unicode compatible characters
  *
@@ -33,14 +20,6 @@ export const unicodeStringSplitter = (splittable: string): string[] => {
 
   return characters;
 };
-
-/**
- * Checks if object has a certain property
- *
- * @param obj Object to traverse
- * @param prop Property to find
- */
-export const hasOwnProperty = <O extends {}, K extends keyof O>(obj: O, prop: K) => obj && obj[prop];
 
 /**
  * Draws a random number given any maximum
