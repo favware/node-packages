@@ -31,8 +31,8 @@ Object {
       Object {
         "ts-check": false,
         "ts-expect-error": false,
-        "ts-ignore": "allow-with-description",
-        "ts-nocheck": "allow-with-description",
+        "ts-ignore": true,
+        "ts-nocheck": true,
       },
     ],
     "@typescript-eslint/consistent-type-definitions": Array [

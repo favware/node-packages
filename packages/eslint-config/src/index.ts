@@ -67,8 +67,8 @@ export const config = {
       'error',
       {
         'ts-expect-error': false,
-        'ts-ignore': 'allow-with-description',
-        'ts-nocheck': 'allow-with-description',
+        'ts-ignore': true, // 'allow-with-description',
+        'ts-nocheck': true, // 'allow-with-description',
         'ts-check': false
       }
     ],
