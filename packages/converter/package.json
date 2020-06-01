@@ -15,15 +15,12 @@
     "build": "tsc -b src",
     "start": "yarn build -w"
   },
-  "dependencies": {
-    "array-flat-polyfill": "^1.0.1"
-  },
   "files": [
     "dist",
     "!dist/.tsbuildinfo"
   ],
   "engines": {
-    "node": ">=10",
+    "node": ">=12",
     "npm": ">=6"
   },
   "repository": {

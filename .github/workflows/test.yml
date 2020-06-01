@@ -13,7 +13,7 @@ jobs:
     if: "!contains(github.event.head_commit.message, '[skip ci]')"
     strategy:
       matrix:
-        node_version: [10, 12, 13]
+        node_version: [12, 14]
         os: [ubuntu-latest, windows-latest, macOS-latest]
 
     steps:
