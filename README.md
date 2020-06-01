@@ -39,9 +39,6 @@
 [![npm bundle size](https://img.shields.io/bundlephobia/min/@favware/zalgo?label=zalgo%20-%20minified&logo=webpack&style=flat-square)](https://bundlephobia.com/result?p=@favware/zalgo)
 [![npm bundle size](https://img.shields.io/bundlephobia/minzip/@favware/zalgo?label=zalgo%20-%20minzipped&logo=webpack&style=flat-square)](https://bundlephobia.com/result?p=@favware/zalgo)
 
-[![npm bundle size](https://img.shields.io/bundlephobia/min/@favware/ts-config?label=tsconfig%20-%20minified&logo=webpack&style=flat-square)](https://bundlephobia.com/result?p=@favware/ts-config)
-[![npm bundle size](https://img.shields.io/bundlephobia/minzip/@favware/ts-config?label=tsconfig%20-%20minzipped&logo=webpack&style=flat-square)](https://bundlephobia.com/result?p=@favware/ts-config)
-
 **NPM Versions**
 
 [![npm](https://img.shields.io/npm/v/@favware/converter?color=crimson&label=converter%20version&logo=npm&style=flat-square)](https://www.npmjs.com/package/@favware/converter)

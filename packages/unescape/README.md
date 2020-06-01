@@ -1,10 +1,11 @@
 <div align="center">
 
-<h1> <b><i>DEPRECATED</i></b>
+<h1> <b><i>DEPRECATED</i></b></h1>
 
+<h2 style='line-height: 2.5rem;text-decoration: underline'>
 Work on this package has stopped in favor of <a href="https://www.npmjs.com/package/confusables">confusables</a> from developer <a href="https://github.com/gc">gc</a>, a package which I have also contributed to and has a much better feature set and far better performance
+</h2>
 
-</h1>
 
 ---
 

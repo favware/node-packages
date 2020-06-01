@@ -1,10 +1,10 @@
 <div align="center">
 
-<h1> <b><i>DEPRECATED</i></b>
+<h1> <b><i>DEPRECATED</i></b></h1>
 
+<h2 style='line-height: 2.5rem;text-decoration: underline'>
 Work on this package has stopped in favor of <a href="https://github.com/lavacord">lavacord</a>, a set of packages that aims to give great music support to your Discord bot using <a href="https://github.com/Frederikam/Lavalink">Lavalink</a>. Furthermore, we also no longer support the development of Discord.JS in favor of <a href="https://github.com/dirigeants/core">@klasa/core</a>
-
-</h1>
+</h2>
 
 ---
 

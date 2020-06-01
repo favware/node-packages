@@ -16,10 +16,8 @@
 [![GitHub](https://img.shields.io/github/license/favware/node-packages?logo=github&style=flat-square)](https://github.com/favware/node-packages/blob/master/LICENSE.md)
 [![Codecov](https://img.shields.io/codecov/c/github/favware/node-packages?logo=codecov&style=flat-square)](https://codecov.io/gh/favware/node-packages)
 
-**Bundle Sizes**
+**Package Info Sizes**
 
-[![npm bundle size](https://img.shields.io/bundlephobia/min/@favware/ts-config?label=tsconfig%20-%20minified&logo=webpack&style=flat-square)](https://bundlephobia.com/result?p=@favware/ts-config)
-[![npm bundle size](https://img.shields.io/bundlephobia/minzip/@favware/ts-config?label=tsconfig%20-%20minzipped&logo=webpack&style=flat-square)](https://bundlephobia.com/result?p=@favware/ts-config)
 [![npm](https://img.shields.io/npm/v/@favware/ts-config?color=crimson&label=tsconfig%20version&logo=npm&style=flat-square)](https://www.npmjs.com/package/@favware/ts-config)
 
 **Social Media and Donations**
