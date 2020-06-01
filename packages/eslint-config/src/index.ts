@@ -34,7 +34,6 @@ export const config = {
     '@typescript-eslint/no-non-null-assertion': 'off',
     '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/consistent-type-definitions': ['error', 'interface'],
-    '@typescript-eslint/interface-name-prefix': ['error', { prefixWithI: 'never' }],
     '@typescript-eslint/no-for-in-array': 'warn',
     '@typescript-eslint/no-unnecessary-qualifier': 'warn',
     '@typescript-eslint/no-unnecessary-type-assertion': 'warn',
@@ -42,6 +41,28 @@ export const config = {
     '@typescript-eslint/prefer-for-of': 'warn',
     '@typescript-eslint/prefer-includes': 'warn',
     '@typescript-eslint/unified-signatures': 'warn',
+    '@typescript-eslint/naming-convention': [
+      'error',
+      {
+        selector: 'default',
+        format: ['camelCase'],
+        leadingUnderscore: 'forbid',
+        trailingUnderscore: 'forbid',
+        filter: { regex: '^(?:VariableDeclarator|AssignmentExpression)$', match: false }
+      },
+      {
+        selector: 'parameter',
+        format: ['camelCase'],
+        leadingUnderscore: 'allow'
+      },
+      {
+        selector: 'property',
+        modifiers: ['readonly'],
+        format: ['PascalCase']
+      },
+      { selector: 'enumMember', format: ['PascalCase'] },
+      { selector: 'typeLike', format: ['PascalCase'] }
+    ],
 
     // Best Practices
     eqeqeq: ['error', 'smart'],

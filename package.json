@@ -16,7 +16,6 @@
     "up": "yarn upgrade-interactive --latest",
     "scripts:runner": "ts-node -P tsconfig.eslint.json",
     "scripts:validateNoOnly": "yarn scripts:runner scripts/validateNoOnly",
-    "scripts:duplicateESLintConfig": "yarn scripts:runner scripts/duplicateESLintConfig",
     "now.sh": "yarn docs && rm -rf packages scripts node_modules"
   },
   "devDependencies": {
@@ -58,9 +57,6 @@
     "*.{js,ts}": [
       "eslint --fix --ext js,ts",
       "prettier --write"
-    ],
-    "packages/eslint-config/src/index.ts": [
-      "yarn scripts:duplicateESLintConfig"
     ]
   },
   "config": {

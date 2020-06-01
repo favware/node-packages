@@ -5,7 +5,7 @@
   "name": "Favware Node Packages",
   "exclude": ["**/node_modules/**", "**/*.test.ts", "**/*.js", "**/rollup.config.ts"],
   "mode": "modules",
-  "pathExclude": ["scripts/duplicateESLintConfig", "scripts/validateNoOnly"],
+  "pathExclude": ["scripts/validateNoOnly"],
   "excludeExternals": true,
   "excludePrivate": true,
   "excludeProtected": true,

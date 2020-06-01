@@ -31,10 +31,47 @@ Object {
       "interface",
     ],
     "@typescript-eslint/explicit-function-return-type": "off",
-    "@typescript-eslint/interface-name-prefix": Array [
+    "@typescript-eslint/naming-convention": Array [
       "error",
       Object {
-        "prefixWithI": "never",
+        "filter": Object {
+          "match": false,
+          "regex": "^(?:VariableDeclarator|AssignmentExpression)$",
+        },
+        "format": Array [
+          "camelCase",
+        ],
+        "leadingUnderscore": "forbid",
+        "selector": "default",
+        "trailingUnderscore": "forbid",
+      },
+      Object {
+        "format": Array [
+          "camelCase",
+        ],
+        "leadingUnderscore": "allow",
+        "selector": "parameter",
+      },
+      Object {
+        "format": Array [
+          "PascalCase",
+        ],
+        "modifiers": Array [
+          "readonly",
+        ],
+        "selector": "property",
+      },
+      Object {
+        "format": Array [
+          "PascalCase",
+        ],
+        "selector": "enumMember",
+      },
+      Object {
+        "format": Array [
+          "PascalCase",
+        ],
+        "selector": "typeLike",
       },
     ],
     "@typescript-eslint/no-for-in-array": "warn",
