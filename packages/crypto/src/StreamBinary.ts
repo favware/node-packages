@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 class StreamBinary {
-  private readonly bases: any;
+  private readonly Bases: any;
 
   constructor(sequence: Buffer, bits: number = sequence instanceof Buffer ? 8 : 1) {
     const n = sequence.length;
@@ -17,7 +17,7 @@ class StreamBinary {
 
     binary = binary.split('').map((bin: string) => parseInt(bin, 2));
 
-    this.bases = { '2': binary };
+    this.Bases = { '2': binary };
   }
 
   private static get(sequence: Buffer, offset: number) {
@@ -57,12 +57,12 @@ class StreamBinary {
   }
 
   private push(base: number, value: number) {
-    this.bases[base] = this.bases[base] || [];
-    this.bases[base].push(value);
+    this.Bases[base] = this.Bases[base] || [];
+    this.Bases[base].push(value);
   }
 
   private shift(base: number, k: number) {
-    const list = this.bases[base];
+    const list = this.Bases[base];
     if (!list || list.length < k) return null;
 
     return list.splice(0, k);

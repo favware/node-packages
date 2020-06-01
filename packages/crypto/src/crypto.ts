@@ -1,6 +1,6 @@
 import { randomBytes } from 'crypto';
 import StreamBinary from './StreamBinary';
-import { CHARACTERS, CryptoError, DEFAULT_BITS, DEFAULT_RADIX, Radix } from './util';
+import { characters, CryptoError, defaultBits, defaultRadix, Radix } from './util';
 
 /**
  * Generates a cryptographic string given an amount of bits and a base radix
@@ -13,7 +13,7 @@ import { CHARACTERS, CryptoError, DEFAULT_BITS, DEFAULT_RADIX, Radix } from './u
  * crypto(160, 64)
  * ```
  */
-export const crypto = (bits: number = DEFAULT_BITS, radix: Radix = DEFAULT_RADIX): string => {
+export const crypto = (bits: number = defaultBits, radix: Radix = defaultRadix): string => {
   try {
     if (typeof bits !== 'number') throw new Error('bits_not_number');
     if (typeof radix !== 'number') throw new Error('radix_not_string');
@@ -25,7 +25,7 @@ export const crypto = (bits: number = DEFAULT_BITS, radix: Radix = DEFAULT_RADIX
     let result = '';
 
     while (result.length < length) {
-      result += CHARACTERS[stream.generate(radix)];
+      result += characters[stream.generate(radix)];
     }
 
     return result;

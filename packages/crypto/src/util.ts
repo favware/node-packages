@@ -1,10 +1,10 @@
 /** Possible options to use as the radix */
 export enum Radix {
-  'base16' = 16,
-  'base32' = 32,
-  'base36' = 36,
-  'base58' = 58,
-  'base64' = 64
+  'Base16' = 16,
+  'Base32' = 32,
+  'Base36' = 36,
+  'Base58' = 58,
+  'Base64' = 64
 }
 
 export class CryptoError extends Error {
@@ -16,6 +16,6 @@ export class CryptoError extends Error {
   }
 }
 
-export const DEFAULT_BITS = 36;
-export const DEFAULT_RADIX = Radix.base64;
-export const CHARACTERS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/'.split('');
+export const defaultBits = 36;
+export const defaultRadix = Radix.Base64;
+export const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/'.split('');
