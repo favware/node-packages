@@ -26,16 +26,19 @@
 
 [![npm bundle size](https://img.shields.io/bundlephobia/min/@favware/eslint-config?label=eslint-config%20-%20minified&logo=webpack&style=flat-square)](https://bundlephobia.com/result?p=@favware/eslint-config)
 [![npm bundle size](https://img.shields.io/bundlephobia/minzip/@favware/eslint-config?label=eslint-config%20-%20minzipped&logo=webpack&style=flat-square)](https://bundlephobia.com/result?p=@favware/eslint-config)
+[![npm bundle size](https://img.shields.io/bundlephobia/min/@favware/eslint-config-react-app?label=eslint-config-react-app%20-%20minified&logo=webpack&style=flat-square)](https://bundlephobia.com/result?p=@favware/eslint-config-react-app)
+[![npm bundle size](https://img.shields.io/bundlephobia/minzip/@favware/eslint-config-react-app?label=eslint-config-react-app%20-%20minzipped&logo=webpack&style=flat-square)](https://bundlephobia.com/result?p=@favware/eslint-config-react-app)
+
 [![npm bundle size](https://img.shields.io/bundlephobia/min/@favware/querystring?label=querystring%20-%20minified&logo=webpack&style=flat-square)](https://bundlephobia.com/result?p=@favware/querystring)
 [![npm bundle size](https://img.shields.io/bundlephobia/minzip/@favware/querystring?label=querystring%20-%20minzipped&logo=webpack&style=flat-square)](https://bundlephobia.com/result?p=@favware/querystring)
-
 [![npm bundle size](https://img.shields.io/bundlephobia/min/@favware/unescape?label=unescape%20-%20minified&logo=webpack&style=flat-square)](https://bundlephobia.com/result?p=@favware/unescape)
 [![npm bundle size](https://img.shields.io/bundlephobia/minzip/@favware/unescape?label=unescape%20-%20minzipped&logo=webpack&style=flat-square)](https://bundlephobia.com/result?p=@favware/unescape)
+
 [![npm bundle size](https://img.shields.io/bundlephobia/min/@favware/yamlreader?label=yamlreader%20-%20minified&logo=webpack&style=flat-square)](https://bundlephobia.com/result?p=@favware/yamlreader)
 [![npm bundle size](https://img.shields.io/bundlephobia/minzip/@favware/yamlreader?label=yamlreader%20-%20minzipped&logo=webpack&style=flat-square)](https://bundlephobia.com/result?p=@favware/yamlreader)
-
 [![npm bundle size](https://img.shields.io/bundlephobia/min/@favware/ytdl-prismplayer?label=ytdl-prismplayer%20-%20minified&logo=webpack&style=flat-square)](https://bundlephobia.com/result?p=@favware/ytdl-prismplayer)
 [![npm bundle size](https://img.shields.io/bundlephobia/minzip/@favware/ytdl-prismplayer?label=ytdl-prismplayer%20-%20minzipped&logo=webpack&style=flat-square)](https://bundlephobia.com/result?p=@favware/ytdl-prismplayer)
+
 [![npm bundle size](https://img.shields.io/bundlephobia/min/@favware/zalgo?label=zalgo%20-%20minified&logo=webpack&style=flat-square)](https://bundlephobia.com/result?p=@favware/zalgo)
 [![npm bundle size](https://img.shields.io/bundlephobia/minzip/@favware/zalgo?label=zalgo%20-%20minzipped&logo=webpack&style=flat-square)](https://bundlephobia.com/result?p=@favware/zalgo)
 
@@ -44,13 +47,14 @@
 [![npm](https://img.shields.io/npm/v/@favware/converter?color=crimson&label=converter%20version&logo=npm&style=flat-square)](https://www.npmjs.com/package/@favware/converter)
 [![npm](https://img.shields.io/npm/v/@favware/crypto?color=crimson&label=crypto%20version&logo=npm&style=flat-square)](https://www.npmjs.com/package/@favware/crypto)
 [![npm](https://img.shields.io/npm/v/@favware/eslint-config?color=crimson&label=eslint-config%20version&logo=npm&style=flat-square)](https://www.npmjs.com/package/@favware/eslint-config)
-[![npm](https://img.shields.io/npm/v/@favware/querystring?color=crimson&label=querystring%20version&logo=npm&style=flat-square)](https://www.npmjs.com/package/@favware/querystring)
+[![npm](https://img.shields.io/npm/v/@favware/eslint-config-react-app?color=crimson&label=eslint-config-react-app%20version&logo=npm&style=flat-square)](https://www.npmjs.com/package/@favware/eslint-config-react-app)
 
+[![npm](https://img.shields.io/npm/v/@favware/querystring?color=crimson&label=querystring%20version&logo=npm&style=flat-square)](https://www.npmjs.com/package/@favware/querystring)
 [![npm](https://img.shields.io/npm/v/@favware/unescape?color=crimson&label=unescape%20version&logo=npm&style=flat-square)](https://www.npmjs.com/package/@favware/unescape)
 [![npm](https://img.shields.io/npm/v/@favware/yamlreader?color=crimson&label=yamlreader%20version&logo=npm&style=flat-square)](https://www.npmjs.com/package/@favware/yamlreader)
 [![npm](https://img.shields.io/npm/v/@favware/ytdl-prismplayer?color=crimson&label=ytdl-prismplayer%20version&logo=npm&style=flat-square)](https://www.npmjs.com/package/@favware/ytdl-prismplayer)
-[![npm](https://img.shields.io/npm/v/@favware/zalgo?color=crimson&label=zalgo%20version&logo=npm&style=flat-square)](https://www.npmjs.com/package/@favware/zalgo)
 
+[![npm](https://img.shields.io/npm/v/@favware/zalgo?color=crimson&label=zalgo%20version&logo=npm&style=flat-square)](https://www.npmjs.com/package/@favware/zalgo)
 [![npm](https://img.shields.io/npm/v/@favware/ts-config?color=crimson&label=tsconfig%20version&logo=npm&style=flat-square)](https://www.npmjs.com/package/@favware/ts-config)
 
 **Social Media and Donations**

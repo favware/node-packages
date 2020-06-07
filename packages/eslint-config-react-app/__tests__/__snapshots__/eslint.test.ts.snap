@@ -1,0 +1,215 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ESLint Config should export rules 1`] = `
+Object {
+  "extends": Array [
+    "@favware",
+    "plugin:import/typescript",
+  ],
+  "parserOptions": Object {
+    "ecmaFeatures": Object {
+      "jsx": true,
+    },
+    "ecmaVersion": 2019,
+    "jsx": true,
+    "project": "./tsconfig.eslint.json",
+    "sourceType": "module",
+  },
+  "plugins": Array [
+    "import",
+    "jsx-a11y",
+    "react",
+    "react-hooks",
+  ],
+  "root": true,
+  "rules": Object {
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@typescript-eslint/naming-convention": Array [
+      "error",
+      Object {
+        "filter": Object {
+          "match": false,
+          "regex": "^(?:VariableDeclarator|AssignmentExpression)$",
+        },
+        "format": Array [
+          "camelCase",
+          "PascalCase",
+          "UPPER_CASE",
+        ],
+        "leadingUnderscore": "forbid",
+        "selector": "default",
+        "trailingUnderscore": "forbid",
+      },
+      Object {
+        "format": Array [
+          "camelCase",
+          "PascalCase",
+          "UPPER_CASE",
+        ],
+        "leadingUnderscore": "allow",
+        "selector": "parameter",
+      },
+      Object {
+        "format": Array [
+          "PascalCase",
+        ],
+        "modifiers": Array [
+          "readonly",
+        ],
+        "selector": "property",
+      },
+      Object {
+        "format": Array [
+          "PascalCase",
+        ],
+        "selector": "enumMember",
+      },
+      Object {
+        "format": Array [
+          "PascalCase",
+        ],
+        "selector": "typeLike",
+      },
+    ],
+    "getter-return": "warn",
+    "import/first": "error",
+    "import/no-amd": "error",
+    "import/no-webpack-loader-syntax": "error",
+    "jsx-a11y/accessible-emoji": "warn",
+    "jsx-a11y/alt-text": "warn",
+    "jsx-a11y/anchor-has-content": "warn",
+    "jsx-a11y/anchor-is-valid": Array [
+      "warn",
+      Object {
+        "aspects": Array [
+          "noHref",
+          "invalidHref",
+        ],
+      },
+    ],
+    "jsx-a11y/aria-activedescendant-has-tabindex": "warn",
+    "jsx-a11y/aria-props": "warn",
+    "jsx-a11y/aria-proptypes": "warn",
+    "jsx-a11y/aria-role": Array [
+      "warn",
+      Object {
+        "ignoreNonDOM": true,
+      },
+    ],
+    "jsx-a11y/aria-unsupported-elements": "warn",
+    "jsx-a11y/heading-has-content": "warn",
+    "jsx-a11y/iframe-has-title": "warn",
+    "jsx-a11y/img-redundant-alt": "warn",
+    "jsx-a11y/no-access-key": "warn",
+    "jsx-a11y/no-distracting-elements": "warn",
+    "jsx-a11y/no-redundant-roles": "warn",
+    "jsx-a11y/role-has-required-aria-props": "warn",
+    "jsx-a11y/role-supports-aria-props": "warn",
+    "jsx-a11y/scope": "warn",
+    "no-extra-label": "warn",
+    "no-invalid-this": "off",
+    "no-iterator": "warn",
+    "no-label-var": "warn",
+    "no-labels": Array [
+      "warn",
+      Object {
+        "allowLoop": true,
+        "allowSwitch": true,
+      },
+    ],
+    "no-lone-blocks": "warn",
+    "no-loop-func": "warn",
+    "no-mixed-operators": Array [
+      "warn",
+      Object {
+        "allowSamePrecedence": false,
+        "groups": Array [
+          Array [
+            "&",
+            "|",
+            "^",
+            "~",
+            "<<",
+            ">>",
+            ">>>",
+          ],
+          Array [
+            "==",
+            "!=",
+            "===",
+            "!==",
+            ">",
+            ">=",
+            "<",
+            "<=",
+          ],
+          Array [
+            "&&",
+            "||",
+          ],
+          Array [
+            "in",
+            "instanceof",
+          ],
+        ],
+      },
+    ],
+    "no-multi-str": "warn",
+    "no-restricted-properties": Array [
+      "error",
+      Object {
+        "message": "Please use import() instead. More info: https://facebook.github.io/create-react-app/docs/code-splitting",
+        "object": "require",
+        "property": "ensure",
+      },
+      Object {
+        "message": "Please use import() instead. More info: https://facebook.github.io/create-react-app/docs/code-splitting",
+        "object": "System",
+        "property": "import",
+      },
+    ],
+    "react-hooks/exhaustive-deps": "warn",
+    "react-hooks/rules-of-hooks": "error",
+    "react/forbid-foreign-prop-types": Array [
+      "warn",
+      Object {
+        "allowInPropTypes": true,
+      },
+    ],
+    "react/jsx-no-comment-textnodes": "warn",
+    "react/jsx-no-duplicate-props": "warn",
+    "react/jsx-no-target-blank": "warn",
+    "react/jsx-no-undef": "error",
+    "react/jsx-pascal-case": Array [
+      "warn",
+      Object {
+        "allowAllCaps": true,
+        "ignore": Array [],
+      },
+    ],
+    "react/jsx-uses-react": "warn",
+    "react/jsx-uses-vars": "warn",
+    "react/no-access-state-in-setstate": "warn",
+    "react/no-children-prop": "warn",
+    "react/no-danger": "error",
+    "react/no-danger-with-children": "warn",
+    "react/no-direct-mutation-state": "warn",
+    "react/no-is-mounted": "warn",
+    "react/no-this-in-sfc": "warn",
+    "react/no-typos": "error",
+    "react/react-in-jsx-scope": "error",
+    "react/require-render-return": "error",
+    "react/style-prop-object": "warn",
+    "react/void-dom-elements-no-children": "warn",
+    "rest-spread-spacing": Array [
+      "warn",
+      "never",
+    ],
+  },
+  "settings": Object {
+    "react": Object {
+      "version": "detect",
+    },
+  },
+}
+`;

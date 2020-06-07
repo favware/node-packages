@@ -1,0 +1,57 @@
+{
+  "name": "@favware/eslint-config-react-app",
+  "version": "1.0.0",
+  "description": "Standard ESLint config for Favware projects using React + TypeScript",
+  "author": "@favware",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "module": "dist/index.es.js",
+  "types": "dist/index.d.ts",
+  "homepage": "https://github.com/favware/node-packages/tree/master/packages/eslint-config-react-app#readme",
+  "scripts": {
+    "test": "jest",
+    "prelint": "yarn test && yarn build",
+    "lint": "eslint src __tests__ --ext js,ts --fix -c dist/index.js",
+    "build": "tsc -b src",
+    "prepublishOnly": "yarn lint"
+  },
+  "dependencies": {
+    "@favware/eslint-config": "^5.0.0",
+    "eslint-plugin-react-hooks": "^4.0.4",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.20.0"
+  },
+  "files": [
+    "dist",
+    "!dist/.tsbuildinfo"
+  ],
+  "engines": {
+    "node": ">=12",
+    "npm": ">=6"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/favware/node-packages.git",
+    "directory": "packages/eslint-config-react-app"
+  },
+  "bugs": {
+    "url": "https://github.com/favware/node-packages/issues"
+  },
+  "keywords": [
+    "eslint-config",
+    "react",
+    "nextjs",
+    "create-react-app",
+    "favware",
+    "typescript",
+    "ts"
+  ],
+  "directories": {
+    "lib": "src",
+    "test": "__tests__"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
