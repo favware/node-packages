@@ -3,6 +3,30 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.0.0](https://github.com/favware/node-packages/compare/@favware/zalgo@2.0.0...@favware/zalgo@3.0.0) (2020-06-07)
+
+
+### chore
+
+* drop support for NodeJS v10 ([5632408](https://github.com/favware/node-packages/commit/56324085cb35a10eecaec28f619fae01417055a7))
+
+
+### Code Refactoring
+
+* **zalgo:** removed ZalgoError and hasOwnProperty ([187f8d4](https://github.com/favware/node-packages/commit/187f8d405477786f3b72b203fa5d2c1a4c3ab5fe))
+
+
+### BREAKING CHANGES
+
+* **zalgo:** hasOwnProperty is now replaced with Reflect API and no longer exported.
+ZalgoError's have been replaced with SyntaxErrors as that's what they actually were
+* NodeJS v10 is no longer LTS and was forcing the inclusions of a polyfill on
+@favware/converter. By making NodeJS v12 the minimum required version this polyfill can be removed.
+
+
+
+
+
 # [2.0.0](https://github.com/favware/node-packages/compare/@favware/zalgo@2.0.0-canary.0...@favware/zalgo@2.0.0) (2020-05-06)
 
 **Note:** Version bump only for package @favware/zalgo

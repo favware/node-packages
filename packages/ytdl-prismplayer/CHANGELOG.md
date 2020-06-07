@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.0.0](https://github.com/favware/node-packages/compare/@favware/ytdl-prismplayer@3.0.0...@favware/ytdl-prismplayer@4.0.0) (2020-06-07)
+
+
+### chore
+
+* drop support for NodeJS v10 ([5632408](https://github.com/favware/node-packages/commit/56324085cb35a10eecaec28f619fae01417055a7))
+* **ytdl-core:** add note of deprecation ([df6522a](https://github.com/favware/node-packages/commit/df6522a3d65fc83c780f0b900efe2336794ab325))
+
+
+### BREAKING CHANGES
+
+* **ytdl-core:** DEPRECATED: ytdl-primsplayer will no longer be worked on. For more information, see
+README
+* NodeJS v10 is no longer LTS and was forcing the inclusions of a polyfill on
+@favware/converter. By making NodeJS v12 the minimum required version this polyfill can be removed.
+
+
+
+
+
 # [3.0.0](https://github.com/favware/node-packages/compare/@favware/ytdl-prismplayer@3.0.0-canary.0...@favware/ytdl-prismplayer@3.0.0) (2020-05-06)
 
 **Note:** Version bump only for package @favware/ytdl-prismplayer

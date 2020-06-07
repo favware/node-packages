@@ -3,6 +3,29 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [6.0.0](https://github.com/favware/node-packages/compare/@favware/querystring@5.0.0...@favware/querystring@6.0.0) (2020-06-07)
+
+
+### chore
+
+* drop support for NodeJS v10 ([5632408](https://github.com/favware/node-packages/commit/56324085cb35a10eecaec28f619fae01417055a7))
+
+
+### Features
+
+* **querystring:** remove objectHasProperty in favour of Reflect API ([5ce1aa7](https://github.com/favware/node-packages/commit/5ce1aa7d604563851cf9baa6216e4fa124663c20))
+
+
+### BREAKING CHANGES
+
+* **querystring:** objectHasProperty is no longer exported, as this lib now prefers Reflect API
+* NodeJS v10 is no longer LTS and was forcing the inclusions of a polyfill on
+@favware/converter. By making NodeJS v12 the minimum required version this polyfill can be removed.
+
+
+
+
+
 # [5.0.0](https://github.com/favware/node-packages/compare/@favware/querystring@5.0.0-canary.0...@favware/querystring@5.0.0) (2020-05-06)
 
 **Note:** Version bump only for package @favware/querystring

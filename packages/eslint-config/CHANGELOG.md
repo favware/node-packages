@@ -3,6 +3,35 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.0.0](https://github.com/favware/node-packages/compare/@favware/eslint-config@4.0.0...@favware/eslint-config@5.0.0) (2020-06-07)
+
+
+### Bug Fixes
+
+* officially drop support for Node v8 and TS <= 3.2 ([f71949e](https://github.com/favware/node-packages/commit/f71949e5de0da0c1983b4b484b095e67061f6cbf))
+* **eslint-config:** fixed ban-ts-comment rule ([f83a26c](https://github.com/favware/node-packages/commit/f83a26c513c8653c60b7ddef3b8bd7d7c0a4350c))
+* **eslint-config:** fixed rules ([c2cb42b](https://github.com/favware/node-packages/commit/c2cb42b585cef4e4fd0951dad19689be930ff96e))
+
+
+### chore
+
+* drop support for NodeJS v10 ([5632408](https://github.com/favware/node-packages/commit/56324085cb35a10eecaec28f619fae01417055a7))
+
+
+### Features
+
+* **eslint-config:** specify rules for banning // [@ts](https://github.com/ts)-<directive> ([9985881](https://github.com/favware/node-packages/commit/9985881e7997f3b8449e0ab0bee2374e55c138bd))
+
+
+### BREAKING CHANGES
+
+* NodeJS v10 is no longer LTS and was forcing the inclusions of a polyfill on
+@favware/converter. By making NodeJS v12 the minimum required version this polyfill can be removed.
+
+
+
+
+
 # [4.0.0](https://github.com/favware/node-packages/compare/@favware/eslint-config@4.0.0-canary.0...@favware/eslint-config@4.0.0) (2020-05-06)
 
 **Note:** Version bump only for package @favware/eslint-config

@@ -1,6 +1,6 @@
 {
   "name": "@favware/crypto",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "Secure random numbers of any size in any base",
   "author": "@favware",
   "license": "MIT",
