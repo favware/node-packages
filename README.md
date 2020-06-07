@@ -93,7 +93,7 @@ Pull requests and stars are always welcome. For bugs and feature requests, [plea
 ### License
 
 Copyright © 2019, [Favware](https://github.com/favware).
-Released under the [MIT License](LICENSE).
+Released under the [MIT License](LICENSE.md).
 
 ### Buy us a donut
 
