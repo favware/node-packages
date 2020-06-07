@@ -15,7 +15,7 @@
 **Project Status**
 
 [![GitHub](https://img.shields.io/github/license/favware/node-packages?logo=github&style=flat-square)](https://github.com/favware/node-packages/blob/master/LICENSE.md)
-[![Codecov](https://img.shields.io/codecov/c/github/favware/node-packages?logo=codecov&style=flat-square)](https://codecov.io/gh/favware/node-packages)
+[![Coverage Status](https://coveralls.io/repos/github/favware/node-packages/badge.svg?branch=master)](https://coveralls.io/github/favware/node-packages?branch=master)
 
 **Bundle Sizes**
 

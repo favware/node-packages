@@ -6,7 +6,6 @@
 Work on this package has stopped in favor of <a href="https://www.npmjs.com/package/confusables">confusables</a> from developer <a href="https://github.com/gc">gc</a>, a package which I have also contributed to and has a much better feature set and far better performance
 </h2>
 
-
 ---
 
   <p>
@@ -24,7 +23,7 @@ Work on this package has stopped in favor of <a href="https://www.npmjs.com/pack
 **Project Status**
 
 [![GitHub](https://img.shields.io/github/license/favware/node-packages?logo=github&style=flat-square)](https://github.com/favware/node-packages/blob/master/LICENSE.md)
-[![Codecov](https://img.shields.io/codecov/c/github/favware/node-packages?logo=codecov&style=flat-square)](https://codecov.io/gh/favware/node-packages)
+[![Coverage Status](https://coveralls.io/repos/github/favware/node-packages/badge.svg?branch=master)](https://coveralls.io/github/favware/node-packages?branch=master)
 
 **Bundle Sizes**
 
