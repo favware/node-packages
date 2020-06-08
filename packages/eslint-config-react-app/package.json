@@ -1,6 +1,6 @@
 {
   "name": "@favware/eslint-config-react-app",
-  "version": "0.0.1",
+  "version": "0.1.0-alpha.0",
   "description": "Standard ESLint config for Favware projects using React + TypeScript",
   "author": "@favware",
   "license": "MIT",
@@ -17,10 +17,10 @@
   },
   "dependencies": {
     "@favware/eslint-config": "^5.0.0",
-    "eslint-plugin-react-hooks": "^4.0.4",
     "eslint-plugin-import": "^2.20.2",
     "eslint-plugin-jsx-a11y": "^6.2.3",
-    "eslint-plugin-react": "^7.20.0"
+    "eslint-plugin-react": "^7.20.0",
+    "eslint-plugin-react-hooks": "^4.0.4"
   },
   "files": [
     "dist",
