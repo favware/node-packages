@@ -4,12 +4,11 @@ about: Request a feature for any package
 title: 'feat: '
 labels: 'Meta: Feature'
 assignees: ''
-
 ---
 
 <!--
 If you need help with the library installation or usage, please go to the Discord server instead:
-  https://favware.tech/redirect/server
+  https://join.favware.tech
 This issue tracker is only for bug reports and enhancement suggestions.
 You likely won't receive any basic help here.
 -->
@@ -27,6 +26,7 @@ A clear and concise description of any alternative solutions or features you've 
 Add any other context or screenshots about the feature request here.
 
 **Further details:**
+
 - Affected package(s):
 - Version of the package:
 - Priority this request should have – please be realistic and elaborate if possible:
