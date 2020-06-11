@@ -16,7 +16,7 @@
     "prepublishOnly": "yarn lint"
   },
   "dependencies": {
-    "@favware/eslint-config": "^5.0.0",
+    "@favware/eslint-config": "latest",
     "eslint-plugin-import": "^2.20.2",
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.20.0",
