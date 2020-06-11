@@ -72,6 +72,7 @@ export const config = {
         'ts-check': false
       }
     ],
+    '@typescript-eslint/no-namespace': 'off',
 
     // Best Practices
     eqeqeq: ['error', 'smart'],
