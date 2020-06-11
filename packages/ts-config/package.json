@@ -1,6 +1,6 @@
 {
   "name": "@favware/ts-config",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "Shareable TypeScript configuration for all Favware projects",
   "author": "@favware",
   "license": "MIT",

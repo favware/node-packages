@@ -1,6 +1,6 @@
 {
   "name": "@favware/eslint-config-react-app",
-  "version": "0.1.0-alpha.0",
+  "version": "0.1.0-alpha.1",
   "description": "Standard ESLint config for Favware projects using React + TypeScript",
   "author": "@favware",
   "license": "MIT",
