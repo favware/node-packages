@@ -484,6 +484,15 @@
     unique-filename "^1.1.1"
     which "^1.3.1"
 
+"@favware/eslint-config@latest":
+  version "5.0.1"
+  resolved "https://registry.yarnpkg.com/@favware/eslint-config/-/eslint-config-5.0.1.tgz#2e05e0316233c60bd87bce067f63667ab847985a"
+  integrity sha512-1BHT4bUk84AgEglb+zNq6BT4WZDFHhLt/udAV2XkdO8ZQk38UH3nWHO2DssX9yZ0yyWpvqyahJ4mvOdFYuOdxw==
+  dependencies:
+    "@typescript-eslint/eslint-plugin" "^3.1.0"
+    "@typescript-eslint/parser" "^3.1.0"
+    eslint "^7.2.0"
+
 "@istanbuljs/load-nyc-config@^1.0.0":
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/@istanbuljs/load-nyc-config/-/load-nyc-config-1.1.0.tgz#fd3db1d59ecf7cf121e80650bb86712f9b55eced"
@@ -675,6 +684,24 @@
     "@types/istanbul-reports" "^1.1.1"
     "@types/yargs" "^15.0.0"
     chalk "^4.0.0"
+
+"@klasa/console@^0.0.3":
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/@klasa/console/-/console-0.0.3.tgz#fbcf5e6cb22897168cff7606bff09f8c4f13219a"
+  integrity sha512-liZ83AqQd2K4NpqLIsSrelLL03o1jrKoC9vE5gltq6VyQ0QbjpbWnx4Mn9Ksx0elnO2mih33cnm5IXh0VoOCkA==
+  dependencies:
+    "@klasa/timestamp" "^0.0.1"
+    "@klasa/utils" "^0.0.8"
+
+"@klasa/timestamp@^0.0.1":
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/@klasa/timestamp/-/timestamp-0.0.1.tgz#f7e2171438563affc1e082e9ff6cb013468062a1"
+  integrity sha512-Oreeh+YawFcLvF5SWREBYQie8Net+KihA15ZRG8hOPYqCLRkkeRcf1xrPUdZelsXFGKV3lqpbdTvhyGOau92mA==
+
+"@klasa/utils@^0.0.8":
+  version "0.0.8"
+  resolved "https://registry.yarnpkg.com/@klasa/utils/-/utils-0.0.8.tgz#8b017d8f7a771e5c1894b85f8dafefc219fc9d76"
+  integrity sha512-6G/P9/HM8fTanKUFPrODFmmD3ff8Jwr7gG//2BsTeWfGBBulDn/H8ObWRJjIu81nLKX1I4iQ1jNcK5uOfso6ug==
 
 "@lerna/add@3.21.0":
   version "3.21.0"

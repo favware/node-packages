@@ -1,7 +1,13 @@
-import chalk from 'chalk';
+import { KlasaConsole } from '@klasa/console';
 import fs from 'fs';
 import glob from 'glob';
 import { join } from 'path';
+
+const kConsole = new KlasaConsole({
+  useColor: true,
+  timestamps: true,
+  utc: false
+});
 
 const onlyPattern = /(?:describe\.only|it\.only|test\.only)/gm;
 const files = glob
@@ -26,20 +32,8 @@ for (const file of files) {
 }
 
 if (shouldError) {
-  // eslint-disable-next-line no-console
-  console.error(
-    [
-      `${chalk.red('\nLooks like you left focused tests, I found these hits:')}`,
-      `${badPatterns
-        .map(
-          (pattern, index) =>
-            `- ${chalk.cyan(pattern)} \t${pattern.includes('describe') ? '' : '\t'}  in \t ${badFiles[index]}`
-        )
-        .join('\n')}`,
-      `${chalk.cyan('Please remove all the focused tests!\n')}`
-    ].join('\n')
-  );
+  kConsole.error('Looks like you left focused tests, I found these hits:');
+  kConsole.error(badPatterns.map((pattern, index) => `- ${pattern}\t→\t${badFiles[index]}`).join('\n'));
+  kConsole.error('Please remove all the focused tests!');
   process.exit(1);
 }
-
-process.exit(0);
