@@ -27,6 +27,7 @@ export const config = {
     // Overwriting config from @favware/eslint-config to better suite React applications
     'no-invalid-this': 'off',
     '@typescript-eslint/explicit-module-boundary-types': 'off',
+    '@typescript-eslint/no-explicit-any': 'off',
     '@typescript-eslint/naming-convention': [
       'error',
       {

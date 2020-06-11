@@ -71,6 +71,7 @@ Object {
         "selector": "typeLike",
       },
     ],
+    "@typescript-eslint/no-explicit-any": "off",
     "getter-return": "warn",
     "import/first": "error",
     "import/no-amd": "error",

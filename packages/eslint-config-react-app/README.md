@@ -45,6 +45,20 @@ yarn add @favware/eslint-config-react-app
 # npm install @favware/eslint-config-react-app
 ```
 
+All necessary dependencies such as `eslint` and `@typescript-eslint/parser` will automatically be installed
+
+## Note to create-react-app users (2020-06-11)
+
+create-react-app will install their own outdated versions of `@typescript-eslint/eslint-plugin` (v2.x), `@typescript-eslint/parser`(v2.x) and `eslint` (v6.x) which will conflict with this configuration. If you're using yarn add the following to your package.json to force yarn to install supported versions of the packages. For other package managers please consult on how to properly modify their respective lock files to force package resolutions.
+
+```json
+	"resolutions": {
+		"@typescript-eslint/eslint-plugin": "^3.1.0",
+		"@typescript-eslint/parser": "^3.1.0",
+		"eslint": "^7.2.0"
+	}
+```
+
 # Usage
 
 ```json
