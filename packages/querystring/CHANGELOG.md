@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [6.0.3](https://github.com/favware/node-packages/compare/@favware/querystring@6.0.2...@favware/querystring@6.0.3) (2020-06-12)
+
+
+### Bug Fixes
+
+* **querystring:** fixed passing "undefined" and "null" to stringify ([7deace1](https://github.com/favware/node-packages/commit/7deace133c45e3dc06296f031becc98ca5db6f82))
+
+
+
+
+
 ## [6.0.2](https://github.com/favware/node-packages/compare/@favware/querystring@6.0.1...@favware/querystring@6.0.2) (2020-06-11)
 
 **Note:** Version bump only for package @favware/querystring
