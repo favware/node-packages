@@ -16,7 +16,7 @@ describe('Standard Behaviour', () => {
   });
 
   test('should work without options', () => {
-    const expected = 'prop=value&prop2=value2&prop3=true&prop4=6&prop5=false&prop6=&prop7=value1&prop7=value2';
+    const expected = 'prop=value&prop2=value2&prop3=true&prop4=6&prop5=false&prop6=&prop7=value1&prop7=value2&prop8=';
     const actual = stringify({
       prop: 'value',
       prop2: 'value2',
@@ -24,14 +24,15 @@ describe('Standard Behaviour', () => {
       prop4: 6,
       prop5: false,
       prop6: Infinity,
-      prop7: ['value1', 'value2']
+      prop7: ['value1', 'value2'],
+      prop8: undefined
     });
     expect(actual).toMatchSnapshot();
     expect(actual).toBe(expected);
   });
 
   test('should exclude props that are undefined or null', () => {
-    const expected = '';
+    const expected = 'prop=&prop2=';
     const actual = stringify({
       prop: undefined,
       prop2: null

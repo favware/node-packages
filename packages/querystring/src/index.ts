@@ -87,7 +87,6 @@ export function stringify<I>(
     const combinedValues: string[] = [];
     for (const [key, value] of Object.entries(obj)) {
       const ks = stringifyPrimitive(key, options.encodeUriComponents) + options.equals!;
-      if (value === undefined || value === null) return '';
       if (Array.isArray(value)) {
         const combinedInnerValues: string[] = [];
         for (const innerValue of value) {
