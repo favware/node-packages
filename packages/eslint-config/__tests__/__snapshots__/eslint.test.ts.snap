@@ -26,63 +26,13 @@ Object {
   },
   "root": true,
   "rules": Object {
-    "@typescript-eslint/ban-ts-comment": Array [
-      "error",
-      Object {
-        "ts-check": false,
-        "ts-expect-error": false,
-        "ts-ignore": true,
-        "ts-nocheck": true,
-      },
-    ],
     "@typescript-eslint/consistent-type-definitions": Array [
       "error",
       "interface",
     ],
     "@typescript-eslint/explicit-function-return-type": "off",
-    "@typescript-eslint/naming-convention": Array [
-      "error",
-      Object {
-        "filter": Object {
-          "match": false,
-          "regex": "^(?:VariableDeclarator|AssignmentExpression)$",
-        },
-        "format": Array [
-          "camelCase",
-        ],
-        "leadingUnderscore": "forbid",
-        "selector": "default",
-        "trailingUnderscore": "forbid",
-      },
-      Object {
-        "format": Array [
-          "camelCase",
-        ],
-        "leadingUnderscore": "allow",
-        "selector": "parameter",
-      },
-      Object {
-        "format": Array [
-          "PascalCase",
-        ],
-        "modifiers": Array [
-          "readonly",
-        ],
-        "selector": "property",
-      },
-      Object {
-        "format": Array [
-          "PascalCase",
-        ],
-        "selector": "enumMember",
-      },
-      Object {
-        "format": Array [
-          "PascalCase",
-        ],
-        "selector": "typeLike",
-      },
-    ],
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@typescript-eslint/naming-convention": "off",
     "@typescript-eslint/no-for-in-array": "warn",
     "@typescript-eslint/no-namespace": "off",
     "@typescript-eslint/no-non-null-assertion": "off",

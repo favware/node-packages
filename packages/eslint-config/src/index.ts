@@ -41,38 +41,9 @@ export const config = {
     '@typescript-eslint/prefer-for-of': 'warn',
     '@typescript-eslint/prefer-includes': 'warn',
     '@typescript-eslint/unified-signatures': 'warn',
-    '@typescript-eslint/naming-convention': [
-      'error',
-      {
-        selector: 'default',
-        format: ['camelCase'],
-        leadingUnderscore: 'forbid',
-        trailingUnderscore: 'forbid',
-        filter: { regex: '^(?:VariableDeclarator|AssignmentExpression)$', match: false }
-      },
-      {
-        selector: 'parameter',
-        format: ['camelCase'],
-        leadingUnderscore: 'allow'
-      },
-      {
-        selector: 'property',
-        modifiers: ['readonly'],
-        format: ['PascalCase']
-      },
-      { selector: 'enumMember', format: ['PascalCase'] },
-      { selector: 'typeLike', format: ['PascalCase'] }
-    ],
-    '@typescript-eslint/ban-ts-comment': [
-      'error',
-      {
-        'ts-expect-error': false,
-        'ts-ignore': true, // 'allow-with-description',
-        'ts-nocheck': true, // 'allow-with-description',
-        'ts-check': false
-      }
-    ],
+    '@typescript-eslint/naming-convention': 'off',
     '@typescript-eslint/no-namespace': 'off',
+    '@typescript-eslint/explicit-module-boundary-types': 'off',
 
     // Best Practices
     eqeqeq: ['error', 'smart'],

@@ -23,54 +23,6 @@ Object {
   ],
   "root": true,
   "rules": Object {
-    "@typescript-eslint/explicit-module-boundary-types": "off",
-    "@typescript-eslint/naming-convention": Array [
-      "error",
-      Object {
-        "filter": Object {
-          "match": false,
-          "regex": "^(?:VariableDeclarator|AssignmentExpression)$",
-        },
-        "format": Array [
-          "camelCase",
-          "PascalCase",
-          "UPPER_CASE",
-        ],
-        "leadingUnderscore": "forbid",
-        "selector": "default",
-        "trailingUnderscore": "forbid",
-      },
-      Object {
-        "format": Array [
-          "camelCase",
-          "PascalCase",
-          "UPPER_CASE",
-        ],
-        "leadingUnderscore": "allow",
-        "selector": "parameter",
-      },
-      Object {
-        "format": Array [
-          "PascalCase",
-        ],
-        "modifiers": Array [
-          "readonly",
-        ],
-        "selector": "property",
-      },
-      Object {
-        "format": Array [
-          "PascalCase",
-        ],
-        "selector": "enumMember",
-      },
-      Object {
-        "format": Array [
-          "PascalCase",
-        ],
-        "selector": "typeLike",
-      },
-    ],
     "@typescript-eslint/no-explicit-any": "off",
     "getter-return": "warn",
     "import/first": "error",

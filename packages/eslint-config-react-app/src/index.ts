@@ -26,39 +26,7 @@ export const config = {
   rules: {
     // Overwriting config from @favware/eslint-config to better suite React applications
     'no-invalid-this': 'off',
-    '@typescript-eslint/explicit-module-boundary-types': 'off',
     '@typescript-eslint/no-explicit-any': 'off',
-    '@typescript-eslint/naming-convention': [
-      'error',
-      {
-        selector: 'default',
-        format: ['camelCase', 'PascalCase', 'UPPER_CASE'],
-        leadingUnderscore: 'forbid',
-        trailingUnderscore: 'forbid',
-        filter: {
-          regex: '^(?:VariableDeclarator|AssignmentExpression)$',
-          match: false
-        }
-      },
-      {
-        selector: 'parameter',
-        format: ['camelCase', 'PascalCase', 'UPPER_CASE'],
-        leadingUnderscore: 'allow'
-      },
-      {
-        selector: 'property',
-        modifiers: ['readonly'],
-        format: ['PascalCase']
-      },
-      {
-        selector: 'enumMember',
-        format: ['PascalCase']
-      },
-      {
-        selector: 'typeLike',
-        format: ['PascalCase']
-      }
-    ],
 
     // Implement desired rules that also get set by eslint-config-react-app
     'no-extra-label': 'warn',
