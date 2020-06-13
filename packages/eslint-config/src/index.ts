@@ -44,6 +44,16 @@ export const config = {
     '@typescript-eslint/naming-convention': 'off',
     '@typescript-eslint/no-namespace': 'off',
     '@typescript-eslint/explicit-module-boundary-types': 'off',
+    '@typescript-eslint/ban-ts-comment': [
+      'error',
+      {
+        'ts-expect-error': 'allow-with-description',
+        'ts-ignore': 'allow-with-description',
+        'ts-nocheck': 'allow-with-description',
+        'ts-check': true,
+        minimumDescriptionLength: 3
+      }
+    ],
 
     // Best Practices
     eqeqeq: ['error', 'smart'],

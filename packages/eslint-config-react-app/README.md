@@ -53,8 +53,8 @@ create-react-app will install their own outdated versions of `@typescript-eslint
 
 ```json
 	"resolutions": {
-		"@typescript-eslint/eslint-plugin": "^3.1.0",
-		"@typescript-eslint/parser": "^3.1.0",
+    "@typescript-eslint/eslint-plugin": "^3.2.0",
+    "@typescript-eslint/parser": "^3.2.0",
 		"eslint": "^7.2.0"
 	}
 ```
