@@ -9,7 +9,6 @@ import ytdl, {
 /** Custom type for ytdl videoFormat to include missing property */
 export interface PrismVideoFormat extends YTDLVideoFormat, YTDLVideoInfo {
   /** The sample rate of the audio format */
-  // eslint-disable-next-line @typescript-eslint/naming-convention
   audio_sample_rate?: string;
   /** The type of audio encoding for the stream */
   audioEncoding: 'mp3' | 'vorbis' | 'aac' | 'opus' | 'flac';
