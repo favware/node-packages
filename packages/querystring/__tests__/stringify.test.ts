@@ -82,7 +82,7 @@ describe('Error checking', () => {
     const expected = 'prop%value=prop2%value2';
     const actual = stringify(
       { prop: 'value', prop2: 'value2' },
-      // @ts-expect-error
+      // @ts-expect-error This is testing TS-invalid code that is handled in JS
       { separator: '=', equals: '%', includeQeustion: true }
     );
     expect(actual).toMatchSnapshot();
@@ -93,7 +93,6 @@ describe('Error checking', () => {
     const expected = '?propnullvaluenullprop2nullvalue2';
     const actual = stringify(
       { prop: 'value', prop2: 'value2' },
-      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
       // @ts-ignore ts-expect-error doesn't recognize this as a valid usecase yet
       { separator: null, equals: null, includeQuestion: true }
     );
