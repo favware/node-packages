@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.1.0](https://github.com/favware/node-packages/compare/@favware/eslint-config@5.0.2...@favware/eslint-config@5.1.0) (2020-06-13)
+
+
+### Bug Fixes
+
+* **eslint-config-(react-app):** disable 2 rules that are an annoyance ([1abca7c](https://github.com/favware/node-packages/commit/1abca7c3ae4bc37d44a19eb3cadf44898b65fa73))
+
+
+### Features
+
+* **eslint-config:** enable ban-ts-comment ([94f8c63](https://github.com/favware/node-packages/commit/94f8c6304193756d3140e8d0cda78bbd9f9e5287))
+
+
+
+
+
 ## [5.0.2](https://github.com/favware/node-packages/compare/@favware/eslint-config@5.0.1...@favware/eslint-config@5.0.2) (2020-06-11)
 
 **Note:** Version bump only for package @favware/eslint-config
