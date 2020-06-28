@@ -56,6 +56,6 @@
     "access": "public"
   },
   "devDependencies": {
-    "@types/js-yaml": "^3.12.4"
+    "@types/js-yaml": "^3.12.5"
   }
 }

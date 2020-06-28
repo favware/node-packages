@@ -55,7 +55,7 @@
     "access": "public"
   },
   "devDependencies": {
-    "prism-media": "^1.2.1",
+    "prism-media": "^1.2.2",
     "ytdl-core": "^2.1.7"
   }
 }
