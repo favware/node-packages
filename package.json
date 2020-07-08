@@ -16,8 +16,7 @@
     "cz": "git-cz",
     "up": "yarn upgrade-interactive --latest",
     "scripts:runner": "ts-node -P tsconfig.eslint.json",
-    "scripts:validateNoOnly": "yarn scripts:runner scripts/validateNoOnly",
-    "now.sh": "yarn docs && rm -rf packages scripts node_modules"
+    "scripts:validateNoOnly": "yarn scripts:runner scripts/validateNoOnly"
   },
   "devDependencies": {
     "@commitlint/cli": "^9.0.1",
