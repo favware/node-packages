@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>@favware/ytdl-prismplayer | Favware Node Packages</title>
+	<title>&quot;packages/unescape/src/index&quot; | Favware Node Packages</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -52,112 +52,44 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="_favware_ytdl_prismplayer.html">@favware/ytdl-prismplayer</a>
+					<a href="_favware_unescape.html">@favware/unescape</a>
+				</li>
+				<li>
+					<a href="_favware_unescape._packages_unescape_src_index_.html">&quot;packages/unescape/src/index&quot;</a>
 				</li>
 			</ul>
-			<h1>Module @favware/ytdl-prismplayer</h1>
+			<h1>External module &quot;packages/unescape/src/index&quot;</h1>
 		</div>
 	</div>
 </header>
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
-			<section class="tsd-panel tsd-comment">
-				<div class="tsd-comment tsd-typography">
-					<div align="center">
-						<h1> <b><i>DEPRECATED</i></b></h1>
-						<h2 style='line-height: 2.5rem;text-decoration: underline'>
-							Work on this package has stopped in favor of <a href="https://github.com/lavacord">lavacord</a>, a set of packages that aims to give great music support to your Discord bot using <a href="https://github.com/Frederikam/Lavalink">Lavalink</a>. Furthermore, we also no longer support the development of Discord.JS in favor of <a href="https://github.com/dirigeants/core">@klasa/core</a>
-						</h2>
-						<hr>
-						<div align="center">
-							<p>
-								<a href="https://favware.tech/prismplayer"><img src="https://storage.googleapis.com/data-sunlight-146313.appspot.com/website-project-icons/prismplayer.png" height="200" alt="logo"/></a>
-							</p>
-							<p>
-								<h1> @favware/ytdl-prismplayer</h1>
-								<h3> A <a href="https://github.com/fent/node-ytdl-core/">ytdl-core</a> wrapper focused on efficiency for use in Discord music bots.</h3>
-							</p>
-						</div>
-						<hr>
-						<p><strong>Project Status</strong></p>
-						<p><a href="https://github.com/favware/node-packages/blob/master/LICENSE.md"><img src="https://img.shields.io/github/license/favware/node-packages?logo=github&style=flat-square" alt="GitHub"></a>
-						<a href="https://coveralls.io/github/favware/node-packages?branch=master"><img src="https://coveralls.io/repos/github/favware/node-packages/badge.svg?branch=master" alt="Coverage Status"></a></p>
-						<p><strong>Bundle Sizes</strong></p>
-						<p><a href="https://bundlephobia.com/result?p=@favware/ytdl-prismplayer"><img src="https://img.shields.io/bundlephobia/min/@favware/ytdl-prismplayer?label=ytdl-prismplayer%20-%20minified&logo=webpack&style=flat-square" alt="npm bundle size"></a>
-							<a href="https://bundlephobia.com/result?p=@favware/ytdl-prismplayer"><img src="https://img.shields.io/bundlephobia/minzip/@favware/ytdl-prismplayer?label=ytdl-prismplayer%20-%20minzipped&logo=webpack&style=flat-square" alt="npm bundle size"></a>
-						<a href="https://www.npmjs.com/package/@favware/ytdl-prismplayer"><img src="https://img.shields.io/npm/v/@favware/ytdl-prismplayer?color=crimson&label=ytdl-prismplayer%20version&logo=npm&style=flat-square" alt="npm"></a></p>
-						<p><strong>Social Media and Donations</strong></p>
-						<p><a href="https://join.favware.tech"><img src="https://img.shields.io/discord/512303595966824458?color=697EC4&label=Join%20Discord%20Server&logo=discord&logoColor=FDFEFE&style=flat-square" alt="Join Discord server"></a>
-							<a href="https://twitter.com/Favna_/follow"><img src="https://img.shields.io/twitter/follow/favna_?label=Follow%20@Favna_&logo=twitter&colorB=1DA1F2&style=flat-square" alt="Twitter Follow"></a>
-							<a href="https://donate.favware.tech/patreon"><img src="https://img.shields.io/badge/patreon-donate-brightgreen.svg?label=Donate%20with%20Patreon&logo=patreon&colorB=F96854&style=flat-square&link=https://donate.favware.tech/patreon" alt="Patreon Donate"></a>
-						<a href="https://donate.favware.tech/paypal"><img src="https://img.shields.io/badge/paypal-donate-brightgreen.svg?label=Donate%20with%20Paypal&logo=paypal&colorB=00457C&style=flat-square&link=https://donate.favware.tech/paypal" alt="PayPal Donate"></a></p>
-						<hr>
-						<p>For compatible videos, this module uses <a href="https://github.com/amishshah/prism-media">prism-media</a>
-							to extract Opus or Vorbis audio from a stream without having to pipe it through FFmpeg first. This greatly
-							reduces the processing power required, making playback smoother and allowing you to play over
-						more connections simultaneously.</p>
-						<p>For videos where the required codec (webm + opus) isn&#39;t available, the module will fallback to
-							using FFmpeg to encode the stream in Opus. Many new videos on YouTube are available in this codec
-						so hopefully this isn&#39;t frequent.</p>
-						<p>Put simply, this module finds the most efficient way to extract a stream of Opus or Vorbis audio from a
-						YouTube video.</p>
-						<a href="#install" id="install" style="color: inherit; text-decoration: none;">
-							<h1>Install</h1>
-						</a>
-						<p>Install with <a href="https://yarnpkg.com">yarn</a> or <a href="https://www.npmjs.com/">npm</a>:</p>
-						<pre><code class="language-sh">yarn add @favware/ytdl-prismplayer ytdl-core prism-media
-
-<span class="hljs-comment"># npm install @favware/ytdl-prismplayer ytdl-core prism-media</span>
-<span class="hljs-comment"># ytdl-core and prism-media are mandatory peer dependencies</span></code></pre>
-						<hr>
-						<a href="#usage" id="usage" style="color: inherit; text-decoration: none;">
-							<h1>Usage</h1>
-						</a>
-						<p>Usage depends on the version of Discord.JS you are using, examples below. You can pass the exact same arguments as you would with the ytdl-core module, with the exception that you must <code>await</code> the function call.</p>
-						<a href="#usage-in-discordjs-11x" id="usage-in-discordjs-11x" style="color: inherit; text-decoration: none;">
-							<h3>Usage in Discord.js 11.x</h3>
-						</a>
-						<pre><code class="language-js"><span class="hljs-keyword">const</span> ytdl = <span class="hljs-built_in">require</span>(<span class="hljs-string">'@favware/ytdl-prismplayer'</span>);
-<span class="hljs-comment">// import ytdl from '@favware/ytdl-prismplayer'</span>
-
-<span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">play</span>(<span class="hljs-params">connection, url</span>) </span>{
-  connection.playOpusStream(<span class="hljs-keyword">await</span> ytdl(url));
-}</code></pre>
-						<a href="#usage-in-discordjs-12x--master" id="usage-in-discordjs-12x--master" style="color: inherit; text-decoration: none;">
-							<h3>Usage in Discord.js 12.x / master</h3>
-						</a>
-						<pre><code class="language-js"><span class="hljs-keyword">const</span> ytdl = <span class="hljs-built_in">require</span>(<span class="hljs-string">'@favware/ytdl-prismplayer'</span>);
-<span class="hljs-comment">// import ytdl from '@favware/ytdl-prismplayer'</span>
-
-<span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">play</span>(<span class="hljs-params">connection, url</span>) </span>{
-  connection.play(<span class="hljs-keyword">await</span> ytdl(url), {
-    <span class="hljs-attr">type</span>: <span class="hljs-string">'opus'</span>
-  });
-}
-
-<span class="hljs-comment">// You can prefer vorbis instead of opus</span>
-<span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">play</span>(<span class="hljs-params">connection, url</span>) </span>{
-  connection.play(<span class="hljs-keyword">await</span> ytdl(url, {}, { <span class="hljs-attr">preferredFormat</span>: <span class="hljs-string">'vorbis'</span> }), {
-    <span class="hljs-attr">type</span>: <span class="hljs-string">'opus'</span>
-  });
-}</code></pre>
-						<a href="#api-documentation" id="api-documentation" style="color: inherit; text-decoration: none;">
-							<h2><a href="https://favware.github.io/node-packages/modules/_favware_ytdl_prismplayer.html">API Documentation</a></h2>
-						</a>
-					</div>
-			</section>
 			<section class="tsd-panel-group tsd-index-group">
 				<h2>Index</h2>
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
 						<section class="tsd-index-section ">
-							<h3>External modules</h3>
+							<h3>References</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-external-module tsd-parent-kind-module"><a href="_favware_ytdl_prismplayer._packages_ytdl_prismplayer_src_index_.html" class="tsd-kind-icon">&quot;packages/ytdl-<wbr>prismplayer/src/index&quot;</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-external-module"><a href="_favware_unescape._packages_unescape_src_index_.html#charsets" class="tsd-kind-icon">char<wbr>Sets</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-external-module"><a href="_favware_unescape._packages_unescape_src_index_.html#unescape" class="tsd-kind-icon">unescape</a></li>
 							</ul>
 						</section>
 					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>References</h2>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-external-module">
+					<a name="charsets" class="tsd-anchor"></a>
+					<h3>char<wbr>Sets</h3>
+					Re-exports <a href="_favware_unescape._packages_unescape_src_charactermap_.html#charsets">charSets</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-external-module">
+					<a name="unescape" class="tsd-anchor"></a>
+					<h3>unescape</h3>
+					Re-exports <a href="_favware_unescape._packages_unescape_src_unescape_.html#unescape">unescape</a>
 				</section>
 			</section>
 		</div>
@@ -185,19 +117,25 @@
 					<li class=" tsd-kind-module">
 						<a href="_favware_ts_config.html">@favware/ts-<wbr>config</a>
 					</li>
-					<li class=" tsd-kind-module">
+					<li class="current tsd-kind-module">
 						<a href="_favware_unescape.html">@favware/unescape</a>
+						<ul>
+							<li class=" tsd-kind-external-module tsd-parent-kind-module">
+								<a href="_favware_unescape._packages_unescape_src_charactermap_.html">&quot;packages/unescape/src/charactermap&quot;</a>
+							</li>
+							<li class="current tsd-kind-external-module tsd-parent-kind-module">
+								<a href="_favware_unescape._packages_unescape_src_index_.html">&quot;packages/unescape/src/index&quot;</a>
+							</li>
+							<li class=" tsd-kind-external-module tsd-parent-kind-module">
+								<a href="_favware_unescape._packages_unescape_src_unescape_.html">&quot;packages/unescape/src/unescape&quot;</a>
+							</li>
+						</ul>
 					</li>
 					<li class=" tsd-kind-module">
 						<a href="_favware_yamlreader.html">@favware/yamlreader</a>
 					</li>
-					<li class="current tsd-kind-module">
+					<li class=" tsd-kind-module">
 						<a href="_favware_ytdl_prismplayer.html">@favware/ytdl-<wbr>prismplayer</a>
-						<ul>
-							<li class=" tsd-kind-external-module tsd-parent-kind-module">
-								<a href="_favware_ytdl_prismplayer._packages_ytdl_prismplayer_src_index_.html">&quot;packages/ytdl-<wbr>prismplayer/src/index&quot;</a>
-							</li>
-						</ul>
 					</li>
 					<li class=" tsd-kind-module">
 						<a href="_favware_zalgo.html">@favware/zalgo</a>
@@ -206,6 +144,12 @@
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
+					<li class=" tsd-kind-reference tsd-parent-kind-external-module">
+						<a href="_favware_unescape._packages_unescape_src_index_.html#charsets" class="tsd-kind-icon">char<wbr>Sets</a>
+					</li>
+					<li class=" tsd-kind-reference tsd-parent-kind-external-module">
+						<a href="_favware_unescape._packages_unescape_src_index_.html#unescape" class="tsd-kind-icon">unescape</a>
+					</li>
 				</ul>
 			</nav>
 		</div>

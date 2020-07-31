@@ -153,179 +153,12 @@
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
 						<section class="tsd-index-section ">
-							<h3>Interfaces</h3>
+							<h3>External modules</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/_favware_querystring.parseoptions.html" class="tsd-kind-icon">Parse<wbr>Options</a></li>
-								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/_favware_querystring.stringifyoptions.html" class="tsd-kind-icon">Stringify<wbr>Options</a></li>
-							</ul>
-						</section>
-						<section class="tsd-index-section ">
-							<h3>Functions</h3>
-							<ul class="tsd-index-list">
-								<li class="tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter"><a href="_favware_querystring.html#parse" class="tsd-kind-icon">parse</a></li>
-								<li class="tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter"><a href="_favware_querystring.html#stringify" class="tsd-kind-icon">stringify</a></li>
-								<li class="tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter"><a href="_favware_querystring.html#stringifyprimitive" class="tsd-kind-icon">stringify<wbr>Primitive</a></li>
+								<li class="tsd-kind-external-module tsd-parent-kind-module"><a href="_favware_querystring._packages_querystring_src_index_.html" class="tsd-kind-icon">&quot;packages/querystring/src/index&quot;</a></li>
 							</ul>
 						</section>
 					</div>
-				</section>
-			</section>
-			<section class="tsd-panel-group tsd-member-group ">
-				<h2>Functions</h2>
-				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter">
-					<a name="parse" class="tsd-anchor"></a>
-					<h3>parse</h3>
-					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter">
-						<li class="tsd-signature tsd-kind-icon">parse&lt;R&gt;<span class="tsd-signature-symbol">(</span>qs<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span>, options<span class="tsd-signature-symbol">?: </span><a href="../interfaces/_favware_querystring.parseoptions.html" class="tsd-signature-type">ParseOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">R</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/favware/node-packages/blob/3077268/packages/querystring/src/index.ts#L139">packages/querystring/src/index.ts:139</a></li>
-								</ul>
-							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Parses a querystring back to an object</p>
-								</div>
-								<dl class="tsd-comment-tags">
-									<dt>example</dt>
-									<dd><pre><code class="language-ts">parse(<span class="hljs-string">'?prop=value&amp;prop2=value2'</span>)</code></pre>
-									</dd>
-									<dt>example</dt>
-									<dd><pre><code class="language-ts">parse(<span class="hljs-string">'?prop=value&amp;prop2=value2'</span>, {separator: <span class="hljs-string">'&amp;'</span>, equals: <span class="hljs-string">'='</span>})</code></pre>
-									</dd>
-									<dt>example</dt>
-									<dd><pre><code class="language-ts">parse(<span class="hljs-string">'prop=value&amp;&amp;prop2=value2'</span>, {separator: <span class="hljs-string">'&amp;&amp;'</span>, equals: <span class="hljs-string">'='</span>})</code></pre>
-									</dd>
-								</dl>
-							</div>
-							<h4 class="tsd-type-parameters-title">Type parameters</h4>
-							<ul class="tsd-type-parameters">
-								<li>
-									<h4>R<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">PropertyKey</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">&gt;</span></h4>
-								</li>
-							</ul>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> qs: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;&quot;</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>Querystring to parse</p>
-									</div>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> options: <a href="../interfaces/_favware_querystring.parseoptions.html" class="tsd-signature-type">ParseOptions</a><span class="tsd-signature-symbol"> = { separator: &#x27;&amp;&#x27;, equals: &#x27;&#x3D;&#x27; }</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>Options for the parse, see {@link IParseOptions}</p>
-									</div>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">R</span></h4>
-							<p>A JavaScript object of the parsed parameters</p>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter">
-					<a name="stringify" class="tsd-anchor"></a>
-					<h3>stringify</h3>
-					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter">
-						<li class="tsd-signature tsd-kind-icon">stringify&lt;I&gt;<span class="tsd-signature-symbol">(</span>obj<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">I</span>, options<span class="tsd-signature-symbol">?: </span><a href="../interfaces/_favware_querystring.stringifyoptions.html" class="tsd-signature-type">StringifyOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/favware/node-packages/blob/3077268/packages/querystring/src/index.ts#L75">packages/querystring/src/index.ts:75</a></li>
-								</ul>
-							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Stringifies an object</p>
-								</div>
-								<dl class="tsd-comment-tags">
-									<dt>example</dt>
-									<dd><pre><code class="language-ts">stringify({prop: <span class="hljs-string">'value'</span>, prop2: <span class="hljs-string">'value2'</span>})</code></pre>
-									</dd>
-									<dt>example</dt>
-									<dd><pre><code class="language-ts">stringify({prop: <span class="hljs-string">'value'</span>, prop2: <span class="hljs-string">'value2'</span>}, {separator: <span class="hljs-string">'&amp;'</span>, equals: <span class="hljs-string">'='</span>, includeQuestion: <span class="hljs-literal">false</span>})</code></pre>
-									</dd>
-									<dt>example</dt>
-									<dd><pre><code class="language-ts">stringify({prop: <span class="hljs-string">'value'</span>, prop2: <span class="hljs-string">'value2'</span>}, {separator: <span class="hljs-string">'&amp;&amp;'</span>, equals: <span class="hljs-string">'='</span>, includeQuestion: <span class="hljs-literal">true</span>})</code></pre>
-									</dd>
-								</dl>
-							</div>
-							<h4 class="tsd-type-parameters-title">Type parameters</h4>
-							<ul class="tsd-type-parameters">
-								<li>
-									<h4>I</h4>
-								</li>
-							</ul>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>obj: <span class="tsd-signature-type">I</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>Object to stringify</p>
-									</div>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> options: <a href="../interfaces/_favware_querystring.stringifyoptions.html" class="tsd-signature-type">StringifyOptions</a><span class="tsd-signature-symbol"> = { separator: &#x27;&amp;&#x27;, equals: &#x27;&#x3D;&#x27;, includeQuestion: false, encodeUriComponents: true }</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>Options for the stringify, see <a href="../interfaces/_favware_querystring.stringifyoptions.html">StringifyOptions</a></p>
-									</div>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
-							<p>The stringified query object</p>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter">
-					<a name="stringifyprimitive" class="tsd-anchor"></a>
-					<h3>stringify<wbr>Primitive</h3>
-					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter">
-						<li class="tsd-signature tsd-kind-icon">stringify<wbr>Primitive&lt;T&gt;<span class="tsd-signature-symbol">(</span>v<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span>, encode<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/favware/node-packages/blob/3077268/packages/querystring/src/index.ts#L34">packages/querystring/src/index.ts:34</a></li>
-								</ul>
-							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Checks what kind of primitive type the property is and transforms accordingly</p>
-								</div>
-								<dl class="tsd-comment-tags">
-									<dt>remarks</dt>
-									<dd><p>Used for stringify</p>
-									</dd>
-								</dl>
-							</div>
-							<h4 class="tsd-type-parameters-title">Type parameters</h4>
-							<ul class="tsd-type-parameters">
-								<li>
-									<h4>T<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">unknown</span></h4>
-								</li>
-							</ul>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>v: <span class="tsd-signature-type">T</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>Input to check for primitive type</p>
-									</div>
-								</li>
-								<li>
-									<h5>encode: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
-						</li>
-					</ul>
 				</section>
 			</section>
 		</div>
@@ -349,6 +182,11 @@
 					</li>
 					<li class="current tsd-kind-module">
 						<a href="_favware_querystring.html">@favware/querystring</a>
+						<ul>
+							<li class=" tsd-kind-external-module tsd-parent-kind-module">
+								<a href="_favware_querystring._packages_querystring_src_index_.html">&quot;packages/querystring/src/index&quot;</a>
+							</li>
+						</ul>
 					</li>
 					<li class=" tsd-kind-module">
 						<a href="_favware_ts_config.html">@favware/ts-<wbr>config</a>
@@ -369,21 +207,6 @@
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
-					<li class=" tsd-kind-interface tsd-parent-kind-module">
-						<a href="../interfaces/_favware_querystring.parseoptions.html" class="tsd-kind-icon">Parse<wbr>Options</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module">
-						<a href="../interfaces/_favware_querystring.stringifyoptions.html" class="tsd-kind-icon">Stringify<wbr>Options</a>
-					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="_favware_querystring.html#parse" class="tsd-kind-icon">parse</a>
-					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="_favware_querystring.html#stringify" class="tsd-kind-icon">stringify</a>
-					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="_favware_querystring.html#stringifyprimitive" class="tsd-kind-icon">stringify<wbr>Primitive</a>
-					</li>
 				</ul>
 			</nav>
 		</div>

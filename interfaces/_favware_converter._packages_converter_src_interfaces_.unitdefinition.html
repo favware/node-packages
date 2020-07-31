@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>@favware/crypto | Favware Node Packages</title>
+	<title>UnitDefinition | Favware Node Packages</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -52,10 +52,16 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="_favware_crypto.html">@favware/crypto</a>
+					<a href="../modules/_favware_converter.html">@favware/converter</a>
+				</li>
+				<li>
+					<a href="../modules/_favware_converter._packages_converter_src_interfaces_.html">&quot;packages/converter/src/interfaces&quot;</a>
+				</li>
+				<li>
+					<a href="_favware_converter._packages_converter_src_interfaces_.unitdefinition.html">UnitDefinition</a>
 				</li>
 			</ul>
-			<h1>Module @favware/crypto</h1>
+			<h1>Interface UnitDefinition</h1>
 		</div>
 	</div>
 </header>
@@ -64,80 +70,95 @@
 		<div class="col-8 col-content">
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
-					<div align="center">
-						<p>
-							<a href="https://favware.tech/crypto"><img src="https://storage.googleapis.com/data-sunlight-146313.appspot.com/website-project-icons/crypto.png" height="200" alt="logo"/></a>
-						</p>
-						<p>
-							<h1> @favware/crypto</h1>
-							<h3> Easily generate a random cryptographic</h3>
-						</p>
+					<div class="lead">
+						<p>Array of supported unit definitions</p>
 					</div>
-					<hr>
-					<p><strong>Project Status</strong></p>
-					<p><a href="https://github.com/favware/node-packages/blob/master/LICENSE.md"><img src="https://img.shields.io/github/license/favware/node-packages?logo=github&style=flat-square" alt="GitHub"></a>
-					<a href="https://coveralls.io/github/favware/node-packages?branch=master"><img src="https://coveralls.io/repos/github/favware/node-packages/badge.svg?branch=master" alt="Coverage Status"></a></p>
-					<p><strong>Bundle Sizes</strong></p>
-					<p><a href="https://bundlephobia.com/result?p=@favware/crypto"><img src="https://img.shields.io/bundlephobia/min/@favware/crypto?label=crypto%20-%20minified&logo=webpack&style=flat-square" alt="npm bundle size"></a>
-						<a href="https://bundlephobia.com/result?p=@favware/crypto"><img src="https://img.shields.io/bundlephobia/minzip/@favware/crypto?label=crypto%20-%20minzipped&logo=webpack&style=flat-square" alt="npm bundle size"></a>
-					<a href="https://www.npmjs.com/package/@favware/crypto"><img src="https://img.shields.io/npm/v/@favware/crypto?color=crimson&label=crypto%20version&logo=npm&style=flat-square" alt="npm"></a></p>
-					<p><strong>Social Media and Donations</strong></p>
-					<p><a href="https://join.favware.tech"><img src="https://img.shields.io/discord/512303595966824458?color=697EC4&label=Join%20Discord%20Server&logo=discord&logoColor=FDFEFE&style=flat-square" alt="Join Discord server"></a>
-						<a href="https://twitter.com/Favna_/follow"><img src="https://img.shields.io/twitter/follow/favna_?label=Follow%20@Favna_&logo=twitter&colorB=1DA1F2&style=flat-square" alt="Twitter Follow"></a>
-						<a href="https://donate.favware.tech/patreon"><img src="https://img.shields.io/badge/patreon-donate-brightgreen.svg?label=Donate%20with%20Patreon&logo=patreon&colorB=F96854&style=flat-square&link=https://donate.favware.tech/patreon" alt="Patreon Donate"></a>
-					<a href="https://donate.favware.tech/paypal"><img src="https://img.shields.io/badge/paypal-donate-brightgreen.svg?label=Donate%20with%20Paypal&logo=paypal&colorB=00457C&style=flat-square&link=https://donate.favware.tech/paypal" alt="PayPal Donate"></a></p>
-					<hr>
-					<p>This package is a full rework of my old package <code>csprng-64</code> but now far better. I decided to release it as a completely separate package and deprecate the previous one as the entire code base was changed and I wasn&#39;t fond of the previous name either.</p>
-					<p><strong>Key Features</strong></p>
-					<ul>
-						<li>Generates secure random numbers using <code>crypto.randomBytes()</code>. Numbers can be of any magnitude and in any base from 2 to 64.</li>
-						<li>Typesafe</li>
-						<li>Bundled with Rollup for maximum size reduction (only 1kB minified + gzipped!), ES module support and browser support</li>
-						<li>Generated TypeScript declarations</li>
-						<li>Treeshakeable in Webpack</li>
-					</ul>
-					<a href="#install" id="install" style="color: inherit; text-decoration: none;">
-						<h1>Install</h1>
-					</a>
-					<p>Install with <a href="https://yarnpkg.com">yarn</a> or <a href="https://www.npmjs.com/">npm</a>:</p>
-					<pre><code class="language-sh">yarn add @favware/crypto
-
-<span class="hljs-comment"># npm install @favware/crypto</span></code></pre>
-					<hr>
-					<a href="#usage" id="usage" style="color: inherit; text-decoration: none;">
-						<h1>Usage</h1>
-					</a>
-					<p>Call the function passing the number of required bits, and the radix of the
-					output.</p>
-					<pre><code class="language-js"><span class="hljs-keyword">const</span> { crypto } = <span class="hljs-built_in">require</span>(<span class="hljs-string">'@favware/crypto'</span>);
-<span class="hljs-comment">// import crypto from '@favware/crypto';</span>
-
-<span class="hljs-comment">// Takes a bit length and base parameter</span>
-<span class="hljs-comment">// base examples are base64 or base32</span>
-crypto(<span class="hljs-number">160</span>, <span class="hljs-number">64</span>);
-
-<span class="hljs-comment">// You can also import the predefined Radix's so you can be sure you're using a supported radix</span>
-<span class="hljs-keyword">const</span> { Radix } = <span class="hljs-built_in">require</span>(<span class="hljs-string">'@favware/crypto'</span>);
-<span class="hljs-comment">// import Radix from '@favware/crypto'</span>
-crypto(<span class="hljs-number">160</span>, Radix.base64);</code></pre>
-					<a href="#api-documentation" id="api-documentation" style="color: inherit; text-decoration: none;">
-						<h2><a href="https://favware.github.io/node-packages/modules/_favware_crypto.html">API Documentation</a></h2>
-					</a>
 				</div>
+			</section>
+			<section class="tsd-panel tsd-hierarchy">
+				<h3>Hierarchy</h3>
+				<ul class="tsd-hierarchy">
+					<li>
+						<span class="target">UnitDefinition</span>
+					</li>
+				</ul>
 			</section>
 			<section class="tsd-panel-group tsd-index-group">
 				<h2>Index</h2>
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
 						<section class="tsd-index-section ">
-							<h3>External modules</h3>
+							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-external-module tsd-parent-kind-module"><a href="_favware_crypto._packages_crypto_src_streambinary_.html" class="tsd-kind-icon">&quot;packages/crypto/src/<wbr>Stream<wbr>Binary&quot;</a></li>
-								<li class="tsd-kind-external-module tsd-parent-kind-module"><a href="_favware_crypto._packages_crypto_src_crypto_.html" class="tsd-kind-icon">&quot;packages/crypto/src/crypto&quot;</a></li>
-								<li class="tsd-kind-external-module tsd-parent-kind-module"><a href="_favware_crypto._packages_crypto_src_index_.html" class="tsd-kind-icon">&quot;packages/crypto/src/index&quot;</a></li>
-								<li class="tsd-kind-external-module tsd-parent-kind-module"><a href="_favware_crypto._packages_crypto_src_util_.html" class="tsd-kind-icon">&quot;packages/crypto/src/util&quot;</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_favware_converter._packages_converter_src_interfaces_.unitdefinition.html#data" class="tsd-kind-icon">data</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_favware_converter._packages_converter_src_interfaces_.unitdefinition.html#name" class="tsd-kind-icon">name</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_favware_converter._packages_converter_src_interfaces_.unitdefinition.html#primary" class="tsd-kind-icon">primary</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_favware_converter._packages_converter_src_interfaces_.unitdefinition.html#secondary" class="tsd-kind-icon">secondary</a></li>
 							</ul>
 						</section>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Properties</h2>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="data" class="tsd-anchor"></a>
+					<h3>data</h3>
+					<div class="tsd-signature tsd-kind-icon">data<span class="tsd-signature-symbol">:</span> <a href="_favware_converter._packages_converter_src_interfaces_.unitdata.html" class="tsd-signature-type">UnitData</a><span class="tsd-signature-symbol">[]</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/favware/node-packages/blob/5f9c20a/packages/converter/src/interfaces.ts#L21">packages/converter/src/interfaces.ts:21</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Unit data that belongs to this unit&#39;s definition</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="name" class="tsd-anchor"></a>
+					<h3>name</h3>
+					<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/favware/node-packages/blob/5f9c20a/packages/converter/src/interfaces.ts#L15">packages/converter/src/interfaces.ts:15</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Name of the unit definition</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="primary" class="tsd-anchor"></a>
+					<h3>primary</h3>
+					<div class="tsd-signature tsd-kind-icon">primary<span class="tsd-signature-symbol">:</span> <a href="_favware_converter._packages_converter_src_interfaces_.measurementsystemdata.html" class="tsd-signature-type">MeasurementSystemData</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/favware/node-packages/blob/5f9c20a/packages/converter/src/interfaces.ts#L17">packages/converter/src/interfaces.ts:17</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Primary measurement system data</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="secondary" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> secondary</h3>
+					<div class="tsd-signature tsd-kind-icon">secondary<span class="tsd-signature-symbol">:</span> <a href="_favware_converter._packages_converter_src_interfaces_.measurementsystemdata.html" class="tsd-signature-type">MeasurementSystemData</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/favware/node-packages/blob/5f9c20a/packages/converter/src/interfaces.ts#L19">packages/converter/src/interfaces.ts:19</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Secondary measurement system data</p>
+						</div>
 					</div>
 				</section>
 			</section>
@@ -148,54 +169,87 @@ crypto(<span class="hljs-number">160</span>, Radix.base64);</code></pre>
 					<li class="globals  ">
 						<a href="../globals.html"><em>Globals</em></a>
 					</li>
-					<li class=" tsd-kind-module">
-						<a href="_favware_converter.html">@favware/converter</a>
-					</li>
 					<li class="current tsd-kind-module">
-						<a href="_favware_crypto.html">@favware/crypto</a>
+						<a href="../modules/_favware_converter.html">@favware/converter</a>
 						<ul>
 							<li class=" tsd-kind-external-module tsd-parent-kind-module">
-								<a href="_favware_crypto._packages_crypto_src_streambinary_.html">&quot;packages/crypto/src/<wbr>Stream<wbr>Binary&quot;</a>
+								<a href="../modules/_favware_converter._packages_converter_src_converter_.html">&quot;packages/converter/src/converter&quot;</a>
 							</li>
 							<li class=" tsd-kind-external-module tsd-parent-kind-module">
-								<a href="_favware_crypto._packages_crypto_src_crypto_.html">&quot;packages/crypto/src/crypto&quot;</a>
+								<a href="../modules/_favware_converter._packages_converter_src_helpers_.html">&quot;packages/converter/src/helpers&quot;</a>
 							</li>
 							<li class=" tsd-kind-external-module tsd-parent-kind-module">
-								<a href="_favware_crypto._packages_crypto_src_index_.html">&quot;packages/crypto/src/index&quot;</a>
+								<a href="../modules/_favware_converter._packages_converter_src_index_.html">&quot;packages/converter/src/index&quot;</a>
 							</li>
-							<li class=" tsd-kind-external-module tsd-parent-kind-module">
-								<a href="_favware_crypto._packages_crypto_src_util_.html">&quot;packages/crypto/src/util&quot;</a>
+							<li class="current tsd-kind-external-module tsd-parent-kind-module">
+								<a href="../modules/_favware_converter._packages_converter_src_interfaces_.html">&quot;packages/converter/src/interfaces&quot;</a>
 							</li>
 						</ul>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="_favware_eslint_config.html">@favware/eslint-<wbr>config</a>
+						<a href="../modules/_favware_crypto.html">@favware/crypto</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="_favware_eslint_config_react_app.html">@favware/eslint-<wbr>config-<wbr>react-<wbr>app</a>
+						<a href="../modules/_favware_eslint_config.html">@favware/eslint-<wbr>config</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="_favware_querystring.html">@favware/querystring</a>
+						<a href="../modules/_favware_eslint_config_react_app.html">@favware/eslint-<wbr>config-<wbr>react-<wbr>app</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="_favware_ts_config.html">@favware/ts-<wbr>config</a>
+						<a href="../modules/_favware_querystring.html">@favware/querystring</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="_favware_unescape.html">@favware/unescape</a>
+						<a href="../modules/_favware_ts_config.html">@favware/ts-<wbr>config</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="_favware_yamlreader.html">@favware/yamlreader</a>
+						<a href="../modules/_favware_unescape.html">@favware/unescape</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="_favware_ytdl_prismplayer.html">@favware/ytdl-<wbr>prismplayer</a>
+						<a href="../modules/_favware_yamlreader.html">@favware/yamlreader</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="_favware_zalgo.html">@favware/zalgo</a>
+						<a href="../modules/_favware_ytdl_prismplayer.html">@favware/ytdl-<wbr>prismplayer</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/_favware_zalgo.html">@favware/zalgo</a>
 					</li>
 				</ul>
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
+					<li class=" tsd-kind-enum tsd-parent-kind-external-module">
+						<a href="../enums/_favware_converter._packages_converter_src_interfaces_.system.html" class="tsd-kind-icon">System</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
+						<a href="_favware_converter._packages_converter_src_interfaces_.convertoptions.html" class="tsd-kind-icon">Convert<wbr>Options</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
+						<a href="_favware_converter._packages_converter_src_interfaces_.measurementsystemdata.html" class="tsd-kind-icon">Measurement<wbr>System<wbr>Data</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
+						<a href="_favware_converter._packages_converter_src_interfaces_.unitdata.html" class="tsd-kind-icon">Unit<wbr>Data</a>
+					</li>
+				</ul>
+				<ul class="current">
+					<li class="current tsd-kind-interface tsd-parent-kind-external-module">
+						<a href="_favware_converter._packages_converter_src_interfaces_.unitdefinition.html" class="tsd-kind-icon">Unit<wbr>Definition</a>
+						<ul>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="_favware_converter._packages_converter_src_interfaces_.unitdefinition.html#data" class="tsd-kind-icon">data</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="_favware_converter._packages_converter_src_interfaces_.unitdefinition.html#name" class="tsd-kind-icon">name</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="_favware_converter._packages_converter_src_interfaces_.unitdefinition.html#primary" class="tsd-kind-icon">primary</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="_favware_converter._packages_converter_src_interfaces_.unitdefinition.html#secondary" class="tsd-kind-icon">secondary</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<ul class="after-current">
 				</ul>
 			</nav>
 		</div>
