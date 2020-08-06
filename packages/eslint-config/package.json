@@ -12,8 +12,7 @@
     "test": "jest",
     "prelint": "yarn test && yarn build",
     "lint": "eslint src __tests__ --ext js,ts --fix -c dist/index.js",
-    "build": "tsc -b src",
-    "prepublishOnly": "yarn lint"
+    "build": "tsc -b src"
   },
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^3.8.0",

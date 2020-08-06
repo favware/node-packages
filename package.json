@@ -5,13 +5,12 @@
     "packages/*"
   ],
   "scripts": {
-    "cleandist": "rimraf packages/**/dist",
+    "clean": "rimraf packages/**/dist",
     "lint": "eslint packages --fix --ext js,jsx,ts,tsx",
     "test": "jest",
     "style": "prettier --write --loglevel=warn packages/**/*.{js,ts,md,json}",
     "build": "lerna run build --parallel",
     "docs": "typedoc",
-    "prepublishOnly": "yarn build",
     "commit": "git-cz",
     "cz": "git-cz",
     "up": "yarn upgrade-interactive --latest",
