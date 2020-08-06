@@ -7,7 +7,7 @@
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "types": "dist/index.d.ts",
-  "homepage": "https://github.com/favware/node-packages/tree/master/packages/eslint-config#readme",
+  "homepage": "https://github.com/favware/node-packages/tree/main/packages/eslint-config#readme",
   "scripts": {
     "test": "jest",
     "prelint": "yarn test && yarn build",
@@ -16,8 +16,8 @@
     "prepublishOnly": "yarn lint"
   },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^3.7.0",
-    "@typescript-eslint/parser": "^3.7.0",
+    "@typescript-eslint/eslint-plugin": "^3.8.0",
+    "@typescript-eslint/parser": "^3.8.0",
     "eslint": "^7.6.0"
   },
   "files": [

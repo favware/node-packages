@@ -3,7 +3,7 @@ name: Code Quality
 on:
   push:
     branches:
-      - master
+      - main
   pull_request:
 
 jobs:
@@ -51,7 +51,7 @@ jobs:
       - name: Install Dependencies
         run: yarn --ignore-scripts --frozen-lockfile
       - name: Compile Projects
-        run:  |
+        run: |
           yarn tsc -b packages/converter packages/crypto packages/eslint-config \
                       packages/ts-config packages/unescape packages/yamlreader \
                       packages/ytdl-prismplayer packages/zalgo

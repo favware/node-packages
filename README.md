@@ -14,8 +14,8 @@
 
 **Project Status**
 
-[![GitHub](https://img.shields.io/github/license/favware/node-packages?logo=github&style=flat-square)](https://github.com/favware/node-packages/blob/master/LICENSE.md)
-[![Coverage Status](https://coveralls.io/repos/github/favware/node-packages/badge.svg?branch=master)](https://coveralls.io/github/favware/node-packages?branch=master)
+[![GitHub](https://img.shields.io/github/license/favware/node-packages?logo=github&style=flat-square)](https://github.com/favware/node-packages/blob/main/LICENSE.md)
+[![Coverage Status](https://coveralls.io/repos/github/favware/node-packages/badge.svg?branch=main)](https://coveralls.io/github/favware/node-packages?branch=main)
 
 **Bundle Sizes**
 

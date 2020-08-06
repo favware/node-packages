@@ -7,7 +7,7 @@
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "types": "dist/index.d.ts",
-  "homepage": "https://github.com/favware/node-packages/tree/master/packages/ytdl-prismplayer#readme",
+  "homepage": "https://github.com/favware/node-packages/tree/main/packages/ytdl-prismplayer#readme",
   "scripts": {
     "test": "jest",
     "lint": "eslint src __tests__ --ext ts --fix -c ../../.eslintrc",
@@ -56,6 +56,6 @@
   },
   "devDependencies": {
     "prism-media": "^1.2.2",
-    "ytdl-core": "^2.1.7"
+    "ytdl-core": "^3.2.0"
   }
 }

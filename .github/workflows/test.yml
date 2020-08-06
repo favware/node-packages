@@ -3,7 +3,7 @@ name: Unit Tests
 on:
   push:
     branches:
-      - master
+      - main
   pull_request:
 
 jobs:
@@ -52,6 +52,6 @@ jobs:
           name: coverage
           path: coverage/
       - name: Coveralls Upload
-        uses: coverallsapp/github-action@master
+        uses: coverallsapp/github-action@main
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}

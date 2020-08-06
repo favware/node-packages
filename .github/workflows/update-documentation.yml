@@ -3,7 +3,7 @@ name: Generate API Documentation
 on:
   push:
     branches:
-      - master
+      - main
   pull_request:
 
 jobs:
@@ -28,7 +28,7 @@ jobs:
         if: github.event_name == 'pull_request'
         run: yarn docs
       - name: Publish Docs
-        if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         run: |
           #!/bin/bash
           set -euxo pipefail

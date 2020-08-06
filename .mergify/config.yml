@@ -2,7 +2,7 @@ pull_request_rules:
   - name: Automatic Depfu merging
     conditions:
       - approved-reviews-by=Favna
-      - base=master
+      - base=main
       - label~=^Meta:\ Dependencies
       - title~=Yarn\ dependencies
     actions:

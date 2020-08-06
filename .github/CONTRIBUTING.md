@@ -10,7 +10,7 @@ merged until the formatting is resolved.
 
 To get ready to work on the codebase, please do the following:
 
-1. Fork & clone the repository, and make sure you're on the **master** branch
+1. Fork & clone the repository, and make sure you're on the **main** branch
 2. Run `yarn install`
 3. Code your heart out!
 4. If you have any substantial code changes make sure these are covered in unit tests
