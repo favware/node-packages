@@ -52,6 +52,6 @@ jobs:
           name: coverage
           path: coverage/
       - name: Coveralls Upload
-        uses: coverallsapp/github-action@main
+        uses: coverallsapp/github-action@master
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
