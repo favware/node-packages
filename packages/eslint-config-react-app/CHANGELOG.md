@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.1](https://github.com/favware/node-packages/compare/@favware/eslint-config-react-app@1.1.0...@favware/eslint-config-react-app@1.1.1) (2020-08-06)
+
+**Note:** Version bump only for package @favware/eslint-config-react-app
+
+
+
+
+
 # [1.1.0](https://github.com/favware/node-packages/compare/@favware/eslint-config-react-app@1.0.0...@favware/eslint-config-react-app@1.1.0) (2020-06-13)
 
 
