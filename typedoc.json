@@ -1,5 +1,4 @@
 {
-  "inputFiles": ["./packages/**/src"],
   "out": "./docs/",
   "readme": "./README.md",
   "name": "Favware Node Packages",
