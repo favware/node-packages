@@ -1,6 +1,6 @@
 {
   "name": "@favware/eslint-config",
-  "version": "5.1.1",
+  "version": "5.1.2",
   "description": "Standard ESLint config for Favware projects written in TypeScript",
   "author": "@favware",
   "license": "MIT",

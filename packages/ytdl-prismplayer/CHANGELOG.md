@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.0.5](https://github.com/favware/node-packages/compare/@favware/ytdl-prismplayer@4.0.4...@favware/ytdl-prismplayer@4.0.5) (2020-08-27)
+
+**Note:** Version bump only for package @favware/ytdl-prismplayer
+
+
+
+
+
 ## [4.0.4](https://github.com/favware/node-packages/compare/@favware/ytdl-prismplayer@4.0.3...@favware/ytdl-prismplayer@4.0.4) (2020-08-06)
 
 **Note:** Version bump only for package @favware/ytdl-prismplayer
