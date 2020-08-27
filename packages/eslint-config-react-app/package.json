@@ -15,7 +15,7 @@
     "build": "tsc -b src"
   },
   "dependencies": {
-    "@favware/eslint-config": "latest",
+    "@favware/eslint-config": "^5.1.1",
     "eslint-plugin-import": "^2.22.0",
     "eslint-plugin-jsx-a11y": "^6.3.1",
     "eslint-plugin-react": "^7.20.5",
