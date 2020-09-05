@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [6.0.7](https://github.com/favware/node-packages/compare/@favware/querystring@6.0.6...@favware/querystring@6.0.7) (2020-09-05)
+
+
+### Bug Fixes
+
+* **eslint-config:** bump eslint dependencies ([37ccb7f](https://github.com/favware/node-packages/commit/37ccb7fc0c266d15df982d20d5960a9e3a07f456))
+
+
+
+
+
 ## [6.0.6](https://github.com/favware/node-packages/compare/@favware/querystring@6.0.5...@favware/querystring@6.0.6) (2020-08-27)
 
 **Note:** Version bump only for package @favware/querystring

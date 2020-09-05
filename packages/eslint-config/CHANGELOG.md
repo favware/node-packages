@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.1.3](https://github.com/favware/node-packages/compare/@favware/eslint-config@5.1.2...@favware/eslint-config@5.1.3) (2020-09-05)
+
+
+### Bug Fixes
+
+* **eslint-config:** bump eslint dependencies ([37ccb7f](https://github.com/favware/node-packages/commit/37ccb7fc0c266d15df982d20d5960a9e3a07f456))
+
+
+
+
+
 ## [5.1.2](https://github.com/favware/node-packages/compare/@favware/eslint-config@5.1.1...@favware/eslint-config@5.1.2) (2020-08-27)
 
 **Note:** Version bump only for package @favware/eslint-config
