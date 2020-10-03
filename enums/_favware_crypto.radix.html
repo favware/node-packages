@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>System | Favware Node Packages</title>
+	<title>Radix | Favware Node Packages</title>
 	<meta name="description" content="Documentation for Favware Node Packages">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -52,13 +52,13 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="../modules/_favware_converter.html">@favware/converter</a>
+					<a href="../modules/_favware_crypto.html">@favware/crypto</a>
 				</li>
 				<li>
-					<a href="_favware_converter.system.html">System</a>
+					<a href="_favware_crypto.radix.html">Radix</a>
 				</li>
 			</ul>
-			<h1>Enumeration System</h1>
+			<h1>Enumeration Radix</h1>
 		</div>
 	</div>
 </header>
@@ -68,7 +68,7 @@
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>Predefined options for the unit system</p>
+						<p>Possible options to use as the radix</p>
 					</div>
 				</div>
 			</section>
@@ -79,8 +79,11 @@
 						<section class="tsd-index-section ">
 							<h3>Enumeration members</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="_favware_converter.system.html#primary" class="tsd-kind-icon">PRIMARY</a></li>
-								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="_favware_converter.system.html#secondary" class="tsd-kind-icon">SECONDARY</a></li>
+								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="_favware_crypto.radix.html#base16" class="tsd-kind-icon">Base16</a></li>
+								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="_favware_crypto.radix.html#base32" class="tsd-kind-icon">Base32</a></li>
+								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="_favware_crypto.radix.html#base36" class="tsd-kind-icon">Base36</a></li>
+								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="_favware_crypto.radix.html#base58" class="tsd-kind-icon">Base58</a></li>
+								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="_favware_crypto.radix.html#base64" class="tsd-kind-icon">Base64</a></li>
 							</ul>
 						</section>
 					</div>
@@ -89,34 +92,54 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Enumeration members</h2>
 				<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
-					<a name="primary" class="tsd-anchor"></a>
-					<h3>PRIMARY</h3>
-					<div class="tsd-signature tsd-kind-icon">PRIMARY<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = &quot;primary&quot;</span></div>
+					<a name="base16" class="tsd-anchor"></a>
+					<h3>Base16</h3>
+					<div class="tsd-signature tsd-kind-icon">Base16<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = 16</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/favware/node-packages/blob/e5c85f1/packages/converter/src/interfaces.ts#L51">packages/converter/src/interfaces.ts:51</a></li>
+							<li>Defined in <a href="https://github.com/favware/node-packages/blob/e5c85f1/packages/crypto/src/util.ts#L3">packages/crypto/src/util.ts:3</a></li>
 						</ul>
 					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>For when the unit is of the primary system</p>
-						</div>
-					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
-					<a name="secondary" class="tsd-anchor"></a>
-					<h3>SECONDARY</h3>
-					<div class="tsd-signature tsd-kind-icon">SECONDARY<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = &quot;secondary&quot;</span></div>
+					<a name="base32" class="tsd-anchor"></a>
+					<h3>Base32</h3>
+					<div class="tsd-signature tsd-kind-icon">Base32<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = 32</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/favware/node-packages/blob/e5c85f1/packages/converter/src/interfaces.ts#L53">packages/converter/src/interfaces.ts:53</a></li>
+							<li>Defined in <a href="https://github.com/favware/node-packages/blob/e5c85f1/packages/crypto/src/util.ts#L4">packages/crypto/src/util.ts:4</a></li>
 						</ul>
 					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>For when the unit is of the secondary system</p>
-						</div>
-					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
+					<a name="base36" class="tsd-anchor"></a>
+					<h3>Base36</h3>
+					<div class="tsd-signature tsd-kind-icon">Base36<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = 36</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/favware/node-packages/blob/e5c85f1/packages/crypto/src/util.ts#L5">packages/crypto/src/util.ts:5</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
+					<a name="base58" class="tsd-anchor"></a>
+					<h3>Base58</h3>
+					<div class="tsd-signature tsd-kind-icon">Base58<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = 58</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/favware/node-packages/blob/e5c85f1/packages/crypto/src/util.ts#L6">packages/crypto/src/util.ts:6</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
+					<a name="base64" class="tsd-anchor"></a>
+					<h3>Base64</h3>
+					<div class="tsd-signature tsd-kind-icon">Base64<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = 64</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/favware/node-packages/blob/e5c85f1/packages/crypto/src/util.ts#L7">packages/crypto/src/util.ts:7</a></li>
+						</ul>
+					</aside>
 				</section>
 			</section>
 		</div>
@@ -126,10 +149,10 @@
 					<li class="globals  ">
 						<a href="../globals.html"><em>Globals</em></a>
 					</li>
-					<li class="current tsd-kind-module">
+					<li class=" tsd-kind-module">
 						<a href="../modules/_favware_converter.html">@favware/converter</a>
 					</li>
-					<li class=" tsd-kind-module">
+					<li class="current tsd-kind-module">
 						<a href="../modules/_favware_crypto.html">@favware/crypto</a>
 					</li>
 					<li class=" tsd-kind-module">
@@ -157,41 +180,41 @@
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-enum tsd-parent-kind-module">
-						<a href="_favware_converter.system.html" class="tsd-kind-icon">System</a>
+						<a href="_favware_crypto.radix.html" class="tsd-kind-icon">Radix</a>
 						<ul>
 							<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
-								<a href="_favware_converter.system.html#primary" class="tsd-kind-icon">PRIMARY</a>
+								<a href="_favware_crypto.radix.html#base16" class="tsd-kind-icon">Base16</a>
 							</li>
 							<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
-								<a href="_favware_converter.system.html#secondary" class="tsd-kind-icon">SECONDARY</a>
+								<a href="_favware_crypto.radix.html#base32" class="tsd-kind-icon">Base32</a>
+							</li>
+							<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
+								<a href="_favware_crypto.radix.html#base36" class="tsd-kind-icon">Base36</a>
+							</li>
+							<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
+								<a href="_favware_crypto.radix.html#base58" class="tsd-kind-icon">Base58</a>
+							</li>
+							<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
+								<a href="_favware_crypto.radix.html#base64" class="tsd-kind-icon">Base64</a>
 							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
 					<li class=" tsd-kind-class tsd-parent-kind-module">
-						<a href="../classes/_favware_converter.convertererror.html" class="tsd-kind-icon">Converter<wbr>Error</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module">
-						<a href="../interfaces/_favware_converter.convertoptions.html" class="tsd-kind-icon">Convert<wbr>Options</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module">
-						<a href="../interfaces/_favware_converter.measurementsystemdata.html" class="tsd-kind-icon">Measurement<wbr>System<wbr>Data</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module">
-						<a href="../interfaces/_favware_converter.unitdata.html" class="tsd-kind-icon">Unit<wbr>Data</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module">
-						<a href="../interfaces/_favware_converter.unitdefinition.html" class="tsd-kind-icon">Unit<wbr>Definition</a>
+						<a href="../classes/_favware_crypto.cryptoerror.html" class="tsd-kind-icon">Crypto<wbr>Error</a>
 					</li>
 					<li class=" tsd-kind-variable tsd-parent-kind-module">
-						<a href="../modules/_favware_converter.html#definitions" class="tsd-kind-icon">definitions</a>
+						<a href="../modules/_favware_crypto.html#characters" class="tsd-kind-icon">characters</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-parent-kind-module">
+						<a href="../modules/_favware_crypto.html#defaultbits" class="tsd-kind-icon">default<wbr>Bits</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-parent-kind-module">
+						<a href="../modules/_favware_crypto.html#defaultradix" class="tsd-kind-icon">default<wbr>Radix</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-module">
-						<a href="../modules/_favware_converter.html#convert" class="tsd-kind-icon">convert</a>
-					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-module">
-						<a href="../modules/_favware_converter.html#roundnumber" class="tsd-kind-icon">round<wbr>Number</a>
+						<a href="../modules/_favware_crypto.html#crypto" class="tsd-kind-icon">crypto</a>
 					</li>
 				</ul>
 			</nav>
