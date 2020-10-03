@@ -7,78 +7,49 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @favware/yamlreader
 
-
-
-
-
 ## [3.0.2](https://github.com/favware/node-packages/compare/@favware/yamlreader@3.0.1...@favware/yamlreader@3.0.2) (2020-06-11)
 
 **Note:** Version bump only for package @favware/yamlreader
-
-
-
-
 
 ## [3.0.1](https://github.com/favware/node-packages/compare/@favware/yamlreader@3.0.0...@favware/yamlreader@3.0.1) (2020-06-11)
 
 **Note:** Version bump only for package @favware/yamlreader
 
-
-
-
-
 # [3.0.0](https://github.com/favware/node-packages/compare/@favware/yamlreader@2.0.0...@favware/yamlreader@3.0.0) (2020-06-07)
-
 
 ### chore
 
-* drop support for NodeJS v10 ([5632408](https://github.com/favware/node-packages/commit/56324085cb35a10eecaec28f619fae01417055a7))
-
+- drop support for NodeJS v10 ([5632408](https://github.com/favware/node-packages/commit/56324085cb35a10eecaec28f619fae01417055a7))
 
 ### Code Refactoring
 
-* **yamlreader:** remove YamlReaderError ([c1a9542](https://github.com/favware/node-packages/commit/c1a9542f27ac392e71ec330ec477d69818bdce71))
-* **yamlreader:** return "unknown" instead of "any" by default ([8311c7a](https://github.com/favware/node-packages/commit/8311c7a92efa9bae1c3c90d5410c88e5556181f5))
-
+- **yamlreader:** remove YamlReaderError ([c1a9542](https://github.com/favware/node-packages/commit/c1a9542f27ac392e71ec330ec477d69818bdce71))
+- **yamlreader:** return "unknown" instead of "any" by default ([8311c7a](https://github.com/favware/node-packages/commit/8311c7a92efa9bae1c3c90d5410c88e5556181f5))
 
 ### BREAKING CHANGES
 
-* **yamlreader:** Instead of returning "any" type the library now returns "unknown", and you can set
-the return type by passing it as the first type generic
-* **yamlreader:** YamlReaderError is gone in favour of regular errors
-* NodeJS v10 is no longer LTS and was forcing the inclusions of a polyfill on
-@favware/converter. By making NodeJS v12 the minimum required version this polyfill can be removed.
-
-
-
-
+- **yamlreader:** Instead of returning "any" type the library now returns "unknown", and you can set
+  the return type by passing it as the first type generic
+- **yamlreader:** YamlReaderError is gone in favour of regular errors
+- NodeJS v10 is no longer LTS and was forcing the inclusions of a polyfill on
+  @favware/converter. By making NodeJS v12 the minimum required version this polyfill can be removed.
 
 # [2.0.0](https://github.com/favware/node-packages/compare/@favware/yamlreader@2.0.0-canary.0...@favware/yamlreader@2.0.0) (2020-05-06)
 
 **Note:** Version bump only for package @favware/yamlreader
 
-
-
-
-
 # [2.0.0-canary.0](https://github.com/favware/node-packages/compare/@favware/yamlreader@1.1.5...@favware/yamlreader@2.0.0-canary.0) (2020-05-06)
-
 
 ### Bug Fixes
 
-* reworked to compile with tsc rather than rollup ([0b7c6c8](https://github.com/favware/node-packages/commit/0b7c6c81fab75fd298eea8427bbee373d91306bb))
-
+- reworked to compile with tsc rather than rollup ([0b7c6c8](https://github.com/favware/node-packages/commit/0b7c6c81fab75fd298eea8427bbee373d91306bb))
 
 ### BREAKING CHANGES
 
-* The default target for ts-config and these packages is now CommonJS, which will
-work in NodeJS by default and get resolved in Rollup (with @rollup/plugin-commonjs) and Webpack as
-well. Furthermore no longer will packages be compiled with importHelpers so tslib is no longer a
-hidden required dependency.
-
-
-
-
+- The default target for ts-config and these packages is now CommonJS, which will
+  work in NodeJS by default and get resolved in Rollup (with @rollup/plugin-commonjs) and Webpack as
+  well. Furthermore no longer will packages be compiled with importHelpers so tslib is no longer a
+  hidden required dependency.
 
 ## [1.1.5](https://github.com/favware/node-packages/compare/@favware/yamlreader@1.1.4...@favware/yamlreader@1.1.5) (2020-04-01)
 

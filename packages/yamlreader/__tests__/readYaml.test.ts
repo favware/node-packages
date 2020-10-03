@@ -1,6 +1,6 @@
 import YAML from 'js-yaml';
-import readYaml from '../src';
 import path from 'path';
+import { readYaml } from '../src';
 
 const fixturesDir = path.join(__dirname, '..', '__fixtures__');
 
