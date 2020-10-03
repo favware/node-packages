@@ -1,6 +1,6 @@
 import chars from './chars';
-import { ZalgoOptions, ZalgoCountsMap } from './interfaces';
-import { unicodeStringSplitter, randomizer } from './utils';
+import { ZalgoCountsMap, ZalgoOptions } from './interfaces';
+import { randomizer, unicodeStringSplitter } from './utils';
 
 /**
  * Zalgofies any given text

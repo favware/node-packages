@@ -1,7 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Snapshot Testing NamedZalgo should match snapshot 1`] = `[Function]`;
-
 exports[`Snapshot Testing banish should match snapshot 1`] = `[Function]`;
 
 exports[`Snapshot Testing chars should match snapshot 1`] = `

@@ -1,4 +1,4 @@
-import zalgo, { banish } from '../src';
+import { zalgo, banish } from '../src';
 
 describe('No option testing', () => {
   test('should zalgo normally', () => {
