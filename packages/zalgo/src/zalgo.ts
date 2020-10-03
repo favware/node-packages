@@ -50,7 +50,7 @@ export const zalgo = (
         continue;
       }
 
-      counts = { up: 0, middle: 0, down: 0 };
+      counts = { up: 0, middle: 0, down: 0 }; // lgtm [js/useless-assignment-to-local]
 
       if (options.size === 'mini') counts = { up: randomizer(8), middle: randomizer(2), down: randomizer(8) };
       else if (options.size === 'maxi')

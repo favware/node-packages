@@ -148,38 +148,33 @@ export function parse<R extends Record<PropertyKey, unknown> = Record<PropertyKe
     if (!options.equals) options.equals = '=';
     if (qs.startsWith('?')) qs = qs.slice(1);
 
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const obj = {} as any;
+    const obj = {} as Record<PropertyKey, unknown>;
     const regexp = /\+/g;
     const queries: string[] = qs.split(options.separator);
-    const maxKeys = 1000;
-
-    let len = queries.length;
-    if (maxKeys > 0 && len > maxKeys) len = maxKeys;
 
     for (const query of queries) {
       const x = query.replace(regexp, '%20');
       const idx = x.indexOf(options.equals);
-      let kstr;
-      let vstr;
+      let keyStr;
+      let valueStr;
 
       if (idx >= 0) {
-        kstr = x.substr(0, idx);
-        vstr = x.substr(idx + 1);
+        keyStr = x.substr(0, idx);
+        valueStr = x.substr(idx + 1);
       } else {
-        kstr = x;
-        vstr = '';
+        keyStr = x;
+        valueStr = '';
       }
 
-      const k = decodeURIComponent(kstr);
-      const v = decodeURIComponent(vstr);
+      const k = decodeURIComponent(keyStr);
+      const v = decodeURIComponent(valueStr);
 
       if (!Reflect.has(obj, k)) {
-        obj[k] = v;
+        Reflect.set(obj, k, v);
       } else if (Array.isArray(obj[k])) {
-        obj[k].push(v);
+        Reflect.set(obj, k, Reflect.get(obj, k).push(v));
       } else {
-        (obj as Record<PropertyKey, unknown>)[k] = [obj[k], v];
+        obj[k] = [obj[k], v];
       }
     }
 
