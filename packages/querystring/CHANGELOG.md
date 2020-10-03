@@ -5,120 +5,73 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## [6.0.7](https://github.com/favware/node-packages/compare/@favware/querystring@6.0.6...@favware/querystring@6.0.7) (2020-09-05)
 
-
 ### Bug Fixes
 
-* **eslint-config:** bump eslint dependencies ([37ccb7f](https://github.com/favware/node-packages/commit/37ccb7fc0c266d15df982d20d5960a9e3a07f456))
-
-
-
-
+- **eslint-config:** bump eslint dependencies ([37ccb7f](https://github.com/favware/node-packages/commit/37ccb7fc0c266d15df982d20d5960a9e3a07f456))
 
 ## [6.0.6](https://github.com/favware/node-packages/compare/@favware/querystring@6.0.5...@favware/querystring@6.0.6) (2020-08-27)
 
 **Note:** Version bump only for package @favware/querystring
 
-
-
-
-
 ## [6.0.5](https://github.com/favware/node-packages/compare/@favware/querystring@6.0.4...@favware/querystring@6.0.5) (2020-08-06)
 
 **Note:** Version bump only for package @favware/querystring
-
-
-
-
 
 ## [6.0.4](https://github.com/favware/node-packages/compare/@favware/querystring@6.0.3...@favware/querystring@6.0.4) (2020-06-13)
 
 **Note:** Version bump only for package @favware/querystring
 
-
-
-
-
 ## [6.0.3](https://github.com/favware/node-packages/compare/@favware/querystring@6.0.2...@favware/querystring@6.0.3) (2020-06-12)
-
 
 ### Bug Fixes
 
-* **querystring:** fixed passing "undefined" and "null" to stringify ([7deace1](https://github.com/favware/node-packages/commit/7deace133c45e3dc06296f031becc98ca5db6f82))
-
-
-
-
+- **querystring:** fixed passing "undefined" and "null" to stringify ([7deace1](https://github.com/favware/node-packages/commit/7deace133c45e3dc06296f031becc98ca5db6f82))
 
 ## [6.0.2](https://github.com/favware/node-packages/compare/@favware/querystring@6.0.1...@favware/querystring@6.0.2) (2020-06-11)
 
 **Note:** Version bump only for package @favware/querystring
 
-
-
-
-
 ## [6.0.1](https://github.com/favware/node-packages/compare/@favware/querystring@6.0.0...@favware/querystring@6.0.1) (2020-06-11)
 
 **Note:** Version bump only for package @favware/querystring
 
-
-
-
-
 # [6.0.0](https://github.com/favware/node-packages/compare/@favware/querystring@5.0.0...@favware/querystring@6.0.0) (2020-06-07)
-
 
 ### chore
 
-* drop support for NodeJS v10 ([5632408](https://github.com/favware/node-packages/commit/56324085cb35a10eecaec28f619fae01417055a7))
-
+- drop support for NodeJS v10 ([5632408](https://github.com/favware/node-packages/commit/56324085cb35a10eecaec28f619fae01417055a7))
 
 ### Features
 
-* **querystring:** remove objectHasProperty in favour of Reflect API ([5ce1aa7](https://github.com/favware/node-packages/commit/5ce1aa7d604563851cf9baa6216e4fa124663c20))
-
+- **querystring:** remove objectHasProperty in favour of Reflect API ([5ce1aa7](https://github.com/favware/node-packages/commit/5ce1aa7d604563851cf9baa6216e4fa124663c20))
 
 ### BREAKING CHANGES
 
-* **querystring:** objectHasProperty is no longer exported, as this lib now prefers Reflect API
-* NodeJS v10 is no longer LTS and was forcing the inclusions of a polyfill on
-@favware/converter. By making NodeJS v12 the minimum required version this polyfill can be removed.
-
-
-
-
+- **querystring:** objectHasProperty is no longer exported, as this lib now prefers Reflect API
+- NodeJS v10 is no longer LTS and was forcing the inclusions of a polyfill on
+  @favware/converter. By making NodeJS v12 the minimum required version this polyfill can be removed.
 
 # [5.0.0](https://github.com/favware/node-packages/compare/@favware/querystring@5.0.0-canary.0...@favware/querystring@5.0.0) (2020-05-06)
 
 **Note:** Version bump only for package @favware/querystring
 
-
-
-
-
 # [5.0.0-canary.0](https://github.com/favware/node-packages/compare/@favware/querystring@4.3.1...@favware/querystring@5.0.0-canary.0) (2020-05-06)
-
 
 ### Bug Fixes
 
-* reworked to compile with tsc rather than rollup ([0b7c6c8](https://github.com/favware/node-packages/commit/0b7c6c81fab75fd298eea8427bbee373d91306bb))
-* **querystring:** remove QuerystringObject in favour of better methods ([c6c5888](https://github.com/favware/node-packages/commit/c6c58885ea88d9c9b1bc48dfddb1f96c3f1af0d9))
-
+- reworked to compile with tsc rather than rollup ([0b7c6c8](https://github.com/favware/node-packages/commit/0b7c6c81fab75fd298eea8427bbee373d91306bb))
+- **querystring:** remove QuerystringObject in favour of better methods ([c6c5888](https://github.com/favware/node-packages/commit/c6c58885ea88d9c9b1bc48dfddb1f96c3f1af0d9))
 
 ### BREAKING CHANGES
 
-* The default target for ts-config and these packages is now CommonJS, which will
-work in NodeJS by default and get resolved in Rollup (with @rollup/plugin-commonjs) and Webpack as
-well. Furthermore no longer will packages be compiled with importHelpers so tslib is no longer a
-hidden required dependency.
-* **querystring:** parse will now return generic parameter "R" which by default is Record<PropertyKey,
-unknown>. stringify will take a parameter of type I, which will get inferred from your input, or you
-can set it as a generic type argument. Furthermore, rather than returning an object with the error
-property this library will now throw the error so you get full stacktraces.
-
-
-
-
+- The default target for ts-config and these packages is now CommonJS, which will
+  work in NodeJS by default and get resolved in Rollup (with @rollup/plugin-commonjs) and Webpack as
+  well. Furthermore no longer will packages be compiled with importHelpers so tslib is no longer a
+  hidden required dependency.
+- **querystring:** parse will now return generic parameter "R" which by default is Record<PropertyKey,
+  unknown>. stringify will take a parameter of type I, which will get inferred from your input, or you
+  can set it as a generic type argument. Furthermore, rather than returning an object with the error
+  property this library will now throw the error so you get full stacktraces.
 
 ## [4.3.1](https://github.com/favware/node-packages/compare/@favware/querystring@4.3.0...@favware/querystring@4.3.1) (2020-04-01)
 

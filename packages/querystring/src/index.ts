@@ -192,5 +192,3 @@ export function parse<R extends Record<PropertyKey, unknown> = Record<PropertyKe
     throw err;
   }
 }
-
-export default stringify;

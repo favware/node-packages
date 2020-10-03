@@ -3,9 +3,8 @@
   "compilerOptions": {
     "rootDir": "./",
     "outDir": "../dist",
-    "composite": true,
     "tsBuildInfoFile": "../dist/.tsbuildinfo",
-    "target": "ES5"
+    "composite": true
   },
-  "files": ["index.ts"]
+  "include": ["."]
 }

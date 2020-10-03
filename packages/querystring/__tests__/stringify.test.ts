@@ -1,4 +1,4 @@
-import stringify from '../src';
+import { stringify } from '../src';
 
 describe('Standard Behaviour', () => {
   test('should work with empty input', () => {

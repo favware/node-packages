@@ -5,7 +5,9 @@
   "author": "@favware",
   "license": "MIT",
   "main": "dist/index.js",
-  "module": "dist/index.es.js",
+  "module": "dist/index.mjs",
+  "browser": "dist/index.umd.js",
+  "unpkg": "dist/index.umd.js",
   "types": "dist/index.d.ts",
   "homepage": "https://github.com/favware/node-packages/tree/main/packages/querystring#readme",
   "scripts": {

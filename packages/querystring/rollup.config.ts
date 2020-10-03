@@ -1,7 +1,7 @@
+import { resolve as resolveDir } from 'path';
 import cleaner from 'rollup-plugin-cleaner';
 import { terser } from 'rollup-plugin-terser';
 import typescript from 'rollup-plugin-typescript2';
-import { resolve as resolveDir } from 'path';
 
 export default {
   input: 'src/index.ts',
@@ -13,9 +13,15 @@ export default {
       sourcemap: true
     },
     {
-      file: './dist/index.es.js',
+      file: './dist/index.mjs',
       format: 'es',
       exports: 'named',
+      sourcemap: true
+    },
+    {
+      file: './dist/index.umd.js',
+      format: 'umd',
+      name: 'FavwareQuerystring',
       sourcemap: true
     }
   ],
@@ -25,10 +31,10 @@ export default {
     }),
     typescript({ tsconfig: resolveDir(__dirname, 'src', 'tsconfig.json') }),
     terser({
-      ecma: 5,
+      ecma: 2019,
       // This will ensure that whenever Rollup is in watch (dev) mode, console logs will not be removed
       compress: { drop_console: !Reflect.has(process.env, 'ROLLUP_WATCH') },
-      output: { comments: false }
+      format: { comments: false }
     })
   ]
 };
