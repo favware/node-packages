@@ -1,4 +1,4 @@
-import converter, { convert } from '../src';
+import { convert } from '../src';
 
 describe('verify support for all combinations', () => {
   test('should support primary-default to primary', () => {
@@ -144,14 +144,6 @@ describe('verify support for options', () => {
   test('modifying decimals with herz to radians per second', () => {
     const expected = 6.28;
     const actual = convert(1, 'hz', 'rad/s', { precision: 2 });
-    expect(actual).toBe(expected);
-  });
-});
-
-describe('verify default export works', () => {
-  test('should support primary-default to primary', () => {
-    const expected = 0.001;
-    const actual = converter(1, 'g', 'kg');
     expect(actual).toBe(expected);
   });
 });
