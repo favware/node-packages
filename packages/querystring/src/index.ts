@@ -148,7 +148,8 @@ export function parse<R extends Record<PropertyKey, unknown> = Record<PropertyKe
     if (!options.equals) options.equals = '=';
     if (qs.startsWith('?')) qs = qs.slice(1);
 
-    const obj = {} as Record<PropertyKey, unknown>;
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const obj = {} as any;
     const regexp = /\+/g;
     const queries: string[] = qs.split(options.separator);
 
@@ -170,11 +171,11 @@ export function parse<R extends Record<PropertyKey, unknown> = Record<PropertyKe
       const v = decodeURIComponent(valueStr);
 
       if (!Reflect.has(obj, k)) {
-        Reflect.set(obj, k, v);
+        obj[k] = v;
       } else if (Array.isArray(obj[k])) {
-        Reflect.set(obj, k, Reflect.get(obj, k).push(v));
+        obj[k].push(v);
       } else {
-        obj[k] = [obj[k], v];
+        (obj as Record<PropertyKey, unknown>)[k] = [obj[k], v];
       }
     }
 
