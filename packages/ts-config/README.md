@@ -1,35 +1,22 @@
 <div align="center">
-  <p>
-  <a href="https://favware.tech"><img src="https://storage.googleapis.com/data-sunlight-146313.appspot.com/website-project-icons/tslogo.png" height="200" alt="logo"/></a>
-  </p>
 
-  <p>
-<h1> @favware/ts-config</h1>
-<h3> Standardized TSConfig for Favware projects </h3>
-  </p>
-</div>
+<img src="https://cdn.favware.tech/img/tslogo.png" height="200" alt="logo"/>
 
----
+# @favware/ts-config
 
-**Project Status**
+**Standardized TSConfig for Favware projects**
 
 [![GitHub](https://img.shields.io/github/license/favware/node-packages?logo=github&style=flat-square)](https://github.com/favware/node-packages/blob/main/LICENSE.md)
 [![Coverage Status](https://coveralls.io/repos/github/favware/node-packages/badge.svg?branch=main)](https://coveralls.io/github/favware/node-packages?branch=main)
+[![Total alerts](https://img.shields.io/lgtm/alerts/g/favware/node-packages.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/favware/node-packages/alerts/)
+[![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/favware/node-packages.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/favware/node-packages/context:javascript)
+[![Coverage Status](https://coveralls.io/repos/github/favware/node-packages/badge.svg?branch=main)](https://coveralls.io/github/favware/node-packages?branch=main)
+[![npm](https://img.shields.io/npm/v/@favware/ts-config?color=crimson&logo=npm&style=flat-square)](https://www.npmjs.com/package/@favware/ts-config)
+[![Depfu](https://badges.depfu.com/badges/30f62cdba0c569448b5f93d532dad8e4/count.svg)](https://depfu.com/github/favware/node-packages?project_id=15121)
 
-**Package Info Sizes**
+</div>
 
-[![npm](https://img.shields.io/npm/v/@favware/ts-config?color=crimson&label=tsconfig%20version&logo=npm&style=flat-square)](https://www.npmjs.com/package/@favware/ts-config)
-
-**Social Media and Donations**
-
-[![Join Discord server](https://img.shields.io/discord/512303595966824458?color=697EC4&label=Join%20Discord%20Server&logo=discord&logoColor=FDFEFE&style=flat-square)](https://join.favware.tech)
-[![Twitter Follow](https://img.shields.io/twitter/follow/favna_?label=Follow%20@Favna_&logo=twitter&colorB=1DA1F2&style=flat-square)](https://twitter.com/Favna_/follow)
-[![Patreon Donate](https://img.shields.io/badge/patreon-donate-brightgreen.svg?label=Donate%20with%20Patreon&logo=patreon&colorB=F96854&style=flat-square&link=https://donate.favware.tech/patreon)](https://donate.favware.tech/patreon)
-[![PayPal Donate](https://img.shields.io/badge/paypal-donate-brightgreen.svg?label=Donate%20with%20Paypal&logo=paypal&colorB=00457C&style=flat-square&link=https://donate.favware.tech/paypal)](https://donate.favware.tech/paypal)
-
----
-
-# Install
+## Install
 
 Install with [yarn](https://yarnpkg.com) or [npm](https://www.npmjs.com/):
 
@@ -39,19 +26,34 @@ yarn add @favware/ts-config
 # npm install @favware/ts-config
 ```
 
-# Usage
+## Usage
+
+In your `tsconfig.json`:
 
 ```json
-// in your tsconfig.json
 {
   "extends": "@favware/ts-config",
   "compilerOptions": {
-    "outDir": "build/",
+    "outDir": "dist/",
     "rootDir": "src/"
   },
-  "include": ["src"],
-  "exclude": ["**/*.test.ts"]
+  "include": ["src"]
 }
 ```
 
-## [API Documentation](https://favware.github.io/node-packages/modules/_favware_tsconfig.html)
+## API Documentation
+
+For the full API documentation please refer to the TypeDoc generated [documentation](https://favware.github.io/node-packages/modules/_favware_tsconfig.html).
+
+## Buy us some doughnuts
+
+Favware projects are and always will be open source, even if we don't get donations. That being said, we know there are amazing people who may still want to donate just to show their appreciation. Thank you very much in advance!
+
+We accept donations through Open Collective, Ko-fi, Paypal, Patreon and GitHub Sponsorships. You can use the buttons below to donate through your method of choice.
+
+|   Donate With   |                      Address                      |
+| :-------------: | :-----------------------------------------------: |
+| GitHub Sponsors |  [Click Here](https://github.com/sponsors/Favna)  |
+|      Ko-fi      |  [Click Here](https://donate.favware.tech/kofi)   |
+|     Patreon     | [Click Here](https://donate.favware.tech/patreon) |
+|     PayPal      | [Click Here](https://donate.favware.tech/paypal)  |
