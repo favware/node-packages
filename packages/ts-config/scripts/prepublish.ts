@@ -1,5 +1,5 @@
-import { mkdirp, copy } from 'fs-nextra';
-import { resolve, join } from 'path';
+import { copy, mkdirp } from 'fs-nextra';
+import { join, resolve } from 'path';
 
 async function prepublish() {
   const rootDir = resolve(__dirname, '..');
