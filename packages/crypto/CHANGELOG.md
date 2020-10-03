@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.1.0](https://github.com/favware/node-packages/compare/@favware/crypto@3.0.3...@favware/crypto@3.1.0) (2020-10-03)
+
+
+### Features
+
+* **crypto:** build with rollup for optimal bundles ([0eb2934](https://github.com/favware/node-packages/commit/0eb293408b359150a64a5bbb41f139e95617ebad))
+
+
+
+
+
 ## [3.0.3](https://github.com/favware/node-packages/compare/@favware/crypto@3.0.2...@favware/crypto@3.0.3) (2020-08-06)
 
 **Note:** Version bump only for package @favware/crypto

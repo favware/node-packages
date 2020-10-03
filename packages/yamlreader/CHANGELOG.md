@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.1.0](https://github.com/favware/node-packages/compare/@favware/yamlreader@3.0.3...@favware/yamlreader@3.1.0) (2020-10-03)
+
+
+### Features
+
+* **yamlreader:** build with rollup for optimal bundles ([b3fecf8](https://github.com/favware/node-packages/commit/b3fecf8920fc46d7016741a4534ae7b7789f9928))
+
+
+
+
+
 ## [3.0.3](https://github.com/favware/node-packages/compare/@favware/yamlreader@3.0.2...@favware/yamlreader@3.0.3) (2020-08-06)
 
 **Note:** Version bump only for package @favware/yamlreader
