@@ -4,12 +4,17 @@ on:
   push:
     branches:
       - main
-  pull_request:
-
+    paths:
+      - packages/**
+      - .all-contributorsrc
+      - README.md
+      - package.json
+      - .github/workflows/update-documentation.yml
 jobs:
   TypeDoc:
     name: Generate API Documentation
     runs-on: ubuntu-latest
+    if: "!contains(github.event.head_commit.message, '[skip ci]')"
     steps:
       - name: Checkout Project
         uses: actions/checkout@v2
@@ -23,16 +28,12 @@ jobs:
           path: node_modules
           key: ${{ runner.os }}-12-${{ hashFiles('**/yarn.lock') }}
       - name: Install Dependencies
-        run: yarn --ignore-scripts
-      - name: Test Docs
-        if: github.event_name == 'pull_request'
+        run: yarn --ignore-scripts --frozen-lockfile
+      - name: Build documentation
         run: yarn docs
       - name: Publish Docs
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         run: |
-          #!/bin/bash
-          set -euxo pipefail
-
           echo -e "\n# Initialise some useful variables"
           REPO="https://${GITHUB_ACTOR}:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
           BRANCH_OR_TAG=`awk -F/ '{print $2}' <<< $GITHUB_REF`
@@ -48,11 +49,16 @@ jobs:
           TARGET_BRANCH="gh-pages"
           git clone $REPO out -b $TARGET_BRANCH
 
-          yarn docs
+          echo -e "\n# Remove any old files in the out folder"
+          rm -rfv out/assets/*
+          rm -rfv out/interfaces/*
+          rm -rfv out/*.html
 
-          echo -e "\n# Move the generated docs to the newly-checked-out repo, to be committed and pushed"
-          rsync -vau docs/ out/
-          rsync -vau README.md LICENSE.md out/
+          echo -e "\n# Move the generated code to the newly-checked-out repo, to be committed and pushed"
+          rsync -vaI .all-contributorsrc out/
+          rsync -vaI LICENSE.md out/
+          rsync -vaI README.md out/
+          rsync -vaI docs/ out/
 
           echo -e "\n# Commit and push"
           cd out
@@ -62,6 +68,6 @@ jobs:
           git commit -m "docs: api docs build for ${GITHUB_SHA}" || true
           git push origin $TARGET_BRANCH
         env:
+          GITHUB_TOKEN: ${{ secrets.BOT_TOKEN }}
           GITHUB_USER: Favware-bot
           GITHUB_EMAIL: favwarebot@gmail.com
-          GITHUB_TOKEN: ${{ secrets.BOT_TOKEN }}

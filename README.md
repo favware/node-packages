@@ -1,70 +1,41 @@
 <div align="center">
-  <p>
-  <a href="https://favware.tech"><img src="https://cdn.favware.tech/img/home.png" height="200" alt="logo"/></a>
-  </p>
 
-  <p>
-<h1> Favware Packages </h1>
-<h3> All node packages by Favware in one convenient location </h3>
-  </p>
+<img src="https://cdn.favware.tech/img/home.png" height="200" alt="logo"/>
 
-</div>
+# Favware Packages
 
----
-
-**Project Status**
+**All node packages by Favware in one convenient location**
 
 [![GitHub](https://img.shields.io/github/license/favware/node-packages?logo=github&style=flat-square)](https://github.com/favware/node-packages/blob/main/LICENSE.md)
 [![Coverage Status](https://coveralls.io/repos/github/favware/node-packages/badge.svg?branch=main)](https://coveralls.io/github/favware/node-packages?branch=main)
-
-**Bundle Sizes**
+[![Total alerts](https://img.shields.io/lgtm/alerts/g/favware/node-packages.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/favware/node-packages/alerts/)
+[![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/favware/node-packages.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/favware/node-packages/context:javascript)
+[![Coverage Status](https://coveralls.io/repos/github/favware/node-packages/badge.svg?branch=main)](https://coveralls.io/github/favware/node-packages?branch=main)
+[![Depfu](https://badges.depfu.com/badges/30f62cdba0c569448b5f93d532dad8e4/count.svg)](https://depfu.com/github/favware/node-packages?project_id=15121)
 
 [![npm bundle size](https://img.shields.io/bundlephobia/min/@favware/converter?label=converter%20-%20minified&logo=webpack&style=flat-square)](https://bundlephobia.com/result?p=@favware/converter)
-[![npm bundle size](https://img.shields.io/bundlephobia/minzip/@favware/converter?label=converter%20-%20minzipped&logo=webpack&style=flat-square)](https://bundlephobia.com/result?p=@favware/converter)
 [![npm bundle size](https://img.shields.io/bundlephobia/min/@favware/crypto?label=crypto%20-%20minified&logo=webpack&style=flat-square)](https://bundlephobia.com/result?p=@favware/crypto)
-[![npm bundle size](https://img.shields.io/bundlephobia/minzip/@favware/crypto?label=crypto%20-%20minzipped&logo=webpack&style=flat-square)](https://bundlephobia.com/result?p=@favware/crypto)
-
-[![npm bundle size](https://img.shields.io/bundlephobia/min/@favware/eslint-config?label=eslint-config%20-%20minified&logo=webpack&style=flat-square)](https://bundlephobia.com/result?p=@favware/eslint-config)
-[![npm bundle size](https://img.shields.io/bundlephobia/minzip/@favware/eslint-config?label=eslint-config%20-%20minzipped&logo=webpack&style=flat-square)](https://bundlephobia.com/result?p=@favware/eslint-config)
 [![npm bundle size](https://img.shields.io/bundlephobia/min/@favware/eslint-config-react-app?label=eslint-config-react-app%20-%20minified&logo=webpack&style=flat-square)](https://bundlephobia.com/result?p=@favware/eslint-config-react-app)
-[![npm bundle size](https://img.shields.io/bundlephobia/minzip/@favware/eslint-config-react-app?label=eslint-config-react-app%20-%20minzipped&logo=webpack&style=flat-square)](https://bundlephobia.com/result?p=@favware/eslint-config-react-app)
-
+[![npm bundle size](https://img.shields.io/bundlephobia/min/@favware/eslint-config?label=eslint-config%20-%20minified&logo=webpack&style=flat-square)](https://bundlephobia.com/result?p=@favware/eslint-config)
 [![npm bundle size](https://img.shields.io/bundlephobia/min/@favware/querystring?label=querystring%20-%20minified&logo=webpack&style=flat-square)](https://bundlephobia.com/result?p=@favware/querystring)
-[![npm bundle size](https://img.shields.io/bundlephobia/minzip/@favware/querystring?label=querystring%20-%20minzipped&logo=webpack&style=flat-square)](https://bundlephobia.com/result?p=@favware/querystring)
-[![npm bundle size](https://img.shields.io/bundlephobia/min/@favware/unescape?label=unescape%20-%20minified&logo=webpack&style=flat-square)](https://bundlephobia.com/result?p=@favware/unescape)
-[![npm bundle size](https://img.shields.io/bundlephobia/minzip/@favware/unescape?label=unescape%20-%20minzipped&logo=webpack&style=flat-square)](https://bundlephobia.com/result?p=@favware/unescape)
-
 [![npm bundle size](https://img.shields.io/bundlephobia/min/@favware/yamlreader?label=yamlreader%20-%20minified&logo=webpack&style=flat-square)](https://bundlephobia.com/result?p=@favware/yamlreader)
-[![npm bundle size](https://img.shields.io/bundlephobia/minzip/@favware/yamlreader?label=yamlreader%20-%20minzipped&logo=webpack&style=flat-square)](https://bundlephobia.com/result?p=@favware/yamlreader)
-[![npm bundle size](https://img.shields.io/bundlephobia/min/@favware/ytdl-prismplayer?label=ytdl-prismplayer%20-%20minified&logo=webpack&style=flat-square)](https://bundlephobia.com/result?p=@favware/ytdl-prismplayer)
-[![npm bundle size](https://img.shields.io/bundlephobia/minzip/@favware/ytdl-prismplayer?label=ytdl-prismplayer%20-%20minzipped&logo=webpack&style=flat-square)](https://bundlephobia.com/result?p=@favware/ytdl-prismplayer)
-
 [![npm bundle size](https://img.shields.io/bundlephobia/min/@favware/zalgo?label=zalgo%20-%20minified&logo=webpack&style=flat-square)](https://bundlephobia.com/result?p=@favware/zalgo)
-[![npm bundle size](https://img.shields.io/bundlephobia/minzip/@favware/zalgo?label=zalgo%20-%20minzipped&logo=webpack&style=flat-square)](https://bundlephobia.com/result?p=@favware/zalgo)
-
-**NPM Versions**
 
 [![npm](https://img.shields.io/npm/v/@favware/converter?color=crimson&label=converter%20version&logo=npm&style=flat-square)](https://www.npmjs.com/package/@favware/converter)
 [![npm](https://img.shields.io/npm/v/@favware/crypto?color=crimson&label=crypto%20version&logo=npm&style=flat-square)](https://www.npmjs.com/package/@favware/crypto)
-[![npm](https://img.shields.io/npm/v/@favware/eslint-config?color=crimson&label=eslint-config%20version&logo=npm&style=flat-square)](https://www.npmjs.com/package/@favware/eslint-config)
 [![npm](https://img.shields.io/npm/v/@favware/eslint-config-react-app?color=crimson&label=eslint-config-react-app%20version&logo=npm&style=flat-square)](https://www.npmjs.com/package/@favware/eslint-config-react-app)
-
+[![npm](https://img.shields.io/npm/v/@favware/eslint-config?color=crimson&label=eslint-config%20version&logo=npm&style=flat-square)](https://www.npmjs.com/package/@favware/eslint-config)
 [![npm](https://img.shields.io/npm/v/@favware/querystring?color=crimson&label=querystring%20version&logo=npm&style=flat-square)](https://www.npmjs.com/package/@favware/querystring)
-[![npm](https://img.shields.io/npm/v/@favware/unescape?color=crimson&label=unescape%20version&logo=npm&style=flat-square)](https://www.npmjs.com/package/@favware/unescape)
-[![npm](https://img.shields.io/npm/v/@favware/yamlreader?color=crimson&label=yamlreader%20version&logo=npm&style=flat-square)](https://www.npmjs.com/package/@favware/yamlreader)
-[![npm](https://img.shields.io/npm/v/@favware/ytdl-prismplayer?color=crimson&label=ytdl-prismplayer%20version&logo=npm&style=flat-square)](https://www.npmjs.com/package/@favware/ytdl-prismplayer)
-
-[![npm](https://img.shields.io/npm/v/@favware/zalgo?color=crimson&label=zalgo%20version&logo=npm&style=flat-square)](https://www.npmjs.com/package/@favware/zalgo)
 [![npm](https://img.shields.io/npm/v/@favware/ts-config?color=crimson&label=tsconfig%20version&logo=npm&style=flat-square)](https://www.npmjs.com/package/@favware/ts-config)
-
-**Social Media and Donations**
+[![npm](https://img.shields.io/npm/v/@favware/yamlreader?color=crimson&label=yamlreader%20version&logo=npm&style=flat-square)](https://www.npmjs.com/package/@favware/yamlreader)
+[![npm](https://img.shields.io/npm/v/@favware/zalgo?color=crimson&label=zalgo%20version&logo=npm&style=flat-square)](https://www.npmjs.com/package/@favware/zalgo)
 
 [![Join Discord server](https://img.shields.io/discord/512303595966824458?color=697EC4&label=Join%20Discord%20Server&logo=discord&logoColor=FDFEFE&style=flat-square)](https://join.favware.tech)
 [![Twitter Follow](https://img.shields.io/twitter/follow/favna_?label=Follow%20@Favna_&logo=twitter&colorB=1DA1F2&style=flat-square)](https://twitter.com/Favna_/follow)
 [![Patreon Donate](https://img.shields.io/badge/patreon-donate-brightgreen.svg?label=Donate%20with%20Patreon&logo=patreon&colorB=F96854&style=flat-square&link=https://donate.favware.tech/patreon)](https://donate.favware.tech/patreon)
 [![PayPal Donate](https://img.shields.io/badge/paypal-donate-brightgreen.svg?label=Donate%20with%20Paypal&logo=paypal&colorB=00457C&style=flat-square&link=https://donate.favware.tech/paypal)](https://donate.favware.tech/paypal)
 
----
+</div>
 
 ## What is Favware?
 
@@ -95,17 +66,15 @@ Pull requests and stars are always welcome. For bugs and feature requests, [plea
 Copyright © 2019, [Favware](https://github.com/favware).
 Released under the [MIT License](LICENSE.md).
 
-### Buy us a donut
+### Buy us some doughnuts
 
-Favware projects are open source and always will be, even if there are no donations. That said, we also know there are people out there that may still want to donate just to show their appreciation so this is for you guys. Thanks in advance!
+Favware projects are and always will be open source, even if we don't get donations. That being said, we know there are amazing people who may still want to donate just to show their appreciation. Thank you very much in advance!
 
-You can contribute in a multitude of ways:
+We accept donations through Open Collective, Ko-fi, Paypal, Patreon and GitHub Sponsorships. You can use the buttons below to donate through your method of choice.
 
-- [PayPal](https://donate.favware.tech/paypal)
-- [Patreon](https://www.patreon.com/favna)
-- [Ko-Fi](https://ko-fi.com/favna)
-- [GitHub Sponsors Favware](https://github.com/sponsors/favware)
-- [GitHub Sponsors Favna](https://github.com/sponsors/Favna)
-- Bitcoin: `1E643TNif2MTh75rugepmXuq35Tck4TnE5`
-- Ethereum: `0xF653F666903cd8739030D2721bF01095896F5D6E`
-- LiteCoin: `LZHvBkaJqKJRa8N7Dyu41Jd1PDBAofCik6`
+|   Donate With   |                      Address                      |
+| :-------------: | :-----------------------------------------------: |
+| GitHub Sponsors |  [Click Here](https://github.com/sponsors/Favna)  |
+|      Ko-fi      |  [Click Here](https://donate.favware.tech/kofi)   |
+|     Patreon     | [Click Here](https://donate.favware.tech/patreon) |
+|     PayPal      | [Click Here](https://donate.favware.tech/paypal)  |

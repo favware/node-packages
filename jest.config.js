@@ -9,9 +9,5 @@ module.exports = {
       tsConfig: '<rootDir>/tsconfig.base.json'
     }
   },
-  coveragePathIgnorePatterns: [
-    '<rootDir>/packages/ytdl-prismplayer',
-    '<rootDir>/packages/unescape',
-    '<rootDir>/packages/ts-config/__tests__/index.ts'
-  ]
+  coveragePathIgnorePatterns: ['<rootDir>/packages/ts-config/__tests__/index.ts']
 };
