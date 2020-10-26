@@ -5,12 +5,16 @@ Object {
   "extends": Array [
     "@favware",
     "plugin:import/typescript",
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended",
   ],
   "parserOptions": Object {
     "ecmaFeatures": Object {
       "jsx": true,
     },
-    "ecmaVersion": 2019,
+    "ecmaVersion": 2020,
     "jsx": true,
     "project": "./tsconfig.eslint.json",
     "sourceType": "module",

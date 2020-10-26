@@ -5,6 +5,8 @@ Object {
   "env": Object {
     "browser": true,
     "commonjs": true,
+    "es2017": true,
+    "es2020": true,
     "es6": true,
     "jest": true,
     "node": true,
@@ -13,17 +15,17 @@ Object {
     "eslint:recommended",
     "plugin:@typescript-eslint/eslint-recommended",
     "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended",
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": Object {
-    "ecmaFeatures": Object {
-      "jsx": false,
-    },
-    "ecmaVersion": 2019,
-    "jsx": true,
+    "ecmaVersion": 2020,
     "project": "./tsconfig.eslint.json",
     "sourceType": "module",
   },
+  "plugins": Array [
+    "@typescript-eslint",
+  ],
   "root": true,
   "rules": Object {
     "@typescript-eslint/ban-ts-comment": Array [

@@ -22,34 +22,53 @@ This configuration extends the [`@favware/eslint-config`](https://www.npmjs.com/
 
 ## Install
 
+### Peer Dependencies
+
+This project has eslint related peer dependencies that can be installed with:
+```sh
+yarn add -D @favware/eslint-config @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint eslint-config-prettier eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-prettier eslint-plugin-react eslint-plugin-react-hooks typescript
+
+# npm install -D @favware/eslint-config @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint eslint-config-prettier eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-prettier eslint-plugin-react eslint-plugin-react-hooks typescript
+```
+
+### This package
+
 Install with [yarn](https://yarnpkg.com) or [npm](https://www.npmjs.com/):
 
 ```sh
-yarn add @favware/eslint-config-react-app
+yarn add -D @favware/eslint-config-react-app
 
-# npm install @favware/eslint-config-react-app
+# npm install -D @favware/eslint-config-react-app
 ```
-
-All necessary dependencies such as `eslint` and `@typescript-eslint/parser` will automatically be installed
 
 ## Usage
 
+Add the ESLint config to your `package.json`:
+
 ```json
 {
-  "extends": ["@favware/eslint-config-react-app"]
+	"name": "my-project",
+	"eslintConfig": {
+		"extends": "@favware/eslint-config-react-app"
+	}
 }
 ```
 
-### Note to create-react-app users (2020-06-11)
-
-create-react-app will install their own outdated versions of `@typescript-eslint/eslint-plugin` (v2.x), `@typescript-eslint/parser`(v2.x) and `eslint` (v6.x) which will conflict with this configuration. If you're using yarn add the following to your package.json to force yarn to install supported versions of the packages. For other package managers please consult on how to properly modify their respective lock files to force package resolutions.
+Or to `eslintrc.js` / `.eslintrc.json`:
 
 ```json
-	"resolutions": {
-    "@typescript-eslint/eslint-plugin": "^3.2.0",
-    "@typescript-eslint/parser": "^3.2.0",
-		"eslint": "^7.2.0"
-	}
+{
+	"extends": "@favware/eslint-config-react-app"
+}
+```
+
+Create `tsconfig.eslint.json` next to the eslint config file, for example with content:
+
+```json
+{
+	"extends": "./tsconfig.json",
+	"include": ["src", "test"]
+}
 ```
 
 ## API Documentation

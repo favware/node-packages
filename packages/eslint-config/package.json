@@ -14,10 +14,13 @@
     "lint": "eslint src __tests__ --ext js,ts --fix -c dist/index.js",
     "build": "tsc -b src"
   },
-  "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^4.5.0",
-    "@typescript-eslint/parser": "^4.5.0",
-    "eslint": "^7.12.0"
+  "peerDependencies": {
+		"@typescript-eslint/eslint-plugin": "4.x",
+		"@typescript-eslint/parser": "4.x",
+		"eslint-config-prettier": "6.x",
+		"eslint-plugin-prettier": "3.x",
+		"eslint": "7.x",
+		"typescript": "4.x"
   },
   "files": [
     "dist",

@@ -18,6 +18,18 @@
 
 ## Install
 
+### Peer Dependencies
+
+This project has eslint related peer dependencies that can be installed with:
+```sh
+yarn add -D @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-config-prettier eslint-plugin-prettier eslint typescript
+
+# npm install -D @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-config-prettier eslint-plugin-prettier eslint typescript
+```
+ 
+
+### This package
+
 Install with [yarn](https://yarnpkg.com) or [npm](https://www.npmjs.com/):
 
 ```sh

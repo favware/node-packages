@@ -9,15 +9,22 @@
  */
 export const config = {
   root: true,
-  extends: ['@favware', 'plugin:import/typescript'],
-  plugins: ['import', 'jsx-a11y', 'react', 'react-hooks'],
   parserOptions: {
-    project: './tsconfig.eslint.json',
+    ecmaVersion: 2020,
     sourceType: 'module',
-    ecmaVersion: 2019,
+    project: './tsconfig.eslint.json',
     ecmaFeatures: { jsx: true },
     jsx: true
   },
+  extends: [
+    '@favware',
+    'plugin:import/typescript',
+    'eslint:recommended',
+    'plugin:@typescript-eslint/eslint-recommended',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:prettier/recommended'
+  ],
+  plugins: ['import', 'jsx-a11y', 'react', 'react-hooks'],
   settings: {
     react: {
       version: 'detect'

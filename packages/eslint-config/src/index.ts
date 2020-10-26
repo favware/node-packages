@@ -11,20 +11,22 @@ export const config = {
   root: true,
   parser: '@typescript-eslint/parser',
   parserOptions: {
-    project: './tsconfig.eslint.json',
-    jsx: true,
+    ecmaVersion: 2020,
     sourceType: 'module',
-    ecmaVersion: 2019,
-    ecmaFeatures: { jsx: false }
+    project: './tsconfig.eslint.json'
   },
   extends: [
     'eslint:recommended',
     'plugin:@typescript-eslint/eslint-recommended',
-    'plugin:@typescript-eslint/recommended'
+    'plugin:@typescript-eslint/recommended',
+    'plugin:prettier/recommended'
   ],
+  plugins: ['@typescript-eslint'],
   env: {
     node: true,
     es6: true,
+    es2017: true,
+    es2020: true,
     jest: true,
     browser: true,
     commonjs: true
