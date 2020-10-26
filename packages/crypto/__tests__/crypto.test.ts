@@ -1,4 +1,4 @@
-import cryptodefault, { crypto, Radix } from '../src';
+import { crypto, Radix } from '../src';
 
 test('Base16 cryptography', () => {
   const cryptography = crypto(280, Radix.Base16);
@@ -33,11 +33,4 @@ test('Base64 cryptography', () => {
 
   expect(typeof cryptography).toBe('string');
   expect(cryptography).toHaveLength(47);
-});
-
-test('Check default export', () => {
-  const cryptography = cryptodefault(280, Radix.Base16);
-
-  expect(typeof cryptography).toBe('string');
-  expect(cryptography).toHaveLength(70);
 });
