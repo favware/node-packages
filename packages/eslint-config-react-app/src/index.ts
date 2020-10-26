@@ -17,11 +17,11 @@ export const config = {
     jsx: true
   },
   extends: [
-    '@favware',
-    'plugin:import/typescript',
     'eslint:recommended',
     'plugin:@typescript-eslint/eslint-recommended',
     'plugin:@typescript-eslint/recommended',
+    'plugin:import/typescript',
+    '@favware',
     'plugin:prettier/recommended'
   ],
   plugins: ['import', 'jsx-a11y', 'react', 'react-hooks'],
