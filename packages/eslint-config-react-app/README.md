@@ -25,6 +25,7 @@ This configuration extends the [`@favware/eslint-config`](https://www.npmjs.com/
 ### Peer Dependencies
 
 This project has eslint related peer dependencies that can be installed with:
+
 ```sh
 yarn add -D @favware/eslint-config @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint eslint-config-prettier eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-prettier eslint-plugin-react eslint-plugin-react-hooks typescript
 
@@ -47,10 +48,10 @@ Add the ESLint config to your `package.json`:
 
 ```json
 {
-	"name": "my-project",
-	"eslintConfig": {
-		"extends": "@favware/eslint-config-react-app"
-	}
+  "name": "my-project",
+  "eslintConfig": {
+    "extends": "@favware/eslint-config-react-app"
+  }
 }
 ```
 
@@ -58,7 +59,7 @@ Or to `eslintrc.js` / `.eslintrc.json`:
 
 ```json
 {
-	"extends": "@favware/eslint-config-react-app"
+  "extends": "@favware/eslint-config-react-app"
 }
 ```
 
@@ -66,8 +67,8 @@ Create `tsconfig.eslint.json` next to the eslint config file, for example with c
 
 ```json
 {
-	"extends": "./tsconfig.json",
-	"include": ["src", "test"]
+  "extends": "./tsconfig.json",
+  "include": ["src", "test"]
 }
 ```
 

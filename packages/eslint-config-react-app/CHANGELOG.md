@@ -7,10 +7,6 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @favware/eslint-config-react-app
 
-
-
-
-
 ## [1.1.3](https://github.com/favware/node-packages/compare/@favware/eslint-config-react-app@1.1.2...@favware/eslint-config-react-app@1.1.3) (2020-09-05)
 
 ### Bug Fixes
