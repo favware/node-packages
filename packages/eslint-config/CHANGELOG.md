@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [6.0.1](https://github.com/favware/node-packages/compare/@favware/eslint-config@6.0.0...@favware/eslint-config@6.0.1) (2020-10-26)
+
+
+### Bug Fixes
+
+* **eslint-config:** also peer depend on prettier ([9f0a6f7](https://github.com/favware/node-packages/commit/9f0a6f70ed1232e0cbc710464b2e46bac9b2ed44))
+
+
+
+
+
 # [6.0.0](https://github.com/favware/node-packages/compare/@favware/eslint-config@5.1.4...@favware/eslint-config@6.0.0) (2020-10-26)
 
 
