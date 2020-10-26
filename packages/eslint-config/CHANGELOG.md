@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [6.0.2](https://github.com/favware/node-packages/compare/@favware/eslint-config@6.0.1...@favware/eslint-config@6.0.2) (2020-10-26)
+
+
+### Bug Fixes
+
+* **eslint-config:** remove plugin line ([94853f1](https://github.com/favware/node-packages/commit/94853f155a254f0247b8bc2c7e53960554b6a152))
+
+
+
+
+
 ## [6.0.1](https://github.com/favware/node-packages/compare/@favware/eslint-config@6.0.0...@favware/eslint-config@6.0.1) (2020-10-26)
 
 
