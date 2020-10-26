@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.2](https://github.com/favware/node-packages/compare/@favware/eslint-config-react-app@2.0.1...@favware/eslint-config-react-app@2.0.2) (2020-10-26)
+
+
+### Bug Fixes
+
+* **eslint-config-react-app:** fixed order of extends ([c48f141](https://github.com/favware/node-packages/commit/c48f1417d4df4f74a2fbd27b172403dda58f2c82))
+
+
+
+
+
 ## [2.0.1](https://github.com/favware/node-packages/compare/@favware/eslint-config-react-app@2.0.0...@favware/eslint-config-react-app@2.0.1) (2020-10-26)
 
 
