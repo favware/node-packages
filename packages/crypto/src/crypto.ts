@@ -1,4 +1,4 @@
-import { randomBytes } from 'crypto';
+import { requireRandomBytes } from './browser-safe-randombytes';
 import StreamBinary from './StreamBinary';
 import { characters, CryptoError, defaultBits, defaultRadix, Radix } from './util';
 
@@ -18,7 +18,7 @@ export const crypto = (bits: number = defaultBits, radix: Radix = defaultRadix):
     if (typeof bits !== 'number') throw new Error('bits_not_number');
     if (typeof radix !== 'number') throw new Error('radix_not_string');
 
-    const entropy = randomBytes(bits);
+    const entropy = requireRandomBytes(bits);
     const length = Math.ceil((bits * Math.log(2)) / Math.log(radix));
     const stream = new StreamBinary(entropy);
 
