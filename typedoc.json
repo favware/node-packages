@@ -9,7 +9,8 @@
     "**/rollup.config.ts",
     "packages/converter/src/index.ts",
     "packages/crypto/src/index.ts",
-    "packages/zalgo/src/index.ts"
+    "packages/zalgo/src/index.ts",
+    "**/jest.config.ts"
   ],
   "mode": "modules",
   "excludeExternals": true,
