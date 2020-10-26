@@ -1,4 +1,6 @@
-module.exports = {
+import type { Config } from '@jest/types';
+
+export default async (): Promise<Config.InitialOptions> => ({
   displayName: 'ts-jest',
   preset: 'ts-jest',
   testEnvironment: 'node',
@@ -13,4 +15,4 @@ module.exports = {
     '<rootDir>/packages/ts-config/__tests__/index.ts',
     '<rootDir>/packages/crypto/src/browser-safe-randombytes.ts'
   ]
-};
+});

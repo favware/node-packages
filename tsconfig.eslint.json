@@ -9,9 +9,8 @@
   "include": [
     "packages/**/*.ts",
     "scripts",
-    "packages/**/jest.config.js",
     "packages/**/__tests__/*.js",
     "packages/**/__fixtures__/*.js",
-    "./jest.config.js"
+    "./jest.config.ts"
   ]
 }
