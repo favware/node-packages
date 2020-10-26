@@ -9,5 +9,8 @@ module.exports = {
       tsconfig: '<rootDir>/tsconfig.base.json'
     }
   },
-  coveragePathIgnorePatterns: ['<rootDir>/packages/ts-config/__tests__/index.ts']
+  coveragePathIgnorePatterns: [
+    '<rootDir>/packages/ts-config/__tests__/index.ts',
+    '<rootDir>/packages/crypto/src/browser-safe-randombytes.ts'
+  ]
 };

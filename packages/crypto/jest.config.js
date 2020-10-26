@@ -7,5 +7,6 @@ module.exports = {
     'ts-jest': {
       tsconfig: '<rootDir>/__tests__/tsconfig.json'
     }
-  }
+  },
+  coveragePathIgnorePatterns: ['<rootDir>/packages/crypto/src/browser-safe-randombytes.ts']
 };
