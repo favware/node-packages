@@ -6,7 +6,7 @@ module.exports = {
   testMatch: ['<rootDir>/packages/**/__tests__/*.test.ts', '<rootDir>/packages/**/__tests__/*.test.js'],
   globals: {
     'ts-jest': {
-      tsConfig: '<rootDir>/tsconfig.base.json'
+      tsconfig: '<rootDir>/tsconfig.base.json'
     }
   },
   coveragePathIgnorePatterns: ['<rootDir>/packages/ts-config/__tests__/index.ts']
