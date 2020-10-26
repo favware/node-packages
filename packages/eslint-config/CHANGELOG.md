@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [6.0.0](https://github.com/favware/node-packages/compare/@favware/eslint-config@5.1.4...@favware/eslint-config@6.0.0) (2020-10-26)
+
+
+### Features
+
+* **eslint-config:** bumped dependencies to latest versions ([765d73c](https://github.com/favware/node-packages/commit/765d73c0f2de3a74bcbb629eaf128f0470fffb01))
+
+
+### BREAKING CHANGES
+
+* **eslint-config:** Providing the additional ESLint packages through dependencies was messing with a
+lot of ESLint setups in other projects so instead all dependendencies are now peerDependencies and
+need to be installed by you yourself. Please see the README to find out which packages you need to
+install.
+
+
+
+
+
 ## [5.1.4](https://github.com/favware/node-packages/compare/@favware/eslint-config@5.1.3...@favware/eslint-config@5.1.4) (2020-10-03)
 
 **Note:** Version bump only for package @favware/eslint-config

@@ -1,6 +1,6 @@
 {
   "name": "@favware/eslint-config",
-  "version": "5.1.4",
+  "version": "6.0.0",
   "description": "Standard ESLint config for Favware projects written in TypeScript",
   "author": "@favware",
   "license": "MIT",
@@ -17,9 +17,9 @@
   "peerDependencies": {
     "@typescript-eslint/eslint-plugin": "4.x",
     "@typescript-eslint/parser": "4.x",
+    "eslint": "7.x",
     "eslint-config-prettier": "6.x",
     "eslint-plugin-prettier": "3.x",
-    "eslint": "7.x",
     "typescript": "4.x"
   },
   "files": [

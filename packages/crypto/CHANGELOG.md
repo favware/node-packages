@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.1.1](https://github.com/favware/node-packages/compare/@favware/crypto@3.1.0...@favware/crypto@3.1.1) (2020-10-26)
+
+
+### Bug Fixes
+
+* **crypto:** make it work in browsers ([3ddb945](https://github.com/favware/node-packages/commit/3ddb9456cd9106a3867d34c732e8a709d9e0dd5a))
+
+
+
+
+
 # [3.1.0](https://github.com/favware/node-packages/compare/@favware/crypto@3.0.3...@favware/crypto@3.1.0) (2020-10-03)
 
 
