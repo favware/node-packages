@@ -3,11 +3,11 @@
 exports[`ESLint Config should export rules 1`] = `
 Object {
   "extends": Array [
-    "@favware",
-    "plugin:import/typescript",
     "eslint:recommended",
     "plugin:@typescript-eslint/eslint-recommended",
     "plugin:@typescript-eslint/recommended",
+    "plugin:import/typescript",
+    "@favware",
     "plugin:prettier/recommended",
   ],
   "parserOptions": Object {

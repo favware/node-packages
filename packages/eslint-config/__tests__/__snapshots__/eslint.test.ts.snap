@@ -23,9 +23,6 @@ Object {
     "project": "./tsconfig.eslint.json",
     "sourceType": "module",
   },
-  "plugins": Array [
-    "@typescript-eslint",
-  ],
   "root": true,
   "rules": Object {
     "@typescript-eslint/ban-ts-comment": Array [
