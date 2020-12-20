@@ -18,7 +18,7 @@
     "start": "yarn build -w"
   },
   "dependencies": {
-    "js-yaml": "^3.14.0"
+    "js-yaml": "^3.14.1"
   },
   "files": [
     "dist",
