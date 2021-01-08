@@ -18,7 +18,18 @@
     "start": "yarn build -w"
   },
   "dependencies": {
-    "js-yaml": "^3.14.1"
+    "js-yaml": "^4.0.0"
+  },
+  "devDependencies": {
+    "@types/js-yaml": "^4.0.0"
+  },
+  "peerDependencies": {
+    "@types/js-yaml": "^4.0.0"
+  },
+  "peerDependenciesMeta": {
+    "@types/js-yaml": {
+      "optional":true
+    }
   },
   "files": [
     "dist",
@@ -56,8 +67,5 @@
   },
   "publishConfig": {
     "access": "public"
-  },
-  "devDependencies": {
-    "@types/js-yaml": "^3.12.5"
   }
 }

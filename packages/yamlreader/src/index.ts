@@ -38,7 +38,7 @@ export const readYaml = <T = unknown>(filepath: string, options?: YamlReaderOpti
   }
 
   try {
-    const jsonData = yaml.safeLoad(str.toString('utf8'), opts);
+    const jsonData = yaml.load(str.toString('utf8'), opts);
     if (typeof jsonData !== 'object') throw new Error('not_valid_yaml');
 
     return (jsonData as unknown) as T;
