@@ -8,6 +8,7 @@
   "module": "dist/index.es.js",
   "types": "dist/index.d.ts",
   "homepage": "https://github.com/favware/node-packages/tree/main/packages/eslint-config-react-app#readme",
+  "private": true,
   "scripts": {
     "test": "jest",
     "prelint": "yarn test && yarn build",
@@ -23,10 +24,10 @@
   },
   "files": [
     "dist",
-    "!dist/.tsbuildinfo"
+    "!dist/*.tsbuildinfo"
   ],
   "engines": {
-    "node": ">=12",
+    "node": ">=14",
     "npm": ">=6"
   },
   "repository": {

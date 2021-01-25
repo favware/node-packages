@@ -8,6 +8,7 @@
   "module": "dist/index.es.js",
   "types": "dist/index.d.ts",
   "homepage": "https://github.com/favware/node-packages/tree/main/packages/eslint-config#readme",
+  "private": true,
   "scripts": {
     "test": "jest",
     "prelint": "yarn test && yarn build",
@@ -18,17 +19,17 @@
     "@typescript-eslint/eslint-plugin": "4.x",
     "@typescript-eslint/parser": "4.x",
     "eslint": "7.x",
-    "eslint-config-prettier": "6.x",
+    "eslint-config-prettier": "7.x",
     "eslint-plugin-prettier": "3.x",
     "prettier": "2.x",
     "typescript": "4.x"
   },
   "files": [
     "dist",
-    "!dist/.tsbuildinfo"
+    "!dist/*.tsbuildinfo"
   ],
   "engines": {
-    "node": ">=12",
+    "node": ">=14",
     "npm": ">=6"
   },
   "repository": {

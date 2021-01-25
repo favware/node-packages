@@ -6,22 +6,23 @@
   "license": "MIT",
   "main": "dist/tsconfig.json",
   "homepage": "https://favware.tech",
+  "private": true,
   "scripts": {
     "test": "jest",
-    "lint": "eslint __tests__ scripts --ext ts --fix -c ../../.eslintrc",
+    "lint": "eslint __tests__ scripts --ext mjs,ts --fix -c ../../.eslintrc",
     "prebuild": "yarn lint",
-    "build": "tsc -b __tests__ && tsc -b scripts",
-    "prepublishOnly": "node build/prepublish.js",
-    "postpublish": "node build/postpublish.js"
+    "build": "tsc -b __tests__",
+    "prepublishOnly": "node scripts/prepublish.mjs",
+		"postpublish": "node scripts/postpublish.mjs"
   },
   "peerDependencies": {
-    "typescript": ">=3"
+    "typescript": "4.x"
   },
   "files": [
     "tsconfig.json"
   ],
   "engines": {
-    "node": ">=12",
+    "node": ">=14",
     "npm": ">=6"
   },
   "repository": {
