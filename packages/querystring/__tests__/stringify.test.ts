@@ -44,20 +44,14 @@ describe('Standard Behaviour', () => {
 
   test('should work with valid options', () => {
     const expected = '?prop=value&prop2=value2';
-    const actual = stringify(
-      { prop: 'value', prop2: 'value2' },
-      { separator: '&', equals: '=', includeQuestion: true }
-    );
+    const actual = stringify({ prop: 'value', prop2: 'value2' }, { separator: '&', equals: '=', includeQuestion: true });
     expect(actual).toMatchSnapshot();
     expect(actual).toBe(expected);
   });
 
   test('confirm default export works', () => {
     const expected = '?prop=value&prop2=value2';
-    const actual = stringify(
-      { prop: 'value', prop2: 'value2' },
-      { separator: '&', equals: '=', includeQuestion: true }
-    );
+    const actual = stringify({ prop: 'value', prop2: 'value2' }, { separator: '&', equals: '=', includeQuestion: true });
     expect(actual).toMatchSnapshot();
     expect(actual).toBe(expected);
   });

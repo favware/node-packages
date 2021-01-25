@@ -16,5 +16,5 @@
   "excludeExternals": true,
   "excludeNotExported": true,
   "stripInternal": true,
-  "tsconfig": "./tsconfig.base.json"
+  "tsconfig": "./tsconfig.dev.json"
 }

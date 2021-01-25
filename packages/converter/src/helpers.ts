@@ -423,7 +423,7 @@ export class ConverterError extends Error {
    * Create an ConverterError
    * @param message The message the error should show
    */
-  constructor(message: string) {
+  public constructor(message: string) {
     super(message);
     this.message = message;
     this.name = 'ConverterError';

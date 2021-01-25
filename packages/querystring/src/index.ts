@@ -103,9 +103,7 @@ export function stringify<I>(
     return combinedValues.join(options.separator);
   } catch (err) {
     if (/object_is_empty/i.test(err.toString())) {
-      return `${options.includeQuestion ? '?' : ''}${encodeURIComponent(
-        stringifyPrimitive(obj, options.encodeUriComponents)
-      )}`;
+      return `${options.includeQuestion ? '?' : ''}${encodeURIComponent(stringifyPrimitive(obj, options.encodeUriComponents))}`;
     }
     if (/input_not_object/i.test(err.toString())) {
       throw '@Favware/Querystring: Your input was not an object. Please supply an object when using Stringify.';
@@ -143,6 +141,7 @@ export function parse<R extends Record<PropertyKey, unknown> = Record<PropertyKe
   try {
     if (typeof qs !== 'string') throw new Error('input_not_string');
     if (qs === '') return {} as R;
+    // eslint-disable-next-line prefer-destructuring
     if (/^https?:\/\//.test(qs)) qs = qs.split('?')[1];
     if (!options.separator) options.separator = '&';
     if (!options.equals) options.equals = '=';

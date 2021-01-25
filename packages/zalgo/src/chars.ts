@@ -1,5 +1,5 @@
 /* eslint-disable max-len */
-import { Chars } from './interfaces';
+import type { Chars } from './interfaces';
 
 /**
  * Supported Zalgo characters, based on {@link https://metacpan.org/pod/Acme::Zalgo | Acme::Zalgo}

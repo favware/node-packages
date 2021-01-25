@@ -1,5 +1,5 @@
 import chars from './chars';
-import { ZalgoCountsMap, ZalgoOptions } from './interfaces';
+import type { ZalgoCountsMap, ZalgoOptions } from './interfaces';
 import { randomizer, unicodeStringSplitter } from './utils';
 
 /**
@@ -53,8 +53,7 @@ export const zalgo = (
       counts = { up: 0, middle: 0, down: 0 }; // lgtm [js/useless-assignment-to-local]
 
       if (options.size === 'mini') counts = { up: randomizer(8), middle: randomizer(2), down: randomizer(8) };
-      else if (options.size === 'maxi')
-        counts = { up: randomizer(16) + 3, middle: randomizer(4) + 1, down: randomizer(64) + 3 };
+      else if (options.size === 'maxi') counts = { up: randomizer(16) + 3, middle: randomizer(4) + 1, down: randomizer(64) + 3 };
       else counts = { up: randomizer(8) + 1, middle: randomizer(3), down: randomizer(8) + 1 };
 
       result += text[i];
@@ -73,10 +72,8 @@ export const zalgo = (
 
     return result;
   } catch (err) {
-    if (/(?:no_input)/i.test(err.toString()))
-      throw SyntaxError('The zalgo function at least requires some text as input!');
-    if (/(?:not_a_string)/i.test(err.toString()))
-      throw new SyntaxError('The zalgo function expects input of type string as first argument!');
+    if (/(?:no_input)/i.test(err.toString())) throw SyntaxError('The zalgo function at least requires some text as input!');
+    if (/(?:not_a_string)/i.test(err.toString())) throw new SyntaxError('The zalgo function expects input of type string as first argument!');
     throw err;
   }
 };
@@ -97,10 +94,8 @@ export const banish = (purgeable: string): string => {
 
     return purgeable.replace(chars.pattern!, '');
   } catch (err) {
-    if (/(?:no_input)/i.test(err.toString()))
-      throw new SyntaxError('The banish function at least requires some text as input!');
-    if (/(?:not_a_string)/i.test(err.toString()))
-      throw new SyntaxError('The banish function expects input of type string as first argument!');
+    if (/(?:no_input)/i.test(err.toString())) throw new SyntaxError('The banish function at least requires some text as input!');
+    if (/(?:not_a_string)/i.test(err.toString())) throw new SyntaxError('The banish function expects input of type string as first argument!');
     throw err;
   }
 };

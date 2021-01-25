@@ -5,31 +5,20 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [4.0.0](https://github.com/favware/node-packages/compare/@favware/yamlreader@3.1.0...@favware/yamlreader@4.0.0) (2021-01-08)
 
-
 ### Features
 
-* bump js-yaml to v4 ([3647cb9](https://github.com/favware/node-packages/commit/3647cb9c59c938422a28a603eee07f81ffe8f165)), closes [#251](https://github.com/favware/node-packages/issues/251) [#255](https://github.com/favware/node-packages/issues/255)
-
+- bump js-yaml to v4 ([3647cb9](https://github.com/favware/node-packages/commit/3647cb9c59c938422a28a603eee07f81ffe8f165)), closes [#251](https://github.com/favware/node-packages/issues/251) [#255](https://github.com/favware/node-packages/issues/255)
 
 ### BREAKING CHANGES
 
-* see changes for js-yaml v4.0.0 here
-https://github.com/nodeca/js-yaml/blob/master/CHANGELOG.md
-
-
-
-
+- see changes for js-yaml v4.0.0 here
+  https://github.com/nodeca/js-yaml/blob/master/CHANGELOG.md
 
 # [3.1.0](https://github.com/favware/node-packages/compare/@favware/yamlreader@3.0.3...@favware/yamlreader@3.1.0) (2020-10-03)
 
-
 ### Features
 
-* **yamlreader:** build with rollup for optimal bundles ([b3fecf8](https://github.com/favware/node-packages/commit/b3fecf8920fc46d7016741a4534ae7b7789f9928))
-
-
-
-
+- **yamlreader:** build with rollup for optimal bundles ([b3fecf8](https://github.com/favware/node-packages/commit/b3fecf8920fc46d7016741a4534ae7b7789f9928))
 
 ## [3.0.3](https://github.com/favware/node-packages/compare/@favware/yamlreader@3.0.2...@favware/yamlreader@3.0.3) (2020-08-06)
 

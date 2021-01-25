@@ -49,8 +49,6 @@ jobs:
           key: ${{ runner.os }}-12-${{ hashFiles('**/yarn.lock') }}
       - name: Install Dependencies
         run: yarn --ignore-scripts --frozen-lockfile
-      - name: Build ESLint config
-        run: yarn tsc -b packages/eslint-config
       - name: Run ESLint
         run: yarn lint --fix=false
 
@@ -101,13 +99,7 @@ jobs:
       - name: Install Dependencies
         run: yarn --ignore-scripts --frozen-lockfile
       - name: Compile Projects
-        run: |
-          yarn tsc -b packages/eslint-config packages/eslint-config-react-app packages/ts-config \
-          && yarn --cwd packages/converter rollup -c ./rollup.config.ts \
-          && yarn --cwd packages/crypto rollup -c ./rollup.config.ts \
-          && yarn --cwd packages/querystring rollup -c ./rollup.config.ts \
-          && yarn --cwd packages/yamlreader rollup -c ./rollup.config.ts \
-          && yarn --cwd packages/zalgo rollup -c ./rollup.config.ts
+        run: yarn build
 
   Upload_Coverage_Report:
     name: Upload coverage report to coveralls

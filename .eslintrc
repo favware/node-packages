@@ -1,3 +1,7 @@
 {
-    "extends": "./packages/eslint-config/dist/index.js"
+    "extends": "@sapphire/eslint-config",
+    "rules": {
+        "@typescript-eslint/no-throw-literal": "off",
+        "@typescript-eslint/require-await": "off"
+    }
 }

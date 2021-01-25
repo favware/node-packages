@@ -7,25 +7,15 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @favware/querystring
 
-
-
-
-
 # [7.0.0](https://github.com/favware/node-packages/compare/@favware/querystring@6.0.7...@favware/querystring@7.0.0) (2020-10-03)
-
 
 ### Features
 
-* **querystring:** change target to ES2019 ([b6e7210](https://github.com/favware/node-packages/commit/b6e721075fd4845e1fa1e5a46e1de9a42b42ed0e))
-
+- **querystring:** change target to ES2019 ([b6e7210](https://github.com/favware/node-packages/commit/b6e721075fd4845e1fa1e5a46e1de9a42b42ed0e))
 
 ### BREAKING CHANGES
 
-* **querystring:** Internet Explorer is no longer supported
-
-
-
-
+- **querystring:** Internet Explorer is no longer supported
 
 ## [6.0.7](https://github.com/favware/node-packages/compare/@favware/querystring@6.0.6...@favware/querystring@6.0.7) (2020-09-05)
 

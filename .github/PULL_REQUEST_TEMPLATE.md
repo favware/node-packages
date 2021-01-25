@@ -5,12 +5,8 @@
 - My changes affect:
   - [ ] converter
   - [ ] crypto
-  - [ ] eslint-config
   - [ ] querystring
-  - [ ] tslint-config
-  - [ ] unescape
   - [ ] yamlreader
-  - [ ] ytdl-prismplayer
   - [ ] zalgo
 
 **Status**

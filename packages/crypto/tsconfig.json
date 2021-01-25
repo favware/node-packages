@@ -1,6 +1,7 @@
 {
-  "extends": "../ts-config/src/tsconfig.json",
+  "extends": "../../tsconfig.base.json",
   "compilerOptions": {
+    "lib": ["ESNext", "DOM"],
     "module": "ESNext",
     "outDir": "dist",
     "rootDir": "src"

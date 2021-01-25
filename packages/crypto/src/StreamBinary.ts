@@ -2,7 +2,7 @@
 class StreamBinary {
   private readonly Bases: any;
 
-  constructor(sequence: Buffer, bits: number = sequence instanceof Buffer ? 8 : 1) {
+  public constructor(sequence: Buffer, bits: number = sequence instanceof Buffer ? 8 : 1) {
     const n = sequence.length;
 
     let binary: any = '';
@@ -18,19 +18,6 @@ class StreamBinary {
     binary = binary.split('').map((bin: string) => parseInt(bin, 2));
 
     this.Bases = { '2': binary };
-  }
-
-  private static get(sequence: Buffer, offset: number) {
-    return sequence.readUInt8 ? sequence.readUInt8(offset) : sequence[offset];
-  }
-
-  private static evaluate(chunk: number[], base: number) {
-    let sum = 0;
-    let i = chunk.length;
-
-    while (i--) sum += chunk[i] * Math.pow(base, chunk.length - (i + 1));
-
-    return sum;
   }
 
   public generate(radix: number, base = 2, inner = false): number | any {
@@ -66,6 +53,19 @@ class StreamBinary {
     if (!list || list.length < k) return null;
 
     return list.splice(0, k);
+  }
+
+  private static get(sequence: Buffer, offset: number) {
+    return sequence.readUInt8 ? sequence.readUInt8(offset) : sequence[offset];
+  }
+
+  private static evaluate(chunk: number[], base: number) {
+    let sum = 0;
+    let i = chunk.length;
+
+    while (i--) sum += chunk[i] * Math.pow(base, chunk.length - (i + 1));
+
+    return sum;
   }
 }
 

@@ -5,25 +5,15 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## [3.1.1](https://github.com/favware/node-packages/compare/@favware/crypto@3.1.0...@favware/crypto@3.1.1) (2020-10-26)
 
-
 ### Bug Fixes
 
-* **crypto:** make it work in browsers ([3ddb945](https://github.com/favware/node-packages/commit/3ddb9456cd9106a3867d34c732e8a709d9e0dd5a))
-
-
-
-
+- **crypto:** make it work in browsers ([3ddb945](https://github.com/favware/node-packages/commit/3ddb9456cd9106a3867d34c732e8a709d9e0dd5a))
 
 # [3.1.0](https://github.com/favware/node-packages/compare/@favware/crypto@3.0.3...@favware/crypto@3.1.0) (2020-10-03)
 
-
 ### Features
 
-* **crypto:** build with rollup for optimal bundles ([0eb2934](https://github.com/favware/node-packages/commit/0eb293408b359150a64a5bbb41f139e95617ebad))
-
-
-
-
+- **crypto:** build with rollup for optimal bundles ([0eb2934](https://github.com/favware/node-packages/commit/0eb293408b359150a64a5bbb41f139e95617ebad))
 
 ## [3.0.3](https://github.com/favware/node-packages/compare/@favware/crypto@3.0.2...@favware/crypto@3.0.3) (2020-08-06)
 

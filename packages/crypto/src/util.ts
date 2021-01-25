@@ -8,7 +8,7 @@ export enum Radix {
 }
 
 export class CryptoError extends Error {
-  constructor(message: string) {
+  public constructor(message: string) {
     super(message);
     this.message = message;
     this.name = 'CryptoError';

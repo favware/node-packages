@@ -11,8 +11,5 @@ export default async (): Promise<Config.InitialOptions> => ({
       tsconfig: '<rootDir>/tsconfig.base.json'
     }
   },
-  coveragePathIgnorePatterns: [
-    '<rootDir>/packages/ts-config/__tests__/index.ts',
-    '<rootDir>/packages/crypto/src/browser-safe-randombytes.ts'
-  ]
+  coveragePathIgnorePatterns: ['<rootDir>/packages/crypto/src/browser-safe-randombytes.ts']
 });

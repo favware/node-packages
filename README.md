@@ -14,18 +14,13 @@
 
 [![npm bundle size](https://img.shields.io/bundlephobia/min/@favware/converter?label=converter%20-%20minified&logo=webpack&style=flat-square)](https://bundlephobia.com/result?p=@favware/converter)
 [![npm bundle size](https://img.shields.io/bundlephobia/min/@favware/crypto?label=crypto%20-%20minified&logo=webpack&style=flat-square)](https://bundlephobia.com/result?p=@favware/crypto)
-[![npm bundle size](https://img.shields.io/bundlephobia/min/@favware/eslint-config-react-app?label=eslint-config-react-app%20-%20minified&logo=webpack&style=flat-square)](https://bundlephobia.com/result?p=@favware/eslint-config-react-app)
-[![npm bundle size](https://img.shields.io/bundlephobia/min/@favware/eslint-config?label=eslint-config%20-%20minified&logo=webpack&style=flat-square)](https://bundlephobia.com/result?p=@favware/eslint-config)
 [![npm bundle size](https://img.shields.io/bundlephobia/min/@favware/querystring?label=querystring%20-%20minified&logo=webpack&style=flat-square)](https://bundlephobia.com/result?p=@favware/querystring)
 [![npm bundle size](https://img.shields.io/bundlephobia/min/@favware/yamlreader?label=yamlreader%20-%20minified&logo=webpack&style=flat-square)](https://bundlephobia.com/result?p=@favware/yamlreader)
 [![npm bundle size](https://img.shields.io/bundlephobia/min/@favware/zalgo?label=zalgo%20-%20minified&logo=webpack&style=flat-square)](https://bundlephobia.com/result?p=@favware/zalgo)
 
 [![npm](https://img.shields.io/npm/v/@favware/converter?color=crimson&label=converter%20version&logo=npm&style=flat-square)](https://www.npmjs.com/package/@favware/converter)
 [![npm](https://img.shields.io/npm/v/@favware/crypto?color=crimson&label=crypto%20version&logo=npm&style=flat-square)](https://www.npmjs.com/package/@favware/crypto)
-[![npm](https://img.shields.io/npm/v/@favware/eslint-config-react-app?color=crimson&label=eslint-config-react-app%20version&logo=npm&style=flat-square)](https://www.npmjs.com/package/@favware/eslint-config-react-app)
-[![npm](https://img.shields.io/npm/v/@favware/eslint-config?color=crimson&label=eslint-config%20version&logo=npm&style=flat-square)](https://www.npmjs.com/package/@favware/eslint-config)
 [![npm](https://img.shields.io/npm/v/@favware/querystring?color=crimson&label=querystring%20version&logo=npm&style=flat-square)](https://www.npmjs.com/package/@favware/querystring)
-[![npm](https://img.shields.io/npm/v/@favware/ts-config?color=crimson&label=tsconfig%20version&logo=npm&style=flat-square)](https://www.npmjs.com/package/@favware/ts-config)
 [![npm](https://img.shields.io/npm/v/@favware/yamlreader?color=crimson&label=yamlreader%20version&logo=npm&style=flat-square)](https://www.npmjs.com/package/@favware/yamlreader)
 [![npm](https://img.shields.io/npm/v/@favware/zalgo?color=crimson&label=zalgo%20version&logo=npm&style=flat-square)](https://www.npmjs.com/package/@favware/zalgo)
 
