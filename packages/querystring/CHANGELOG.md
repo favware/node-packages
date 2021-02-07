@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.0.2](https://github.com/favware/node-packages/compare/@favware/querystring@7.0.1...@favware/querystring@7.0.2) (2021-02-07)
+
+
+### Bug Fixes
+
+* **querystring:** improve bundling ([e86722c](https://github.com/favware/node-packages/commit/e86722c711e4352f1e9fd3db561ab8ecf09fe49a))
+
+
+
+
+
 ## [7.0.1](https://github.com/favware/node-packages/compare/@favware/querystring@7.0.0...@favware/querystring@7.0.1) (2021-01-08)
 
 **Note:** Version bump only for package @favware/querystring

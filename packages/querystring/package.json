@@ -1,6 +1,6 @@
 {
   "name": "@favware/querystring",
-  "version": "7.0.1",
+  "version": "7.0.2",
   "description": "Awesome and robust querystring",
   "author": "@favware",
   "license": "MIT",
@@ -9,10 +9,10 @@
   "browser": "dist/index.umd.js",
   "unpkg": "dist/index.umd.js",
   "types": "dist/index.d.ts",
-	"exports": {
-		"import": "./dist/index.mjs",
-		"require": "./dist/index.js"
-	},
+  "exports": {
+    "import": "./dist/index.mjs",
+    "require": "./dist/index.js"
+  },
   "homepage": "https://github.com/favware/node-packages/tree/main/packages/querystring#readme",
   "scripts": {
     "test": "jest",
