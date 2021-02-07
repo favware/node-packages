@@ -99,7 +99,8 @@
 					<p>Install with <a href="https://yarnpkg.com">yarn</a> or <a href="https://www.npmjs.com/">npm</a>:</p>
 					<pre><code class="language-sh">yarn add @favware/querystring
 
-<span class="hljs-comment"># npm install @favware/querystring</span></code></pre>
+<span class="hljs-comment"># npm install @favware/querystring</span>
+</code></pre>
 					<a href="#usage" id="usage" style="color: inherit; text-decoration: none;">
 						<h2>Usage</h2>
 					</a>
@@ -119,7 +120,8 @@
 
 <span class="hljs-comment">// customize options</span>
 <span class="hljs-built_in">console</span>.log(stringify({ <span class="hljs-attr">prop</span>: <span class="hljs-string">&#x27;value&#x27;</span>, <span class="hljs-attr">prop2</span>: <span class="hljs-string">&#x27;value2&#x27;</span> }, { <span class="hljs-attr">separator</span>: <span class="hljs-string">&#x27;&amp;&amp;&#x27;</span>, <span class="hljs-attr">equals</span>: <span class="hljs-string">&#x27;=&#x27;</span>, <span class="hljs-attr">includeQuestion</span>: <span class="hljs-literal">false</span> }));
-<span class="hljs-comment">//=&gt; &#x27;prop=value&amp;&amp;prop2=value2&#x27;</span></code></pre>
+<span class="hljs-comment">//=&gt; &#x27;prop=value&amp;&amp;prop2=value2&#x27;</span>
+</code></pre>
 					<a href="#parse" id="parse" style="color: inherit; text-decoration: none;">
 						<h3>Parse</h3>
 					</a>
@@ -136,7 +138,8 @@
 
 <span class="hljs-comment">// customize options</span>
 <span class="hljs-built_in">console</span>.log(parse(<span class="hljs-string">&#x27;prop=value&amp;&amp;prop2=value2&#x27;</span>, { <span class="hljs-attr">separator</span>: <span class="hljs-string">&#x27;&amp;&amp;&#x27;</span>, <span class="hljs-attr">equals</span>: <span class="hljs-string">&#x27;=&#x27;</span> }));
-<span class="hljs-comment">//=&gt; {prop: &#x27;value&#x27;, prop2: &#x27;value2&#x27;}</span></code></pre>
+<span class="hljs-comment">//=&gt; {prop: &#x27;value&#x27;, prop2: &#x27;value2&#x27;}</span>
+</code></pre>
 					<a href="#api-documentation" id="api-documentation" style="color: inherit; text-decoration: none;">
 						<h2>API Documentation</h2>
 					</a>
@@ -222,7 +225,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/favware/node-packages/blob/5100d77/packages/querystring/src/index.ts#L137">packages/querystring/src/index.ts:137</a></li>
+									<li>Defined in <a href="https://github.com/favware/node-packages/blob/f56b5c5/packages/querystring/src/index.ts#L137">packages/querystring/src/index.ts:137</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -231,13 +234,16 @@
 								</div>
 								<dl class="tsd-comment-tags">
 									<dt>example</dt>
-									<dd><pre><code class="language-ts">parse(<span class="hljs-string">&#x27;?prop=value&amp;prop2=value2&#x27;</span>)</code></pre>
+									<dd><pre><code class="language-ts">parse(<span class="hljs-string">&#x27;?prop=value&amp;prop2=value2&#x27;</span>)
+</code></pre>
 									</dd>
 									<dt>example</dt>
-									<dd><pre><code class="language-ts">parse(<span class="hljs-string">&#x27;?prop=value&amp;prop2=value2&#x27;</span>, {<span class="hljs-attr">separator</span>: <span class="hljs-string">&#x27;&amp;&#x27;</span>, <span class="hljs-attr">equals</span>: <span class="hljs-string">&#x27;=&#x27;</span>})</code></pre>
+									<dd><pre><code class="language-ts">parse(<span class="hljs-string">&#x27;?prop=value&amp;prop2=value2&#x27;</span>, {<span class="hljs-attr">separator</span>: <span class="hljs-string">&#x27;&amp;&#x27;</span>, <span class="hljs-attr">equals</span>: <span class="hljs-string">&#x27;=&#x27;</span>})
+</code></pre>
 									</dd>
 									<dt>example</dt>
-									<dd><pre><code class="language-ts">parse(<span class="hljs-string">&#x27;prop=value&amp;&amp;prop2=value2&#x27;</span>, {<span class="hljs-attr">separator</span>: <span class="hljs-string">&#x27;&amp;&amp;&#x27;</span>, <span class="hljs-attr">equals</span>: <span class="hljs-string">&#x27;=&#x27;</span>})</code></pre>
+									<dd><pre><code class="language-ts">parse(<span class="hljs-string">&#x27;prop=value&amp;&amp;prop2=value2&#x27;</span>, {<span class="hljs-attr">separator</span>: <span class="hljs-string">&#x27;&amp;&amp;&#x27;</span>, <span class="hljs-attr">equals</span>: <span class="hljs-string">&#x27;=&#x27;</span>})
+</code></pre>
 									</dd>
 								</dl>
 							</div>
@@ -277,7 +283,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/favware/node-packages/blob/5100d77/packages/querystring/src/index.ts#L75">packages/querystring/src/index.ts:75</a></li>
+									<li>Defined in <a href="https://github.com/favware/node-packages/blob/f56b5c5/packages/querystring/src/index.ts#L75">packages/querystring/src/index.ts:75</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -286,13 +292,16 @@
 								</div>
 								<dl class="tsd-comment-tags">
 									<dt>example</dt>
-									<dd><pre><code class="language-ts">stringify({<span class="hljs-attr">prop</span>: <span class="hljs-string">&#x27;value&#x27;</span>, <span class="hljs-attr">prop2</span>: <span class="hljs-string">&#x27;value2&#x27;</span>})</code></pre>
+									<dd><pre><code class="language-ts">stringify({<span class="hljs-attr">prop</span>: <span class="hljs-string">&#x27;value&#x27;</span>, <span class="hljs-attr">prop2</span>: <span class="hljs-string">&#x27;value2&#x27;</span>})
+</code></pre>
 									</dd>
 									<dt>example</dt>
-									<dd><pre><code class="language-ts">stringify({<span class="hljs-attr">prop</span>: <span class="hljs-string">&#x27;value&#x27;</span>, <span class="hljs-attr">prop2</span>: <span class="hljs-string">&#x27;value2&#x27;</span>}, {<span class="hljs-attr">separator</span>: <span class="hljs-string">&#x27;&amp;&#x27;</span>, <span class="hljs-attr">equals</span>: <span class="hljs-string">&#x27;=&#x27;</span>, <span class="hljs-attr">includeQuestion</span>: <span class="hljs-literal">false</span>})</code></pre>
+									<dd><pre><code class="language-ts">stringify({<span class="hljs-attr">prop</span>: <span class="hljs-string">&#x27;value&#x27;</span>, <span class="hljs-attr">prop2</span>: <span class="hljs-string">&#x27;value2&#x27;</span>}, {<span class="hljs-attr">separator</span>: <span class="hljs-string">&#x27;&amp;&#x27;</span>, <span class="hljs-attr">equals</span>: <span class="hljs-string">&#x27;=&#x27;</span>, <span class="hljs-attr">includeQuestion</span>: <span class="hljs-literal">false</span>})
+</code></pre>
 									</dd>
 									<dt>example</dt>
-									<dd><pre><code class="language-ts">stringify({<span class="hljs-attr">prop</span>: <span class="hljs-string">&#x27;value&#x27;</span>, <span class="hljs-attr">prop2</span>: <span class="hljs-string">&#x27;value2&#x27;</span>}, {<span class="hljs-attr">separator</span>: <span class="hljs-string">&#x27;&amp;&amp;&#x27;</span>, <span class="hljs-attr">equals</span>: <span class="hljs-string">&#x27;=&#x27;</span>, <span class="hljs-attr">includeQuestion</span>: <span class="hljs-literal">true</span>})</code></pre>
+									<dd><pre><code class="language-ts">stringify({<span class="hljs-attr">prop</span>: <span class="hljs-string">&#x27;value&#x27;</span>, <span class="hljs-attr">prop2</span>: <span class="hljs-string">&#x27;value2&#x27;</span>}, {<span class="hljs-attr">separator</span>: <span class="hljs-string">&#x27;&amp;&amp;&#x27;</span>, <span class="hljs-attr">equals</span>: <span class="hljs-string">&#x27;=&#x27;</span>, <span class="hljs-attr">includeQuestion</span>: <span class="hljs-literal">true</span>})
+</code></pre>
 									</dd>
 								</dl>
 							</div>
@@ -332,7 +341,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/favware/node-packages/blob/5100d77/packages/querystring/src/index.ts#L34">packages/querystring/src/index.ts:34</a></li>
+									<li>Defined in <a href="https://github.com/favware/node-packages/blob/f56b5c5/packages/querystring/src/index.ts#L34">packages/querystring/src/index.ts:34</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
