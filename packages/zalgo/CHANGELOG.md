@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.1.1](https://github.com/favware/node-packages/compare/@favware/zalgo@3.1.0...@favware/zalgo@3.1.1) (2021-03-02)
+
+### Bug Fixes
+
+- **zalgo:** fixed README, bundling and exports ([5abf2bb](https://github.com/favware/node-packages/commit/5abf2bbcf00d6fc6e0f7a6fcde93f88ee3aa409b))
+
 # [3.1.0](https://github.com/favware/node-packages/compare/@favware/zalgo@3.0.3...@favware/zalgo@3.1.0) (2020-10-03)
 
 ### Features
