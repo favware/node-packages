@@ -1,16 +1,8 @@
-import { banish, chars, zalgo } from '../src';
+import { chars, zalgo } from '../src';
 
 describe('Snapshot Testing', () => {
   test('zalgo should match snapshot', () => {
-    expect(zalgo).toMatchSnapshot();
-  });
-
-  test('chars should match snapshot', () => {
-    expect(chars).toMatchSnapshot();
-  });
-
-  test('banish should match snapshot', () => {
-    expect(banish).toMatchSnapshot();
+    expect(zalgo.toString()).toMatchSnapshot();
   });
 });
 

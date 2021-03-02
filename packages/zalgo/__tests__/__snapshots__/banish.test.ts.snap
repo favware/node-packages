@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot Testing banish should match snapshot 1`] = `
+"(purgeable) => {
+    try {
+        if (!purgeable)
+            throw new Error('no_input');
+        if (typeof purgeable !== 'string')
+            throw new Error('not_a_string');
+        return purgeable.replace(chars_1.chars.pattern, '');
+    }
+    catch (err) {
+        if (/(?:no_input)/i.test(err.toString()))
+            throw new SyntaxError('The banish function at least requires some text as input!');
+        if (/(?:not_a_string)/i.test(err.toString()))
+            throw new SyntaxError('The banish function expects input of type string as first argument!');
+        throw err;
+    }
+}"
+`;

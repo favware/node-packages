@@ -9,6 +9,10 @@
   "browser": "dist/index.umd.js",
   "unpkg": "dist/index.umd.js",
   "types": "dist/index.d.ts",
+  "exports": {
+    "import": "./dist/index.mjs",
+    "require": "./dist/index.js"
+  },
   "homepage": "https://github.com/favware/node-packages/tree/main/packages/zalgo#readme",
   "scripts": {
     "test": "jest",

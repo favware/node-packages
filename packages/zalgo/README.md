@@ -36,9 +36,9 @@ yarn add @favware/zalgo
 ## Usage
 
 ```js
-const { zalgo, banish, chars } = require('awesome-zalgo');
-// Or for babel / typescript:
-// import zalgo, { banish, chars } from 'awesome-zalgo';
+const { zalgo, banish, chars } = require('@favware/zalgo');
+// Or for ES Modules:
+// import zalgo, { banish, chars } from '@favware/zalgo';
 
 // Zalgo usage
 zalgo('some text');

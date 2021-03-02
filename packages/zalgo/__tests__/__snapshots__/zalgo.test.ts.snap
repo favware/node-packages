@@ -1,245 +1,70 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Snapshot Testing banish should match snapshot 1`] = `[Function]`;
-
-exports[`Snapshot Testing chars should match snapshot 1`] = `
-Object {
-  "all": Array [
-    "̍",
-    "̎",
-    "̄",
-    "̅",
-    "̿",
-    "̑",
-    "̆",
-    "̐",
-    "͒",
-    "͗",
-    "͑",
-    "̇",
-    "̈",
-    "̊",
-    "͂",
-    "̓",
-    "̈́",
-    "͊",
-    "͋",
-    "͌",
-    "̃",
-    "̂",
-    "̌",
-    "͐",
-    "̀",
-    "́",
-    "̋",
-    "̏",
-    "̒",
-    "̓",
-    "̔",
-    "̽",
-    "̉",
-    "ͣ",
-    "ͤ",
-    "ͥ",
-    "ͦ",
-    "ͧ",
-    "ͨ",
-    "ͩ",
-    "ͪ",
-    "ͫ",
-    "ͬ",
-    "ͭ",
-    "ͮ",
-    "ͯ",
-    "̾",
-    "͛",
-    "͆",
-    "̚",
-    "̕",
-    "̛",
-    "̀",
-    "́",
-    "͘",
-    "̡",
-    "̢",
-    "̧",
-    "̨",
-    "̴",
-    "̵",
-    "̶",
-    "͏",
-    "͜",
-    "͝",
-    "͞",
-    "͟",
-    "͠",
-    "͢",
-    "̸",
-    "̷",
-    "͡",
-    "҉",
-    "̖",
-    "̗",
-    "̘",
-    "̙",
-    "̜",
-    "̝",
-    "̞",
-    "̟",
-    "̠",
-    "̤",
-    "̥",
-    "̦",
-    "̩",
-    "̪",
-    "̫",
-    "̬",
-    "̭",
-    "̮",
-    "̯",
-    "̰",
-    "̱",
-    "̲",
-    "̳",
-    "̹",
-    "̺",
-    "̻",
-    "̼",
-    "ͅ",
-    "͇",
-    "͈",
-    "͉",
-    "͍",
-    "͎",
-    "͓",
-    "͔",
-    "͕",
-    "͖",
-    "͙",
-    "͚",
-    "̣",
-  ],
-  "down": Array [
-    "̖",
-    "̗",
-    "̘",
-    "̙",
-    "̜",
-    "̝",
-    "̞",
-    "̟",
-    "̠",
-    "̤",
-    "̥",
-    "̦",
-    "̩",
-    "̪",
-    "̫",
-    "̬",
-    "̭",
-    "̮",
-    "̯",
-    "̰",
-    "̱",
-    "̲",
-    "̳",
-    "̹",
-    "̺",
-    "̻",
-    "̼",
-    "ͅ",
-    "͇",
-    "͈",
-    "͉",
-    "͍",
-    "͎",
-    "͓",
-    "͔",
-    "͕",
-    "͖",
-    "͙",
-    "͚",
-    "̣",
-  ],
-  "middle": Array [
-    "̕",
-    "̛",
-    "̀",
-    "́",
-    "͘",
-    "̡",
-    "̢",
-    "̧",
-    "̨",
-    "̴",
-    "̵",
-    "̶",
-    "͏",
-    "͜",
-    "͝",
-    "͞",
-    "͟",
-    "͠",
-    "͢",
-    "̸",
-    "̷",
-    "͡",
-    "҉",
-  ],
-  "pattern": /\\(̍\\|̎\\|̄\\|̅\\|̿\\|̑\\|̆\\|̐\\|͒\\|͗\\|͑\\|̇\\|̈\\|̊\\|͂\\|̓\\|̈́\\|͊\\|͋\\|͌\\|̃\\|̂\\|̌\\|͐\\|̀\\|́\\|̋\\|̏\\|̒\\|̓\\|̔\\|̽\\|̉\\|ͣ\\|ͤ\\|ͥ\\|ͦ\\|ͧ\\|ͨ\\|ͩ\\|ͪ\\|ͫ\\|ͬ\\|ͭ\\|ͮ\\|ͯ\\|̾\\|͛\\|͆\\|̚\\|̕\\|̛\\|̀\\|́\\|͘\\|̡\\|̢\\|̧\\|̨\\|̴\\|̵\\|̶\\|͏\\|͜\\|͝\\|͞\\|͟\\|͠\\|͢\\|̸\\|̷\\|͡\\|҉\\|̖\\|̗\\|̘\\|̙\\|̜\\|̝\\|̞\\|̟\\|̠\\|̤\\|̥\\|̦\\|̩\\|̪\\|̫\\|̬\\|̭\\|̮\\|̯\\|̰\\|̱\\|̲\\|̳\\|̹\\|̺\\|̻\\|̼\\|ͅ\\|͇\\|͈\\|͉\\|͍\\|͎\\|͓\\|͔\\|͕\\|͖\\|͙\\|͚\\|̣\\)/g,
-  "up": Array [
-    "̍",
-    "̎",
-    "̄",
-    "̅",
-    "̿",
-    "̑",
-    "̆",
-    "̐",
-    "͒",
-    "͗",
-    "͑",
-    "̇",
-    "̈",
-    "̊",
-    "͂",
-    "̓",
-    "̈́",
-    "͊",
-    "͋",
-    "͌",
-    "̃",
-    "̂",
-    "̌",
-    "͐",
-    "̀",
-    "́",
-    "̋",
-    "̏",
-    "̒",
-    "̓",
-    "̔",
-    "̽",
-    "̉",
-    "ͣ",
-    "ͤ",
-    "ͥ",
-    "ͦ",
-    "ͧ",
-    "ͨ",
-    "ͩ",
-    "ͪ",
-    "ͫ",
-    "ͬ",
-    "ͭ",
-    "ͮ",
-    "ͯ",
-    "̾",
-    "͛",
-    "͆",
-    "̚",
-  ],
-}
+exports[`Snapshot Testing zalgo should match snapshot 1`] = `
+"(text, options = {
+    up: true,
+    middle: true,
+    down: true,
+    size: ''
+}) => {
+    try {
+        if (!text)
+            throw new Error('no_input');
+        if (typeof text !== 'string')
+            throw new Error('not_a_string');
+        if (!Reflect.has(options, 'up'))
+            options.up = true;
+        if (!Reflect.has(options, 'middle'))
+            options.middle = true;
+        if (!Reflect.has(options, 'down'))
+            options.down = true;
+        if (!Reflect.has(options, 'size'))
+            options.size = '';
+        const splitText = utils_1.unicodeStringSplitter(text);
+        const splitTextLength = splitText.length;
+        let counts;
+        let result = '';
+        const types = [];
+        if (Reflect.has(options, 'up'))
+            types.push('up');
+        if (Reflect.has(options, 'middle'))
+            types.push('middle');
+        if (Reflect.has(options, 'down'))
+            types.push('down');
+        for (let i = 0; i < splitTextLength; i++) {
+            if (chars_1.chars.pattern.test(splitText[i]))
+                continue;
+            // Skip Emojis
+            if (splitText[i].length > 1) {
+                result += splitText[i];
+                continue;
+            }
+            counts = { up: 0, middle: 0, down: 0 }; // lgtm [js/useless-assignment-to-local]
+            if (options.size === 'mini')
+                counts = { up: utils_1.randomizer(8), middle: utils_1.randomizer(2), down: utils_1.randomizer(8) };
+            else if (options.size === 'maxi')
+                counts = { up: utils_1.randomizer(16) + 3, middle: utils_1.randomizer(4) + 1, down: utils_1.randomizer(64) + 3 };
+            else
+                counts = { up: utils_1.randomizer(8) + 1, middle: utils_1.randomizer(3), down: utils_1.randomizer(8) + 1 };
+            result += text[i];
+            for (let j = 0, m = types.length; j < m; j++) {
+                const type = types[j];
+                let count = counts[type];
+                const tchars = chars_1.chars[type];
+                const max = tchars.length - 1;
+                while (count--) {
+                    result += tchars[utils_1.randomizer(max)];
+                }
+            }
+        }
+        return result;
+    }
+    catch (err) {
+        if (/(?:no_input)/i.test(err.toString()))
+            throw SyntaxError('The zalgo function at least requires some text as input!');
+        if (/(?:not_a_string)/i.test(err.toString()))
+            throw new SyntaxError('The zalgo function expects input of type string as first argument!');
+        throw err;
+    }
+}"
 `;
-
-exports[`Snapshot Testing zalgo should match snapshot 1`] = `[Function]`;

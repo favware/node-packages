@@ -1,4 +1,10 @@
-import { zalgo, banish } from '../src';
+import { banish, zalgo } from '../src';
+
+describe('Snapshot Testing', () => {
+  test('banish should match snapshot', () => {
+    expect(banish.toString()).toMatchSnapshot();
+  });
+});
 
 describe('No option testing', () => {
   test('should zalgo normally', () => {

@@ -1,4 +1,7 @@
-export * from './chars';
+import { zalgo } from './zalgo';
+
+export { chars } from './chars';
 export * from './interfaces';
-export * from './utils';
-export * from './zalgo';
+export { banish, zalgo } from './zalgo';
+
+export default zalgo;

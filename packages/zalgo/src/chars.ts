@@ -110,5 +110,3 @@ export const chars: Chars = {
 
 chars.all = [...chars.up, ...chars.middle, ...chars.down];
 chars.pattern = RegExp(`(${chars.all.join('|')})`, 'g');
-
-export default chars;

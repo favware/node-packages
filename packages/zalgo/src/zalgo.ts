@@ -1,4 +1,4 @@
-import chars from './chars';
+import { chars } from './chars';
 import type { ZalgoCountsMap, ZalgoOptions } from './interfaces';
 import { randomizer, unicodeStringSplitter } from './utils';
 
@@ -99,5 +99,3 @@ export const banish = (purgeable: string): string => {
     throw err;
   }
 };
-
-export default zalgo;

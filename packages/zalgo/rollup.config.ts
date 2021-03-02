@@ -21,6 +21,7 @@ export default {
     {
       file: './dist/index.umd.js',
       format: 'umd',
+      exports: 'named',
       name: 'FavwareZalgo',
       sourcemap: true
     }
@@ -34,7 +35,9 @@ export default {
       ecma: 2019,
       // This will ensure that whenever Rollup is in watch (dev) mode, console logs will not be removed
       compress: { drop_console: !Reflect.has(process.env, 'ROLLUP_WATCH') },
-      format: { comments: false }
+      format: { comments: false },
+      keep_classnames: true,
+      keep_fnames: true
     })
   ]
 };
