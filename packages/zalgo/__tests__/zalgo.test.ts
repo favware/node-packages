@@ -1,11 +1,5 @@
 import { chars, zalgo } from '../src';
 
-describe('Snapshot Testing', () => {
-  test('zalgo should match snapshot', () => {
-    expect(zalgo.toString()).toMatchSnapshot();
-  });
-});
-
 describe('No option testing', () => {
   test('should zalgo normally', () => {
     const text = 'That rug really tied the room together';
