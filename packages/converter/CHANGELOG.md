@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.1.1](https://github.com/favware/node-packages/compare/@favware/converter@3.1.0...@favware/converter@3.1.1) (2021-06-11)
+
+**Note:** Version bump only for package @favware/converter
+
 # [3.1.0](https://github.com/favware/node-packages/compare/@favware/converter@3.0.3...@favware/converter@3.1.0) (2020-10-03)
 
 ### Features

@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.0.1](https://github.com/favware/node-packages/compare/@favware/yamlreader@4.0.0...@favware/yamlreader@4.0.1) (2021-06-11)
+
+**Note:** Version bump only for package @favware/yamlreader
+
 # [4.0.0](https://github.com/favware/node-packages/compare/@favware/yamlreader@3.1.0...@favware/yamlreader@4.0.0) (2021-01-08)
 
 ### Features

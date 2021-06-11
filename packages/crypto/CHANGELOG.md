@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.1.2](https://github.com/favware/node-packages/compare/@favware/crypto@3.1.1...@favware/crypto@3.1.2) (2021-06-11)
+
+**Note:** Version bump only for package @favware/crypto
+
 ## [3.1.1](https://github.com/favware/node-packages/compare/@favware/crypto@3.1.0...@favware/crypto@3.1.1) (2020-10-26)
 
 ### Bug Fixes
