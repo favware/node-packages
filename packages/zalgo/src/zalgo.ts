@@ -72,8 +72,8 @@ export const zalgo = (
 
     return result;
   } catch (err) {
-    if (/(?:no_input)/i.test(err.toString())) throw SyntaxError('The zalgo function at least requires some text as input!');
-    if (/(?:not_a_string)/i.test(err.toString())) throw new SyntaxError('The zalgo function expects input of type string as first argument!');
+    if (/(?:no_input)/i.test((err as Error).message)) throw SyntaxError('The zalgo function at least requires some text as input!');
+    if (/(?:not_a_string)/i.test((err as Error).message)) throw new SyntaxError('The zalgo function expects input of type string as first argument!');
     throw err;
   }
 };
@@ -94,8 +94,9 @@ export const banish = (purgeable: string): string => {
 
     return purgeable.replace(chars.pattern!, '');
   } catch (err) {
-    if (/(?:no_input)/i.test(err.toString())) throw new SyntaxError('The banish function at least requires some text as input!');
-    if (/(?:not_a_string)/i.test(err.toString())) throw new SyntaxError('The banish function expects input of type string as first argument!');
+    if (/(?:no_input)/i.test((err as Error).message)) throw new SyntaxError('The banish function at least requires some text as input!');
+    if (/(?:not_a_string)/i.test((err as Error).message))
+      throw new SyntaxError('The banish function expects input of type string as first argument!');
     throw err;
   }
 };

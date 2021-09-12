@@ -73,14 +73,15 @@ export const convert = (value: number, fromUnit: string, toUnit: string, options
 
     return roundNumber(result / toData.multiplier, options.precision);
   } catch (err) {
-    if (/(?:missing_input)/i.test(err.toString())) throw new ConverterError('You are lacking some input arguments, please supply all arguments');
-    if (/(?:value_not_number)/i.test(err.toString())) throw new ConverterError('Your input value is not of type number');
-    if (/(?:fromUnit_not_string)/i.test(err.toString())) throw new ConverterError('Your fromUnit is not of type string');
-    if (/(?:toUnit_not_string)/i.test(err.toString())) throw new ConverterError('Your toUnit is not of type string');
-    if (/(?:fromUnit_not_supported)/i.test(err.toString())) throw new ConverterError('Your fromUnit is not supported by this library');
-    if (/(?:toUnit_not_supported)/i.test(err.toString())) throw new ConverterError('Your toUnit is not supported by this library');
-    if (/(?:no_data_found)/i.test(err.toString())) throw new ConverterError(`Cannot convert incompatible unit of ${fromUnit} to ${toUnit}`);
-    if (/(?:fromUnit_has_uniqueTransform)/i.test(err.toString())) {
+    if (/(?:missing_input)/i.test((err as Error).message))
+      throw new ConverterError('You are lacking some input arguments, please supply all arguments');
+    if (/(?:value_not_number)/i.test((err as Error).message)) throw new ConverterError('Your input value is not of type number');
+    if (/(?:fromUnit_not_string)/i.test((err as Error).message)) throw new ConverterError('Your fromUnit is not of type string');
+    if (/(?:toUnit_not_string)/i.test((err as Error).message)) throw new ConverterError('Your toUnit is not of type string');
+    if (/(?:fromUnit_not_supported)/i.test((err as Error).message)) throw new ConverterError('Your fromUnit is not supported by this library');
+    if (/(?:toUnit_not_supported)/i.test((err as Error).message)) throw new ConverterError('Your toUnit is not supported by this library');
+    if (/(?:no_data_found)/i.test((err as Error).message)) throw new ConverterError(`Cannot convert incompatible unit of ${fromUnit} to ${toUnit}`);
+    if (/(?:fromUnit_has_uniqueTransform)/i.test((err as Error).message)) {
       throw new ConverterError(
         `
           Looks like your from unit had a "unique transform".
@@ -92,6 +93,6 @@ export const convert = (value: number, fromUnit: string, toUnit: string, options
       );
     }
 
-    throw new ConverterError(`Unhandled Error, please contact the developer of the package. Message: ${err.toString()}`);
+    throw new ConverterError(`Unhandled Error, please contact the developer of the package. Message: ${(err as Error).message}`);
   }
 };

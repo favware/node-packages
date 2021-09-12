@@ -30,11 +30,11 @@ export const crypto = (bits: number = defaultBits, radix: Radix = defaultRadix):
 
     return result;
   } catch (err) {
-    if (/(?:bits_not_number)/i.test(err.toString())) throw new CryptoError('Your bits value is not of type number');
-    if (/(?:radix_not_string)/i.test(err.toString()))
+    if (/(?:bits_not_number)/i.test((err as Error).message)) throw new CryptoError('Your bits value is not of type number');
+    if (/(?:radix_not_string)/i.test((err as Error).message))
       throw new CryptoError('Your radix is not of type string, please utilize the build in Radix provider');
 
-    throw new CryptoError(`Unhandled Error, please contact the developer of the package. Message: ${err.toString()}`);
+    throw new CryptoError(`Unhandled Error, please contact the developer of the package. Message: ${(err as Error).message}`);
   }
 };
 
