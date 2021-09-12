@@ -30,7 +30,7 @@ export const readYaml = <T = unknown>(filepath: string, options?: YamlReaderOpti
   try {
     str = fs.readFileSync(filepath, options);
   } catch (err) {
-    if (/(?:no such file or directory, open)/i.test(err.toString())) {
+    if (/(?:no such file or directory, open)/i.test((err as Error).message)) {
       throw 'You supplied a file that was not found, please check your file path';
     }
 
@@ -43,7 +43,7 @@ export const readYaml = <T = unknown>(filepath: string, options?: YamlReaderOpti
 
     return jsonData as unknown as T;
   } catch (err) {
-    if (/(?:not_valid_yaml)/i.test(err.toString())) {
+    if (/(?:not_valid_yaml)/i.test((err as Error).message)) {
       throw 'It looks like the supplied file was not a valid YAML file!';
     }
     throw 'Something went wrong parsing the YAML file';

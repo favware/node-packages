@@ -102,10 +102,10 @@ export function stringify<I>(
 
     return combinedValues.join(options.separator);
   } catch (err) {
-    if (/object_is_empty/i.test(err.toString())) {
+    if (/object_is_empty/i.test((err as Error).message)) {
       return `${options.includeQuestion ? '?' : ''}${encodeURIComponent(stringifyPrimitive(obj, options.encodeUriComponents))}`;
     }
-    if (/input_not_object/i.test(err.toString())) {
+    if (/input_not_object/i.test((err as Error).message)) {
       throw '@Favware/Querystring: Your input was not an object. Please supply an object when using Stringify.';
     }
 
@@ -180,7 +180,7 @@ export function parse<R extends Record<PropertyKey, unknown> = Record<PropertyKe
 
     return obj as R;
   } catch (err) {
-    if (/input_not_string/i.test(err.toString())) {
+    if (/input_not_string/i.test((err as Error).message)) {
       throw '@Favware/Querystring: Your input was not an string. Please supply a string when using Parse.';
     }
 
