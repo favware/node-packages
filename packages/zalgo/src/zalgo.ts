@@ -37,9 +37,9 @@ export const zalgo = (
     let result = '';
     const types: string[] = [];
 
-    if (Reflect.has(options, 'up')) types.push('up');
-    if (Reflect.has(options, 'middle')) types.push('middle');
-    if (Reflect.has(options, 'down')) types.push('down');
+    if (options.up) types.push('up');
+    if (options.middle) types.push('middle');
+    if (options.down) types.push('down');
 
     for (let i = 0; i < splitTextLength; i++) {
       if (chars.pattern!.test(splitText[i])) continue;
