@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.1.3](https://github.com/favware/node-packages/compare/@favware/zalgo@3.1.2...@favware/zalgo@3.1.3) (2021-09-22)
+
+### Bug Fixes
+
+- **zalgo:** properly handle `up`/`middle`/`down` options ([#289](https://github.com/favware/node-packages/issues/289)) ([07435ac](https://github.com/favware/node-packages/commit/07435ac76902e11266d93ec86eca3b040dca8087))
+
 ## [3.1.2](https://github.com/favware/node-packages/compare/@favware/zalgo@3.1.1...@favware/zalgo@3.1.2) (2021-06-11)
 
 **Note:** Version bump only for package @favware/zalgo

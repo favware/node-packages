@@ -1,6 +1,6 @@
 {
   "name": "@favware/yamlreader",
-  "version": "4.0.1",
+  "version": "4.0.2",
   "description": "Minimal wrapper around js-yaml for directly reading in YAML files",
   "author": "@favware",
   "license": "MIT",
