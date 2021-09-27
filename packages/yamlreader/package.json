@@ -24,7 +24,7 @@
     "@types/js-yaml": "^4.0.3"
   },
   "peerDependencies": {
-    "@types/js-yaml": "^4.0.1"
+    "@types/js-yaml": "^4.0.3"
   },
   "peerDependenciesMeta": {
     "@types/js-yaml": {
