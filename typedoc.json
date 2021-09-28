@@ -1,20 +1,30 @@
 {
-  "out": "./docs/",
-  "readme": "./README.md",
+	"cleanOutputDir": true,
+	"emit": true,
+	"entryPointStrategy": "packages",
+	"entryPoints": ["."],
+	"exclude": [
+		"**/node_modules/**",
+		"**/dist/**",
+		"**/*.test.ts",
+		"packages/**/tests/**",
+		"**/*.js",
+		"**/*.d.ts",
+		"**/rollup.config.ts",
+		"**/jest.config.ts",
+		"**/jest.setup.ts"
+	],
+	"excludeExternals": false,
+	"hideGenerator": true,
+	"lightHighlightTheme": "github-light",
+	"darkHighlightTheme": "github-dark",
+	"markedOptions": {
+		"gfm": true,
+		"mangle": false,
+		"smartypants": true
+	},
   "name": "Favware Node Packages",
-  "exclude": [
-    "**/node_modules/**",
-    "**/*.test.ts",
-    "**/*.js",
-    "**/rollup.config.ts",
-    "packages/converter/src/index.ts",
-    "packages/crypto/src/index.ts",
-    "packages/zalgo/src/index.ts",
-    "**/jest.config.ts"
-  ],
-  "mode": "modules",
-  "excludeExternals": true,
-  "excludeNotExported": true,
-  "stripInternal": true,
-  "tsconfig": "./tsconfig.base.json"
+	"out": "./docs/",
+	"readme": "./README.md",
+	"tsconfig": "./tsconfig.base.json"
 }
