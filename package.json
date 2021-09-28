@@ -67,7 +67,7 @@
     }
   },
   "resolutions": {
-    "acorn": "^8.2.4",
+    "acorn": "^8.5.0",
     "minimist": "^1.2.5",
     "kind-of": "^6.0.3",
     "dot-prop": "^6.0.1",
