@@ -31,7 +31,7 @@ export interface ParseOptions {
  *
  * @param v Input to check for primitive type
  */
-export function stringifyPrimitive<T extends unknown>(v: T, encode: boolean | undefined): string {
+export function stringifyPrimitive<T>(v: T, encode: boolean | undefined): string {
   let primitive: string;
 
   switch (typeof v) {
