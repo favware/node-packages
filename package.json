@@ -5,14 +5,12 @@
     "packages/*"
   ],
   "scripts": {
-    "clean": "rimraf packages/**/dist packages/**/node_modules",
+    "clean": "rimraf \"packages/**/dist packages/**/node_modules\"",
     "test": "jest",
     "lint": "eslint packages --fix --ext js,jsx,ts,tsx",
-    "format": "prettier --write --loglevel=warn packages/**/*.{js,ts,md,json}",
+    "format": "prettier --write --loglevel=warn \"packages/**/*.{js,ts,md,json}\"",
     "build": "lerna run build --parallel",
     "docs": "typedoc",
-    "commit": "git-cz",
-    "cz": "git-cz",
     "update": "yarn upgrade-interactive --latest",
     "prepare": "husky install .github/husky"
   },
@@ -64,7 +62,5 @@
       "path": "./node_modules/cz-conventional-changelog"
     }
   },
-  "resolutions": {
-    "acorn": "^8.7.0"
-  }
+  "packageManager": "yarn@3.2.0"
 }
