@@ -1,30 +1,30 @@
 {
-	"cleanOutputDir": true,
-	"emit": true,
-	"entryPointStrategy": "packages",
-	"entryPoints": ["."],
-	"exclude": [
-		"**/node_modules/**",
-		"**/dist/**",
-		"**/*.test.ts",
-		"packages/**/tests/**",
-		"**/*.js",
-		"**/*.d.ts",
-		"**/rollup.config.ts",
-		"**/jest.config.ts",
-		"**/jest.setup.ts"
-	],
-	"excludeExternals": false,
-	"hideGenerator": true,
-	"lightHighlightTheme": "github-light",
-	"darkHighlightTheme": "github-dark",
-	"markedOptions": {
-		"gfm": true,
-		"mangle": false,
-		"smartypants": true
-	},
+  "cleanOutputDir": true,
+  "emit": true,
+  "entryPointStrategy": "packages",
+  "entryPoints": ["."],
+  "exclude": [
+    "**/node_modules/**",
+    "**/dist/**",
+    "**/*.test.ts",
+    "packages/**/tests/**",
+    "**/*.js",
+    "**/*.d.ts",
+    "**/rollup.config.ts",
+    "**/jest.config.mjs",
+    "**/jest.setup.ts"
+  ],
+  "excludeExternals": false,
+  "hideGenerator": true,
+  "lightHighlightTheme": "github-light",
+  "darkHighlightTheme": "github-dark",
+  "markedOptions": {
+    "gfm": true,
+    "mangle": false,
+    "smartypants": true
+  },
   "name": "Favware Node Packages",
-	"out": "./docs/",
-	"readme": "./README.md",
-	"tsconfig": "./tsconfig.base.json"
+  "out": "./docs/",
+  "readme": "./README.md",
+  "tsconfig": "./tsconfig.base.json"
 }

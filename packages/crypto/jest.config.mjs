@@ -1,14 +1,13 @@
-import type { Config } from '@jest/types';
-
-export default async (): Promise<Config.InitialOptions> => ({
+/** @type {import('@jest/types').Config.InitialOptions} */
+const config = {
   displayName: 'ts-jest',
   preset: 'ts-jest',
-  testEnvironment: 'node',
-  testRunner: 'jest-circus/runner',
   globals: {
     'ts-jest': {
       tsconfig: '<rootDir>/__tests__/tsconfig.json'
     }
   },
   coveragePathIgnorePatterns: ['<rootDir>/packages/crypto/src/browser-safe-randombytes.ts']
-});
+};
+
+export default config;
