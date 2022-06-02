@@ -12,7 +12,7 @@
     "build": "lerna run build --parallel",
     "docs": "typedoc",
     "update": "yarn upgrade-interactive --latest",
-    "prepare": "husky install .github/husky"
+    "postinstall": "husky install .github/husky"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.0.1",
