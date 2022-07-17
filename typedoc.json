@@ -1,6 +1,6 @@
 {
   "cleanOutputDir": true,
-  "emit": true,
+  "emit": "both",
   "entryPointStrategy": "packages",
   "entryPoints": ["."],
   "exclude": [

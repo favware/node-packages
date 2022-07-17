@@ -9,7 +9,9 @@
   "browser": "dist/index.umd.js",
   "unpkg": "dist/index.umd.js",
   "types": "dist/index.d.ts",
-  "typedocMain": "src/index.ts",
+  "typedoc": {
+    "entryPoint": "src/index.ts"
+  },
   "homepage": "https://github.com/favware/node-packages/tree/main/packages/converter#readme",
   "scripts": {
     "test": "jest",
