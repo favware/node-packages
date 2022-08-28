@@ -10,7 +10,7 @@ exports[`Standard Behaviour should encode Uri Components when specified 1`] = `"
 
 exports[`Standard Behaviour should exclude props that are undefined or null 1`] = `"prop=&prop2="`;
 
-exports[`Standard Behaviour should not encode Uri Components when specified 1`] = `"prop=value+_{}\\":"`;
+exports[`Standard Behaviour should not encode Uri Components when specified 1`] = `"prop=value+_{}":"`;
 
 exports[`Standard Behaviour should work with empty input 1`] = `""`;
 
