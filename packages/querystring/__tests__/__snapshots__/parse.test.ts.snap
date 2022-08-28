@@ -1,15 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Error checking should work when passing invalid separator and equals 1`] = `
-Object {
+{
   "prop": "value",
   "prop2": "value2",
 }
 `;
 
 exports[`Standard Behaviour should work when exceeding max keys 1`] = `
-Object {
-  "prop": Array [
+{
+  "prop": [
     "value",
     "value",
     "value",
@@ -41,7 +41,7 @@ Object {
     "value",
     "value",
   ],
-  "prop0": Array [
+  "prop0": [
     "value",
     "value",
     "value",
@@ -73,7 +73,7 @@ Object {
     "value",
     "value",
   ],
-  "prop1": Array [
+  "prop1": [
     "value",
     "value",
     "value",
@@ -105,7 +105,7 @@ Object {
     "value",
     "value",
   ],
-  "prop10": Array [
+  "prop10": [
     "value",
     "value",
     "value",
@@ -137,7 +137,7 @@ Object {
     "value",
     "value",
   ],
-  "prop11": Array [
+  "prop11": [
     "value",
     "value",
     "value",
@@ -169,7 +169,7 @@ Object {
     "value",
     "value",
   ],
-  "prop12": Array [
+  "prop12": [
     "value",
     "value",
     "value",
@@ -201,7 +201,7 @@ Object {
     "value",
     "value",
   ],
-  "prop13": Array [
+  "prop13": [
     "value",
     "value",
     "value",
@@ -233,7 +233,7 @@ Object {
     "value",
     "value",
   ],
-  "prop14": Array [
+  "prop14": [
     "value",
     "value",
     "value",
@@ -265,7 +265,7 @@ Object {
     "value",
     "value",
   ],
-  "prop15": Array [
+  "prop15": [
     "value",
     "value",
     "value",
@@ -297,7 +297,7 @@ Object {
     "value",
     "value",
   ],
-  "prop16": Array [
+  "prop16": [
     "value",
     "value",
     "value",
@@ -329,7 +329,7 @@ Object {
     "value",
     "value",
   ],
-  "prop17": Array [
+  "prop17": [
     "value",
     "value",
     "value",
@@ -361,7 +361,7 @@ Object {
     "value",
     "value",
   ],
-  "prop18": Array [
+  "prop18": [
     "value",
     "value",
     "value",
@@ -393,7 +393,7 @@ Object {
     "value",
     "value",
   ],
-  "prop19": Array [
+  "prop19": [
     "value",
     "value",
     "value",
@@ -425,7 +425,7 @@ Object {
     "value",
     "value",
   ],
-  "prop2": Array [
+  "prop2": [
     "value",
     "value",
     "value",
@@ -457,7 +457,7 @@ Object {
     "value",
     "value",
   ],
-  "prop20": Array [
+  "prop20": [
     "value",
     "value",
     "value",
@@ -489,7 +489,7 @@ Object {
     "value",
     "value",
   ],
-  "prop3": Array [
+  "prop3": [
     "value",
     "value",
     "value",
@@ -521,7 +521,7 @@ Object {
     "value",
     "value",
   ],
-  "prop4": Array [
+  "prop4": [
     "value",
     "value",
     "value",
@@ -553,7 +553,7 @@ Object {
     "value",
     "value",
   ],
-  "prop5": Array [
+  "prop5": [
     "value",
     "value",
     "value",
@@ -585,7 +585,7 @@ Object {
     "value",
     "value",
   ],
-  "prop6": Array [
+  "prop6": [
     "value",
     "value",
     "value",
@@ -617,7 +617,7 @@ Object {
     "value",
     "value",
   ],
-  "prop7": Array [
+  "prop7": [
     "value",
     "value",
     "value",
@@ -649,7 +649,7 @@ Object {
     "value",
     "value",
   ],
-  "prop8": Array [
+  "prop8": [
     "value",
     "value",
     "value",
@@ -681,7 +681,7 @@ Object {
     "value",
     "value",
   ],
-  "prop9": Array [
+  "prop9": [
     "value",
     "value",
     "value",
@@ -717,8 +717,8 @@ Object {
 `;
 
 exports[`Standard Behaviour should work when key exists multiple times 1`] = `
-Object {
-  "prop": Array [
+{
+  "prop": [
     "value",
     "value",
   ],
@@ -726,31 +726,31 @@ Object {
 `;
 
 exports[`Standard Behaviour should work when key has array-like value 1`] = `
-Object {
+{
   "prop": "['value', 'value']",
 }
 `;
 
 exports[`Standard Behaviour should work when passing a full URL 1`] = `
-Object {
+{
   "prop": "value",
   "prop2": "value2",
 }
 `;
 
-exports[`Standard Behaviour should work with empty input 1`] = `Object {}`;
+exports[`Standard Behaviour should work with empty input 1`] = `{}`;
 
-exports[`Standard Behaviour should work with no parameters 1`] = `Object {}`;
+exports[`Standard Behaviour should work with no parameters 1`] = `{}`;
 
 exports[`Standard Behaviour should work with valid options 1`] = `
-Object {
+{
   "prop": "value",
   "prop2": "value2",
 }
 `;
 
 exports[`Standard Behaviour should work without options 1`] = `
-Object {
+{
   "prop": "value",
   "prop2": "value2",
 }
