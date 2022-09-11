@@ -14,7 +14,7 @@
   },
   "homepage": "https://github.com/favware/node-packages/tree/main/packages/converter#readme",
   "scripts": {
-    "test": "jest",
+    "test": "vitest run",
     "lint": "eslint src __tests__ --ext ts --fix -c ../../.eslintrc",
     "prebuild": "yarn lint && yarn test",
     "build": "rollup -c rollup.config.ts",

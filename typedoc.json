@@ -11,8 +11,7 @@
     "**/*.js",
     "**/*.d.ts",
     "**/rollup.config.ts",
-    "**/jest.config.mjs",
-    "**/jest.setup.ts"
+    "**/vitest.config.ts"
   ],
   "excludeExternals": false,
   "hideGenerator": true,

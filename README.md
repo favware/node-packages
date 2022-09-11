@@ -38,7 +38,6 @@ Before you can develop on packages in this repository you'll have to follow a fe
 
 1. Install NodeJS: https://nodejs.org/en/download/
 2. Install Yarn package manager: `npm i -g yarn`
-3. Globally install CLI tools: `yarn global add commitizen eslint jest-cli lerna rollup ts-node typescript`
 
 ## API Documentation
 

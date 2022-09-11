@@ -1,13 +1,13 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1
 
-exports[`Error checking should work when passing invalid separator and equals 1`] = `
+exports[`Error checking > should work when passing invalid separator and equals 1`] = `
 {
   "prop": "value",
   "prop2": "value2",
 }
 `;
 
-exports[`Standard Behaviour should work when exceeding max keys 1`] = `
+exports[`Standard Behaviour > should work when exceeding max keys 1`] = `
 {
   "prop": [
     "value",
@@ -716,7 +716,7 @@ exports[`Standard Behaviour should work when exceeding max keys 1`] = `
 }
 `;
 
-exports[`Standard Behaviour should work when key exists multiple times 1`] = `
+exports[`Standard Behaviour > should work when key exists multiple times 1`] = `
 {
   "prop": [
     "value",
@@ -725,31 +725,31 @@ exports[`Standard Behaviour should work when key exists multiple times 1`] = `
 }
 `;
 
-exports[`Standard Behaviour should work when key has array-like value 1`] = `
+exports[`Standard Behaviour > should work when key has array-like value 1`] = `
 {
   "prop": "['value', 'value']",
 }
 `;
 
-exports[`Standard Behaviour should work when passing a full URL 1`] = `
+exports[`Standard Behaviour > should work when passing a full URL 1`] = `
 {
   "prop": "value",
   "prop2": "value2",
 }
 `;
 
-exports[`Standard Behaviour should work with empty input 1`] = `{}`;
+exports[`Standard Behaviour > should work with empty input 1`] = `{}`;
 
-exports[`Standard Behaviour should work with no parameters 1`] = `{}`;
+exports[`Standard Behaviour > should work with no parameters 1`] = `{}`;
 
-exports[`Standard Behaviour should work with valid options 1`] = `
+exports[`Standard Behaviour > should work with valid options 1`] = `
 {
   "prop": "value",
   "prop2": "value2",
 }
 `;
 
-exports[`Standard Behaviour should work without options 1`] = `
+exports[`Standard Behaviour > should work without options 1`] = `
 {
   "prop": "value",
   "prop2": "value2",
