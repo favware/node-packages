@@ -21,7 +21,7 @@
     "test": "vitest run",
     "lint": "eslint src __tests__ --ext ts --fix -c ../../.eslintrc",
     "prebuild": "yarn lint && yarn test",
-    "build": "rollup -c rollup.config.ts",
+    "build": "rollup -c rollup.config.mjs",
     "start": "yarn build -w"
   },
   "files": [

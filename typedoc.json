@@ -10,7 +10,7 @@
     "packages/**/tests/**",
     "**/*.js",
     "**/*.d.ts",
-    "**/rollup.config.ts",
+    "**/rollup.config.mjs",
     "**/vitest.config.ts"
   ],
   "excludeExternals": false,
