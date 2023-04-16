@@ -6,5 +6,4 @@
 **/*.tsbuildinfo
 **/*.eslintrc
 **/dist/
-**/docs/
 **/node_modules/

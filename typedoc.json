@@ -1,8 +1,0 @@
-{
-  "entryPoints": ["packages/*"],
-  "name": "Favware Node Packages",
-  "entryPointStrategy": "packages",
-  // "readme": "./README.md",
-  "includeVersion": true
-  // "tsconfig": "./tsconfig.base.json"
-}

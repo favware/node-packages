@@ -40,10 +40,6 @@ const data = readYaml('/path/to/some/yaml/file');
 console.log(data); // => JavaScript object with the keys from the yaml
 ```
 
-## API Documentation
-
-For the full API documentation please refer to the TypeDoc generated [documentation](https://favware.github.io/node-packages/modules/_favware_yamlreader.html).
-
 ## Buy us some doughnuts
 
 Favware projects are and always will be open source, even if we don't get donations. That being said, we know there are amazing people who may still want to donate just to show their appreciation. Thank you very much in advance!
