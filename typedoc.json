@@ -1,29 +1,8 @@
 {
-  "cleanOutputDir": true,
-  "emit": "both",
-  "entryPointStrategy": "packages",
-  "entryPoints": ["."],
-  "exclude": [
-    "**/node_modules/**",
-    "**/dist/**",
-    "**/*.test.ts",
-    "packages/**/tests/**",
-    "**/*.js",
-    "**/*.d.ts",
-    "**/rollup.config.mjs",
-    "**/vitest.config.ts"
-  ],
-  "excludeExternals": false,
-  "hideGenerator": true,
-  "lightHighlightTheme": "github-light",
-  "darkHighlightTheme": "github-dark",
-  "markedOptions": {
-    "gfm": true,
-    "mangle": false,
-    "smartypants": true
-  },
+  "entryPoints": ["packages/*"],
   "name": "Favware Node Packages",
-  "out": "./docs/",
-  "readme": "./README.md",
-  "tsconfig": "./tsconfig.base.json"
+  "entryPointStrategy": "packages",
+  // "readme": "./README.md",
+  "includeVersion": true
+  // "tsconfig": "./tsconfig.base.json"
 }

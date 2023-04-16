@@ -1,6 +1,7 @@
 {
   "extends": "@sapphire/ts-config",
   "compilerOptions": {
+    "composite": true,
     "lib": ["ESNext", "DOM"]
   }
 }

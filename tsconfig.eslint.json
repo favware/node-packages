@@ -6,13 +6,5 @@
     "module": "commonjs",
     "moduleResolution": "node"
   },
-  "include": [
-    "packages/**/*.mjs",
-    "packages/**/*.ts",
-    "packages/**/*.tsx",
-    "scripts",
-    "vitest.config.ts",
-    "packages/**/__fixtures__/*.js",
-    "packages/**/__tests__/*.js"
-  ]
+  "include": ["packages/**/*.mjs", "packages/**/*.ts", "packages/**/*.tsx", "scripts", "vitest.config.ts", "packages/**/tests/**/*.js"]
 }

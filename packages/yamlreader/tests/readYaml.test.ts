@@ -2,7 +2,7 @@ import YAML from 'js-yaml';
 import path from 'path';
 import { readYaml } from '../src';
 
-const fixturesDir = path.join(__dirname, '..', '__fixtures__');
+const fixturesDir = path.join(__dirname, 'fixtures');
 
 test('it should read the yaml file asynchronously', () => {
   const actual = readYaml(path.resolve(fixturesDir, 'passer.yml'));

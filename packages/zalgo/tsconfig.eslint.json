@@ -4,6 +4,6 @@
     "allowJs": true,
     "checkJs": true
   },
-  "include": ["src", "__tests__"],
+  "include": ["src", "tests"],
   "exclude": ["**/*.json"]
 }
