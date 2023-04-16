@@ -1,5 +1,5 @@
 import { ConverterError, definitions, roundNumber } from './helpers';
-import { ConvertOptions, System, UnitData, UnitDefinition } from './interfaces';
+import { System, type ConvertOptions, type UnitData, type UnitDefinition } from './interfaces';
 
 /**
  * Converts input from one unit to another unit

@@ -1,4 +1,4 @@
-import { System, UnitDefinition } from './interfaces';
+import { System, type UnitDefinition } from './interfaces';
 
 /**
  * Rounds any number to a given precision

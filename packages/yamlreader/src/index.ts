@@ -1,5 +1,5 @@
 import fs from 'fs';
-import yaml, { DumpOptions } from 'js-yaml';
+import yaml, { type DumpOptions } from 'js-yaml';
 
 /** FS Options */
 export interface FsOptions {
