@@ -1,5 +1,5 @@
-import fs from 'fs';
 import yaml, { type DumpOptions } from 'js-yaml';
+import { readFileSync } from 'node:fs';
 
 /** FS Options */
 export interface FsOptions {
@@ -28,7 +28,7 @@ export const readYaml = <T = unknown>(filepath: string, options?: YamlReaderOpti
   const opts = { ...options, filename: filepath };
 
   try {
-    str = fs.readFileSync(filepath, options);
+    str = readFileSync(filepath, options);
   } catch (err) {
     if (/(?:no such file or directory, open)/i.test((err as Error).message)) {
       throw 'You supplied a file that was not found, please check your file path';

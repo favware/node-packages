@@ -1,10 +1,9 @@
 {
   "extends": "../../../tsconfig.base.json",
   "compilerOptions": {
-    "lib": ["ESNext", "DOM"],
     "rootDir": "./",
     "outDir": "../dist",
-    "tsBuildInfoFile": "../dist/.tsbuildinfo"
+    "emitDeclarationOnly": true
   },
   "include": ["."]
 }

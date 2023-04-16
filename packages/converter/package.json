@@ -14,7 +14,7 @@
     "test": "vitest run",
     "lint": "eslint src tests --ext ts --fix -c ../../.eslintrc",
     "prebuild": "yarn lint && yarn test",
-    "build": "rollup -c rollup.config.mjs",
+    "build": "tsup && tsc -b src",
     "start": "yarn build -w"
   },
   "files": [
@@ -46,5 +46,8 @@
   ],
   "publishConfig": {
     "access": "public"
+  },
+  "devDependencies": {
+    "tsup": "^6.7.0"
   }
 }

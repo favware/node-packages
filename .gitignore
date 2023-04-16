@@ -10,28 +10,20 @@ node_modules
 
 # Build Artifacts
 dist/
-build/
 docs/
-test_out/
-*.zip
-*.tar
-*.tar.xz
-*.tar.gz
-*.7z
-*.rar
 
 # Logs
 logs/
 coverage/
+.turbo/
 *.log*
 *.tsbuildinfo
 
 # IDE Settings
 .idea/
-.vscode/*
-!.vscode/*.code-snippets
 .vs/
 *.iml
+
 # Yarn files
 .yarn/install-state.gz
 .yarn/build-state.yml

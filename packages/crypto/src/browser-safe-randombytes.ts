@@ -1,3 +1,6 @@
+// eslint-disable-next-line spaced-comment
+/// <reference lib="dom" />
+
 const isNodeJS = () => typeof process?.versions?.node !== 'undefined';
 
 // limit of Crypto.getRandomValues()
