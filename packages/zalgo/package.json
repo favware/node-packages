@@ -6,19 +6,20 @@
   "license": "MIT",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
-  "browser": "dist/index.umd.js",
-  "unpkg": "dist/index.umd.js",
+  "browser": "dist/index.global.js",
+  "unpkg": "dist/index.global.js",
   "types": "dist/index.d.ts",
   "exports": {
     "import": "./dist/index.mjs",
-    "require": "./dist/index.js"
+    "require": "./dist/index.js",
+    "types": "./dist/index.d.ts"
   },
   "homepage": "https://github.com/favware/node-packages/tree/main/packages/zalgo#readme",
   "scripts": {
     "test": "vitest run",
     "lint": "eslint src tests --ext ts --fix -c ../../.eslintrc",
     "prebuild": "yarn lint && yarn test",
-    "build": "tsup && tsc -b src",
+    "build": "tsup",
     "start": "yarn build -w"
   },
   "files": [

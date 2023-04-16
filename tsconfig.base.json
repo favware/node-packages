@@ -1,7 +1,8 @@
 {
   "extends": "@sapphire/ts-config",
   "compilerOptions": {
-    "composite": true,
+    "noEmit": true,
+    "incremental": false,
     "emitDecoratorMetadata": false
   }
 }

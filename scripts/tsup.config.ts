@@ -4,7 +4,7 @@ import { defineConfig, type Options } from 'tsup';
 export const createTsupConfig = (options: Options = {}) =>
   defineConfig({
     clean: true,
-    dts: false,
+    dts: true,
     entry: ['src/index.ts'],
     format: ['esm', 'cjs', 'iife'],
     minify: false,
