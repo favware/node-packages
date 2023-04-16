@@ -30,7 +30,7 @@
 
 ## What is Favware?
 
-Favware is the hobbyist organization headed by Jeroen Claassens, a.k.a. Favna. This repository holds all the primary work done under the Favware name in one conventient place. If you have any questions on inquires you can contact Favware at [support@favware.tech](mailto:support@favware.tech)
+Favware is the hobbyist organization headed by Jeroen Claassens, a.k.a. Favna. This repository holds all the primary work done under the Favware name in one convenient place. If you have any questions on inquires you can contact Favware at [support@favware.tech](mailto:support@favware.tech)
 
 ## Requirements for developing
 
@@ -38,10 +38,6 @@ Before you can develop on packages in this repository you'll have to follow a fe
 
 1. Install NodeJS: https://nodejs.org/en/download/
 2. Install Yarn package manager: `npm i -g yarn`
-
-## API Documentation
-
-The documentation for all packages can be found on this repository's [github.io page](https://favware.github.io/node-packages/)
 
 ---
 
