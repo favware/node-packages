@@ -18,7 +18,7 @@
     "@commitlint/cli": "^17.5.1",
     "@commitlint/config-conventional": "^17.4.4",
     "@lerna-lite/cli": "^1.17.0",
-    "@lerna-lite/run": "^1.17.0",
+    "@lerna-lite/run": "^2.0.0",
     "@rollup/plugin-commonjs": "^24.0.1",
     "@rollup/plugin-node-resolve": "^15.0.2",
     "@sapphire/eslint-config": "^4.3.8",
