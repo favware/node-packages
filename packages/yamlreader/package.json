@@ -25,7 +25,7 @@
   },
   "devDependencies": {
     "@types/js-yaml": "^4.0.5",
-    "tsup": "^6.7.0"
+    "tsup": "^7.0.0"
   },
   "peerDependencies": {
     "@types/js-yaml": "^4.0.5"
