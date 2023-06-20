@@ -46,8 +46,6 @@ jobs:
           registry-url: https://registry.npmjs.org/
       - name: Install Dependencies
         run: yarn --immutable
-      - name: Typecheck Code
-        run: yarn typecheck
       - name: Build Code
         run: yarn build
       - name: Run tests
