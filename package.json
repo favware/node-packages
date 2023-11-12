@@ -14,7 +14,7 @@
     "update": "yarn upgrade-interactive --latest"
   },
   "devDependencies": {
-    "@commitlint/cli": "^18.4.0",
+    "@commitlint/cli": "^18.4.1",
     "@commitlint/config-conventional": "^18.4.0",
     "@lerna-lite/cli": "^2.6.0",
     "@sapphire/eslint-config": "^5.0.2",
