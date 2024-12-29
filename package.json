@@ -28,13 +28,13 @@
     "eslint": "^8.57.1",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.2.1",
-    "lint-staged": "^15.2.11",
+    "lint-staged": "^15.3.0",
     "npm-run-all2": "^7.0.2",
     "prettier": "^3.4.2",
     "rimraf": "^6.0.1",
     "turbo": "^2.3.3",
     "typescript": "^5.5.2",
-    "vite": "^6.0.5",
+    "vite": "^6.0.6",
     "vitest": "^2.1.8"
   },
   "resolutions": {
