@@ -4,5 +4,13 @@
     "allowJs": true,
     "checkJs": true
   },
-  "include": ["packages/**/*.mjs", "packages/**/*.ts", "packages/**/*.tsx", "scripts", "vitest.config.ts", "packages/**/tests/**/*.js"]
+  "include": [
+    "packages/**/*.mjs",
+    "packages/**/*.ts",
+    "packages/**/*.tsx",
+    "packages/**/tests/**/*.js",
+    "scripts",
+    "vitest.config.ts",
+    "vitest.workspace.ts"
+  ]
 }
