@@ -750,15 +750,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@lerna-lite/cli@npm:^4.5.0":
-  version: 4.5.0
-  resolution: "@lerna-lite/cli@npm:4.5.0"
+"@lerna-lite/cli@npm:^4.5.1":
+  version: 4.5.1
+  resolution: "@lerna-lite/cli@npm:4.5.1"
   dependencies:
-    "@lerna-lite/core": "npm:4.5.0"
-    "@lerna-lite/init": "npm:4.5.0"
+    "@lerna-lite/core": "npm:4.5.1"
+    "@lerna-lite/init": "npm:4.5.1"
     "@lerna-lite/npmlog": "npm:4.1.2"
     dedent: "npm:^1.6.0"
-    dotenv: "npm:^16.5.0"
+    dotenv: "npm:^16.6.1"
     import-local: "npm:^3.2.0"
     load-json-file: "npm:^7.0.1"
     yargs: "npm:^18.0.0"
@@ -777,13 +777,13 @@ __metadata:
       optional: true
   bin:
     lerna: dist/cli.js
-  checksum: 10/41625ddf1ea1295265739296f891c8d9a983352ee65a19b86d5ff9bf348c6a7037b599e15246b0211584a6e0bed0efb20cc96c73ecfeaa654b3dfa4d8b1d60bf
+  checksum: 10/f7281a7815639a292faae76defdbb36f8af4bb2d59323cf6b52ebdd2151bc9c8aaada5e1d472cf3bd1b0a4b70d82d196ad63064faaecf098461fa5540bc0f5e4
   languageName: node
   linkType: hard
 
-"@lerna-lite/core@npm:4.5.0":
-  version: 4.5.0
-  resolution: "@lerna-lite/core@npm:4.5.0"
+"@lerna-lite/core@npm:4.5.1":
+  version: 4.5.1
+  resolution: "@lerna-lite/core@npm:4.5.1"
   dependencies:
     "@inquirer/expand": "npm:^4.0.15"
     "@inquirer/input": "npm:^4.1.12"
@@ -814,19 +814,20 @@ __metadata:
     write-json-file: "npm:^6.0.0"
     write-package: "npm:^7.1.0"
     yaml: "npm:^2.8.0"
-  checksum: 10/b225c5b1c304a2844205ad912f2cefbc26b24044677329d332fd8c7fc9e32531f42bc39faf65e170734044bf302dfd20f60767a2df95087f11d9db354995bcce
+    zeptomatch: "npm:^2.0.2"
+  checksum: 10/82f3e0683a4d111f6997eb26a0279b87ee3205d4131750ec4342842058dbd525dd6176197460c7d512cfe39a0afa19bd58029761fe03456f903934b12f3f7a56
   languageName: node
   linkType: hard
 
-"@lerna-lite/init@npm:4.5.0":
-  version: 4.5.0
-  resolution: "@lerna-lite/init@npm:4.5.0"
+"@lerna-lite/init@npm:4.5.1":
+  version: 4.5.1
+  resolution: "@lerna-lite/init@npm:4.5.1"
   dependencies:
-    "@lerna-lite/core": "npm:4.5.0"
+    "@lerna-lite/core": "npm:4.5.1"
     fs-extra: "npm:^11.3.0"
     p-map: "npm:^7.0.3"
     write-json-file: "npm:^6.0.0"
-  checksum: 10/b861831dfeac147b074a5e198cbcb2719d1efc0380b7835273df32407e2aeb985435c9c4c75ce115d633010e00def31060c47d2e00b431e81828bb2135a15e9e
+  checksum: 10/f304fa848507ef2c5f06f2c7c5fc7faf49a25fa60e0b1b0827ab7adbba9580ff553092bd4ae3f697468214d296130cbe1bf0772df7b8a1bcbe365298c38bf159
   languageName: node
   linkType: hard
 
@@ -2400,10 +2401,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"dotenv@npm:^16.5.0":
-  version: 16.5.0
-  resolution: "dotenv@npm:16.5.0"
-  checksum: 10/e68a16834f1a41cc2dfb01563bc150668ad675e6cd09191211467b5c0806b6ecd6ec438e021aa8e01cd0e72d2b70ef4302bec7cc0fe15b6955f85230b62dc8a9
+"dotenv@npm:^16.6.1":
+  version: 16.6.1
+  resolution: "dotenv@npm:16.6.1"
+  checksum: 10/1d1897144344447ffe62aa1a6d664f4cd2e0784e0aff787eeeec1940ded32f8e4b5b506d665134fc87157baa086fce07ec6383970a2b6d2e7985beaed6a4cc14
   languageName: node
   linkType: hard
 
@@ -3264,6 +3265,13 @@ __metadata:
   version: 4.2.10
   resolution: "graceful-fs@npm:4.2.10"
   checksum: 10/0c83c52b62c68a944dcfb9d66b0f9f10f7d6e3d081e8067b9bfdc9e5f3a8896584d576036f82915773189eec1eba599397fc620e75c03c0610fb3d67c6713c1a
+  languageName: node
+  linkType: hard
+
+"grammex@npm:^3.1.10":
+  version: 3.1.10
+  resolution: "grammex@npm:3.1.10"
+  checksum: 10/c58cad0c4614aca3fc60e187df9e0ffa2a34e0a328ee590f48084bcb2406744ff36ebc5c49a5d552d549f8291930442c48f44e2d2a8d663a735fdca577c61a41
   languageName: node
   linkType: hard
 
@@ -5419,7 +5427,7 @@ __metadata:
   dependencies:
     "@commitlint/cli": "npm:^19.8.1"
     "@commitlint/config-conventional": "npm:^19.8.1"
-    "@lerna-lite/cli": "npm:^4.5.0"
+    "@lerna-lite/cli": "npm:^4.5.1"
     "@sapphire/eslint-config": "npm:^5.0.6"
     "@sapphire/prettier-config": "npm:^2.0.0"
     "@sapphire/ts-config": "npm:^5.0.1"
@@ -6822,5 +6830,14 @@ __metadata:
   version: 2.1.1
   resolution: "yoctocolors@npm:2.1.1"
   checksum: 10/563fbec88bce9716d1044bc98c96c329e1d7a7c503e6f1af68f1ff914adc3ba55ce953c871395e2efecad329f85f1632f51a99c362032940321ff80c42a6f74d
+  languageName: node
+  linkType: hard
+
+"zeptomatch@npm:^2.0.2":
+  version: 2.0.2
+  resolution: "zeptomatch@npm:2.0.2"
+  dependencies:
+    grammex: "npm:^3.1.10"
+  checksum: 10/1ed533338d16693410ca0a8026a2a44f38db6a67e2f1eb1b4e24dbdab2d6a86756933d152d189f1daa4910af800a4f633c4b2520a246b84ba0f8eff4a86a864a
   languageName: node
   linkType: hard
