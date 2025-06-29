@@ -750,12 +750,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@lerna-lite/cli@npm:^4.4.1":
-  version: 4.4.1
-  resolution: "@lerna-lite/cli@npm:4.4.1"
+"@lerna-lite/cli@npm:^4.5.0":
+  version: 4.5.0
+  resolution: "@lerna-lite/cli@npm:4.5.0"
   dependencies:
-    "@lerna-lite/core": "npm:4.4.1"
-    "@lerna-lite/init": "npm:4.4.1"
+    "@lerna-lite/core": "npm:4.5.0"
+    "@lerna-lite/init": "npm:4.5.0"
     "@lerna-lite/npmlog": "npm:4.1.2"
     dedent: "npm:^1.6.0"
     dotenv: "npm:^16.5.0"
@@ -777,13 +777,13 @@ __metadata:
       optional: true
   bin:
     lerna: dist/cli.js
-  checksum: 10/8e1b0962418beead4493b447f0b5a2a59242c5bf86d1f9d822d05742365d0cb93354647742c35d4b157b072ff25bcfa6f12fe48b3f9d0541d7bc82f920026de8
+  checksum: 10/41625ddf1ea1295265739296f891c8d9a983352ee65a19b86d5ff9bf348c6a7037b599e15246b0211584a6e0bed0efb20cc96c73ecfeaa654b3dfa4d8b1d60bf
   languageName: node
   linkType: hard
 
-"@lerna-lite/core@npm:4.4.1":
-  version: 4.4.1
-  resolution: "@lerna-lite/core@npm:4.4.1"
+"@lerna-lite/core@npm:4.5.0":
+  version: 4.5.0
+  resolution: "@lerna-lite/core@npm:4.5.0"
   dependencies:
     "@inquirer/expand": "npm:^4.0.15"
     "@inquirer/input": "npm:^4.1.12"
@@ -793,14 +793,13 @@ __metadata:
     ci-info: "npm:^4.2.0"
     clone-deep: "npm:^4.0.1"
     config-chain: "npm:^1.1.13"
-    cosmiconfig: "npm:^9.0.0"
     dedent: "npm:^1.6.0"
     execa: "npm:^9.6.0"
     fs-extra: "npm:^11.3.0"
     glob-parent: "npm:^6.0.2"
     json5: "npm:^2.2.3"
+    lilconfig: "npm:^3.1.3"
     load-json-file: "npm:^7.0.1"
-    minimatch: "npm:^10.0.3"
     multimatch: "npm:^7.0.0"
     npm-package-arg: "npm:^12.0.2"
     p-map: "npm:^7.0.3"
@@ -815,19 +814,19 @@ __metadata:
     write-json-file: "npm:^6.0.0"
     write-package: "npm:^7.1.0"
     yaml: "npm:^2.8.0"
-  checksum: 10/6ee2d4db770dac3c9a5ee971eaaae40044ebd1213e37f32a6d562c111a3546e8362ed08ee5284a5c3cf085ae00393da4371b3e03de5049102e64bce3f816543a
+  checksum: 10/b225c5b1c304a2844205ad912f2cefbc26b24044677329d332fd8c7fc9e32531f42bc39faf65e170734044bf302dfd20f60767a2df95087f11d9db354995bcce
   languageName: node
   linkType: hard
 
-"@lerna-lite/init@npm:4.4.1":
-  version: 4.4.1
-  resolution: "@lerna-lite/init@npm:4.4.1"
+"@lerna-lite/init@npm:4.5.0":
+  version: 4.5.0
+  resolution: "@lerna-lite/init@npm:4.5.0"
   dependencies:
-    "@lerna-lite/core": "npm:4.4.1"
+    "@lerna-lite/core": "npm:4.5.0"
     fs-extra: "npm:^11.3.0"
     p-map: "npm:^7.0.3"
     write-json-file: "npm:^6.0.0"
-  checksum: 10/2eadc11695a3285a3205fdf06d93be87dd3a0a204fdf3dbc2f71f022e7064196c23b4baa3711645d42bbf0bd3940de5f0a06ca1ab4c1c817b329a0aefc775af9
+  checksum: 10/b861831dfeac147b074a5e198cbcb2719d1efc0380b7835273df32407e2aeb985435c9c4c75ce115d633010e00def31060c47d2e00b431e81828bb2135a15e9e
   languageName: node
   linkType: hard
 
@@ -1225,12 +1224,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:^22.15.32":
-  version: 22.15.32
-  resolution: "@types/node@npm:22.15.32"
+"@types/node@npm:*, @types/node@npm:^22.15.34":
+  version: 22.15.34
+  resolution: "@types/node@npm:22.15.34"
   dependencies:
     undici-types: "npm:~6.21.0"
-  checksum: 10/10b4c106d0c512a1d35ec08142bd7fb5cf2e1df93fc5627b3c69dd843dec4be07a47f1fa7ede232ad84762d75a372ea35028b79ee1e753b6f2adecd0b2cb2f71
+  checksum: 10/b0fb6674f6c17e3d515531d7f787ccd6676641ba161a6a0e6a93a2d5bc2089fde492eac24b5152a11413bf07a818055a9ec9077d3200b03cf7ea9718470a8417
   languageName: node
   linkType: hard
 
@@ -2607,9 +2606,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-prettier@npm:^5.4.0, eslint-plugin-prettier@npm:^5.5.0":
-  version: 5.5.0
-  resolution: "eslint-plugin-prettier@npm:5.5.0"
+"eslint-plugin-prettier@npm:^5.4.0, eslint-plugin-prettier@npm:^5.5.1":
+  version: 5.5.1
+  resolution: "eslint-plugin-prettier@npm:5.5.1"
   dependencies:
     prettier-linter-helpers: "npm:^1.0.0"
     synckit: "npm:^0.11.7"
@@ -2623,7 +2622,7 @@ __metadata:
       optional: true
     eslint-config-prettier:
       optional: true
-  checksum: 10/83210819211ad98f305b719352c151794c8c6403d3888c0f8cca76429bf91235753c15d060eb8097d3872e85e9224b8a46280105e468d8c578e2ca9f253bfa57
+  checksum: 10/4d750c70d97d6ef50776bc0a27eeececaac64792fb50713213c69231ed475aa9822a3d177870300fee537d3e24d0dc8eed1528929cab2d20f6e7ec37484648a3
   languageName: node
   linkType: hard
 
@@ -4283,7 +4282,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"minimatch@npm:^10.0.0, minimatch@npm:^10.0.3":
+"minimatch@npm:^10.0.0":
   version: 10.0.3
   resolution: "minimatch@npm:10.0.3"
   dependencies:
@@ -5113,12 +5112,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier@npm:^3.0.0, prettier@npm:^3.5.3":
-  version: 3.5.3
-  resolution: "prettier@npm:3.5.3"
+"prettier@npm:^3.0.0, prettier@npm:^3.5.3, prettier@npm:^3.6.2":
+  version: 3.6.2
+  resolution: "prettier@npm:3.6.2"
   bin:
     prettier: bin/prettier.cjs
-  checksum: 10/7050c08f674d9e49fbd9a4c008291d0715471f64e94cc5e4b01729affce221dfc6875c8de7e66b728c64abc9352eefb7eaae071b5f79d30081be207b53774b78
+  checksum: 10/1213691706bcef1371d16ef72773c8111106c3533b660b1cc8ec158bd109cdf1462804125f87f981f23c4a3dba053b6efafda30ab0114cc5b4a725606bb9ff26
   languageName: node
   linkType: hard
 
@@ -5420,21 +5419,21 @@ __metadata:
   dependencies:
     "@commitlint/cli": "npm:^19.8.1"
     "@commitlint/config-conventional": "npm:^19.8.1"
-    "@lerna-lite/cli": "npm:^4.4.1"
+    "@lerna-lite/cli": "npm:^4.5.0"
     "@sapphire/eslint-config": "npm:^5.0.6"
     "@sapphire/prettier-config": "npm:^2.0.0"
     "@sapphire/ts-config": "npm:^5.0.1"
-    "@types/node": "npm:^22.15.32"
+    "@types/node": "npm:^22.15.34"
     "@typescript-eslint/eslint-plugin": "npm:^7.13.1"
     "@typescript-eslint/parser": "npm:^7.13.1"
     "@vitest/coverage-v8": "npm:^3.2.4"
     cz-conventional-changelog: "npm:^3.3.0"
     eslint: "npm:^8.57.1"
     eslint-config-prettier: "npm:^10.1.5"
-    eslint-plugin-prettier: "npm:^5.5.0"
+    eslint-plugin-prettier: "npm:^5.5.1"
     lint-staged: "npm:^16.1.2"
     npm-run-all2: "npm:^8.0.4"
-    prettier: "npm:^3.5.3"
+    prettier: "npm:^3.6.2"
     rimraf: "npm:^6.0.1"
     turbo: "npm:^2.5.4"
     typescript: "npm:^5.8.3"
