@@ -17,11 +17,11 @@
   "devDependencies": {
     "@commitlint/cli": "^19.8.1",
     "@commitlint/config-conventional": "^19.8.1",
-    "@lerna-lite/cli": "^4.5.1",
+    "@lerna-lite/cli": "^4.6.1",
     "@sapphire/eslint-config": "^5.0.6",
     "@sapphire/prettier-config": "^2.0.0",
     "@sapphire/ts-config": "^5.0.1",
-    "@types/node": "^22.16.0",
+    "@types/node": "^22.16.3",
     "@typescript-eslint/eslint-plugin": "^7.13.1",
     "@typescript-eslint/parser": "^7.13.1",
     "@vitest/coverage-v8": "^3.2.4",
@@ -35,7 +35,7 @@
     "rimraf": "^6.0.1",
     "turbo": "^2.5.4",
     "typescript": "^5.8.3",
-    "vite": "^7.0.2",
+    "vite": "^7.0.4",
     "vitest": "^3.2.4"
   },
   "resolutions": {
