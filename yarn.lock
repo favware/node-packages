@@ -757,12 +757,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@lerna-lite/cli@npm:^4.9.1":
-  version: 4.9.1
-  resolution: "@lerna-lite/cli@npm:4.9.1"
+"@lerna-lite/cli@npm:^4.9.2":
+  version: 4.9.2
+  resolution: "@lerna-lite/cli@npm:4.9.2"
   dependencies:
-    "@lerna-lite/core": "npm:4.9.1"
-    "@lerna-lite/init": "npm:4.9.1"
+    "@lerna-lite/core": "npm:4.9.2"
+    "@lerna-lite/init": "npm:4.9.2"
     "@lerna-lite/npmlog": "npm:4.9.1"
     dedent: "npm:^1.7.0"
     dotenv: "npm:^17.2.3"
@@ -784,19 +784,19 @@ __metadata:
       optional: true
   bin:
     lerna: dist/cli.js
-  checksum: 10/7233f43ab71bd8ecc076407956c92715d77df26fefb4ba8f489e28d2ee7d6964290718cb0cb4f41c798c653eaca235893676813e6ea8116f74cc4712dbcf0053
+  checksum: 10/6602463a43414134aa29766bb9bd76a09b3494361110daed2e620f579f790faa0d8c19e38ba7e59a163fc5e450b4fdeb8f62a2115c8510723e93e050bf6bbeb3
   languageName: node
   linkType: hard
 
-"@lerna-lite/core@npm:4.9.1":
-  version: 4.9.1
-  resolution: "@lerna-lite/core@npm:4.9.1"
+"@lerna-lite/core@npm:4.9.2":
+  version: 4.9.2
+  resolution: "@lerna-lite/core@npm:4.9.2"
   dependencies:
     "@inquirer/expand": "npm:^4.0.21"
     "@inquirer/input": "npm:^4.2.5"
     "@inquirer/select": "npm:^4.4.0"
     "@lerna-lite/npmlog": "npm:4.9.1"
-    "@npmcli/run-script": "npm:^10.0.0"
+    "@npmcli/run-script": "npm:^10.0.2"
     ci-info: "npm:^4.3.1"
     config-chain: "npm:^1.1.13"
     dedent: "npm:^1.7.0"
@@ -813,24 +813,24 @@ __metadata:
     slash: "npm:^5.1.0"
     tinyglobby: "npm:^0.2.15"
     tinyrainbow: "npm:^3.0.3"
-    write-file-atomic: "npm:^6.0.0"
+    write-file-atomic: "npm:^7.0.0"
     write-json-file: "npm:^7.0.0"
     write-package: "npm:^7.2.0"
     yaml: "npm:^2.8.1"
-    zeptomatch: "npm:^2.0.2"
-  checksum: 10/62d6b299ec87ca0e53038ed624f1f7f4876e9e957c8b7d30d666847343dc2b1486af14c21fb7748339f395fcc5c2b9f2b0b177f828a12a1d9f9ce77f5e4f9aa4
+    zeptomatch: "npm:^2.1.0"
+  checksum: 10/ea505bb76162fca2e4680bab2b758f38c1a483ab27cfe7ac53b238a8bfde2707e2f506c747ced4ca49a7041da77b6b5bd75606bcd0c4a61cc989852e6d52485d
   languageName: node
   linkType: hard
 
-"@lerna-lite/init@npm:4.9.1":
-  version: 4.9.1
-  resolution: "@lerna-lite/init@npm:4.9.1"
+"@lerna-lite/init@npm:4.9.2":
+  version: 4.9.2
+  resolution: "@lerna-lite/init@npm:4.9.2"
   dependencies:
-    "@lerna-lite/core": "npm:4.9.1"
+    "@lerna-lite/core": "npm:4.9.2"
     fs-extra: "npm:^11.3.2"
     p-map: "npm:^7.0.3"
     write-json-file: "npm:^7.0.0"
-  checksum: 10/21e0af9a744e8c11460f076e60da842b184e97f769fd96c52f7b72b1f389bbe77bf997cfb9986330a027a53db29a544f2ce488260dfea34e60e58bfdfe837288
+  checksum: 10/e578505710abea3e223e3a38c2aa81fbc221a21e3dff2a0470e3f40392933cbbb15e6f884d222a3b712a2cfef5dca7359bd675eb6e92ec0dcea2fe1a07dd7c66
   languageName: node
   linkType: hard
 
@@ -934,10 +934,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@npmcli/node-gyp@npm:^4.0.0":
-  version: 4.0.0
-  resolution: "@npmcli/node-gyp@npm:4.0.0"
-  checksum: 10/edfbdc66dcb35b769d27f1d34b6149957a15fdf56d6f9dd01120720f2d56dbeb825e4b2fad0eebb36855f8a741a5128683c69c2d024412d799df843c32af3d5d
+"@npmcli/node-gyp@npm:^5.0.0":
+  version: 5.0.0
+  resolution: "@npmcli/node-gyp@npm:5.0.0"
+  checksum: 10/31488b0a0a6293efc4ab1bd87ba483d1000f8720c5f068d4c28cf49e39a045cd122960ba2a166a376fc9767f457f6124d99ec673ebcb19015cd29835bb038e46
   languageName: node
   linkType: hard
 
@@ -965,17 +965,26 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@npmcli/run-script@npm:^10.0.0":
-  version: 10.0.0
-  resolution: "@npmcli/run-script@npm:10.0.0"
+"@npmcli/promise-spawn@npm:^9.0.0":
+  version: 9.0.0
+  resolution: "@npmcli/promise-spawn@npm:9.0.0"
   dependencies:
-    "@npmcli/node-gyp": "npm:^4.0.0"
-    "@npmcli/package-json": "npm:^7.0.0"
-    "@npmcli/promise-spawn": "npm:^8.0.0"
-    node-gyp: "npm:^11.0.0"
-    proc-log: "npm:^5.0.0"
     which: "npm:^5.0.0"
-  checksum: 10/400641d0fbbdc32851b7809c98bc796fdfa6b155987e45aef8473d0704d62b0127a2bd590d845c0ece464e1b6c33d00e239ba065517cf32fc879ade2e14a5df2
+  checksum: 10/1f647ca8165d69e50dbe7da8d565b41b0474721853b1c7f71650d1d39180e73eba8de368ee49a8e97819651ed70646c7330da6ebb95622330aaa81b33b9000de
+  languageName: node
+  linkType: hard
+
+"@npmcli/run-script@npm:^10.0.2":
+  version: 10.0.2
+  resolution: "@npmcli/run-script@npm:10.0.2"
+  dependencies:
+    "@npmcli/node-gyp": "npm:^5.0.0"
+    "@npmcli/package-json": "npm:^7.0.0"
+    "@npmcli/promise-spawn": "npm:^9.0.0"
+    node-gyp: "npm:^11.0.0"
+    proc-log: "npm:^6.0.0"
+    which: "npm:^5.0.0"
+  checksum: 10/546e68c8f828e721b54e6386d5874e3b834ae2bf7ff5f41aa40b34b90241b71eb229985bf36042e97a660669c1cf7073d32a8b4cde0b333eec765df1a3cd765f
   languageName: node
   linkType: hard
 
@@ -1227,12 +1236,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:^22.18.13":
-  version: 22.18.13
-  resolution: "@types/node@npm:22.18.13"
+"@types/node@npm:*, @types/node@npm:^22.19.0":
+  version: 22.19.0
+  resolution: "@types/node@npm:22.19.0"
   dependencies:
     undici-types: "npm:~6.21.0"
-  checksum: 10/a0e8632a3eeeed3986f3b0b170187f67c0f0bb0d4fbbf9627af5c9bf81e2836bb64aa6f3bdab1c00658cb7911d8c231d7d6db853ae643edcd41f383c86f349e6
+  checksum: 10/fdb16593b54fcc82f16064da089f89e80df3da70162a379dc9dc91fd65234704d738f31a5479ab1affc45ca531333ccdb4fad5546e5fcd40327987b9539f173f
   languageName: node
   linkType: hard
 
@@ -3254,10 +3263,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"grammex@npm:^3.1.10":
-  version: 3.1.10
-  resolution: "grammex@npm:3.1.10"
-  checksum: 10/c58cad0c4614aca3fc60e187df9e0ffa2a34e0a328ee590f48084bcb2406744ff36ebc5c49a5d552d549f8291930442c48f44e2d2a8d663a735fdca577c61a41
+"grammex@npm:^3.1.11":
+  version: 3.1.11
+  resolution: "grammex@npm:3.1.11"
+  checksum: 10/7ad4c82cdf16beb190ba66b991afb28df18fad5421e22bca4a6b637200102671fee575b6b8297a3ad3a5191df43403cf6adfc2607aef787928ebbe7a7c5356be
   languageName: node
   linkType: hard
 
@@ -3265,6 +3274,13 @@ __metadata:
   version: 1.4.0
   resolution: "graphemer@npm:1.4.0"
   checksum: 10/6dd60dba97007b21e3a829fab3f771803cc1292977fe610e240ea72afd67e5690ac9eeaafc4a99710e78962e5936ab5a460787c2a1180f1cb0ccfac37d29f897
+  languageName: node
+  linkType: hard
+
+"graphmatch@npm:^1.1.0":
+  version: 1.1.0
+  resolution: "graphmatch@npm:1.1.0"
+  checksum: 10/c09b0c4223cabcebf7341ba24b9cdbf132a97db38df969ab74f837b4aaad7f57bfa42c30788a51382cd37d855bc526481287692e4f00b33f04190dc33b14a726
   languageName: node
   linkType: hard
 
@@ -5083,6 +5099,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"proc-log@npm:^6.0.0":
+  version: 6.0.0
+  resolution: "proc-log@npm:6.0.0"
+  checksum: 10/98831f35d30f254f89836ff3eb89e5970ed8f88ad1bde2ce6c0baa70e0f53166408ba8d9c6a5e3c44d10b611bb415ac46d9b2c78277a397608890c044f9d5942
+  languageName: node
+  linkType: hard
+
 "promise-inflight@npm:^1.0.1":
   version: 1.0.1
   resolution: "promise-inflight@npm:1.0.1"
@@ -5365,11 +5388,11 @@ __metadata:
   dependencies:
     "@commitlint/cli": "npm:^20.1.0"
     "@commitlint/config-conventional": "npm:^20.0.0"
-    "@lerna-lite/cli": "npm:^4.9.1"
+    "@lerna-lite/cli": "npm:^4.9.2"
     "@sapphire/eslint-config": "npm:^5.0.6"
     "@sapphire/prettier-config": "npm:^2.0.0"
     "@sapphire/ts-config": "npm:^5.0.1"
-    "@types/node": "npm:^22.18.13"
+    "@types/node": "npm:^22.19.0"
     "@typescript-eslint/eslint-plugin": "npm:^7.13.1"
     "@typescript-eslint/parser": "npm:^7.13.1"
     "@vitest/coverage-v8": "npm:^3.2.4"
@@ -5383,7 +5406,7 @@ __metadata:
     rimraf: "npm:^6.1.0"
     turbo: "npm:^2.6.0"
     typescript: "npm:^5.8.3"
-    vite: "npm:^7.1.12"
+    vite: "npm:^7.2.2"
     vitest: "npm:^3.2.4"
   languageName: unknown
   linkType: soft
@@ -6314,9 +6337,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vite@npm:^5.0.0 || ^6.0.0 || ^7.0.0-0, vite@npm:^7.1.12":
-  version: 7.1.12
-  resolution: "vite@npm:7.1.12"
+"vite@npm:^5.0.0 || ^6.0.0 || ^7.0.0-0, vite@npm:^7.2.2":
+  version: 7.2.2
+  resolution: "vite@npm:7.2.2"
   dependencies:
     esbuild: "npm:^0.25.0"
     fdir: "npm:^6.5.0"
@@ -6365,7 +6388,7 @@ __metadata:
       optional: true
   bin:
     vite: bin/vite.js
-  checksum: 10/827a18e7365871532af74b2ec65cccecff1effccbf6fb5c32fa1f8d7bcea26f4403d6988db3fa39e9c09c8091b04654b6cfbcc6da5c5dc449eed2b07afc22d81
+  checksum: 10/aee08b420646d5bcd92d5f4130b13b90303cab1cf48ee4772030f5fa7b464cc602ba578e9b1800a71f9b1c9b8daf1336e8c069a4cf1bb90b7b05ae5b13f62b06
   languageName: node
   linkType: hard
 
@@ -6584,6 +6607,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"write-file-atomic@npm:^7.0.0":
+  version: 7.0.0
+  resolution: "write-file-atomic@npm:7.0.0"
+  dependencies:
+    imurmurhash: "npm:^0.1.4"
+    signal-exit: "npm:^4.0.1"
+  checksum: 10/ca8f12cc4de17756a3f35087c1985c45b5be1ac399b9dc33000ab8cdbacb210ce3adde5bc1a90acfa729fe5326d250cf4f91ef57143b25bcf342a267391f8754
+  languageName: node
+  linkType: hard
+
 "write-json-file@npm:^6.0.0":
   version: 6.0.0
   resolution: "write-json-file@npm:6.0.0"
@@ -6722,11 +6755,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"zeptomatch@npm:^2.0.2":
-  version: 2.0.2
-  resolution: "zeptomatch@npm:2.0.2"
+"zeptomatch@npm:^2.1.0":
+  version: 2.1.0
+  resolution: "zeptomatch@npm:2.1.0"
   dependencies:
-    grammex: "npm:^3.1.10"
-  checksum: 10/1ed533338d16693410ca0a8026a2a44f38db6a67e2f1eb1b4e24dbdab2d6a86756933d152d189f1daa4910af800a4f633c4b2520a246b84ba0f8eff4a86a864a
+    grammex: "npm:^3.1.11"
+    graphmatch: "npm:^1.1.0"
+  checksum: 10/28a0aaa01d7081fe26984a3df096fac00eb49b589d86676a32b65f57c31b92622ee2bd8dafeebb76c1b14f59e913db4b36c5e3036485a05ad11a0a812993a8ef
   languageName: node
   linkType: hard
