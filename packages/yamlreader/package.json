@@ -27,11 +27,11 @@
     "start": "yarn build -w"
   },
   "dependencies": {
-    "js-yaml": "^4.1.0"
+    "js-yaml": "^4.1.1"
   },
   "devDependencies": {
     "@types/js-yaml": "^4.0.9",
-    "tsup": "^8.5.0"
+    "tsup": "^8.5.1"
   },
   "peerDependencies": {
     "@types/js-yaml": "^4.0.9"
