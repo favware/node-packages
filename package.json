@@ -15,8 +15,8 @@
     "update": "yarn upgrade-interactive --latest"
   },
   "devDependencies": {
-    "@commitlint/cli": "^20.1.0",
-    "@commitlint/config-conventional": "^20.0.0",
+    "@commitlint/cli": "^20.2.0",
+    "@commitlint/config-conventional": "^20.2.0",
     "@lerna-lite/cli": "^4.9.4",
     "@sapphire/eslint-config": "^5.0.6",
     "@sapphire/prettier-config": "^2.0.0",
@@ -24,19 +24,19 @@
     "@types/node": "^24.10.1",
     "@typescript-eslint/eslint-plugin": "^7.13.1",
     "@typescript-eslint/parser": "^7.13.1",
-    "@vitest/coverage-v8": "^4.0.14",
+    "@vitest/coverage-v8": "^4.0.15",
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "^8.57.1",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-prettier": "^5.5.4",
     "lint-staged": "^16.2.7",
     "npm-run-all2": "^8.0.4",
-    "prettier": "^3.7.3",
+    "prettier": "^3.7.4",
     "rimraf": "^6.1.2",
-    "turbo": "^2.6.1",
+    "turbo": "^2.6.3",
     "typescript": "^5.9.3",
-    "vite": "^7.2.4",
-    "vitest": "^4.0.14"
+    "vite": "^7.2.6",
+    "vitest": "^4.0.15"
   },
   "resolutions": {
     "ansi-regex": "^5.0.1",
